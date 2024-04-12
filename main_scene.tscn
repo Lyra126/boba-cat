@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhoh40m4lx3uo"]
+
+[ext_resource type="Script" path="res://main_scene.gd" id="1_dhh15"]
+[ext_resource type="Texture2D" uid="uid://bmlmkwgko5lju" path="res://menu.webp" id="2_k61se"]
+
+[node name="MainScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -84.0
+offset_top = -52.0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_dhh15")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -581.0
+offset_top = -326.0
+offset_right = 569.0
+offset_bottom = 324.0
+texture = ExtResource("2_k61se")
+
+[node name="Play" type="Button" parent="."]
+offset_left = -294.0
+offset_top = 104.0
+offset_right = -179.0
+offset_bottom = 193.0
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.168
+anchor_right = 2.126
+anchor_bottom = 1.643
+offset_left = 339.832
+offset_top = 246.0
+offset_right = 203.376
+offset_bottom = 157.844
+text = "Quit"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

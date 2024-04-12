@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bincjiyglgcf4"]
+
+[ext_resource type="Script" path="res://make-boba.gd" id="1_nj122"]
+[ext_resource type="Texture2D" uid="uid://d12y1p1qn73ff" path="res://stations.webp" id="2_mit1e"]
+
+[node name="make-boba" type="Node2D"]
+script = ExtResource("1_nj122")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -576.0
+offset_top = -321.0
+offset_right = 560.0
+offset_bottom = 324.0
+texture = ExtResource("2_mit1e")
+
+[node name="Back" type="Button" parent="."]
+offset_left = -541.0
+offset_top = 232.0
+offset_right = -433.0
+offset_bottom = 272.0
+text = "Back"
+
+[node name="Next" type="Button" parent="."]
+offset_left = 362.0
+offset_top = 238.0
+offset_right = 457.0
+offset_bottom = 283.0
+text = "Next"
+
+[connection signal="pressed" from="Back" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_button_2_pressed"]

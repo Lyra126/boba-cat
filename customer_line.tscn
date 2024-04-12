@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c77yg5d4yjufk"]
+
+[ext_resource type="Script" path="res://customer_line.gd" id="1_2m8u5"]
+[ext_resource type="Texture2D" uid="uid://daldqgnk04x6t" path="res://image.webp" id="2_ll1oi"]
+
+[node name="customer-line" type="Node2D"]
+script = ExtResource("1_2m8u5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(290, 81)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -293.0
+offset_top = -240.0
+offset_right = 859.0
+offset_bottom = 400.0
+texture = ExtResource("2_ll1oi")
+
+[node name="Next" type="Button" parent="."]
+offset_left = 658.0
+offset_top = 303.0
+offset_right = 755.0
+offset_bottom = 354.0
+text = "Next"
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
