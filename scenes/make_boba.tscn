@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bincjiyglgcf4"]
+[gd_scene load_steps=6 format=3 uid="uid://bincjiyglgcf4"]
 
 [ext_resource type="Script" path="res://scripts/make-boba.gd" id="1_lo0ut"]
 [ext_resource type="Texture2D" uid="uid://d12y1p1qn73ff" path="res://assets/stations.webp" id="2_t2nm0"]
 [ext_resource type="Texture2D" uid="uid://ooy1y8vts1b5" path="res://assets/download-removebg-preview.png" id="3_iqsvq"]
+[ext_resource type="Texture2D" uid="uid://c8gnhm635xay6" path="res://assets/milk.png" id="4_p4hng"]
+[ext_resource type="Script" path="res://scenes/milkInFridge.gd" id="5_70oli"]
 
 [node name="make-boba" type="Node2D"]
 script = ExtResource("1_lo0ut")
@@ -95,6 +97,51 @@ offset_left = -87.0
 offset_top = -76.0
 offset_right = -2.0
 offset_bottom = -58.0
+
+[node name="Node" type="Node" parent="."]
+
+[node name="milkInFridge" type="TextureRect" parent="Node"]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 330.0
+offset_top = -141.0
+offset_right = 430.0
+offset_bottom = 4.0
+texture = ExtResource("4_p4hng")
+expand_mode = 1
+script = ExtResource("5_70oli")
+
+[node name="Panel" type="Panel" parent="Node/milkInFridge"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.569
+anchor_bottom = 0.5
+offset_left = 209.0
+offset_top = 168.0
+offset_right = 12.5
+offset_bottom = 70.0
+mouse_filter = 2
+
+[node name="milkPour" type="TextureRect" parent="Node"]
+custom_minimum_size = Vector2(100, 100)
+offset_left = -94.0
+offset_top = -34.0
+offset_right = 6.0
+offset_bottom = 93.0
+expand_mode = 1
+script = ExtResource("5_70oli")
+
+[node name="Panel" type="Panel" parent="Node/milkPour"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.569
+anchor_bottom = 0.5
+offset_left = -199.0
+offset_top = 259.0
+offset_right = -395.5
+offset_bottom = 161.0
+mouse_filter = 2
 
 [connection signal="pressed" from="Back" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_button_2_pressed"]

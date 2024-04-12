@@ -19,7 +19,7 @@ config/icon="res://assets/icon.svg"
 
 window/size/viewport_width=2000
 window/size/viewport_height=1250
-window/stretch/aspect="expand"
+window/stretch/aspect="ignore"
 window/stretch/scale=1.51
 
 [rendering]
