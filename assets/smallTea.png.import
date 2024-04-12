@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d12y1p1qn73ff"
-path="res://.godot/imported/stations.webp-cd1ce1fcca244c59b506137590e67dc3.ctex"
+uid="uid://b5q3yx7d2w56"
+path="res://.godot/imported/smallTea.png-3fb9d3539379877e6bbb31a4c3b40e07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://stations.webp"
-dest_files=["res://.godot/imported/stations.webp-cd1ce1fcca244c59b506137590e67dc3.ctex"]
+source_file="res://assets/smallTea.png"
+dest_files=["res://.godot/imported/smallTea.png-3fb9d3539379877e6bbb31a4c3b40e07.ctex"]
 
 [params]
 
