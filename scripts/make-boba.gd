@@ -7,6 +7,10 @@ var large : Texture = preload("res://assets/large.png")
 var smallTea : Texture = preload("res://assets/smallTea.png")
 var medTea : Texture = preload("res://assets/medTea.png")
 var largeTea : Texture = preload("res://assets/largeTea.png")
+var smallCoffee : Texture = preload("res://assets/smallCoffee.png")
+var medCoffee : Texture = preload("res://assets/medCoffee.png")
+var largeCoffee : Texture = preload("res://assets/largeCoffee.png")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -49,4 +53,10 @@ func _on_tea_pressed():
 			$cupsize/cup.set_texture(largeTea)
 
 func _on_coffee_pressed():
-	pass
+	if ($cupsize/cup.get_texture() != null && cupsize != null):
+		if(cupsize == "s"):
+			$cupsize/cup.set_texture(smallCoffee)
+		elif(cupsize == "m"):
+			$cupsize/cup.set_texture(medCoffee)
+		elif(cupsize == "l"):
+			$cupsize/cup.set_texture(largeCoffee)
