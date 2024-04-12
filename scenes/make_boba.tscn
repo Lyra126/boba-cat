@@ -64,11 +64,16 @@ scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("3_iqsvq")
 
 [node name="cup" type="TextureRect" parent="cupsize"]
-layout_mode = 0
-offset_left = -286.0
-offset_top = -172.0
-offset_right = -176.0
-offset_bottom = -4.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -5.775
+anchor_top = -2.2
+anchor_right = -5.775
+anchor_bottom = -2.2
+offset_left = -55.0
+offset_top = -84.0
+offset_right = 55.0
+offset_bottom = 84.0
 stretch_mode = 2
 
 [node name="drink" type="Control" parent="."]
