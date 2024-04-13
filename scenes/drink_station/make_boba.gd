@@ -23,7 +23,7 @@ func _process(delta):
 	pass
 
 func _on_back_pressed():
-	get_tree().change_scene_to_file("res://scenes/customer_line.tscn")
+	get_tree().change_scene_to_file("res://scenes/customer_line/customer_line.tscn")
 
 
 func _on_next_pressed():

@@ -1,6 +1,6 @@
 extends Control
 
-const TARGET_SCENE_PATH:String = "res://scenes/customer_line.tscn"
+const TARGET_SCENE_PATH:String = "res://scenes/customer_line/customer_line.tscn"
 const LOADING_DELAY:float = 0.7 # Adjust the delay time as needed
 const PROGRESS_INCREMENT:float = 5 # Adjust the progress increment as needed
 

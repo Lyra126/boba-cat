@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c77yg5d4yjufk"]
 
-[ext_resource type="Script" path="res://scripts/customer_line.gd" id="1_go1ct"]
+[ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
 [ext_resource type="Texture2D" uid="uid://daldqgnk04x6t" path="res://assets/image.webp" id="2_beh0m"]
 
 [node name="customer-line" type="Node2D"]

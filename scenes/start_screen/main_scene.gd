@@ -6,7 +6,7 @@ func _ready():
 
 func _on_play_pressed():
 	print("play is pressed")
-	get_tree().change_scene_to_file("res://scenes/loading_scene.tscn")
+	get_tree().change_scene_to_file("res://scenes/start_screen/loading_scene.tscn")
 
 func _on_quit_pressed():
 	print("quit is pressed")
