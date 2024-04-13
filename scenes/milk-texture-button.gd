@@ -31,6 +31,7 @@ func _on_button_up():
 	if cup_droppable:
 		#animate_to_position(body_ref.global_position)
 		print("animation")
+		animate_to_position(body_ref.global_position + Vector2(100,100))
 	elif base_droppable:
 		animate_to_position(body_ref.global_position + calculate_offset())
 	else:

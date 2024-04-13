@@ -12,8 +12,8 @@ script/source = "extends Node
 var is_dragging = false
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfmri"]
-size = Vector2(83.5, 150.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ynks0"]
+size = Vector2(87, 154)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wx7pv"]
 size = Vector2(135.75, 187.531)
@@ -122,8 +122,10 @@ script = ExtResource("6_ya2cn")
 [node name="Area2D" type="Area2D" parent="drink/milkButton"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="drink/milkButton/Area2D"]
-position = Vector2(53.25, 95.75)
-shape = SubResource("RectangleShape2D_qfmri")
+modulate = Color(0.301961, 1, 1, 1)
+light_mask = 0
+position = Vector2(52, 96)
+shape = SubResource("RectangleShape2D_ynks0")
 
 [node name="tea" type="Button" parent="drink"]
 layout_mode = 0
