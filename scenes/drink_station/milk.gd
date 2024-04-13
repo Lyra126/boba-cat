@@ -66,6 +66,8 @@ func _input(event):
 					elif mouse_position.x < cup_droppable_position.x:
 						if Input.is_action_just_pressed("click"):
 							milk_anim.play("pouring_milk_left")
+				else:
+					selected = false
 
 
 func _on_milk_area_body_entered(body):

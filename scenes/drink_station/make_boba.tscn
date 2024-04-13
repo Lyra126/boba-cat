@@ -18,7 +18,7 @@ size = Vector2(94.3307, 160.305)
 [sub_resource type="SpriteFrames" id="SpriteFrames_bxd5m"]
 animations = [{
 "frames": [{
-"duration": 30.0,
+"duration": 1.0,
 "texture": ExtResource("4_21wc3")
 }],
 "loop": true,
