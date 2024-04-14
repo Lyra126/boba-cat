@@ -1,6 +1,5 @@
 extends Node2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,7 +11,15 @@ func _process(delta):
 
 
 func _on_submit_order_pressed():
-	print("submitted")
+	var ordersMatch = false
+	print("checking if player made order correctly...")
+	if len(global.order) == len(global.playerOrder):
+		for i in range(len(global.order)):
+			if global.order[i] != global.playerOrder[i]:
+				return
+		ordersMatch = true
+	else:
+		print("Arrays have different lengths, cannot compare elements.")
 
 
 func _on_back_pressed():

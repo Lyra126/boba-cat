@@ -5,9 +5,8 @@ var drink_options = ["Tea", "Coffee", "Juice"]
 var syrup_options = ["25% Sugar", "50% Sugar", "75% Sugar"]
 var milk_options = ["Oat Milk", "Almond Milk", "Regular Milk"]
 var topping_options = ["Popping Boba Pearls", "Dalgona Chunks", "Fruit Jelly"]
-var order = []
 
-var prevOrderFinished = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,13 +21,13 @@ func generate_order():
 	var milk = milk_options[randi() % milk_options.size()]
 	var topping = topping_options[randi() % topping_options.size()]
 
-	order = [boba, drink, syrup, milk, topping]
+	global.order = [boba, drink, syrup, milk, topping]
 	# Print the order (you can replace this with your order processing logic)
 	print("Customer ordered:", boba, drink, syrup, milk, "with", topping)
 	
 func showOrder():
 	var orderText = ""
-	for item in order:
+	for item in global.order:
 		orderText += str(item) + "\n"
 	print(orderText)
 	$Label.set_text(orderText)

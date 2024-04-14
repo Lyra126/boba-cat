@@ -24,7 +24,7 @@ func hideOrder():
 
 
 func _on_next_pressed():
-	get_tree().change_scene_to_file("res://scenes/drink_station/make_boba.tscn")
+	get_tree().change_scene_to_file("res://scenes/drink_station/liquid_station.tscn")
 
 	
 	
