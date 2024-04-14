@@ -13,7 +13,7 @@ var target_position
 var pouring_milk
 var pour_milk_left = false
 var pour_milk_right = true
-var cup_droppable_position = Vector2(800,173)
+var cup_droppable_position = Vector2(-200,173)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,8 +25,9 @@ func _process(delta):
 	pass
 
 func _on_milk_area_input_event(viewport, event, shape_idx):
-	if Input.is_action_pressed("click"):
+	if Input.is_action_pressed("click") and not global.SomethingBeingClickedRn:
 		selected = true
+		global.SomethingBeingClickedRn = true;
 		offset = get_global_mouse_position() - global_position
 	
 func _physics_process(delta):
@@ -40,6 +41,7 @@ func _physics_process(delta):
 		
 func _on_milk_animations_animation_finished():
 	selected = false
+	global.SomethingBeingClickedRn = false;
 	milk_anim.stop()
 	milk_anim.hide()
 	milk_still.show()
@@ -68,6 +70,7 @@ func _input(event):
 							milk_anim.play("pouring_milk_left")
 				else:
 					selected = false
+					global.SomethingBeingClickedRn = false
 
 
 func _on_milk_area_body_entered(body):

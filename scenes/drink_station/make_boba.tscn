@@ -5,12 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://ooy1y8vts1b5" path="res://assets/download-removebg-preview.png" id="2_fwgpi"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="3_wtyj4"]
 [ext_resource type="Texture2D" uid="uid://c8gnhm635xay6" path="res://assets/milk.png" id="4_21wc3"]
-[ext_resource type="Texture2D" uid="uid://bj3pkyveuc65m" path="res://assets/animations/milk-animation/Untitled_Artwork-1 2.png" id="5_byvbw"]
-[ext_resource type="Texture2D" uid="uid://bay72gropcdqv" path="res://assets/animations/milk-animation/Untitled_Artwork-2 3.png" id="6_nscbu"]
-[ext_resource type="Texture2D" uid="uid://bta4ltp57uqsf" path="res://assets/animations/milk-animation/Untitled_Artwork-3 2.png" id="7_c8l71"]
-[ext_resource type="Texture2D" uid="uid://bdrjrgklxsjyp" path="res://assets/animations/milk-animation/Untitled_Artwork-1.png" id="8_gf7pw"]
-[ext_resource type="Texture2D" uid="uid://dk6r4kuqj4c6s" path="res://assets/animations/milk-animation/Untitled_Artwork-2 2.png" id="9_v21vo"]
-[ext_resource type="Texture2D" uid="uid://dhe327i4mbvmg" path="res://assets/animations/milk-animation/Untitled_Artwork-3.png" id="10_ph5m0"]
+[ext_resource type="Texture2D" uid="uid://bj3pkyveuc65m" path="res://assets/liquid_station/animations/milk-animation/left_1.png" id="5_byvbw"]
+[ext_resource type="Texture2D" uid="uid://bay72gropcdqv" path="res://assets/liquid_station/animations/milk-animation/left_2.png" id="6_nscbu"]
+[ext_resource type="Texture2D" uid="uid://bta4ltp57uqsf" path="res://assets/liquid_station/animations/milk-animation/left_3.png" id="7_c8l71"]
+[ext_resource type="Texture2D" uid="uid://bdrjrgklxsjyp" path="res://assets/liquid_station/animations/milk-animation/right_1.png" id="8_gf7pw"]
+[ext_resource type="Texture2D" uid="uid://dk6r4kuqj4c6s" path="res://assets/liquid_station/animations/milk-animation/right_2.png" id="9_v21vo"]
+[ext_resource type="Texture2D" uid="uid://dhe327i4mbvmg" path="res://assets/liquid_station/animations/milk-animation/right_3.png" id="10_ph5m0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_457jg"]
 size = Vector2(94.3307, 160.305)

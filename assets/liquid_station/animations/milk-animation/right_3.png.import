@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bta4ltp57uqsf"
-path="res://.godot/imported/Untitled_Artwork-3 2.png-bd032ac5cb8bc38764acc07fa2856dfa.ctex"
+uid="uid://dhe327i4mbvmg"
+path="res://.godot/imported/right_3.png-5a017b590763f3b4e1b1b748dd3a53a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/animations/milk-animation/Untitled_Artwork-3 2.png"
-dest_files=["res://.godot/imported/Untitled_Artwork-3 2.png-bd032ac5cb8bc38764acc07fa2856dfa.ctex"]
+source_file="res://assets/liquid_station/animations/milk-animation/right_3.png"
+dest_files=["res://.godot/imported/right_3.png-5a017b590763f3b4e1b1b748dd3a53a5.ctex"]
 
 [params]
 
