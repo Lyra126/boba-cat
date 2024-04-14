@@ -27,7 +27,7 @@ func _on_back_pressed():
 
 
 func _on_next_pressed():
-	print("no next scene yet")
+	get_tree().change_scene_to_file("res://scenes/Toppings/Toppings.tscn")
 
 func _on_largecup_pressed():
 	$cupsize/cup.set_texture(large)
