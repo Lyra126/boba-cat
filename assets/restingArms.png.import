@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dex7etfyeycpi"
-path="res://.godot/imported/largeCoffee.png-d61793b1eebf324168e5f0d376b21c79.ctex"
+uid="uid://67v6fvra775d"
+path="res://.godot/imported/restingArms.png-90b1b7d4b8d8a631263da804f3105d32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/largeCoffee.png"
-dest_files=["res://.godot/imported/largeCoffee.png-d61793b1eebf324168e5f0d376b21c79.ctex"]
+source_file="res://assets/restingArms.png"
+dest_files=["res://.godot/imported/restingArms.png-90b1b7d4b8d8a631263da804f3105d32.ctex"]
 
 [params]
 
