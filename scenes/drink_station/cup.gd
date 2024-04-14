@@ -32,9 +32,13 @@ func _physics_process(delta):
 		target_position = get_global_mouse_position() - offset
 		global_position = lerp(global_position, target_position, 15 * delta) # Smooth animation during dragging
 		#look_at(get_local_mouse_position())
-	else:
-		#global_position = lerp(global_position, Vector2.ZERO, 10 * delta)
-		rotation = lerp_angle(rotation, 0, 10 * delta)
+		if global_position.y < -50:
+			scale = Vector2(0.75, 0.75)
+		else:
+			scale = Vector2(1, 1)
+	#else:
+		##global_position = lerp(global_position, Vector2.ZERO, 10 * delta)
+		#rotation = lerp_angle(rotation, 0, 10 * delta)
 		
 func _input(event):
 	if selected:
@@ -46,17 +50,7 @@ func _input(event):
 					global_position = lerp(global_position, Vector2.ZERO, 1)
 					selected = false
 					global.SomethingBeingClickedRn = false;
-				#if cup_droppable:
-					#milk_anim.show()
-					#milk_still.hide()
-					#if mouse_position.x > cup_droppable_position.x:
-						#if Input.is_action_just_pressed("click"):
-							#milk_anim.play("pouring_milk_right")
-					#elif mouse_position.x < cup_droppable_position.x:
-						#if Input.is_action_just_pressed("click"):
-							#milk_anim.play("pouring_milk_left")
-				#else:
-					#selected = false
+					scale = Vector2(1, 1)
 
 
 func _on_cup_pick_up_body_entered(body):
