@@ -58,33 +58,4 @@ func _input(event):
 			selected = false
 			return
 
-		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			handle_liquid_selection(event)
 
-func handle_liquid_selection(event):
-	# Determine which liquid is droppable
-	var is_tea = tea_droppable and not liquid_station_global.tea_set_to_pour
-	var is_coffee = coffee_droppable and not liquid_station_global.coffee_set_to_pour
-	
-	# Reset selections
-	selected = false
-	global.SomethingBeingClickedRn = false
-
-	if is_tea:
-		liquid_station_global.tea_set_to_pour = true
-		print("tea can pour")
-		global_position = lerp(global_position, tea_droppable_position, 1)
-		selected = false
-
-	elif is_coffee:
-		liquid_station_global.coffee_set_to_pour = true
-		print("coffee can pour")
-		global_position = lerp(global_position, coffee_droppable_position, 1)
-		selected = false
-
-	else:
-		# Reset pouring state to allow re-selection
-		liquid_station_global.tea_set_to_pour = false
-		liquid_station_global.coffee_set_to_pour = false
-		global_position = lerp(global_position, Vector2.ZERO, 1)
-		scale = Vector2(1, 1)  # Reset scale if needed

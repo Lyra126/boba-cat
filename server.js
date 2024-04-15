@@ -6,6 +6,10 @@ const path = require('path');
 app.use(function(req, res, next) {
   res.header("Cross-Origin-Embedder-Policy", "require-corp");
   res.header("Cross-Origin-Opener-Policy", "same-origin");
+  res.header("SharedArrayBuffer", "true");
+  res.header("Access-Control-Allow-Origin", "*"); // or specify specific origins
+  res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
 

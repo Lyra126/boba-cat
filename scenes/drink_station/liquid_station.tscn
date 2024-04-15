@@ -140,21 +140,6 @@ script = ExtResource("1_p4uih")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Back" type="Button" parent="."]
-offset_left = -1231.0
-offset_top = 479.0
-offset_right = -921.0
-offset_bottom = 667.0
-text = "Back"
-
-[node name="Next" type="Button" parent="."]
-offset_left = 866.0
-offset_top = 508.0
-offset_right = 1115.0
-offset_bottom = 676.0
-text = "Next"
-metadata/_edit_use_anchors_ = true
-
 [node name="fridge" type="Node2D" parent="."]
 script = ExtResource("13_ay75l")
 
@@ -246,7 +231,6 @@ metadata/_edit_lock_ = true
 
 [node name="tea static body" type="StaticBody2D" parent="Liquid Types/tea/TeaContainer" groups=["tea-droppable"]]
 position = Vector2(-7.50415, 47.5255)
-scale = Vector2(1, 1)
 metadata/_edit_lock_ = true
 
 [node name="tea collission" type="CollisionShape2D" parent="Liquid Types/tea/TeaContainer/tea static body" groups=["tea-droppable"]]
@@ -357,8 +341,18 @@ size_flags_horizontal = 4
 texture = ExtResource("13_8b6s5")
 metadata/_edit_lock_ = true
 
-[connection signal="pressed" from="Back" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Next" to="." method="_on_button_2_pressed"]
+[node name="Back" type="Button" parent="."]
+offset_left = -1218.0
+offset_top = 522.0
+offset_right = -868.0
+offset_bottom = 688.0
+
+[node name="Next" type="Button" parent="."]
+offset_left = 904.0
+offset_top = 538.0
+offset_right = 1220.0
+offset_bottom = 686.0
+
 [connection signal="input_event" from="fridge/fridge_area" to="fridge" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="fridge/fridge_area" to="fridge" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="fridge/fridge_area" to="fridge" method="_on_area_2d_mouse_exited"]
@@ -380,3 +374,5 @@ metadata/_edit_lock_ = true
 [connection signal="input_event" from="Milk Types/milk/milkSprite/milkArea" to="Milk Types/milk" method="_on_milk_area_input_event"]
 [connection signal="animation_finished" from="Milk Types/milk/milk_animations" to="Milk Types/milk" method="_on_milk_animations_animation_finished"]
 [connection signal="animation_looped" from="Milk Types/milk/milk_animations" to="Milk Types/milk" method="_on_milk_animations_animation_looped"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
