@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qllqghcqw1h" path="res://assets/toppings.webp" id="2_rlgts"]
 
 [node name="Toppings" type="Node2D"]
+scale = Vector2(0.653345, 0.582413)
 script = ExtResource("1_ykgei")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -20,12 +21,14 @@ offset_left = -816.0
 offset_top = 310.0
 offset_right = -558.0
 offset_bottom = 420.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Next" type="Button" parent="."]
 offset_left = 558.0
 offset_top = 312.0
 offset_right = 764.0
 offset_bottom = 428.0
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

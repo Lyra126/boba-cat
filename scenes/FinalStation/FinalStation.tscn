@@ -38,6 +38,7 @@ size = Vector2(334, 481.5)
 size = Vector2(244.5, 382.75)
 
 [node name="FinalStation" type="Node2D"]
+scale = Vector2(0.454923, 0.444704)
 script = ExtResource("1_ixfov")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -54,6 +55,7 @@ offset_left = -1230.0
 offset_top = 555.0
 offset_right = -926.0
 offset_bottom = 687.0
+metadata/_edit_use_anchors_ = true
 
 [node name="SubmitOrder" type="Button" parent="."]
 offset_left = 887.0
@@ -61,6 +63,7 @@ offset_top = 546.0
 offset_right = 1215.0
 offset_bottom = 673.0
 text = "Submit Order"
+metadata/_edit_use_anchors_ = true
 
 [node name="cup" type="Node2D" parent="."]
 position = Vector2(-105, 88)
