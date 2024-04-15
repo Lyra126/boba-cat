@@ -6,6 +6,8 @@ var OrderForm
 @onready var timer = $Timer
 @onready var percentage_of_time
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Next.pressed.connect(self._on_next_pressed)

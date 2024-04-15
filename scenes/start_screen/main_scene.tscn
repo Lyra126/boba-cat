@@ -19,19 +19,19 @@ anchor_left = -6.516
 anchor_top = -5.12
 anchor_right = 6.379
 anchor_bottom = 5.783
-offset_left = 206.984
-offset_top = 101.04
-offset_right = -41.996
-offset_bottom = -47.0361
+offset_left = -379.016
+offset_top = -204.96
+offset_right = 542.004
+offset_bottom = 242.964
 texture = ExtResource("2_m3uqy")
 expand_mode = 1
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 0
-offset_left = -287.0
-offset_top = 185.0
-offset_right = -91.0
-offset_bottom = 336.0
+offset_left = -601.0
+offset_top = 273.0
+offset_right = -235.0
+offset_bottom = 520.0
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 1
@@ -39,10 +39,10 @@ anchors_preset = -1
 anchor_left = -0.168
 anchor_right = 2.126
 anchor_bottom = 1.643
-offset_left = -545.168
-offset_top = 185.0
-offset_right = -622.624
-offset_bottom = 189.844
+offset_left = -1113.17
+offset_top = 269.0
+offset_right = -1006.62
+offset_bottom = 369.844
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(79, 48)
