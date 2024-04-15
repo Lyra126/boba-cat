@@ -7,7 +7,6 @@ var milk_options = ["Oat Milk", "Almond Milk", "Regular Milk"]
 var topping_options = ["Popping Boba Pearls", "Dalgona Chunks", "Fruit Jelly"]
 
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	generate_order()

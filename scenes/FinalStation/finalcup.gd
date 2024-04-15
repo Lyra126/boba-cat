@@ -8,11 +8,6 @@ var coffee_droppable = false
 var smoothie_droppable = false
 
 var target_position
-var pouring_milk
-var pour_milk_left = false
-var pour_milk_right = true
-var tea_droppable_position = Vector2(-925,-125)
-var coffee_droppable_position = Vector2(-435,-125)
 var overlapMachine
 var finalStation
 
@@ -84,4 +79,3 @@ func addLid():
 	global_position.y = 50
 	$Lid.visible = true
 	
-

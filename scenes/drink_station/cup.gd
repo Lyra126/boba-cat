@@ -13,6 +13,7 @@ var pour_milk_left = false
 var pour_milk_right = true
 var tea_droppable_position = Vector2(-925,-125)
 var coffee_droppable_position = Vector2(-435,-125)
+var smoothie_droppable_position = Vector2(0,-125)
 
 func _ready():
 	global.SomethingBeingClickedRn = false;
@@ -50,6 +51,7 @@ func handle_liquid_selection(event):
 	# Determine which liquid is droppable
 	var is_tea = tea_droppable and not liquid_station_global.tea_set_to_pour
 	var is_coffee = coffee_droppable and not liquid_station_global.coffee_set_to_pour
+	var is_smoothie = smoothie_droppable and not liquid_station_global.smoothie_set_to_pour
 	
 	# Reset selections
 	selected = false
@@ -66,6 +68,12 @@ func handle_liquid_selection(event):
 		print("coffee can pour")
 		global_position = lerp(global_position, coffee_droppable_position, 1)
 		selected = false
+		
+	elif is_smoothie:
+		liquid_station_global.smoothie_set_to_pour = true
+		print("smoothie can pour")
+		global_position = lerp(global_position, smoothie_droppable_position, 1)
+		selected = false
 
 	else:
 		# Reset pouring state to allow re-selection
@@ -80,15 +88,22 @@ func _on_cup_pick_up_body_entered(body):
 		tea_droppable = true
 	elif body.is_in_group('coffee-droppable'):
 		coffee_droppable = true
+	elif body.is_in_group('smoothie-droppable'):
+		smoothie_droppable = true
 
 func _on_cup_pick_up_body_exited(body):
 	if body.is_in_group('tea-droppable'):
 		tea_droppable = false
 	elif body.is_in_group('coffee-droppable'):
 		coffee_droppable = false
+	elif body.is_in_group('smoothie-droppable'):
+		smoothie_droppable = false
 
 func _on_tea_nozzle_down_animation_finished():
 	selected = true
 	
 func _on_coffee_nozzle_down_animation_finished():
+	selected = true
+
+func _on_smoothie_nozzle_down_animation_finished():
 	selected = true

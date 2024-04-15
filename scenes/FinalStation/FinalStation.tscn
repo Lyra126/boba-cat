@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ceqg4sr663xx2"]
+[gd_scene load_steps=10 format=3 uid="uid://ceqg4sr663xx2"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://big5mwob0xacb" path="res://assets/finalStation.png" id="2_262ud"]
 [ext_resource type="Script" path="res://scenes/drink_station/cup.gd" id="3_jaj3k"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_gn2qx"]
-[ext_resource type="Texture2D" uid="uid://cjhj7pjoqngfc" path="res://assets/lid.png" id="6_dmgr3"]
 
 [sub_resource type="GDScript" id="GDScript_14f8c"]
 script/source = "extends StaticBody2D
@@ -94,15 +93,6 @@ texture = ExtResource("5_gn2qx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cup/cup_sprite/cup_pick_up"]
 position = Vector2(-23, 376.25)
 shape = SubResource("RectangleShape2D_c37ek")
-
-[node name="Lid" type="TextureRect" parent="finalcup"]
-visible = false
-offset_left = -222.667
-offset_top = 116.0
-offset_right = 452.333
-offset_bottom = 251.0
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("6_dmgr3")
 
 [node name="AttachLid" type="Area2D" parent="." groups=["droppable"]]
 

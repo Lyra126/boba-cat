@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://6gjivhk7a7oi"]
+[gd_scene load_steps=15 format=3 uid="uid://dao3gqqtxkuf8"]
 
 [ext_resource type="Texture2D" uid="uid://ooy1y8vts1b5" path="res://assets/download-removebg-preview.png" id="2_fwgpi"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="3_wtyj4"]
@@ -11,67 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dhe327i4mbvmg" path="res://assets/liquid_station/animations/milk-animation/right_3.png" id="10_ph5m0"]
 
 [sub_resource type="GDScript" id="GDScript_sjqiq"]
-script/source = "extends Node2D
-
-var cupsize : String = \"\"
-var small : Texture = preload(\"res://assets/small.png\")
-var medium : Texture = preload(\"res://assets/med.png\")
-var large : Texture = preload(\"res://assets/large.png\")
-var smallTea : Texture = preload(\"res://assets/smallTea.png\")
-var medTea : Texture = preload(\"res://assets/medTea.png\")
-var largeTea : Texture = preload(\"res://assets/largeTea.png\")
-var smallCoffee : Texture = preload(\"res://assets/smallCoffee.png\")
-var medCoffee : Texture = preload(\"res://assets/medCoffee.png\")
-var largeCoffee : Texture = preload(\"res://assets/largeCoffee.png\")
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	$Back.pressed.connect(self._on_back_pressed)
-	$Next.pressed.connect(self._on_next_pressed)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-func _on_back_pressed():
-	get_tree().change_scene_to_file(\"res://scenes/customer_line/customer_line.tscn\")
-
-
-func _on_next_pressed():
-	get_tree().change_scene_to_file(\"res://scenes/Toppings/Toppings.tscn\")
-
-func _on_largecup_pressed():
-	$cupsize/cup.set_texture(large)
-	cupsize = \"l\"
-
-func _on_medcup_pressed():
-	$cupsize/cup.set_texture(medium)
-	cupsize = \"m\"
-
-func _on_smallcup_pressed():
-	$cupsize/cup.set_texture(small)
-	cupsize = \"s\"
-
-func _on_tea_pressed():
-	if ($cupsize/cup.get_texture() != null && cupsize != null):
-		if(cupsize == \"s\"):
-			$cupsize/cup.set_texture(smallTea)
-		elif(cupsize == \"m\"):
-			$cupsize/cup.set_texture(medTea)
-		elif(cupsize == \"l\"):
-			$cupsize/cup.set_texture(largeTea)
-
-func _on_coffee_pressed():
-	if ($cupsize/cup.get_texture() != null && cupsize != null):
-		if(cupsize == \"s\"):
-			$cupsize/cup.set_texture(smallCoffee)
-		elif(cupsize == \"m\"):
-			$cupsize/cup.set_texture(medCoffee)
-		elif(cupsize == \"l\"):
-			$cupsize/cup.set_texture(largeCoffee)
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_457jg"]
 size = Vector2(94.3307, 160.305)
