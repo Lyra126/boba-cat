@@ -13,11 +13,15 @@ var pour_milk_left = false
 var pour_milk_right = true
 var tea_droppable_position = Vector2(-925,-125)
 var coffee_droppable_position = Vector2(-435,-125)
+var overlapMachine
+var finalStation
 
 func _ready():
 	global.SomethingBeingClickedRn = false;
 	liquid_station_global.coffee_set_to_pour = false;
 	liquid_station_global.tea_set_to_pour = false;
+	overlapMachine = preload("res://assets/overlapMachine.png")
+	finalStation = preload("res://assets/finalStation.png")
 
 func _process(delta):
 	pass
@@ -49,6 +53,7 @@ func _input(event):
 						global_position.x = -814.25
 						global_position.y = 50
 						scale = Vector2(0.5, 0.5)
+						addLid()
 					else:
 						global_position = lerp(global_position, Vector2.ZERO, 1)
 					selected = false
@@ -58,4 +63,25 @@ func _input(event):
 			selected = false
 			return
 
+func addLid():
+	#wait one second
+	await get_tree().create_timer(1.0).timeout
+	#move cup up
+	global_position.y = -30
+	#change to overlap machine
+	#var overlap = TextureRect.new()
+	#overlap.texture = overlapMachine
+	#overlap.position.x = -1100
+	#overlap.position.y = -650
+	#get_parent().add_child(overlap)
+	#add lid texture on top and fix it to the cup sprite
+	
+	#wait 3 seconds
+	await get_tree().create_timer(2.0).timeout
+	#change texture back to original background
+	#overlap.texture = null
+	#move cup back down
+	global_position.y = 50
+	$Lid.visible = true
+	
 
