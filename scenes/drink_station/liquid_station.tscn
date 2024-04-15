@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=37 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="4_t0iax"]
@@ -7,41 +7,27 @@
 [ext_resource type="Texture2D" uid="uid://bj3pkyveuc65m" path="res://assets/liquid_station/animations/milk-animation/left_1.png" id="6_j6uy8"]
 [ext_resource type="Texture2D" uid="uid://bay72gropcdqv" path="res://assets/liquid_station/animations/milk-animation/left_2.png" id="7_d4jhd"]
 [ext_resource type="Texture2D" uid="uid://bta4ltp57uqsf" path="res://assets/liquid_station/animations/milk-animation/left_3.png" id="8_icfsp"]
+[ext_resource type="Script" path="res://scenes/drink_station/tea.gd" id="9_1upol"]
 [ext_resource type="Texture2D" uid="uid://bdrjrgklxsjyp" path="res://assets/liquid_station/animations/milk-animation/right_1.png" id="9_8k3xs"]
+[ext_resource type="Texture2D" uid="uid://74gmr84m12k3" path="res://assets/liquid_station/assets/tea_container.png" id="9_lhlql"]
 [ext_resource type="Texture2D" uid="uid://dk6r4kuqj4c6s" path="res://assets/liquid_station/animations/milk-animation/right_2.png" id="10_uk5f7"]
+[ext_resource type="Texture2D" uid="uid://rld0v7fg280q" path="res://assets/liquid_station/assets/tea_nozzle_norm.png" id="10_ykvc5"]
 [ext_resource type="Texture2D" uid="uid://dhe327i4mbvmg" path="res://assets/liquid_station/animations/milk-animation/right_3.png" id="11_42k4m"]
+[ext_resource type="Texture2D" uid="uid://b0lb4fndwpn38" path="res://assets/liquid_station/assets/tea_nozzle_down.png" id="11_lqjrf"]
 [ext_resource type="Texture2D" uid="uid://26n3xfp856d1" path="res://assets/liquid_station/assets/fridge_closed.png" id="12_0otd3"]
+[ext_resource type="Texture2D" uid="uid://bee8e7v1r8ax4" path="res://assets/liquid_station/assets/coffee_nozzle_norm.png" id="12_kvpxp"]
+[ext_resource type="Texture2D" uid="uid://l43pqvu43upd" path="res://assets/liquid_station/assets/coffee_nozzle_down.png" id="13_3yeq2"]
 [ext_resource type="Texture2D" uid="uid://d3nshuiqio30k" path="res://assets/liquid_station/assets/background.png" id="13_8b6s5"]
 [ext_resource type="Script" path="res://scenes/drink_station/fridge.gd" id="13_ay75l"]
 [ext_resource type="Texture2D" uid="uid://b41ak5nosuxyo" path="res://assets/liquid_station/assets/fridge_open.png" id="14_dxkqo"]
+[ext_resource type="Script" path="res://scenes/drink_station/coffee.gd" id="14_sdbwb"]
 [ext_resource type="Texture2D" uid="uid://jastphwwwg00" path="res://assets/liquid_station/assets/fridge_semiopen.png" id="14_ulmdc"]
+[ext_resource type="Texture2D" uid="uid://yxp224hvvgxa" path="res://assets/liquid_station/assets/coffee_container.png" id="15_rw11m"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="16_it5lc"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="17_yy1ah"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4hdd"]
 size = Vector2(698, 823.5)
-
-[sub_resource type="GDScript" id="GDScript_fnsfk"]
-script/source = "extends StaticBody2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	modulate = Color(Color.MEDIUM_AQUAMARINE, 0.7)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	#print(global_position)
-	pass
-
-func select():
-	for child in get_tree().get_nodes_in_group(\"droppable\"):
-		child.deselect()
-	modulate = Color.BLUE
-
-func deselect():
-	modulate = Color.WHITE
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wx7pv"]
 size = Vector2(354, 487.883)
@@ -50,7 +36,44 @@ size = Vector2(354, 487.883)
 size = Vector2(334, 481.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lc8p1"]
-size = Vector2(396, 439)
+size = Vector2(515.277, 395.994)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_36dq1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ykvc5")
+}, {
+"duration": 15.0,
+"texture": ExtResource("11_lqjrf")
+}],
+"loop": false,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h640a"]
+size = Vector2(95.765, 121.289)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mawh3"]
+size = Vector2(532.501, 394.375)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y4w8q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_kvpxp")
+}, {
+"duration": 15.0,
+"texture": ExtResource("13_3yeq2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2p13q"]
+size = Vector2(124, 80.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_457jg"]
 size = Vector2(98.6572, 167.669)
@@ -117,6 +140,21 @@ script = ExtResource("1_p4uih")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="Back" type="Button" parent="."]
+offset_left = -1231.0
+offset_top = 479.0
+offset_right = -921.0
+offset_bottom = 667.0
+text = "Back"
+
+[node name="Next" type="Button" parent="."]
+offset_left = 866.0
+offset_top = 508.0
+offset_right = 1115.0
+offset_bottom = 676.0
+text = "Next"
+metadata/_edit_use_anchors_ = true
+
 [node name="fridge" type="Node2D" parent="."]
 script = ExtResource("13_ay75l")
 
@@ -153,33 +191,38 @@ texture = ExtResource("14_ulmdc")
 metadata/_edit_lock_ = true
 
 [node name="cup" type="Node2D" parent="."]
+z_index = 90
+position = Vector2(2.08165e-12, 2.08165e-12)
 script = ExtResource("6_68ikd")
 
 [node name="cup_spot" type="StaticBody2D" parent="cup" groups=["cup_drop", "droppable"]]
-script = SubResource("GDScript_fnsfk")
+position = Vector2(0, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cup/cup_spot"]
-position = Vector2(-21, 377)
+[node name="cup_spot_collision" type="CollisionShape2D" parent="cup/cup_spot"]
+position = Vector2(3, 436)
 shape = SubResource("RectangleShape2D_wx7pv")
 one_way_collision_margin = 0.0
 
 [node name="cup_sprite" type="Node2D" parent="cup"]
+position = Vector2(15, 321)
 
 [node name="FrontCup" type="Sprite2D" parent="cup/cup_sprite"]
-z_index = 5
-position = Vector2(-18, 362)
+z_index = 10
+position = Vector2(-13, 99)
 scale = Vector2(0.641872, 0.641872)
 texture = ExtResource("16_it5lc")
 
 [node name="BackCup" type="Sprite2D" parent="cup/cup_sprite"]
-position = Vector2(-18, 362)
+z_index = 2
+position = Vector2(-12, 100)
 scale = Vector2(0.642054, 0.642054)
 texture = ExtResource("17_yy1ah")
 
 [node name="cup_pick_up" type="Area2D" parent="cup/cup_sprite"]
+position = Vector2(-14, -320)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cup/cup_sprite/cup_pick_up"]
-position = Vector2(-23, 376.25)
+[node name="cup_pick_up_collision" type="CollisionShape2D" parent="cup/cup_sprite/cup_pick_up"]
+position = Vector2(1, 438)
 shape = SubResource("RectangleShape2D_dphaq")
 
 [node name="Liquid Types" type="Control" parent="."]
@@ -189,24 +232,104 @@ offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
-[node name="tea" type="StaticBody2D" parent="Liquid Types" groups=["tea-droppable"]]
+[node name="tea" type="Node2D" parent="Liquid Types"]
+rotation = 0.155301
+script = ExtResource("9_1upol")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Liquid Types/tea"]
-position = Vector2(-938, -266)
+[node name="TeaContainer" type="Sprite2D" parent="Liquid Types/tea"]
+z_index = 1
+position = Vector2(-971.243, -191.07)
+rotation = -0.155301
+scale = Vector2(0.79957, 0.79957)
+texture = ExtResource("9_lhlql")
+metadata/_edit_lock_ = true
+
+[node name="tea static body" type="StaticBody2D" parent="Liquid Types/tea/TeaContainer" groups=["tea-droppable"]]
+position = Vector2(-7.50415, 47.5255)
+scale = Vector2(1, 1)
+metadata/_edit_lock_ = true
+
+[node name="tea collission" type="CollisionShape2D" parent="Liquid Types/tea/TeaContainer/tea static body" groups=["tea-droppable"]]
+position = Vector2(5.00269, -19.1509)
 shape = SubResource("RectangleShape2D_lc8p1")
+
+[node name="tea nozzle" type="Node2D" parent="Liquid Types/tea"]
+
+[node name="TeaNozzleNorm" type="Sprite2D" parent="Liquid Types/tea/tea nozzle"]
+z_index = 3
+position = Vector2(-931.473, 30.6282)
+rotation = -0.155301
+scale = Vector2(0.495283, 0.495283)
+texture = ExtResource("10_ykvc5")
+
+[node name="tea nozzle down" type="AnimatedSprite2D" parent="Liquid Types/tea/tea nozzle"]
+z_index = 1
+position = Vector2(-931.085, 29.8639)
+rotation = -0.152043
+scale = Vector2(0.473615, 0.473615)
+sprite_frames = SubResource("SpriteFrames_36dq1")
+
+[node name="nozzle area" type="Area2D" parent="Liquid Types/tea/tea nozzle" groups=["tea-nozzle"]]
+
+[node name="nozzle collision" type="CollisionShape2D" parent="Liquid Types/tea/tea nozzle/nozzle area"]
+z_index = 3
+position = Vector2(-938.521, -7.92726)
+rotation = -1.72858
+scale = Vector2(0.880101, 1)
+shape = SubResource("RectangleShape2D_h640a")
+
+[node name="coffee" type="Node2D" parent="Liquid Types"]
+position = Vector2(2.08165e-12, 0)
+script = ExtResource("14_sdbwb")
+
+[node name="CoffeeContainer" type="Sprite2D" parent="Liquid Types/coffee"]
+z_index = 1
+position = Vector2(-442, -337)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("15_rw11m")
+metadata/_edit_lock_ = true
+
+[node name="coffee static body" type="StaticBody2D" parent="Liquid Types/coffee/CoffeeContainer" groups=["coffee-droppable"]]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Liquid Types/coffee/CoffeeContainer/coffee static body" groups=["coffee-droppable"]]
+position = Vector2(-1.25, 31.5625)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_mawh3")
+
+[node name="coffee nozzle" type="Node2D" parent="Liquid Types/coffee"]
+position = Vector2(2, 1)
+
+[node name="coffee nozzle norm" type="Sprite2D" parent="Liquid Types/coffee/coffee nozzle"]
+z_index = 1
+position = Vector2(-436, -114)
+scale = Vector2(0.495, 0.495)
+texture = ExtResource("12_kvpxp")
+
+[node name="coffee nozzle down" type="AnimatedSprite2D" parent="Liquid Types/coffee/coffee nozzle"]
+z_index = 1
+position = Vector2(-436, -113)
+scale = Vector2(0.495, 0.495)
+sprite_frames = SubResource("SpriteFrames_y4w8q")
+
+[node name="nozzle area" type="Area2D" parent="Liquid Types/coffee/coffee nozzle" groups=["coffee-nozzle"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Liquid Types/coffee/coffee nozzle/nozzle area"]
+z_index = 1
+position = Vector2(-435, -157)
+shape = SubResource("RectangleShape2D_2p13q")
 
 [node name="Milk Types" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
 
 [node name="milk" type="Node2D" parent="Milk Types"]
 script = ExtResource("4_t0iax")
 
 [node name="milkSprite" type="Sprite2D" parent="Milk Types/milk"]
-position = Vector2(902.187, -205.219)
+position = Vector2(882.188, -206.219)
 scale = Vector2(1.69881, 1.6212)
 texture = ExtResource("5_i0ygq")
 
@@ -219,7 +342,7 @@ position = Vector2(5.22693, -13.0812)
 shape = SubResource("RectangleShape2D_457jg")
 
 [node name="milk_animations" type="AnimatedSprite2D" parent="Milk Types/milk"]
-position = Vector2(901.188, -204.219)
+position = Vector2(881.188, -205.219)
 scale = Vector2(1.65893, 1.64399)
 sprite_frames = SubResource("SpriteFrames_bxd5m")
 animation = &"milk"
@@ -234,28 +357,26 @@ size_flags_horizontal = 4
 texture = ExtResource("13_8b6s5")
 metadata/_edit_lock_ = true
 
-[node name="Back" type="Button" parent="."]
-offset_left = -1206.0
-offset_top = 542.0
-offset_right = -826.0
-offset_bottom = 664.0
-
-[node name="Next" type="Button" parent="."]
-offset_left = 766.0
-offset_top = 544.0
-offset_right = 1206.0
-offset_bottom = 664.0
-
+[connection signal="pressed" from="Back" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_button_2_pressed"]
 [connection signal="input_event" from="fridge/fridge_area" to="fridge" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="fridge/fridge_area" to="fridge" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="fridge/fridge_area" to="fridge" method="_on_area_2d_mouse_exited"]
 [connection signal="body_entered" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_entered"]
 [connection signal="body_exited" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_exited"]
 [connection signal="input_event" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_input_event"]
+[connection signal="animation_finished" from="Liquid Types/tea/tea nozzle/tea nozzle down" to="cup" method="_on_tea_nozzle_down_animation_finished"]
+[connection signal="animation_finished" from="Liquid Types/tea/tea nozzle/tea nozzle down" to="Liquid Types/tea" method="_on_tea_nozzle_down_animation_finished"]
+[connection signal="input_event" from="Liquid Types/tea/tea nozzle/nozzle area" to="Liquid Types/tea" method="_on_nozzle_area_input_event"]
+[connection signal="mouse_entered" from="Liquid Types/tea/tea nozzle/nozzle area" to="Liquid Types/tea" method="_on_nozzle_area_mouse_entered"]
+[connection signal="mouse_exited" from="Liquid Types/tea/tea nozzle/nozzle area" to="Liquid Types/tea" method="_on_nozzle_area_mouse_exited"]
+[connection signal="animation_finished" from="Liquid Types/coffee/coffee nozzle/coffee nozzle down" to="cup" method="_on_coffee_nozzle_down_animation_finished"]
+[connection signal="animation_finished" from="Liquid Types/coffee/coffee nozzle/coffee nozzle down" to="Liquid Types/coffee" method="_on_coffee_nozzle_down_animation_finished"]
+[connection signal="input_event" from="Liquid Types/coffee/coffee nozzle/nozzle area" to="Liquid Types/coffee" method="_on_nozzle_area_input_event"]
+[connection signal="mouse_entered" from="Liquid Types/coffee/coffee nozzle/nozzle area" to="Liquid Types/coffee" method="_on_nozzle_area_mouse_entered"]
+[connection signal="mouse_exited" from="Liquid Types/coffee/coffee nozzle/nozzle area" to="Liquid Types/coffee" method="_on_nozzle_area_mouse_exited"]
 [connection signal="body_entered" from="Milk Types/milk/milkSprite/milkArea" to="Milk Types/milk" method="_on_milk_area_body_entered"]
 [connection signal="body_exited" from="Milk Types/milk/milkSprite/milkArea" to="Milk Types/milk" method="_on_milk_area_body_exited"]
 [connection signal="input_event" from="Milk Types/milk/milkSprite/milkArea" to="Milk Types/milk" method="_on_milk_area_input_event"]
 [connection signal="animation_finished" from="Milk Types/milk/milk_animations" to="Milk Types/milk" method="_on_milk_animations_animation_finished"]
 [connection signal="animation_looped" from="Milk Types/milk/milk_animations" to="Milk Types/milk" method="_on_milk_animations_animation_looped"]
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
