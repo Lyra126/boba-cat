@@ -1,18 +1,11 @@
-[gd_scene load_steps=44 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=41 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="4_t0iax"]
-[ext_resource type="Texture2D" uid="uid://c8gnhm635xay6" path="res://assets/milk.png" id="5_i0ygq"]
 [ext_resource type="Script" path="res://scenes/drink_station/cup.gd" id="6_68ikd"]
-[ext_resource type="Texture2D" uid="uid://bj3pkyveuc65m" path="res://assets/liquid_station/animations/milk-animation/left_1.png" id="6_j6uy8"]
-[ext_resource type="Texture2D" uid="uid://bay72gropcdqv" path="res://assets/liquid_station/animations/milk-animation/left_2.png" id="7_d4jhd"]
-[ext_resource type="Texture2D" uid="uid://bta4ltp57uqsf" path="res://assets/liquid_station/animations/milk-animation/left_3.png" id="8_icfsp"]
 [ext_resource type="Script" path="res://scenes/drink_station/tea.gd" id="9_1upol"]
-[ext_resource type="Texture2D" uid="uid://bdrjrgklxsjyp" path="res://assets/liquid_station/animations/milk-animation/right_1.png" id="9_8k3xs"]
 [ext_resource type="Texture2D" uid="uid://74gmr84m12k3" path="res://assets/liquid_station/assets/tea_container.png" id="9_lhlql"]
-[ext_resource type="Texture2D" uid="uid://dk6r4kuqj4c6s" path="res://assets/liquid_station/animations/milk-animation/right_2.png" id="10_uk5f7"]
 [ext_resource type="Texture2D" uid="uid://rld0v7fg280q" path="res://assets/liquid_station/assets/tea_nozzle_norm.png" id="10_ykvc5"]
-[ext_resource type="Texture2D" uid="uid://dhe327i4mbvmg" path="res://assets/liquid_station/animations/milk-animation/right_3.png" id="11_42k4m"]
 [ext_resource type="Texture2D" uid="uid://b0lb4fndwpn38" path="res://assets/liquid_station/assets/tea_nozzle_down.png" id="11_lqjrf"]
 [ext_resource type="Texture2D" uid="uid://26n3xfp856d1" path="res://assets/liquid_station/assets/fridge_closed.png" id="12_0otd3"]
 [ext_resource type="Texture2D" uid="uid://bee8e7v1r8ax4" path="res://assets/liquid_station/assets/coffee_nozzle_norm.png" id="12_kvpxp"]
@@ -29,6 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://bvw8gc7q4yu01" path="res://assets/liquid_station/assets/smoothie_container.png" id="18_rga2s"]
 [ext_resource type="Texture2D" uid="uid://glunx2udyoje" path="res://assets/liquid_station/assets/smoothie_nozzle_norm.png" id="19_s0ohr"]
 [ext_resource type="Texture2D" uid="uid://cb5q32768nk2s" path="res://assets/liquid_station/assets/smoothie_nozzle_down.png" id="20_hgr5q"]
+[ext_resource type="Texture2D" uid="uid://dcege7trhmgrl" path="res://assets/liquid_station/assets/milk_still.png" id="23_3q5kg"]
+[ext_resource type="Texture2D" uid="uid://bowlp63mrvm1" path="res://assets/liquid_station/animations/milk1.png" id="24_oass6"]
+[ext_resource type="Texture2D" uid="uid://dtbhaxgi3dfn4" path="res://assets/liquid_station/animations/milk2.png" id="25_kocgj"]
+[ext_resource type="Texture2D" uid="uid://djvtujhoyqrbd" path="res://assets/liquid_station/animations/milk3.png" id="26_jjmtj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4hdd"]
 size = Vector2(698, 823.5)
@@ -93,70 +90,58 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qsfi2"]
 size = Vector2(121, 82.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_457jg"]
-size = Vector2(98.6572, 167.669)
+size = Vector2(551.763, 926.427)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bxd5m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_i0ygq")
+"texture": ExtResource("23_3q5kg")
 }],
 "loop": true,
 "name": &"milk",
 "speed": 1.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_j6uy8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_d4jhd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_icfsp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_j6uy8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_d4jhd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_icfsp")
-}],
+"frames": [],
 "loop": false,
 "name": &"pouring_milk_left",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_8k3xs")
+"texture": ExtResource("24_oass6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_uk5f7")
+"texture": ExtResource("25_kocgj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_42k4m")
+"texture": ExtResource("26_jjmtj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_8k3xs")
+"texture": ExtResource("24_oass6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_uk5f7")
+"texture": ExtResource("25_kocgj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_42k4m")
+"texture": ExtResource("26_jjmtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_oass6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kocgj")
 }],
 "loop": false,
 "name": &"pouring_milk_right",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [node name="liquid_station" type="Node2D"]
@@ -242,7 +227,7 @@ texture = ExtResource("17_yy1ah")
 position = Vector2(-14, -320)
 
 [node name="cup_pick_up_collision" type="CollisionShape2D" parent="cup/cup_sprite/cup_pick_up"]
-position = Vector2(1, 438)
+position = Vector2(1.20243, 438.388)
 shape = SubResource("RectangleShape2D_dphaq")
 
 [node name="Liquid Types" type="Control" parent="."]
@@ -379,23 +364,26 @@ metadata/_edit_use_anchors_ = true
 script = ExtResource("4_t0iax")
 
 [node name="milkSprite" type="Sprite2D" parent="Milk Types/milk"]
-position = Vector2(882.188, -206.219)
-scale = Vector2(1.69881, 1.6212)
-texture = ExtResource("5_i0ygq")
+position = Vector2(883.124, -224.757)
+scale = Vector2(0.398727, 0.380182)
+texture = ExtResource("23_3q5kg")
 
 [node name="milkArea" type="Area2D" parent="Milk Types/milk/milkSprite"]
 position = Vector2(-4.23083, 16.6158)
 scale = Vector2(0.900931, 0.960653)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Milk Types/milk/milkSprite/milkArea"]
-position = Vector2(5.22693, -13.0812)
+position = Vector2(16.9575, -38.8179)
 shape = SubResource("RectangleShape2D_457jg")
 
 [node name="milk_animations" type="AnimatedSprite2D" parent="Milk Types/milk"]
-position = Vector2(881.188, -205.219)
-scale = Vector2(1.65893, 1.64399)
+visible = false
+position = Vector2(863.303, -251.415)
+scale = Vector2(0.399, 0.395)
 sprite_frames = SubResource("SpriteFrames_bxd5m")
-animation = &"milk"
+animation = &"pouring_milk_right"
+frame = 7
+frame_progress = 1.0
 
 [node name="background" type="TextureRect" parent="."]
 z_index = -6
@@ -407,6 +395,11 @@ scale = Vector2(0.9966, 0.989153)
 size_flags_horizontal = 4
 texture = ExtResource("13_8b6s5")
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -44.6437)
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
@@ -428,6 +421,7 @@ metadata/_edit_use_anchors_ = true
 [connection signal="mouse_exited" from="Liquid Types/coffee/coffee nozzle/nozzle area" to="Liquid Types/coffee" method="_on_nozzle_area_mouse_exited"]
 [connection signal="animation_finished" from="Liquid Types/smoothie/smoothie nozzle/smoothie nozzle down" to="cup" method="_on_smoothie_nozzle_down_animation_finished"]
 [connection signal="animation_finished" from="Liquid Types/smoothie/smoothie nozzle/smoothie nozzle down" to="Liquid Types/smoothie" method="_on_smoothie_nozzle_down_animation_finished"]
+[connection signal="input_event" from="Liquid Types/smoothie/smoothie nozzle/nozzle area" to="Liquid Types/smoothie" method="_on_nozzle_area_input_event"]
 [connection signal="mouse_entered" from="Liquid Types/smoothie/smoothie nozzle/nozzle area" to="Liquid Types/smoothie" method="_on_nozzle_area_mouse_entered"]
 [connection signal="mouse_exited" from="Liquid Types/smoothie/smoothie nozzle/nozzle area" to="Liquid Types/smoothie" method="_on_nozzle_area_mouse_exited"]
 [connection signal="body_entered" from="Milk Types/milk/milkSprite/milkArea" to="Milk Types/milk" method="_on_milk_area_body_entered"]

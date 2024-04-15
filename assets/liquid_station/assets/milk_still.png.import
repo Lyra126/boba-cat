@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk6r4kuqj4c6s"
-path="res://.godot/imported/right_2.png-d4d382ee97ca5b46445f9f5280bb763e.ctex"
+uid="uid://dcege7trhmgrl"
+path="res://.godot/imported/milk_still.png-e78822f1a43caa75ef667b8b3f0ebdc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/liquid_station/animations/milk-animation/right_2.png"
-dest_files=["res://.godot/imported/right_2.png-d4d382ee97ca5b46445f9f5280bb763e.ctex"]
+source_file="res://assets/liquid_station/assets/milk_still.png"
+dest_files=["res://.godot/imported/milk_still.png-e78822f1a43caa75ef667b8b3f0ebdc4.ctex"]
 
 [params]
 

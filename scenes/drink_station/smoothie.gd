@@ -12,7 +12,7 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_nozzle_area_input_event(viewport, event, shape_idx):
+func _on_nozzle_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_action_pressed("click") and liquid_station_global.smoothie_set_to_pour:
 		nozzle_anim.show()
 		nozzle_anim.play()
@@ -35,3 +35,4 @@ func _on_smoothie_nozzle_down_animation_finished() -> void:
 	nozzle_still.show()
 	nozzle_still.scale = Vector2(0.495,0.495)
 	liquid_station_global.nozzle_anim_playing = false
+

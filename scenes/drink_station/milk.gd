@@ -36,7 +36,7 @@ func _physics_process(delta):
 		global_position = lerp(global_position, target_position, 15 * delta) # Smooth animation during dragging
 		look_at(get_global_mouse_position())
 	else:
-		global_position = lerp(global_position, Vector2.ZERO, 10 * delta)
+		global_position = lerp(global_position, Vector2(575, 345), 10 * delta)
 		rotation = lerp_angle(rotation, 0, 10 * delta)
 		
 func _on_milk_animations_animation_finished():

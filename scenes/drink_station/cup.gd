@@ -11,9 +11,9 @@ var target_position
 var pouring_milk
 var pour_milk_left = false
 var pour_milk_right = true
-var tea_droppable_position = Vector2(-925,-125)
-var coffee_droppable_position = Vector2(-435,-125)
-var smoothie_droppable_position = Vector2(0,-125)
+var tea_droppable_position = Vector2(140,260)
+var coffee_droppable_position = Vector2(360,260)
+var smoothie_droppable_position = Vector2(590,260)
 
 func _ready():
 	global.SomethingBeingClickedRn = false;
@@ -33,7 +33,7 @@ func _physics_process(delta):
 	if selected:
 		target_position = get_global_mouse_position() - offset
 		global_position = lerp(global_position, target_position, 15 * delta)
-		if global_position.y < -100:
+		if global_position.y < 270:
 			scale = Vector2(0.75, 0.75)
 		else:
 			scale = Vector2(1, 1)
@@ -79,7 +79,8 @@ func handle_liquid_selection(event):
 		# Reset pouring state to allow re-selection
 		liquid_station_global.tea_set_to_pour = false
 		liquid_station_global.coffee_set_to_pour = false
-		global_position = lerp(global_position, Vector2.ZERO, 1)
+		liquid_station_global.smoothie_set_to_pour = false
+		global_position = lerp(global_position, Vector2(580,335), 1)
 		scale = Vector2(1, 1)  # Reset scale if needed
 	
 
