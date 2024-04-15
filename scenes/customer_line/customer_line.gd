@@ -6,8 +6,6 @@ var OrderForm
 @onready var timer = $Timer
 @onready var percentage_of_time
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Next.pressed.connect(self._on_next_pressed)
@@ -36,8 +34,6 @@ func _process(delta):
 		progress_bar.value = percentage_of_time
 	else:
 		progress_bar.value = 100
-
-   
 
 
 func _on_timer_timeout():

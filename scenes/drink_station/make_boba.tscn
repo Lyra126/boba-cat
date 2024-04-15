@@ -1,6 +1,5 @@
-[gd_scene load_steps=16 format=3 uid="uid://dbjnv7egbmojt"]
+[gd_scene load_steps=15 format=3 uid="uid://6gjivhk7a7oi"]
 
-[ext_resource type="Texture2D" uid="uid://d12y1p1qn73ff" path="res://assets/stations.webp" id="1_a7s1o"]
 [ext_resource type="Texture2D" uid="uid://ooy1y8vts1b5" path="res://assets/download-removebg-preview.png" id="2_fwgpi"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="3_wtyj4"]
 [ext_resource type="Texture2D" uid="uid://c8gnhm635xay6" path="res://assets/milk.png" id="4_21wc3"]
@@ -169,7 +168,6 @@ offset_left = -576.0
 offset_top = -321.0
 offset_right = 560.0
 offset_bottom = 324.0
-texture = ExtResource("1_a7s1o")
 metadata/_edit_use_anchors_ = true
 
 [node name="Back" type="Button" parent="."]

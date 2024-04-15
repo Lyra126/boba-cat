@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://big5mwob0xacb" path="res://assets/finalStation.png" id="2_262ud"]
-[ext_resource type="Script" path="res://scenes/FinalStation/finalcup.gd" id="3_j63vv"]
+[ext_resource type="Script" path="res://scenes/drink_station/cup.gd" id="3_jaj3k"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_gn2qx"]
 
@@ -62,35 +62,35 @@ offset_right = 1215.0
 offset_bottom = 673.0
 text = "Submit Order"
 
-[node name="finalcup" type="Node2D" parent="."]
+[node name="cup" type="Node2D" parent="."]
 position = Vector2(-105, 88)
 scale = Vector2(0.75, 0.75)
-script = ExtResource("3_j63vv")
+script = ExtResource("3_jaj3k")
 
-[node name="cup_spot" type="StaticBody2D" parent="finalcup" groups=["cup_drop", "droppable"]]
+[node name="cup_spot" type="StaticBody2D" parent="cup" groups=["cup_drop", "droppable"]]
 script = SubResource("GDScript_14f8c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="finalcup/cup_spot"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cup/cup_spot"]
 position = Vector2(-21, 377)
 shape = SubResource("RectangleShape2D_ijsh8")
 one_way_collision_margin = 0.0
 
-[node name="cup_sprite" type="Node2D" parent="finalcup"]
+[node name="cup_sprite" type="Node2D" parent="cup"]
 
-[node name="FrontCup" type="Sprite2D" parent="finalcup/cup_sprite"]
+[node name="FrontCup" type="Sprite2D" parent="cup/cup_sprite"]
 z_index = 5
 position = Vector2(-18, 362)
 scale = Vector2(0.641872, 0.641872)
 texture = ExtResource("4_hdwhh")
 
-[node name="BackCup" type="Sprite2D" parent="finalcup/cup_sprite"]
+[node name="BackCup" type="Sprite2D" parent="cup/cup_sprite"]
 position = Vector2(-18, 362)
 scale = Vector2(0.642054, 0.642054)
 texture = ExtResource("5_gn2qx")
 
-[node name="cup_pick_up" type="Area2D" parent="finalcup/cup_sprite"]
+[node name="cup_pick_up" type="Area2D" parent="cup/cup_sprite"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="finalcup/cup_sprite/cup_pick_up"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cup/cup_sprite/cup_pick_up"]
 position = Vector2(-23, 376.25)
 shape = SubResource("RectangleShape2D_c37ek")
 
@@ -102,9 +102,9 @@ shape = SubResource("RectangleShape2D_k3fie")
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="SubmitOrder" to="." method="_on_submit_order_pressed"]
-[connection signal="body_entered" from="finalcup/cup_sprite/cup_pick_up" to="finalcup" method="_on_cup_pick_up_body_entered"]
-[connection signal="body_exited" from="finalcup/cup_sprite/cup_pick_up" to="finalcup" method="_on_cup_pick_up_body_exited"]
-[connection signal="input_event" from="finalcup/cup_sprite/cup_pick_up" to="finalcup" method="_on_cup_pick_up_input_event"]
+[connection signal="body_entered" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_entered"]
+[connection signal="body_exited" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_exited"]
+[connection signal="input_event" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_input_event"]
 [connection signal="body_entered" from="AttachLid" to="." method="_on_attach_lid_body_entered"]
 [connection signal="body_exited" from="AttachLid" to="." method="_on_attach_lid_body_exited"]
 [connection signal="input_event" from="AttachLid" to="." method="_on_attach_lid_input_event"]

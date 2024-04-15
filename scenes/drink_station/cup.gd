@@ -23,7 +23,6 @@ func _process(delta):
 	pass
 	
 func _on_cup_pick_up_input_event(viewport, event, shape_idx):
-	
 	if Input.is_action_just_pressed("click") and not global.SomethingBeingClickedRn:
 		selected = true
 		global.SomethingBeingClickedRn = true;
@@ -40,20 +39,6 @@ func _physics_process(delta):
 
 func _input(event):
 	if selected:
-		if event is InputEventMouseButton:
-			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-				if tea_droppable:
-					print("placeholder")
-				else:
-					if global_position.x < -600 and global_position.x > -1000 and global_position.y < 100 and global_position.y > -500:
-						global_position.x = -814.25
-						global_position.y = 50
-						scale = Vector2(0.5, 0.5)
-					else:
-						global_position = lerp(global_position, Vector2.ZERO, 1)
-					selected = false
-					global.SomethingBeingClickedRn = false;
-					
 		if liquid_station_global.nozzle_anim_playing:
 			selected = false
 			return
@@ -88,3 +73,22 @@ func handle_liquid_selection(event):
 		liquid_station_global.coffee_set_to_pour = false
 		global_position = lerp(global_position, Vector2.ZERO, 1)
 		scale = Vector2(1, 1)  # Reset scale if needed
+	
+
+func _on_cup_pick_up_body_entered(body):
+	if body.is_in_group('tea-droppable'):
+		tea_droppable = true
+	elif body.is_in_group('coffee-droppable'):
+		coffee_droppable = true
+
+func _on_cup_pick_up_body_exited(body):
+	if body.is_in_group('tea-droppable'):
+		tea_droppable = false
+	elif body.is_in_group('coffee-droppable'):
+		coffee_droppable = false
+
+func _on_tea_nozzle_down_animation_finished():
+	selected = true
+	
+func _on_coffee_nozzle_down_animation_finished():
+	selected = true
