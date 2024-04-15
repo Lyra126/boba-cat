@@ -25,7 +25,7 @@ function threadPrintErr() {
 }
 function threadAlert() {
   var text = Array.prototype.slice.call(arguments).join(' ');
-  postMessage({cmd: 'alert', text: text, threadId: Module['_pthread_self']()});
+  postMessage({cmd: 'alert', text, threadId: Module['_pthread_self']()});
 }
 // We don't need out() for now, but may need to add it if we want to use it
 // here. Or, if this code all moves into the main JS, that problem will go
@@ -33,6 +33,7 @@ function threadAlert() {
 var out = () => { throw 'out() is not defined in worker.js.'; }
 var err = threadPrintErr;
 self.alert = threadAlert;
+var dbg = threadPrintErr;
 
 Module['instantiateWasm'] = (info, receiveInstance) => {
   // Instantiate from the module posted from the main thread.
@@ -50,7 +51,7 @@ Module['instantiateWasm'] = (info, receiveInstance) => {
 // Turn unhandled rejected promises into errors so that the main thread will be
 // notified about them.
 self.onunhandledrejection = (e) => {
-  throw e.reason ?? e;
+  throw e.reason || e;
 };
 
 function handleMessage(e) {
@@ -80,8 +81,8 @@ function handleMessage(e) {
       // Use `const` here to ensure that the variable is scoped only to
       // that iteration, allowing safe reference from a closure.
       for (const handler of e.data.handlers) {
-        Module[handler] = function() {
-          postMessage({ cmd: 'callHandler', handler, args: [...arguments] });
+        Module[handler] = (...args) => {
+          postMessage({ cmd: 'callHandler', handler, args: args });
         }
       }
 
@@ -103,7 +104,7 @@ function handleMessage(e) {
       Godot(Module);
     } else if (e.data.cmd === 'run') {
       // Pass the thread address to wasm to store it for fast access.
-      Module['__emscripten_thread_init'](e.data.pthread_ptr, /*isMainBrowserThread=*/0, /*isMainRuntimeThread=*/0, /*canBlock=*/1);
+      Module['__emscripten_thread_init'](e.data.pthread_ptr, /*is_main=*/0, /*is_runtime=*/0, /*can_block=*/1);
 
       // Await mailbox notifications with `Atomics.waitAsync` so we can start
       // using the fast `Atomics.notify` notification path.
@@ -143,19 +144,15 @@ function handleMessage(e) {
       // The received message looks like something that should be handled by this message
       // handler, (since there is a e.data.cmd field present), but is not one of the
       // recognized commands:
-      err('worker.js received unknown command ' + e.data.cmd);
+      err(`worker.js received unknown command ${e.data.cmd}`);
       err(e.data);
     }
   } catch(ex) {
-    err('worker.js onmessage() captured an uncaught exception: ' + ex);
-    if (ex && ex.stack) err(ex.stack);
-    if (Module['__emscripten_thread_crashed']) {
-      Module['__emscripten_thread_crashed']();
-    }
+    err(`worker.js onmessage() captured an uncaught exception: ${ex}`);
+    if (ex?.stack) err(ex.stack);
+    Module['__emscripten_thread_crashed']?.();
     throw ex;
   }
 };
 
 self.onmessage = handleMessage;
-
-
