@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scenes/customer_line/Sprite2D.gd" id="6_qt0fo"]
 
 [node name="customer-line" type="Node2D"]
+scale = Vector2(0.452582, 0.449998)
 script = ExtResource("1_go1ct")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -26,6 +27,7 @@ offset_top = 609.0
 offset_right = 1498.0
 offset_bottom = 781.0
 text = "Next"
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 offset_left = -70.0
@@ -36,6 +38,7 @@ scale = Vector2(0.5, 0.5)
 fill_mode = 4
 texture_under = ExtResource("3_o1auf")
 texture_progress = ExtResource("4_g6yia")
+metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0
