@@ -34,19 +34,7 @@ offset_top = 144.0
 offset_right = -63.0
 offset_bottom = 257.0
 
-[node name="Quit" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.168
-anchor_right = 2.126
-anchor_bottom = 1.643
-offset_left = -444.168
-offset_top = 146.0
-offset_right = -557.624
-offset_bottom = 109.844
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(79, 48)
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
