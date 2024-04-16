@@ -23,7 +23,7 @@ func _process(delta):
 	pass
 
 func _on_milk_area_input_event(viewport, event, shape_idx):
-	if Input.is_action_pressed("click") and not global.SomethingBeingClickedRn:
+	if Input.is_action_pressed("click") and not global.SomethingBeingClickedRn and liquid_station_global.fridge_open:
 		selected = true
 		global.SomethingBeingClickedRn = true;
 		offset = get_global_mouse_position() - global_position

@@ -108,3 +108,4 @@ func _on_coffee_nozzle_down_animation_finished():
 
 func _on_smoothie_nozzle_down_animation_finished():
 	selected = true
+

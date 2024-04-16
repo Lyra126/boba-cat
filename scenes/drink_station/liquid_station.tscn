@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=55 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="4_t0iax"]
@@ -31,6 +31,11 @@
 [ext_resource type="Texture2D" uid="uid://7b2oxm52g6lm" path="res://assets/liquid_station/animations/oat-milk-animation/oat1.png" id="28_8rug6"]
 [ext_resource type="Texture2D" uid="uid://bfhoj7ar02ods" path="res://assets/liquid_station/animations/oat-milk-animation/oat2.png" id="29_ft0m0"]
 [ext_resource type="Texture2D" uid="uid://cnwykukjwyk71" path="res://assets/liquid_station/animations/oat-milk-animation/oat3.png" id="30_3hbfx"]
+[ext_resource type="Script" path="res://scenes/drink_station/almond_milk.gd" id="31_t7563"]
+[ext_resource type="Texture2D" uid="uid://t2sne5rpi7lv" path="res://assets/liquid_station/assets/almond_still.png" id="32_3hf2e"]
+[ext_resource type="Texture2D" uid="uid://bn3a4ln7ljd83" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond1.png" id="33_iadle"]
+[ext_resource type="Texture2D" uid="uid://c3bfhfrvyg62l" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond2.png" id="34_1f30t"]
+[ext_resource type="Texture2D" uid="uid://pa157pyurqxk" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond3.png" id="35_ux4h3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4hdd"]
 size = Vector2(698, 823.5)
@@ -184,6 +189,41 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsg06"]
+size = Vector2(493.865, 790.329)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_youfl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_iadle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_1f30t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ux4h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_iadle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_1f30t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ux4h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_iadle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_1f30t")
+}],
+"loop": false,
+"name": &"default",
+"speed": 7.0
+}]
+
 [node name="liquid_station" type="Node2D"]
 position = Vector2(581, 343)
 scale = Vector2(0.45407, 0.425592)
@@ -206,10 +246,11 @@ text = "Next"
 metadata/_edit_use_anchors_ = true
 
 [node name="fridge" type="Node2D" parent="."]
+z_index = 2
 script = ExtResource("13_ay75l")
 
 [node name="fridge_area" type="Area2D" parent="fridge"]
-position = Vector2(706, -29)
+position = Vector2(695.928, -23.4967)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fridge/fridge_area"]
 position = Vector2(16, -44)
@@ -217,7 +258,7 @@ shape = SubResource("RectangleShape2D_l4hdd")
 
 [node name="FridgeClosed" type="Sprite2D" parent="fridge"]
 visible = false
-z_index = 2
+z_index = 5
 position = Vector2(728.17, -54.71)
 scale = Vector2(1.06, 1.06)
 texture = ExtResource("12_0otd3")
@@ -231,13 +272,12 @@ metadata/_edit_lock_ = true
 
 [node name="FridgeSemiopen" type="Sprite2D" parent="fridge"]
 visible = false
-z_index = 2
+z_index = 5
 position = Vector2(726.17, -56.71)
 scale = Vector2(1.06, 1.06)
 texture = ExtResource("14_ulmdc")
 
 [node name="cup" type="Node2D" parent="."]
-z_index = 90
 position = Vector2(2.08165e-12, 2.08165e-12)
 script = ExtResource("6_68ikd")
 
@@ -259,7 +299,7 @@ scale = Vector2(0.641872, 0.641872)
 texture = ExtResource("16_it5lc")
 
 [node name="BackCup" type="Sprite2D" parent="cup/cup_sprite"]
-z_index = 2
+z_index = -10
 position = Vector2(-12, 100)
 scale = Vector2(0.642054, 0.642054)
 texture = ExtResource("17_yy1ah")
@@ -283,7 +323,7 @@ rotation = 0.155301
 script = ExtResource("9_1upol")
 
 [node name="TeaContainer" type="Sprite2D" parent="Liquid Types/tea"]
-z_index = 1
+z_index = -15
 position = Vector2(-1010.53, -186.325)
 rotation = -0.155301
 scale = Vector2(0.79957, 0.79957)
@@ -297,6 +337,7 @@ position = Vector2(2.56189, -19.151)
 shape = SubResource("RectangleShape2D_lc8p1")
 
 [node name="tea nozzle" type="Node2D" parent="Liquid Types/tea"]
+z_index = 5
 
 [node name="TeaNozzleNorm" type="Sprite2D" parent="Liquid Types/tea/tea nozzle"]
 z_index = 3
@@ -327,7 +368,7 @@ position = Vector2(2.08165e-12, 0)
 script = ExtResource("14_sdbwb")
 
 [node name="CoffeeContainer" type="Sprite2D" parent="Liquid Types/coffee"]
-z_index = 1
+z_index = -15
 position = Vector2(-473.4, -333.2)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("15_rw11m")
@@ -340,6 +381,7 @@ scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_mawh3")
 
 [node name="coffee nozzle" type="Node2D" parent="Liquid Types/coffee"]
+z_index = 5
 position = Vector2(0, 2)
 
 [node name="coffee nozzle norm" type="Sprite2D" parent="Liquid Types/coffee/coffee nozzle"]
@@ -366,6 +408,7 @@ shape = SubResource("RectangleShape2D_2p13q")
 script = ExtResource("17_rhxvo")
 
 [node name="smoothie container" type="Sprite2D" parent="Liquid Types/smoothie"]
+z_index = -15
 position = Vector2(19, -336)
 scale = Vector2(0.783019, 0.783019)
 texture = ExtResource("18_rga2s")
@@ -377,6 +420,7 @@ position = Vector2(-1.27711, 30.012)
 shape = SubResource("RectangleShape2D_d2gpp")
 
 [node name="smoothie nozzle" type="Node2D" parent="Liquid Types/smoothie"]
+z_index = 5
 
 [node name="smoothie nozzle norm" type="Sprite2D" parent="Liquid Types/smoothie/smoothie nozzle"]
 position = Vector2(23, -117)
@@ -405,6 +449,7 @@ metadata/_edit_use_anchors_ = true
 script = ExtResource("4_t0iax")
 
 [node name="milkSprite" type="Sprite2D" parent="Milk Types/milk"]
+z_index = 3
 position = Vector2(883.124, -224.757)
 scale = Vector2(0.398727, 0.380182)
 texture = ExtResource("23_3q5kg")
@@ -428,6 +473,7 @@ animation = &"pouring_milk_right"
 script = ExtResource("26_dee6e")
 
 [node name="oatSprite" type="Sprite2D" parent="Milk Types/oat milk"]
+z_index = 3
 position = Vector2(607.836, -202.072)
 scale = Vector2(0.410198, 0.410198)
 texture = ExtResource("27_8b3bb")
@@ -436,18 +482,39 @@ texture = ExtResource("27_8b3bb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Milk Types/oat milk/oatSprite/oatArea"]
 position = Vector2(-2.49414, -54.1891)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ahek8")
 
 [node name="oat_animations" type="AnimatedSprite2D" parent="Milk Types/oat milk"]
+visible = false
 position = Vector2(572.599, -251.414)
 scale = Vector2(0.41, 0.41)
 sprite_frames = SubResource("SpriteFrames_rck20")
 frame = 7
 frame_progress = 1.0
 
+[node name="almond milk" type="Node2D" parent="Milk Types"]
+script = ExtResource("31_t7563")
+
+[node name="almondSprite" type="Sprite2D" parent="Milk Types/almond milk"]
+z_index = 3
+position = Vector2(777.413, 136.281)
+scale = Vector2(0.396434, 0.396434)
+texture = ExtResource("32_3hf2e")
+
+[node name="almondArea" type="Area2D" parent="Milk Types/almond milk/almondSprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Milk Types/almond milk/almondSprite/almondArea"]
+position = Vector2(8.61035, 37.8545)
+shape = SubResource("RectangleShape2D_dsg06")
+
+[node name="almond_animations" type="AnimatedSprite2D" parent="Milk Types/almond milk"]
+visible = false
+position = Vector2(693.726, 145.679)
+scale = Vector2(0.407465, 0.407465)
+sprite_frames = SubResource("SpriteFrames_youfl")
+
 [node name="background" type="TextureRect" parent="."]
-z_index = -6
+z_index = -20
 offset_left = -1274.0
 offset_top = -804.0
 offset_right = 1276.0
@@ -493,3 +560,7 @@ metadata/_edit_lock_ = true
 [connection signal="body_exited" from="Milk Types/oat milk/oatSprite/oatArea" to="Milk Types/oat milk" method="_on_oat_area_body_exited"]
 [connection signal="input_event" from="Milk Types/oat milk/oatSprite/oatArea" to="Milk Types/oat milk" method="_on_oat_area_input_event"]
 [connection signal="animation_finished" from="Milk Types/oat milk/oat_animations" to="Milk Types/oat milk" method="_on_oat_animations_animation_finished"]
+[connection signal="body_shape_entered" from="Milk Types/almond milk/almondSprite/almondArea" to="Milk Types/almond milk" method="_on_almond_area_body_shape_entered"]
+[connection signal="body_shape_exited" from="Milk Types/almond milk/almondSprite/almondArea" to="Milk Types/almond milk" method="_on_almond_area_body_shape_exited"]
+[connection signal="input_event" from="Milk Types/almond milk/almondSprite/almondArea" to="Milk Types/almond milk" method="_on_almond_area_input_event"]
+[connection signal="animation_finished" from="Milk Types/almond milk/almond_animations" to="Milk Types/almond milk" method="_on_almond_animations_animation_finished"]
