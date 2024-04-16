@@ -30,7 +30,7 @@ func _physics_process(delta):
 		rotation = lerp_angle(rotation, 0, 10 * delta)
 	
 func smooth_back(delta):
-	global_position = lerp(global_position, Vector2(540, 340), 10 * delta)
+	global_position = lerp(global_position, Vector2.ZERO, 10 * delta)
 
 func _input(event):
 	if selected:

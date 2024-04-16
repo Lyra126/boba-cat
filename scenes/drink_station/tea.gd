@@ -21,7 +21,6 @@ func _on_nozzle_area_input_event(viewport, event, shape_idx):
 		liquid_station_global.tea_set_to_pour = false
 
 func _on_nozzle_area_mouse_entered():
-	print(liquid_station_global.tea_set_to_pour)
 	if liquid_station_global.tea_set_to_pour:
 		nozzle_still.scale = Vector2(0.58,0.58)
 

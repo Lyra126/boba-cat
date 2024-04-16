@@ -1,6 +1,9 @@
-[gd_scene load_steps=55 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=60 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
+[ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
+[ext_resource type="Texture2D" uid="uid://d0cw56n8po7l5" path="res://assets/liquid_station/assets/syrup.png" id="3_lew52"]
+[ext_resource type="Texture2D" uid="uid://b4wlosyyn6c26" path="res://assets/liquid_station/assets/syrup_down.png" id="4_g2ujl"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="4_t0iax"]
 [ext_resource type="Script" path="res://scenes/drink_station/cup.gd" id="6_68ikd"]
 [ext_resource type="Script" path="res://scenes/drink_station/tea.gd" id="9_1upol"]
@@ -36,6 +39,23 @@
 [ext_resource type="Texture2D" uid="uid://bn3a4ln7ljd83" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond1.png" id="33_iadle"]
 [ext_resource type="Texture2D" uid="uid://c3bfhfrvyg62l" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond2.png" id="34_1f30t"]
 [ext_resource type="Texture2D" uid="uid://pa157pyurqxk" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond3.png" id="35_ux4h3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pyus"]
+size = Vector2(468.88, 368.044)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nvx2t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lew52")
+}, {
+"duration": 5.0,
+"texture": ExtResource("4_g2ujl")
+}],
+"loop": false,
+"name": &"default",
+"speed": 7.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4hdd"]
 size = Vector2(698, 823.5)
@@ -245,6 +265,27 @@ offset_bottom = 676.0
 text = "Next"
 metadata/_edit_use_anchors_ = true
 
+[node name="sugar syrup" type="Node2D" parent="."]
+z_index = 30
+script = ExtResource("2_frsv4")
+
+[node name="syrupSprite" type="Sprite2D" parent="sugar syrup"]
+z_index = 15
+position = Vector2(-737.772, 357.15)
+scale = Vector2(0.571312, 0.608632)
+texture = ExtResource("3_lew52")
+
+[node name="syrup area" type="Area2D" parent="sugar syrup/syrupSprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sugar syrup/syrupSprite/syrup area"]
+position = Vector2(0.000108719, 14.293)
+shape = SubResource("RectangleShape2D_3pyus")
+
+[node name="syrup_down" type="AnimatedSprite2D" parent="sugar syrup"]
+position = Vector2(-737.772, 361.849)
+scale = Vector2(0.589713, 0.611802)
+sprite_frames = SubResource("SpriteFrames_nvx2t")
+
 [node name="fridge" type="Node2D" parent="."]
 z_index = 2
 script = ExtResource("13_ay75l")
@@ -428,8 +469,8 @@ scale = Vector2(0.495, 0.495)
 texture = ExtResource("19_s0ohr")
 
 [node name="smoothie nozzle down" type="AnimatedSprite2D" parent="Liquid Types/smoothie/smoothie nozzle"]
-position = Vector2(23, -117)
-scale = Vector2(0.495, 0.495)
+position = Vector2(22.9866, -116.511)
+scale = Vector2(0.495039, 0.496115)
 sprite_frames = SubResource("SpriteFrames_p2ufx")
 
 [node name="nozzle area" type="Area2D" parent="Liquid Types/smoothie/smoothie nozzle" groups=["smoothie-nozzle"]]
@@ -531,6 +572,10 @@ metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="body_entered" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_entered"]
+[connection signal="body_exited" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_exited"]
+[connection signal="input_event" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_input_event"]
+[connection signal="animation_finished" from="sugar syrup/syrup_down" to="sugar syrup" method="_on_syrup_down_animation_finished"]
 [connection signal="input_event" from="fridge/fridge_area" to="fridge" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="fridge/fridge_area" to="fridge" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="fridge/fridge_area" to="fridge" method="_on_area_2d_mouse_exited"]

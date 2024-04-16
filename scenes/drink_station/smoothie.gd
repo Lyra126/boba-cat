@@ -21,7 +21,6 @@ func _on_nozzle_area_input_event(viewport: Node, event: InputEvent, shape_idx: i
 		liquid_station_global.smoothie_set_to_pour = false
 
 func _on_nozzle_area_mouse_entered():
-	print(liquid_station_global.smoothie_set_to_pour)
 	if liquid_station_global.smoothie_set_to_pour:
 		nozzle_still.scale = Vector2(0.58,0.58)
 
