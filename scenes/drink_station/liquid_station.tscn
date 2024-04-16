@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=48 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="4_t0iax"]
@@ -23,9 +23,14 @@
 [ext_resource type="Texture2D" uid="uid://glunx2udyoje" path="res://assets/liquid_station/assets/smoothie_nozzle_norm.png" id="19_s0ohr"]
 [ext_resource type="Texture2D" uid="uid://cb5q32768nk2s" path="res://assets/liquid_station/assets/smoothie_nozzle_down.png" id="20_hgr5q"]
 [ext_resource type="Texture2D" uid="uid://dcege7trhmgrl" path="res://assets/liquid_station/assets/milk_still.png" id="23_3q5kg"]
-[ext_resource type="Texture2D" uid="uid://bowlp63mrvm1" path="res://assets/liquid_station/animations/milk1.png" id="24_oass6"]
-[ext_resource type="Texture2D" uid="uid://dtbhaxgi3dfn4" path="res://assets/liquid_station/animations/milk2.png" id="25_kocgj"]
-[ext_resource type="Texture2D" uid="uid://djvtujhoyqrbd" path="res://assets/liquid_station/animations/milk3.png" id="26_jjmtj"]
+[ext_resource type="Texture2D" uid="uid://bowlp63mrvm1" path="res://assets/liquid_station/animations/milk-animation/milk1.png" id="24_oass6"]
+[ext_resource type="Texture2D" uid="uid://dtbhaxgi3dfn4" path="res://assets/liquid_station/animations/milk-animation/milk2.png" id="25_kocgj"]
+[ext_resource type="Script" path="res://scenes/drink_station/oat_milk.gd" id="26_dee6e"]
+[ext_resource type="Texture2D" uid="uid://djvtujhoyqrbd" path="res://assets/liquid_station/animations/milk-animation/milk3.png" id="26_jjmtj"]
+[ext_resource type="Texture2D" uid="uid://co0tmv6jovvjv" path="res://assets/liquid_station/assets/oat-milk-still.png" id="27_8b3bb"]
+[ext_resource type="Texture2D" uid="uid://7b2oxm52g6lm" path="res://assets/liquid_station/animations/oat-milk-animation/oat1.png" id="28_8rug6"]
+[ext_resource type="Texture2D" uid="uid://bfhoj7ar02ods" path="res://assets/liquid_station/animations/oat-milk-animation/oat2.png" id="29_ft0m0"]
+[ext_resource type="Texture2D" uid="uid://cnwykukjwyk71" path="res://assets/liquid_station/animations/oat-milk-animation/oat3.png" id="30_3hbfx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4hdd"]
 size = Vector2(698, 823.5)
@@ -144,6 +149,41 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahek8"]
+size = Vector2(348.596, 818.667)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rck20"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_8rug6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ft0m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_3hbfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_8rug6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ft0m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_3hbfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_8rug6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ft0m0")
+}],
+"loop": false,
+"name": &"default",
+"speed": 7.0
+}]
+
 [node name="liquid_station" type="Node2D"]
 position = Vector2(581, 343)
 scale = Vector2(0.45407, 0.425592)
@@ -187,6 +227,7 @@ z_index = -2
 position = Vector2(728.17, -55.71)
 scale = Vector2(1.06, 1.06)
 texture = ExtResource("14_dxkqo")
+metadata/_edit_lock_ = true
 
 [node name="FridgeSemiopen" type="Sprite2D" parent="fridge"]
 visible = false
@@ -382,6 +423,26 @@ position = Vector2(863.303, -251.415)
 scale = Vector2(0.399, 0.395)
 sprite_frames = SubResource("SpriteFrames_bxd5m")
 animation = &"pouring_milk_right"
+
+[node name="oat milk" type="Node2D" parent="Milk Types"]
+script = ExtResource("26_dee6e")
+
+[node name="oatSprite" type="Sprite2D" parent="Milk Types/oat milk"]
+position = Vector2(607.836, -202.072)
+scale = Vector2(0.410198, 0.410198)
+texture = ExtResource("27_8b3bb")
+
+[node name="oatArea" type="Area2D" parent="Milk Types/oat milk/oatSprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Milk Types/oat milk/oatSprite/oatArea"]
+position = Vector2(-2.49414, -54.1891)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ahek8")
+
+[node name="oat_animations" type="AnimatedSprite2D" parent="Milk Types/oat milk"]
+position = Vector2(572.599, -251.414)
+scale = Vector2(0.41, 0.41)
+sprite_frames = SubResource("SpriteFrames_rck20")
 frame = 7
 frame_progress = 1.0
 
@@ -428,4 +489,7 @@ metadata/_edit_lock_ = true
 [connection signal="body_exited" from="Milk Types/milk/milkSprite/milkArea" to="Milk Types/milk" method="_on_milk_area_body_exited"]
 [connection signal="input_event" from="Milk Types/milk/milkSprite/milkArea" to="Milk Types/milk" method="_on_milk_area_input_event"]
 [connection signal="animation_finished" from="Milk Types/milk/milk_animations" to="Milk Types/milk" method="_on_milk_animations_animation_finished"]
-[connection signal="animation_looped" from="Milk Types/milk/milk_animations" to="Milk Types/milk" method="_on_milk_animations_animation_looped"]
+[connection signal="body_entered" from="Milk Types/oat milk/oatSprite/oatArea" to="Milk Types/oat milk" method="_on_oat_area_body_entered"]
+[connection signal="body_exited" from="Milk Types/oat milk/oatSprite/oatArea" to="Milk Types/oat milk" method="_on_oat_area_body_exited"]
+[connection signal="input_event" from="Milk Types/oat milk/oatSprite/oatArea" to="Milk Types/oat milk" method="_on_oat_area_input_event"]
+[connection signal="animation_finished" from="Milk Types/oat milk/oat_animations" to="Milk Types/oat milk" method="_on_oat_animations_animation_finished"]
