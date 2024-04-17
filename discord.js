@@ -30,4 +30,7 @@ async function setup() {
   auth = await discordSdk.commands.authenticate({
     access_token,
   });
+
+  await discordSdk.subscribe("activity_layout_mode_update", eventHandler, args);
+
 }

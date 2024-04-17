@@ -10,10 +10,9 @@
 [ext_resource type="Script" path="res://scenes/Toppings/ladle.gd" id="8_bi727"]
 
 [node name="Toppings" type="Node2D"]
-scale = Vector2(0.653345, 0.582413)
+position = Vector2(800, 448)
+scale = Vector2(0.907088, 0.814889)
 script = ExtResource("1_ykgei")
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="bar" type="Node2D" parent="."]
 

@@ -11,11 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/hoverNext.png" id="9_68g1n"]
 
 [node name="customer-line" type="Node2D"]
-scale = Vector2(0.452582, 0.449998)
+position = Vector2(624, 398)
+scale = Vector2(0.636324, 0.632691)
 script = ExtResource("1_go1ct")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(290, 81)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -976.0
@@ -23,6 +21,7 @@ offset_top = -617.0
 offset_right = 1545.0
 offset_bottom = 801.0
 texture = ExtResource("2_ghg8k")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 offset_left = -70.0
@@ -49,10 +48,11 @@ offset_left = 1106.98
 offset_top = 448.891
 offset_right = 2106.98
 offset_bottom = 1448.89
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.4, 0.402615)
 texture_normal = ExtResource("7_ips1v")
 texture_pressed = ExtResource("8_kueyq")
 texture_hover = ExtResource("9_68g1n")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

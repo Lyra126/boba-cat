@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://big5mwob0xacb" path="res://assets/finalStation.png" id="2_262ud"]
-[ext_resource type="Script" path="res://scenes/drink_station/cup.gd" id="3_jaj3k"]
+[ext_resource type="Script" path="res://scenes/FinalStation/finalcup.gd" id="3_fdyuf"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_gn2qx"]
 [ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/normalBack.png" id="6_d1lop"]
@@ -41,10 +41,9 @@ size = Vector2(334, 481.5)
 size = Vector2(244.5, 382.75)
 
 [node name="FinalStation" type="Node2D"]
-scale = Vector2(0.454923, 0.444704)
+position = Vector2(807, 450)
+scale = Vector2(0.632565, 0.618355)
 script = ExtResource("1_ixfov")
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -1271.0
@@ -52,6 +51,7 @@ offset_top = -722.0
 offset_right = 1259.0
 offset_bottom = 735.0
 texture = ExtResource("2_262ud")
+metadata/_edit_use_anchors_ = true
 
 [node name="SubmitOrder" type="Button" parent="."]
 offset_left = 887.0
@@ -64,7 +64,7 @@ metadata/_edit_use_anchors_ = true
 [node name="cup" type="Node2D" parent="."]
 position = Vector2(-105, 88)
 scale = Vector2(0.75, 0.75)
-script = ExtResource("3_jaj3k")
+script = ExtResource("3_fdyuf")
 
 [node name="cup_spot" type="StaticBody2D" parent="cup" groups=["cup_drop", "droppable"]]
 script = SubResource("GDScript_14f8c")
@@ -108,6 +108,7 @@ scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("6_d1lop")
 texture_pressed = ExtResource("7_x6tj0")
 texture_hover = ExtResource("8_p3bsi")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="SubmitOrder" to="." method="_on_submit_order_pressed"]
 [connection signal="body_entered" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_entered"]

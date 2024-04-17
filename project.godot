@@ -22,6 +22,9 @@ liquid_station_global="*res://scenes/drink_station/liquid_station_global.gd"
 
 [display]
 
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
 [input]
@@ -36,3 +39,4 @@ click={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
