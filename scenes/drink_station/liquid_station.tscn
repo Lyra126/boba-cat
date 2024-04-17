@@ -258,23 +258,27 @@ script = ExtResource("1_p4uih")
 [node name="sugar syrup" type="Node2D" parent="."]
 z_index = 30
 script = ExtResource("2_frsv4")
+metadata/_edit_lock_ = true
 
 [node name="syrupSprite" type="Sprite2D" parent="sugar syrup"]
 z_index = 15
 position = Vector2(-737.772, 357.15)
 scale = Vector2(0.571312, 0.608632)
 texture = ExtResource("3_lew52")
+metadata/_edit_lock_ = true
 
 [node name="syrup area" type="Area2D" parent="sugar syrup/syrupSprite"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sugar syrup/syrupSprite/syrup area"]
 position = Vector2(0.000108719, 14.293)
 shape = SubResource("RectangleShape2D_3pyus")
+metadata/_edit_lock_ = true
 
 [node name="syrup_down" type="AnimatedSprite2D" parent="sugar syrup"]
 position = Vector2(-737.772, 361.849)
 scale = Vector2(0.589713, 0.611802)
 sprite_frames = SubResource("SpriteFrames_nvx2t")
+metadata/_edit_lock_ = true
 
 [node name="fridge" type="Node2D" parent="."]
 z_index = 2
@@ -561,21 +565,21 @@ position = Vector2(0, -44.6437)
 metadata/_edit_lock_ = true
 
 [node name="Back" type="TextureButton" parent="."]
-offset_left = -1281.74
-offset_top = 354.8
-offset_right = -281.741
-offset_bottom = 1354.8
-scale = Vector2(0.4, 0.4)
+offset_left = -1247.0
+offset_top = 399.444
+offset_right = -247.0
+offset_bottom = 1399.44
+scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("40_2pc7h")
 texture_pressed = ExtResource("41_rpnfp")
 texture_hover = ExtResource("42_8e33d")
 
 [node name="Next" type="TextureButton" parent="."]
-offset_left = 861.101
-offset_top = 352.45
-offset_right = 1861.1
-offset_bottom = 1352.45
-scale = Vector2(0.4, 0.4)
+offset_left = 927.17
+offset_top = 399.444
+offset_right = 1927.17
+offset_bottom = 1399.44
+scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("43_m4dw2")
 texture_pressed = ExtResource("44_iy20j")
 texture_hover = ExtResource("45_dwcwo")
