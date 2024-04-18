@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c77yg5d4yjufk"]
+[gd_scene load_steps=15 format=3 uid="uid://c77yg5d4yjufk"]
 
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
+[ext_resource type="PackedScene" uid="uid://vbjyytkea21g" path="res://scenes/Dialogue/dialogue_player.tscn" id="2_8ynne"]
 [ext_resource type="Texture2D" uid="uid://ji54mdaxk0tg" path="res://assets/customerLine.png" id="2_ghg8k"]
 [ext_resource type="Texture2D" uid="uid://uh4uugncspxg" path="res://assets/empty.png" id="3_o1auf"]
 [ext_resource type="Texture2D" uid="uid://bn0wg8vsq0nni" path="res://assets/fill.png" id="4_g6yia"]
@@ -9,6 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/normalNext.png" id="7_ips1v"]
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/pressedNext.png" id="8_kueyq"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/hoverNext.png" id="9_68g1n"]
+[ext_resource type="Texture2D" uid="uid://dj0w1sbo4nmp0" path="res://assets/cat.jpeg" id="10_68fj0"]
+[ext_resource type="PackedScene" uid="uid://cwow41a5vitqj" path="res://scenes/Dialogue/dialogue_area.tscn" id="11_ilyii"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5knr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o4q43"]
+radius = 279.28
 
 [node name="customer-line" type="Node2D"]
 position = Vector2(624, 398)
@@ -54,5 +62,31 @@ texture_pressed = ExtResource("8_kueyq")
 texture_hover = ExtResource("9_68g1n")
 metadata/_edit_use_anchors_ = true
 
+[node name="Customer" type="Sprite2D" parent="."]
+position = Vector2(27.2176, 11.2321)
+scale = Vector2(2.31162, 2.77714)
+texture = ExtResource("10_68fj0")
+
+[node name="DialogueInteractionArea" type="Area2D" parent="Customer"]
+position = Vector2(-35.073, -21.4078)
+scale = Vector2(0.314336, 0.288181)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Customer/DialogueInteractionArea"]
+shape = SubResource("RectangleShape2D_u5knr")
+
+[node name="DialogueAreaCustomer" parent="." instance=ExtResource("11_ilyii")]
+position = Vector2(132.008, -113.8)
+dialogue_key = "customer1"
+
+[node name="CollisionShape2D" parent="DialogueAreaCustomer" index="0"]
+position = Vector2(-108.435, 153.313)
+shape = SubResource("CircleShape2D_o4q43")
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("2_8ynne")]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+
+[editable path="DialogueAreaCustomer"]
