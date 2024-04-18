@@ -1,5 +1,13 @@
 extends Node2D
 
+@onready var cup_spot = $"../cup_spot"
+@onready var tea_drop = $"../Liquid Types/tea/cup_tea_droppable/cup_tea_collision"
+@onready var coffee_drop = $"../Liquid Types/coffee/cup_coffee_droppable/cup_coffee_collision"
+@onready var smoothie_drop = $"../Liquid Types/smoothie/cup_smoothie_droppable/cup_smoothie_collision"
+
+var coffee_droppable_position = Vector2(360,260)
+var smoothie_droppable_position = Vector2(590,260)
+
 var selected
 var offset = Vector2.ZERO
 
@@ -8,19 +16,17 @@ var coffee_droppable = false
 var smoothie_droppable = false
 
 var target_position
-var pouring_milk
-var pour_milk_left = false
-var pour_milk_right = true
-var tea_droppable_position = Vector2(140,260)
-var coffee_droppable_position = Vector2(360,260)
-var smoothie_droppable_position = Vector2(590,260)
+
 
 func _ready():
 	global.SomethingBeingClickedRn = false;
 	liquid_station_global.coffee_set_to_pour = false;
 	liquid_station_global.tea_set_to_pour = false;
+	
 
 func _process(delta):
+	if tea_droppable:
+		print(tea_drop.global_position)
 	pass
 	
 func _on_cup_pick_up_input_event(viewport, event, shape_idx):
@@ -60,27 +66,30 @@ func handle_liquid_selection(event):
 	if is_tea:
 		liquid_station_global.tea_set_to_pour = true
 		print("tea can pour")
-		global_position = lerp(global_position, tea_droppable_position, 1)
+		global_position = lerp(global_position, tea_drop.global_position, 1)
 		selected = false
+		liquid_station_global.going_to_pour = true
 
 	elif is_coffee:
 		liquid_station_global.coffee_set_to_pour = true
 		print("coffee can pour")
-		global_position = lerp(global_position, coffee_droppable_position, 1)
+		global_position = lerp(global_position, coffee_drop.global_position, 1)
 		selected = false
+		liquid_station_global.going_to_pour = true
 		
 	elif is_smoothie:
 		liquid_station_global.smoothie_set_to_pour = true
 		print("smoothie can pour")
-		global_position = lerp(global_position, smoothie_droppable_position, 1)
+		global_position = lerp(global_position, smoothie_drop.global_position, 1)
 		selected = false
+		liquid_station_global.going_to_pour = true
 
 	else:
 		# Reset pouring state to allow re-selection
 		liquid_station_global.tea_set_to_pour = false
 		liquid_station_global.coffee_set_to_pour = false
 		liquid_station_global.smoothie_set_to_pour = false
-		global_position = lerp(global_position, Vector2(580,335), 1)
+		global_position = lerp(global_position, cup_spot.global_position, 1)
 		scale = Vector2(1, 1)  # Reset scale if needed
 	
 
@@ -102,10 +111,12 @@ func _on_cup_pick_up_body_exited(body):
 
 func _on_tea_nozzle_down_animation_finished():
 	selected = true
+	liquid_station_global.going_to_pour = false
 	
 func _on_coffee_nozzle_down_animation_finished():
 	selected = true
+	liquid_station_global.going_to_pour = false
 
 func _on_smoothie_nozzle_down_animation_finished():
 	selected = true
-
+	liquid_station_global.going_to_pour = false

@@ -6,3 +6,5 @@ var smoothie_set_to_pour = false;
 
 var nozzle_anim_playing = false
 var fridge_open = false
+
+var going_to_pour = false

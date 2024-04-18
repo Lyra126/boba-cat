@@ -19,7 +19,7 @@ func _on_nozzle_area_input_event(viewport, event, shape_idx):
 		nozzle_still.hide()
 		liquid_station_global.nozzle_anim_playing = true
 		liquid_station_global.tea_set_to_pour = false
-		global.SomethingBeingClickedRn = true
+
 
 func _on_nozzle_area_mouse_entered():
 	if liquid_station_global.tea_set_to_pour:

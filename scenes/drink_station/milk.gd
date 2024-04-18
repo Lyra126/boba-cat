@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var milk_anim = $milk_animations
 @onready var milk_still = $milkSprite
+@onready var cow_milk_droppable = $"../cow milk droppable"
 
 var selected
 var offset = Vector2.ZERO
@@ -23,7 +24,7 @@ func _process(delta):
 	pass
 
 func _on_milk_area_input_event(viewport, event, shape_idx):
-	if Input.is_action_pressed("click") and not global.SomethingBeingClickedRn and liquid_station_global.fridge_open:
+	if Input.is_action_pressed("click") and not global.SomethingBeingClickedRn and liquid_station_global.fridge_open and not liquid_station_global.going_to_pour:
 		selected = true
 		global.SomethingBeingClickedRn = true;
 		offset = get_global_mouse_position() - global_position
@@ -34,7 +35,7 @@ func _physics_process(delta):
 		global_position = lerp(global_position, target_position, 15 * delta) # Smooth animation during dragging
 		look_at(get_global_mouse_position())
 	else:
-		global_position = lerp(global_position, Vector2(575, 345), 10 * delta)
+		global_position = lerp(global_position, cow_milk_droppable.global_position, 10 * delta)
 		rotation = lerp_angle(rotation, 0, 10 * delta)
 		
 func _on_milk_animations_animation_finished():

@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var syrup_down = $syrup_down
 @onready var syrup_still = $syrupSprite
+@onready var syrup_position = $"../sugar_syrup_droppable"
 
 var selected
 var offset = Vector2.ZERO
@@ -27,7 +28,7 @@ func _physics_process(delta):
 		target_position = get_global_mouse_position() - offset
 		global_position = lerp(global_position, target_position, 15 * delta) # Smooth animation during dragging
 	else:
-		global_position = lerp(global_position, Vector2(575, 345), 10 * delta)
+		global_position = lerp(global_position, syrup_position.global_position, 10 * delta)
 		
 func _input(event):
 	if selected:
