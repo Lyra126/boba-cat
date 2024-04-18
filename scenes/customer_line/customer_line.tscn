@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c77yg5d4yjufk"]
+[gd_scene load_steps=13 format=3 uid="uid://c77yg5d4yjufk"]
 
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
 [ext_resource type="PackedScene" uid="uid://vbjyytkea21g" path="res://scenes/Dialogue/dialogue_player.tscn" id="2_8ynne"]
@@ -12,8 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/hoverNext.png" id="9_68g1n"]
 [ext_resource type="Texture2D" uid="uid://dj0w1sbo4nmp0" path="res://assets/cat.jpeg" id="10_68fj0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5knr"]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjlre"]
 radius = 155.978
 
@@ -23,10 +21,10 @@ scale = Vector2(0.636324, 0.632691)
 script = ExtResource("1_go1ct")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -976.0
-offset_top = -617.0
-offset_right = 1545.0
-offset_bottom = 801.0
+offset_left = -1250.94
+offset_top = -708.087
+offset_right = 1270.06
+offset_bottom = 709.913
 scale = Vector2(1.00707, 1)
 texture = ExtResource("2_ghg8k")
 metadata/_edit_use_anchors_ = true
@@ -46,16 +44,16 @@ metadata/_edit_use_anchors_ = true
 wait_time = 60.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(203, 103)
+position = Vector2(15.7153, 47.4165)
 scale = Vector2(1.1705, 1.1728)
 texture = ExtResource("5_dirnv")
 script = ExtResource("6_qt0fo")
 
 [node name="Next" type="TextureButton" parent="."]
-offset_left = 1106.98
-offset_top = 448.891
-offset_right = 2106.98
-offset_bottom = 1448.89
+offset_left = 872.197
+offset_top = 316.11
+offset_right = 1872.2
+offset_bottom = 1316.11
 scale = Vector2(0.4, 0.402615)
 texture_normal = ExtResource("7_ips1v")
 texture_pressed = ExtResource("8_kueyq")
@@ -67,36 +65,27 @@ position = Vector2(27.2176, 11.2321)
 scale = Vector2(2.31162, 2.77714)
 texture = ExtResource("10_68fj0")
 
-[node name="DialogueInteractionArea" type="Area2D" parent="Customer"]
-position = Vector2(-35.073, -21.4078)
-scale = Vector2(0.314336, 0.288181)
-collision_layer = 2
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Customer/DialogueInteractionArea"]
-shape = SubResource("RectangleShape2D_u5knr")
-
 [node name="DialoguePlayer" parent="." instance=ExtResource("2_8ynne")]
 
 [node name="Background" parent="DialoguePlayer" index="0"]
-offset_left = 435.0
-offset_top = 63.0
-offset_right = 1435.0
-offset_bottom = 313.0
+offset_left = 205.0
+offset_top = 22.0
+offset_right = 1205.0
+offset_bottom = 272.0
 metadata/_edit_use_anchors_ = true
 
 [node name="TextLabel" parent="DialoguePlayer" index="1"]
-offset_left = 48.4
-offset_top = 23.4
-offset_right = -59.2001
-offset_bottom = -27.5
+offset_left = -181.6
+offset_top = -17.6
+offset_right = -289.2
+offset_bottom = -68.5
 metadata/_edit_use_anchors_ = true
 
 [node name="DialogArea" type="Area2D" parent="DialoguePlayer"]
-position = Vector2(629, 395)
+position = Vector2(625, 399)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialoguePlayer/DialogArea"]
-position = Vector2(3, 11)
+position = Vector2(200, 30)
 shape = SubResource("CircleShape2D_kjlre")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

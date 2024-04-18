@@ -44,14 +44,9 @@ func display_dialogue(text_key):
 		show_text()
 
 
-#func _on_dialog_area_mouse_entered() -> void:
-	#on_display_dialogue("customer1")
-
-
 func _on_dialog_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			print("Test2")
 			display_dialogue("customer1")
 
 
