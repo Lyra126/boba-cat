@@ -1,3 +1,4 @@
+
 extends CanvasLayer
 
 @export_file("*.json") var scene_text_file
@@ -8,10 +9,9 @@ var in_progress = false
 @onready var text_label = $TextLabel
 
 func _ready():
-	print("Ready")
 	background.visible = false
 	scene_text = load_scene_text()
-	SignalBus.display_dialogue.connect(on_display_dialogue)
+	#SignalBus.display_dialogue.connect(on_display_dialogue)
 	
 func load_scene_text():
 	var file = "res://scenes/Dialogue/dialogue.json"
@@ -35,12 +35,24 @@ func finish():
 	in_progress = false
 	get_tree().paused = false
 		
-func on_display_dialogue(text_key):
+func display_dialogue(text_key):
 	if in_progress:
 		next_line()
 	else:
-		get_tree().paused = true
 		background.visible = true
 		in_progress = true
 		selected_text = scene_text[text_key].duplicate()
 		show_text()
+
+
+#func _on_dialog_area_mouse_entered() -> void:
+	#on_display_dialogue("customer1")
+
+
+func _on_dialog_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			print("Test2")
+			display_dialogue("customer1")
+
+
