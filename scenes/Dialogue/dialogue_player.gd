@@ -11,7 +11,6 @@ var in_progress = false
 func _ready():
 	background.visible = false
 	scene_text = load_scene_text()
-	#SignalBus.display_dialogue.connect(on_display_dialogue)
 	
 func load_scene_text():
 	var file = "res://scenes/Dialogue/dialogue.json"
