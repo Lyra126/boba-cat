@@ -19,7 +19,6 @@ config/icon="res://assets/icon.svg"
 
 global="*res://global.gd"
 liquid_station_global="*res://scenes/drink_station/liquid_station_global.gd"
-SignalBus="*res://SignalBus.gd"
 
 [display]
 

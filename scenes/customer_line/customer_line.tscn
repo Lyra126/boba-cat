@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c77yg5d4yjufk"]
+[gd_scene load_steps=14 format=3 uid="uid://c77yg5d4yjufk"]
 
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
 [ext_resource type="PackedScene" uid="uid://vbjyytkea21g" path="res://scenes/Dialogue/dialogue_player.tscn" id="2_8ynne"]
@@ -11,12 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/pressedNext.png" id="8_kueyq"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/hoverNext.png" id="9_68g1n"]
 [ext_resource type="Texture2D" uid="uid://dj0w1sbo4nmp0" path="res://assets/cat.jpeg" id="10_68fj0"]
+[ext_resource type="PackedScene" uid="uid://bk2yy2qaah4pg" path="res://scenes/OrderForm/OrderForm.tscn" id="12_1o3d2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjlre"]
 radius = 155.978
 
 [node name="customer-line" type="Node2D"]
-position = Vector2(623, 396)
+position = Vector2(776, 448)
 scale = Vector2(0.636324, 0.632691)
 script = ExtResource("1_go1ct")
 
@@ -28,20 +29,6 @@ offset_bottom = 709.913
 scale = Vector2(1.00707, 1)
 texture = ExtResource("2_ghg8k")
 metadata/_edit_use_anchors_ = true
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-offset_left = -70.0
-offset_top = -173.0
-offset_right = 230.0
-offset_bottom = 127.0
-scale = Vector2(0.5, 0.5)
-fill_mode = 4
-texture_under = ExtResource("3_o1auf")
-texture_progress = ExtResource("4_g6yia")
-metadata/_edit_use_anchors_ = true
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 60.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(15.7153, 47.4165)
@@ -61,35 +48,55 @@ texture_hover = ExtResource("9_68g1n")
 metadata/_edit_use_anchors_ = true
 
 [node name="Customer" type="Sprite2D" parent="."]
-position = Vector2(27.2176, 11.2321)
+position = Vector2(1040.35, 0)
 scale = Vector2(2.31162, 2.77714)
 texture = ExtResource("10_68fj0")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Customer"]
+visible = false
+offset_left = -77.5012
+offset_top = -207.163
+offset_right = 222.499
+offset_bottom = 92.8371
+scale = Vector2(0.5, 0.42)
+fill_mode = 4
+texture_under = ExtResource("3_o1auf")
+texture_progress = ExtResource("4_g6yia")
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="Customer"]
+wait_time = 60.0
 
 [node name="DialoguePlayer" parent="." instance=ExtResource("2_8ynne")]
 
 [node name="Background" parent="DialoguePlayer" index="0"]
-offset_left = 205.0
-offset_top = 22.0
-offset_right = 1205.0
-offset_bottom = 272.0
+offset_left = 537.0
+offset_top = 70.0
+offset_right = 1537.0
+offset_bottom = 320.0
 metadata/_edit_use_anchors_ = true
 
 [node name="TextLabel" parent="DialoguePlayer" index="1"]
-offset_left = -181.6
-offset_top = -17.6
-offset_right = -289.2
-offset_bottom = -68.5
+offset_left = 150.4
+offset_top = 30.4
+offset_right = 42.8
+offset_bottom = -20.5
 metadata/_edit_use_anchors_ = true
 
 [node name="DialogArea" type="Area2D" parent="DialoguePlayer"]
-position = Vector2(625, 399)
+position = Vector2(722, 446)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialoguePlayer/DialogArea"]
-position = Vector2(200, 30)
+position = Vector2(-3, -1)
 shape = SubResource("CircleShape2D_kjlre")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="OrderForm" parent="." instance=ExtResource("12_1o3d2")]
+visible = false
+position = Vector2(-672.613, -232.341)
+scale = Vector2(1.7721, 1.88484)
+
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="timeout" from="Customer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="input_event" from="DialoguePlayer/DialogArea" to="DialoguePlayer" method="_on_dialog_area_input_event"]
 [connection signal="mouse_entered" from="DialoguePlayer/DialogArea" to="DialoguePlayer" method="_on_dialog_area_mouse_entered"]
 

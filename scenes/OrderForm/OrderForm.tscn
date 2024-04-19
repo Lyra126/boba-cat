@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scenes/OrderForm/OrderForm.gd" id="1_yiyrc"]
 
 [node name="OrderForm" type="Node2D"]
+position = Vector2(304, 240)
 script = ExtResource("1_yiyrc")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -17,5 +18,3 @@ offset_left = -281.0
 offset_top = -209.0
 offset_right = -106.0
 offset_bottom = -2.0
-
-[node name="Camera2D" type="Camera2D" parent="."]

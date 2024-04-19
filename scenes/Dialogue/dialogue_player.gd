@@ -33,6 +33,7 @@ func finish():
 	background.visible = false
 	in_progress = false
 	get_tree().paused = false
+	global.dialogueCompleted = true
 		
 func display_dialogue(text_key):
 	if in_progress:
