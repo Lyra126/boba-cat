@@ -5,7 +5,6 @@ var OrderForm
 @onready var canfire = true
 @onready var timer = $Customer/Timer
 @onready var percentage_of_time
-var cust2 = preload("res://assets/cat2.jpeg")
 var nextCustomerCalled = false
 
 # Called when the node enters the scene tree for the first time.
@@ -53,11 +52,6 @@ func _process(delta):
 	elif timer.get_time_left() > 0:
 		percentage_of_time = ((1 - timer.get_time_left() / timer.get_wait_time()) * 5000) #100
 		progress_bar.value = percentage_of_time
-		print(progress_bar.value)
-		
-			
-			
-			
 			
 		
 func nextCustomer():
@@ -67,11 +61,14 @@ func nextCustomer():
 	$OrderForm.generate_order()
 	$OrderForm.showOrder()
 	global.dialogueCompleted = false
-	global.currCustomer = "cat2"
+	global.visitedCustomers.append(global.currCustomer)
 	$Customer.visible = false;
 	$Customer.position = Vector2(1040, 0)
-	$Customer.texture = cust2
+	var cat_number = global.currCustomer.substr(0 + "cat".length()).to_int() + 1
+	global.currCustomer = "cat" + str(cat_number)
+	$Customer.texture = global.get_customer_texture(global.currCustomer)
 	$Customer.visible = true;
 	await get_tree().create_timer(1.0).timeout
 	move_customer()
 	canfire = true
+	nextCustomerCalled = false
