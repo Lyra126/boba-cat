@@ -35,10 +35,6 @@ click={
 , null]
 }
 
-[layer_names]
-
-2d_physics/layer_2="Dialogue"
-
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
