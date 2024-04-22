@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwtjyl3dll2e1"]
+
+[ext_resource type="Script" path="res://scenes/Rate/rate.gd" id="1_6u8ji"]
+[ext_resource type="Texture2D" uid="uid://dxrasnos0pmau" path="res://assets/rate.png" id="1_t0xof"]
+[ext_resource type="Texture2D" uid="uid://bbksx7pkqscxv" path="res://assets/cat1.png" id="2_j26db"]
+[ext_resource type="Texture2D" uid="uid://doyijlo53a272" path="res://assets/emptyStars.png" id="3_pdw6o"]
+[ext_resource type="Texture2D" uid="uid://decqfronbg1e3" path="res://assets/fullStars.png" id="4_olikd"]
+[ext_resource type="Texture2D" uid="uid://b88ek1qkts6hn" path="res://assets/dialogue.png" id="6_lxgvp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vdxh8"]
+radius = 167.547
+
+[node name="Rate" type="Node2D"]
+script = ExtResource("1_6u8ji")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 2000.0
+offset_bottom = 1250.0
+scale = Vector2(0.800277, 0.719555)
+texture = ExtResource("1_t0xof")
+
+[node name="Customer" type="Sprite2D" parent="."]
+position = Vector2(770, 333)
+scale = Vector2(1.84265, 2.15613)
+texture = ExtResource("2_j26db")
+
+[node name="Rating" type="TextureProgressBar" parent="."]
+visible = false
+offset_left = 474.0
+offset_top = 571.0
+offset_right = 2974.0
+offset_bottom = 1571.0
+scale = Vector2(0.440489, 0.373984)
+texture_under = ExtResource("3_pdw6o")
+texture_progress = ExtResource("4_olikd")
+
+[node name="Notif" type="TextureRect" parent="."]
+visible = false
+offset_left = 931.0
+offset_top = 22.0
+offset_right = 1931.0
+offset_bottom = 272.0
+scale = Vector2(0.66145, 1.22595)
+texture = ExtResource("6_lxgvp")
+
+[node name="Clear" type="Label" parent="."]
+visible = false
+offset_left = 1113.0
+offset_top = 98.0
+offset_right = 1416.0
+offset_bottom = 235.0
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 100
+text = "CLEAR"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 973.0
+offset_top = 100.0
+offset_right = 1013.0
+offset_bottom = 123.0
+
+[node name="DiagArea" type="Area2D" parent="."]
+position = Vector2(770, 344)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DiagArea"]
+position = Vector2(-8, 23)
+shape = SubResource("CircleShape2D_vdxh8")
+
+[connection signal="input_event" from="DiagArea" to="." method="_on_diag_area_input_event"]

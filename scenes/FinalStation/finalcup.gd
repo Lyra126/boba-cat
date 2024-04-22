@@ -63,19 +63,7 @@ func addLid():
 	await get_tree().create_timer(1.0).timeout
 	#move cup up
 	global_position.y = -30
-	#change to overlap machine
-	#var overlap = TextureRect.new()
-	#overlap.texture = overlapMachine
-	#overlap.position.x = -1100
-	#overlap.position.y = -650
-	#get_parent().add_child(overlap)
-	#add lid texture on top and fix it to the cup sprite
-	
-	#wait 3 seconds
 	await get_tree().create_timer(2.0).timeout
-	#change texture back to original background
-	#overlap.texture = null
-	#move cup back down
 	global_position.y = 50
 	$Lid.visible = true
 	

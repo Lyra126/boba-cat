@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://vbjyytkea21g"]
+
+[ext_resource type="Texture2D" uid="uid://b88ek1qkts6hn" path="res://assets/dialogue.png" id="1_ikayj"]
+[ext_resource type="Script" path="res://scenes/Dialogue/dialogue_player.gd" id="1_soy1t"]
+
+[node name="DialoguePlayer" type="CanvasLayer"]
+script = ExtResource("1_soy1t")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 436.0
+offset_top = 65.0
+offset_right = 1436.0
+offset_bottom = 315.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_ikayj")
+
+[node name="TextLabel" type="Label" parent="."]
+process_mode = 1
+anchors_preset = -1
+anchor_left = 0.291
+anchor_top = 0.094
+anchor_right = 0.757
+anchor_bottom = 0.275
+offset_left = 49.4
+offset_top = 25.4
+offset_right = -58.2001
+offset_bottom = -25.5
