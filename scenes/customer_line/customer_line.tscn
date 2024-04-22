@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/normalNext.png" id="7_ips1v"]
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/pressedNext.png" id="8_kueyq"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/hoverNext.png" id="9_68g1n"]
-[ext_resource type="Texture2D" uid="uid://dj0w1sbo4nmp0" path="res://assets/cat.jpeg" id="10_68fj0"]
+[ext_resource type="Texture2D" uid="uid://dj0w1sbo4nmp0" path="res://assets/cat1.jpeg" id="10_68fj0"]
 [ext_resource type="PackedScene" uid="uid://bk2yy2qaah4pg" path="res://scenes/OrderForm/OrderForm.tscn" id="12_1o3d2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjlre"]
@@ -48,7 +48,7 @@ texture_hover = ExtResource("9_68g1n")
 metadata/_edit_use_anchors_ = true
 
 [node name="Customer" type="Sprite2D" parent="."]
-position = Vector2(1040.35, 0)
+position = Vector2(1040, 0)
 scale = Vector2(2.31162, 2.77714)
 texture = ExtResource("10_68fj0")
 
