@@ -13,15 +13,7 @@ func _process(delta):
 
 
 func _on_submit_order_pressed():
-	var ordersMatch = false
-	print("checking if player made order correctly...")
-	if len(global.order) == len(global.playerOrder):
-		for i in range(len(global.order)):
-			if global.order[i] != global.playerOrder[i]:
-				return
-		ordersMatch = true
-	else:
-		print("Arrays have different lengths, cannot compare elements.")
+	get_tree().change_scene_to_file("res://scenes/Rate/rate.tscn")
 
 
 func _on_back_pressed():

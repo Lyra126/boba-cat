@@ -37,6 +37,18 @@ func load_scene_text():
 	var json_as_dict = JSON.parse_string(json_as_text)
 	if json_as_dict:
 		return (json_as_dict)
+		
+		
+func checkOrder():
+	var ordersMatch = false
+	print("checking if player made order correctly...")
+	if len(global.order) == len(global.playerOrder):
+		for i in range(len(global.order)):
+			if global.order[i] != global.playerOrder[i]:
+				return
+		ordersMatch = true
+	else:
+		print("Arrays have different lengths, cannot compare elements.")
 	
 func showDialogue():
 	$Label.visible = true;
