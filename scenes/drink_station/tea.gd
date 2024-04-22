@@ -19,7 +19,8 @@ func _on_nozzle_area_input_event(viewport, event, shape_idx):
 		nozzle_still.hide()
 		liquid_station_global.nozzle_anim_playing = true
 		liquid_station_global.tea_set_to_pour = false
-
+		liquid_station_global.tea_pouring = true
+		#global.insert_liquid_poured("tea")
 
 func _on_nozzle_area_mouse_entered():
 	if liquid_station_global.tea_set_to_pour:
@@ -36,3 +37,4 @@ func _on_tea_nozzle_down_animation_finished():
 	nozzle_still.scale = Vector2(0.495,0.495)
 	liquid_station_global.nozzle_anim_playing = false
 	global.SomethingBeingClickedRn = false
+	liquid_station_global.tea_pouring = false

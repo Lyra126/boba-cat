@@ -73,3 +73,4 @@ func _on_almond_area_input_event(viewport: Node, event: InputEvent, shape_idx: i
 		selected = true
 		global.SomethingBeingClickedRn = true;
 		offset = get_global_mouse_position() - global_position
+		global.liquids_poured.append("almond_milk")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=64 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
@@ -66,11 +66,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4hdd"]
 size = Vector2(698, 823.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wx7pv"]
-size = Vector2(354, 487.883)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dphaq"]
-size = Vector2(334, 481.5)
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1bue"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_36dq1"]
 animations = [{
@@ -138,9 +134,6 @@ size = Vector2(146.056, 334.335)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dgkrj"]
 size = Vector2(191.226, 313.115)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_457jg"]
-size = Vector2(551.763, 926.427)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_bxd5m"]
 animations = [{
 "frames": [{
@@ -186,9 +179,6 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahek8"]
-size = Vector2(348.596, 818.667)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_rck20"]
 animations = [{
 "frames": [{
@@ -220,9 +210,6 @@ animations = [{
 "name": &"default",
 "speed": 7.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsg06"]
-size = Vector2(493.865, 790.329)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_youfl"]
 animations = [{
@@ -263,11 +250,9 @@ script = ExtResource("1_p4uih")
 
 [node name="sugar_syrup_droppable" type="Area2D" parent="."]
 position = Vector2(0, 1.69761)
-scale = Vector2(1, 1)
 
 [node name="sugar syrup collision" type="CollisionShape2D" parent="sugar_syrup_droppable"]
 position = Vector2(-735.456, 362.886)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_3bh2m")
 metadata/_edit_lock_ = true
 
@@ -326,13 +311,18 @@ scale = Vector2(1.06, 1.06)
 texture = ExtResource("14_ulmdc")
 
 [node name="cup_spot" type="StaticBody2D" parent="." groups=["cup_drop", "droppable"]]
+visible = false
 position = Vector2(0, 1)
-scale = Vector2(1, 1)
 
-[node name="cup_spot_collision" type="CollisionShape2D" parent="cup_spot"]
-position = Vector2(3, 436)
-shape = SubResource("RectangleShape2D_wx7pv")
-one_way_collision_margin = 0.0
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cup_spot"]
+position = Vector2(1.00012, 419)
+scale = Vector2(0.641872, 0.641872)
+polygon = PackedVector2Array(-291.8, -312.5, -290.6, -312.5, -284.5, -314.1, -284.5, -311.1, -277.4, -300.5, -276.1, -300.5, -256.1, -291.5, -251.3, -291.5, -151.1, -273.5, -149.4, -273.5, -107.3, -269.5, -87.5, -269.5, 60.5, -267.5, 60.5, -268.4, 147.5, -274.4, 147.5, -275.2, 246.5, -291.2, 246.5, -291.9, 271.5, -300.9, 279.4, -313.5, 284, -313.5, 288, -315.5, 291.4, -315.5, 303.5, -301.2, 303.5, -296.5, 304.6, -277.5, 302.6, -277.5, 290.5, -257.9, 290.5, -252.3, 269.5, -165.5, 269.5, -156.3, 228.5, 61.9, 228.5, 69.7, 204.2, 219.5, 203.2, 219.5, 177.1, 347.5, 175.6, 347.5, 166.6, 362.5, 165.2, 362.5, 142.2, 382.5, 140, 382.5, 98, 403.5, 93.8, 403.5, 48.8, 416.5, 39.5, 416.5, -23.5, 419.5, -23.5, 418.3, -73.5, 413.3, -73.5, 411.9, -127.5, 393.9, -127.5, 392.8, -143.5, 385.8, -143.5, 384.6, -161.5, 372.6, -161.5, 371.4, -173.5, 361.4, -173.5, 359.2, -183.5, 346.2, -183.5, 341.9, -210.5, 217.7, -210.5, 210.5, -238.2, 40.5, -239.1, 40.5, -262.5, -75.3, -262.5, -84.5, -275.2, -162.5, -276.1, -162.5, -296.2, -255.5, -297.2, -255.5, -298.2, -261.5, -310.5, -278.9, -310.5, -290, -298.5, -313, -298.5, -314.7, -296.3, -315.8)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="cup_spot"]
+position = Vector2(2, 420)
+scale = Vector2(0.642054, 0.642054)
+polygon = PackedVector2Array(29.5, -374.4, 109.5, -370.4, 109.5, -369.3, 213.5, -355.2, 213.5, -354, 254.5, -342, 254.5, -340.8, 277.5, -329.8, 277.5, -328.4, 301.5, -307.4, 301.5, -304.2, 304.5, -300.2, 304.5, -288.5, 302.6, -288.5, 294.7, -274.5, 291.2, -274.5, 283, -291.8, 263.1, -279.5, 258.9, -279.5, 200.5, -268.8, 200.5, -268, 180.8, -262.5, 172.9, -262.5, 150.7, -257.5, 140.7, -257.5, 68.6, -251.5, -91.5, -251.5, -91.5, -252.7, -185.5, -262.7, -185.5, -264, -278.5, -286.9, -278.5, -288.4, -288.4, -294.2, -298.4, -274.2, -301.5, -274.9, -301.5, -277, -310.5, -289.9, -310.5, -300, -304.7, -311.5, -303.3, -311.5, -287.3, -327.5, -285.2, -327.5, -276.2, -334.5, -274, -334.5, -247, -347.5, -242.9, -347.5, -219.8, -355.5, -214.8, -355.5, -150.7, -366.5, -148.6, -366.5, -35.5, -374.4, -35.5, -375.5, 29.5, -375.5)
 
 [node name="cup" type="Node2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)
@@ -356,9 +346,24 @@ texture = ExtResource("17_yy1ah")
 [node name="cup_pick_up" type="Area2D" parent="cup/cup_sprite"]
 position = Vector2(-14, -320)
 
-[node name="cup_pick_up_collision" type="CollisionShape2D" parent="cup/cup_sprite/cup_pick_up"]
-position = Vector2(1.20243, 438.388)
-shape = SubResource("RectangleShape2D_dphaq")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cup/cup_sprite/cup_pick_up"]
+position = Vector2(1.00012, 419)
+scale = Vector2(0.641872, 0.641872)
+polygon = PackedVector2Array(-291.8, -312.5, -290.6, -312.5, -284.5, -314.1, -284.5, -311.1, -277.4, -300.5, -276.1, -300.5, -256.1, -291.5, -251.3, -291.5, -151.1, -273.5, -149.4, -273.5, -107.3, -269.5, -87.5, -269.5, 60.5, -267.5, 60.5, -268.4, 147.5, -274.4, 147.5, -275.2, 246.5, -291.2, 246.5, -291.9, 271.5, -300.9, 279.4, -313.5, 284, -313.5, 288, -315.5, 291.4, -315.5, 303.5, -301.2, 303.5, -296.5, 304.6, -277.5, 302.6, -277.5, 290.5, -257.9, 290.5, -252.3, 269.5, -165.5, 269.5, -156.3, 228.5, 61.9, 228.5, 69.7, 204.2, 219.5, 203.2, 219.5, 177.1, 347.5, 175.6, 347.5, 166.6, 362.5, 165.2, 362.5, 142.2, 382.5, 140, 382.5, 98, 403.5, 93.8, 403.5, 48.8, 416.5, 39.5, 416.5, -23.5, 419.5, -23.5, 418.3, -73.5, 413.3, -73.5, 411.9, -127.5, 393.9, -127.5, 392.8, -143.5, 385.8, -143.5, 384.6, -161.5, 372.6, -161.5, 371.4, -173.5, 361.4, -173.5, 359.2, -183.5, 346.2, -183.5, 341.9, -210.5, 217.7, -210.5, 210.5, -238.2, 40.5, -239.1, 40.5, -262.5, -75.3, -262.5, -84.5, -275.2, -162.5, -276.1, -162.5, -296.2, -255.5, -297.2, -255.5, -298.2, -261.5, -310.5, -278.9, -310.5, -290, -298.5, -313, -298.5, -314.7, -296.3, -315.8)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="cup/cup_sprite/cup_pick_up"]
+position = Vector2(2, 420)
+scale = Vector2(0.642054, 0.642054)
+polygon = PackedVector2Array(29.5, -374.4, 109.5, -370.4, 109.5, -369.3, 213.5, -355.2, 213.5, -354, 254.5, -342, 254.5, -340.8, 277.5, -329.8, 277.5, -328.4, 301.5, -307.4, 301.5, -304.2, 304.5, -300.2, 304.5, -288.5, 302.6, -288.5, 294.7, -274.5, 291.2, -274.5, 283, -291.8, 263.1, -279.5, 258.9, -279.5, 200.5, -268.8, 200.5, -268, 180.8, -262.5, 172.9, -262.5, 150.7, -257.5, 140.7, -257.5, 68.6, -251.5, -91.5, -251.5, -91.5, -252.7, -185.5, -262.7, -185.5, -264, -278.5, -286.9, -278.5, -288.4, -288.4, -294.2, -298.4, -274.2, -301.5, -274.9, -301.5, -277, -310.5, -289.9, -310.5, -300, -304.7, -311.5, -303.3, -311.5, -287.3, -327.5, -285.2, -327.5, -276.2, -334.5, -274, -334.5, -247, -347.5, -242.9, -347.5, -219.8, -355.5, -214.8, -355.5, -150.7, -366.5, -148.6, -366.5, -35.5, -374.4, -35.5, -375.5, 29.5, -375.5)
+
+[node name="liquid-in-cup" type="Node2D" parent="cup"]
+
+[node name="Polygon2D" type="Polygon2D" parent="cup/liquid-in-cup"]
+clip_children = 1
+polygon = PackedVector2Array(-171.169, 305.569, -109.358, 643.393, -87.1696, 665.461, -50.7168, 677.345, 9.5094, 684.135, 69.7357, 670.554, 109.358, 641.695, 172.754, 297.081, 136.302, 305.569, 66.5659, 298.779, 19.0188, 310.662, -47.547, 305.569, -91.9243, 297.081, -142.641, 303.871)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cup/liquid-in-cup/Polygon2D"]
+sprite_frames = SubResource("SpriteFrames_k1bue")
 
 [node name="Liquid Types" type="Control" parent="."]
 layout_mode = 3
@@ -385,6 +390,7 @@ position = Vector2(-7.50415, 47.5255)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Liquid Types/tea/TeaContainer/tea static body"]
 position = Vector2(7.50415, -47.5256)
 polygon = PackedVector2Array(36.5, -431.5, 36.5, -430.3, 97.5, -423.3, 97.5, -422, 126.5, -414, 126.5, -412.8, 164.5, -396.8, 164.5, -395.5, 182.5, -381.5, 182.5, -379.3, 186.5, -375.3, 186.5, -369.8, 189.8, -362.5, 190.9, -362.5, 226.5, -346.8, 226.5, -345.5, 250.5, -328.5, 250.5, -326.1, 255.5, -318.1, 255.5, -311.9, 259.9, -299.5, 281.5, -299.5, 281.5, -297.5, 289.5, -291.5, 289.5, -287.9, 297.5, -266.9, 297.5, -260.5, 300.8, -235.5, 298.4, -235.5, 288.4, -223.5, 283.9, -223.5, 269.5, -220.8, 269.5, -219.5, 284.5, -106.6, 284.5, -105.5, 287.5, 91.5, 286.5, 91.5, 285.5, 163.5, 284.4, 163.5, 278.4, 246.5, 277.2, 246.5, 262.5, 324.9, 262.5, 328.7, 273.5, 339.7, 273.5, 343.1, 276, 354.5, 273.8, 354.5, 265.8, 372.5, 264.2, 372.5, 241.2, 390.5, 236.9, 390.5, 216.9, 398.5, 212.6, 398.5, 170.8, 409.5, 164.7, 409.5, 21.6, 426.5, 4.5, 426.5, -57.5, 424.5, -57.5, 423.3, -167.5, 411.3, -167.5, 410.2, -217.5, 400.1, -217.5, 398.9, -254.5, 387, -254.5, 385.5, -272.5, 371.5, -272.5, 369, -281.5, 353, -281.5, 345, -274.7, 332.5, -273.2, 332.5, -268.5, 328.6, -268.5, 326.5, -269.1, 326.5, -282.5, 259.7, -282.5, 251.5, -291.5, 161.6, -291.5, 160.5, -293.5, -17.5, -292.5, -17.5, -290.5, -108.5, -289.3, -108.5, -275.8, -220.5, -295.5, -223.8, -295.5, -225.5, -305.5, -233.5, -305.5, -257.5, -304.2, -257.5, -300.2, -280.5, -298.9, -280.5, -293.9, -293.5, -292.3, -293.5, -286.3, -299.5, -266.5, -299.5, -266.5, -300.3, -263.5, -303.3, -263.5, -308.7, -261.1, -319.5, -259.7, -319.5, -252.7, -332.5, -250.2, -332.5, -231.2, -347.5, -228.1, -347.5, -214.1, -356.5, -210.9, -356.5, -196.5, -361.9, -187.8, -382.5, -186.4, -382.5, -178.4, -391.5, -176, -391.5, -160.1, -402.5, -156.9, -402.5, -101.9, -423.5, -92.9, -423.5, -62.7, -429.5, -51.7, -429.5, -27.5, -431.4, -27.5, -432.5)
+metadata/_edit_lock_ = true
 
 [node name="tea nozzle" type="Node2D" parent="Liquid Types/tea"]
 z_index = 5
@@ -420,13 +426,11 @@ metadata/_edit_lock_ = true
 [node name="cup_tea_droppable" type="Area2D" parent="Liquid Types/tea"]
 position = Vector2(1.56592, -0.245178)
 rotation = -0.155301
-scale = Vector2(1, 1)
 
 [node name="cup_tea_collision" type="CollisionShape2D" parent="Liquid Types/tea/cup_tea_droppable"]
 position = Vector2(-971.545, -218.991)
 scale = Vector2(6.21024, 5.41928)
 shape = SubResource("RectangleShape2D_ijc5b")
-metadata/_edit_lock_ = true
 
 [node name="coffee" type="Node2D" parent="Liquid Types"]
 position = Vector2(2.08165e-12, 0)
@@ -437,12 +441,13 @@ z_index = -15
 position = Vector2(-473.4, -333.2)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("15_rw11m")
+metadata/_edit_lock_ = true
 
 [node name="coffee static body" type="StaticBody2D" parent="Liquid Types/coffee/CoffeeContainer" groups=["coffee-droppable"]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Liquid Types/coffee/CoffeeContainer/coffee static body"]
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(36.5, -431.5, 36.5, -430.3, 97.5, -423.3, 97.5, -422, 126.5, -414, 126.5, -412.8, 164.5, -396.8, 164.5, -395.5, 182.5, -381.5, 182.5, -379.3, 186.5, -375.3, 186.5, -369.8, 189.8, -362.5, 190.9, -362.5, 226.5, -346.8, 226.5, -345.5, 250.5, -328.5, 250.5, -326.1, 255.5, -318.1, 255.5, -311.9, 259.9, -299.5, 281.5, -299.5, 281.5, -297.5, 289.5, -291.5, 289.5, -287.9, 297.5, -266.9, 297.5, -260.5, 300.8, -235.5, 298.4, -235.5, 288.4, -223.5, 283.9, -223.5, 269.5, -220.8, 269.5, -219.5, 284.5, -106.6, 284.5, -105.5, 287.5, 91.5, 286.5, 91.5, 285.5, 163.5, 284.4, 163.5, 278.4, 246.5, 277.2, 246.5, 262.5, 324.9, 262.5, 328.7, 273.5, 339.7, 273.5, 343.1, 276, 354.5, 273.8, 354.5, 265.8, 372.5, 264.2, 372.5, 241.2, 390.5, 236.9, 390.5, 216.9, 398.5, 212.6, 398.5, 170.8, 409.5, 164.7, 409.5, 21.6, 426.5, 4.5, 426.5, -57.5, 424.5, -57.5, 423.3, -167.5, 411.3, -167.5, 410.2, -217.5, 400.1, -217.5, 398.9, -254.5, 387, -254.5, 385.5, -272.5, 371.5, -272.5, 369, -281.5, 353, -281.5, 345, -274.7, 332.5, -273.2, 332.5, -268.5, 328.6, -268.5, 326.5, -269.1, 326.5, -282.5, 259.7, -282.5, 251.5, -291.5, 161.6, -291.5, 160.5, -293.5, -17.5, -292.5, -17.5, -290.5, -108.5, -289.3, -108.5, -275.8, -220.5, -295.5, -223.8, -295.5, -225.5, -305.5, -233.5, -305.5, -257.5, -304.2, -257.5, -300.2, -280.5, -298.9, -280.5, -293.9, -293.5, -292.3, -293.5, -286.3, -299.5, -266.5, -299.5, -266.5, -300.3, -263.5, -303.3, -263.5, -308.7, -261.1, -319.5, -259.7, -319.5, -252.7, -332.5, -250.2, -332.5, -231.2, -347.5, -228.1, -347.5, -214.1, -356.5, -210.9, -356.5, -196.5, -361.9, -187.8, -382.5, -186.4, -382.5, -178.4, -391.5, -176, -391.5, -160.1, -402.5, -156.9, -402.5, -101.9, -423.5, -92.9, -423.5, -62.7, -429.5, -51.7, -429.5, -27.5, -431.4, -27.5, -432.5)
+metadata/_edit_lock_ = true
 
 [node name="coffee nozzle" type="Node2D" parent="Liquid Types/coffee"]
 z_index = 5
@@ -469,7 +474,6 @@ position = Vector2(-481, -157)
 shape = SubResource("RectangleShape2D_2p13q")
 
 [node name="cup_coffee_droppable" type="Area2D" parent="Liquid Types/coffee"]
-scale = Vector2(1, 1)
 
 [node name="cup_coffee_collision" type="CollisionShape2D" parent="Liquid Types/coffee/cup_coffee_droppable"]
 position = Vector2(-481.81, -218.991)
@@ -489,6 +493,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Liquid Types/smoothie/smoothie container/smoothie static"]
 polygon = PackedVector2Array(36.5, -431.5, 36.5, -430.3, 97.5, -423.3, 97.5, -422, 126.5, -414, 126.5, -412.8, 164.5, -396.8, 164.5, -395.5, 182.5, -381.5, 182.5, -379.3, 186.5, -375.3, 186.5, -369.8, 189.8, -362.5, 190.9, -362.5, 226.5, -346.8, 226.5, -345.5, 250.5, -328.5, 250.5, -326.1, 255.5, -318.1, 255.5, -311.9, 259.9, -299.5, 281.5, -299.5, 281.5, -297.5, 289.5, -291.5, 289.5, -287.9, 297.5, -266.9, 297.5, -260.5, 300.8, -235.5, 298.4, -235.5, 288.4, -223.5, 283.9, -223.5, 269.5, -220.8, 269.5, -219.5, 284.5, -106.6, 284.5, -105.5, 287.5, 91.5, 286.5, 91.5, 285.5, 163.5, 284.4, 163.5, 278.4, 246.5, 277.2, 246.5, 262.5, 324.9, 262.5, 328.7, 273.5, 339.7, 273.5, 343.1, 276, 354.5, 273.8, 354.5, 265.8, 372.5, 264.2, 372.5, 241.2, 390.5, 236.9, 390.5, 216.9, 398.5, 212.6, 398.5, 170.8, 409.5, 164.7, 409.5, 21.6, 426.5, 4.5, 426.5, -57.5, 424.5, -57.5, 423.3, -167.5, 411.3, -167.5, 410.2, -217.5, 400.1, -217.5, 398.9, -254.5, 387, -254.5, 385.5, -272.5, 371.5, -272.5, 369, -281.5, 353, -281.5, 345, -274.7, 332.5, -273.2, 332.5, -268.5, 328.6, -268.5, 326.5, -269.1, 326.5, -282.5, 259.7, -282.5, 251.5, -291.5, 161.6, -291.5, 160.5, -293.5, -17.5, -292.5, -17.5, -290.5, -108.5, -289.3, -108.5, -275.8, -220.5, -295.5, -223.8, -295.5, -225.5, -305.5, -233.5, -305.5, -257.5, -304.2, -257.5, -300.2, -280.5, -298.9, -280.5, -293.9, -293.5, -292.3, -293.5, -286.3, -299.5, -266.5, -299.5, -266.5, -300.3, -263.5, -303.3, -263.5, -308.7, -261.1, -319.5, -259.7, -319.5, -252.7, -332.5, -250.2, -332.5, -231.2, -347.5, -228.1, -347.5, -214.1, -356.5, -210.9, -356.5, -196.5, -361.9, -187.8, -382.5, -186.4, -382.5, -178.4, -391.5, -176, -391.5, -160.1, -402.5, -156.9, -402.5, -101.9, -423.5, -92.9, -423.5, -62.7, -429.5, -51.7, -429.5, -27.5, -431.4, -27.5, -432.5)
+metadata/_edit_lock_ = true
 
 [node name="smoothie nozzle" type="Node2D" parent="Liquid Types/smoothie"]
 z_index = 5
@@ -513,11 +518,9 @@ polygon = PackedVector2Array(27.5, -171.3, 82.5, -164.3, 82.5, -163, 94.5, -160.
 
 [node name="cup_smoothie_droppable" type="Area2D" parent="Liquid Types/smoothie"]
 position = Vector2(4.75452, -1.69757)
-scale = Vector2(1, 1)
 
 [node name="cup_smoothie_collision" type="CollisionShape2D" parent="Liquid Types/smoothie/cup_smoothie_droppable"]
 position = Vector2(15.8491, -224.084)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0eh5u")
 metadata/_edit_lock_ = true
 
@@ -529,21 +532,18 @@ offset_bottom = 4.0
 metadata/_edit_use_anchors_ = true
 
 [node name="cow milk droppable" type="Area2D" parent="Milk Types"]
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Milk Types/cow milk droppable"]
 position = Vector2(888.474, -232.124)
 shape = SubResource("RectangleShape2D_nciqo")
 
 [node name="oat milk droppable" type="Area2D" parent="Milk Types"]
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Milk Types/oat milk droppable"]
 position = Vector2(592.753, -227.479)
 shape = SubResource("RectangleShape2D_l0au1")
 
 [node name="almond milk droppable" type="Area2D" parent="Milk Types"]
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="Milk Types/almond milk droppable"]
 position = Vector2(779.772, 150.709)
@@ -562,9 +562,10 @@ texture = ExtResource("23_3q5kg")
 position = Vector2(-4.23083, 16.6158)
 scale = Vector2(0.900931, 0.960653)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Milk Types/milk/milkSprite/milkArea"]
-position = Vector2(16.9575, -38.8179)
-shape = SubResource("RectangleShape2D_457jg")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Milk Types/milk/milkSprite/milkArea"]
+position = Vector2(4.6958, -17.2963)
+scale = Vector2(1.10996, 1.04096)
+polygon = PackedVector2Array(-38, -473.9, -38, -472.8, 173, -450.8, 173, -449, 181, -443, 181, -438, 182.9, -403, 252, -316.7, 252, -269, 257, 352, 255, 352, 249, 360, 245.5, 360, 105.5, 441, 86.9, 441, -224, 420.9, -224, 420, -232, 420, -232, 417.8, -237, 412.8, -237, 393, -240, -280, -238.5, -280, -233.5, -298, -232.3, -298, -173, -419.5, -173, -467, -171, -467, -163, -478, -160.1, -478, -158, -478.5, -158, -480.1)
 
 [node name="milk_animations" type="AnimatedSprite2D" parent="Milk Types/milk"]
 visible = false
@@ -585,9 +586,9 @@ texture = ExtResource("27_8b3bb")
 [node name="oatArea" type="Area2D" parent="Milk Types/oat milk/oatSprite"]
 position = Vector2(-19.0197, -134.614)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Milk Types/oat milk/oatSprite/oatArea"]
-position = Vector2(19.0196, 89.091)
-shape = SubResource("RectangleShape2D_ahek8")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Milk Types/oat milk/oatSprite/oatArea"]
+position = Vector2(19.02, 134.614)
+polygon = PackedVector2Array(88, -472.8, 108, -470.8, 108, -468.9, 122, -455.9, 122, -452.4, 127, -424.2, 127, -421, 125, -378, 123.5, -378, 121.5, -371, 119.9, -371, 110.9, -360, 108.8, -360, 104.8, -356, 101.3, -356, 95.3, -354, 97.7, -343, 98.3, -343, 106.3, -326, 107.1, -326, 165, -240.6, 165, -237.4, 175, -209.3, 175, -202.4, 179, -181.2, 179, -171, 182.1, -121, 181, -121, 177, 284, 178, 284, 178, 295, 179.3, 295, 185.1, 308, 182.7, 308, 181.6, 313, 180, 313, 168, 328, 165.7, 328, 151.7, 340, 149.5, 340, 130.5, 351, 127.3, 351, 108.4, 359, 103.1, 359, 71.3, 368, 65.2, 368, 1, 374.2, 1, 372.9, -67, 368.9, -67, 367.6, -127, 353.6, -127, 352.2, -168, 331.2, -168, 329.8, -196, 300.8, -196, 297, -199, 265.1, -199, 115, -197.9, 115, -194, 23.9, -194, 21.9, -192.9, -185, -191.9, -185, -189.9, -212, -188.9, -212, -187.9, -226, -186.4, -226, -177.4, -253, -176, -253, -138, -299.8, -138, -301.7, -122, -323.7, -122, -325.5, -107.4, -353.7, -126, -360.6, -126, -362.2, -134, -370.2, -134, -373.5, -137, -378.4, -137, -386.1, -133.9, -442, -132.7, -442, -129.7, -458, -127.9, -458, -116.9, -470, -111.2, -470, -87, -472.8, -87, -474, 88, -474)
 
 [node name="oat_animations" type="AnimatedSprite2D" parent="Milk Types/oat milk"]
 visible = false
@@ -608,9 +609,8 @@ texture = ExtResource("32_3hf2e")
 
 [node name="almondArea" type="Area2D" parent="Milk Types/almond milk/almondSprite"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Milk Types/almond milk/almondSprite/almondArea"]
-position = Vector2(8.61035, 37.8545)
-shape = SubResource("RectangleShape2D_dsg06")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Milk Types/almond milk/almondSprite/almondArea"]
+polygon = PackedVector2Array(-23, -408.7, 9, -402.7, 9, -400.9, 18, -392.9, 18, -377, 32, -377, 95, -374, 130, -374, 252, -376, 252, -373.7, 260, -363.7, 260, -354, 262, 363, 261, 363, 261, 373, 259, 373, 255, 378, 252.5, 378, 134.5, 438, -194, 438, -194, 436.9, -233, 434.9, -233, -330, -231.1, -330, -228.1, -335, -223.4, -335, -203.4, -343, -199.1, -343, -89, -371.5, -86.8, -395, -85.1, -395, -81.1, -401, -78.7, -401, -71.7, -407, -67.2, -407, -53, -408.8, -53, -410, -23, -410)
 
 [node name="almond_animations" type="AnimatedSprite2D" parent="Milk Types/almond milk"]
 visible = false

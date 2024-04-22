@@ -106,8 +106,8 @@ scale = Vector2(0.582041, 0.583663)
 script = ExtResource("8_bi727")
 
 [node name="Ladle" type="Sprite2D" parent="ladle"]
-position = Vector2(22.17, -24.9048)
-scale = Vector2(0.843723, 0.843723)
+position = Vector2(44.8637, -48.9625)
+scale = Vector2(0.683145, 0.702019)
 texture = ExtResource("7_vtvgs")
 
 [node name="ladle area" type="Area2D" parent="ladle/Ladle"]

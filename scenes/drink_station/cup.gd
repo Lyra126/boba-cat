@@ -5,9 +5,6 @@ extends Node2D
 @onready var coffee_drop = $"../Liquid Types/coffee/cup_coffee_droppable/cup_coffee_collision"
 @onready var smoothie_drop = $"../Liquid Types/smoothie/cup_smoothie_droppable/cup_smoothie_collision"
 
-var coffee_droppable_position = Vector2(360,260)
-var smoothie_droppable_position = Vector2(590,260)
-
 var selected
 var offset = Vector2.ZERO
 
@@ -120,3 +117,26 @@ func _on_coffee_nozzle_down_animation_finished():
 func _on_smoothie_nozzle_down_animation_finished():
 	selected = true
 	liquid_station_global.going_to_pour = false
+	
+func insert_liquid_poured(liquid):
+	if global.liquids_poured.size() < 6:
+		global.liquids_poured.append(liquid)
+		#global.playerOrder.append(liquids_poured)
+	else:
+		print("cannot hold anymore liquid")
+	
+func pouring_liquid_into_cup(liquid):
+	if liquid == "tea":
+		pass
+	elif liquid == "coffee":
+		pass
+	elif liquid == "smoothie":
+		pass
+	elif liquid == "cow milk":
+		pass
+	elif liquid == "oat milk":
+		pass
+	elif liquid == "almond milk":
+		pass
+	else:
+		print("this liquid cannot be poured into the cup")

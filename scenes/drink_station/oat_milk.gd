@@ -56,6 +56,7 @@ func _on_oat_area_input_event(viewport: Node, event: InputEvent, shape_idx: int)
 		selected = true
 		global.SomethingBeingClickedRn = true;
 		offset = get_global_mouse_position() - global_position
+		global.liquids_poured.append("oat_milk")
 
 func _on_oat_animations_animation_finished() -> void:
 	selected = false

@@ -57,6 +57,7 @@ func _on_syrup_area_input_event(viewport: Node, event: InputEvent, shape_idx: in
 		selected = true
 		global.SomethingBeingClickedRn = true;
 		offset = get_global_mouse_position() - global_position
+		#$"../cup/liquid-in-cup/Polygon2D/liquid".start_timer()
 
 
 func _on_syrup_area_body_entered(body: Node2D) -> void:
