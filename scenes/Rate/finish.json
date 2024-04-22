@@ -1,0 +1,17 @@
+{
+	"bad": [
+		"Oh no! That order didn't go so well. Better luck next time!",
+		"I'm sorry, but that order didn't meet our expectations. We'll have to do better next time.",
+		"Hmm, looks like there were some issues with that order. Let's learn from our mistakes and improve."
+	],
+	"good": [
+		"Not bad! The order was okay, but there's room for improvement.",
+		"You did a decent job with that order. Keep practicing and you'll get even better!",
+		"Well done! That order was pretty good, but there's still some room for growth."
+	],
+	"excellent": [
+		"Great job! That order was excellent. Keep up the good work!",
+		"Fantastic job! That order was top-notch. You really nailed it!",
+		"Wow! That order was outstanding. You're really becoming a pro at this!"
+	]
+}
