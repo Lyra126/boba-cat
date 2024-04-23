@@ -17,7 +17,7 @@ var transition_progress = 0.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	original_texture = texture
-	target_texture = preload("res://assets/grabArms.png")
+	target_texture = preload("res://assets/cutomer_line/grabArms.png")
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:

@@ -1,17 +1,18 @@
-[gd_scene load_steps=14 format=3 uid="uid://c77yg5d4yjufk"]
+[gd_scene load_steps=15 format=3 uid="uid://c77yg5d4yjufk"]
 
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
 [ext_resource type="PackedScene" uid="uid://vbjyytkea21g" path="res://scenes/Dialogue/dialogue_player.tscn" id="2_8ynne"]
-[ext_resource type="Texture2D" uid="uid://ji54mdaxk0tg" path="res://assets/customerLine.png" id="2_ghg8k"]
-[ext_resource type="Texture2D" uid="uid://uh4uugncspxg" path="res://assets/empty.png" id="3_o1auf"]
-[ext_resource type="Texture2D" uid="uid://bn0wg8vsq0nni" path="res://assets/fill.png" id="4_g6yia"]
-[ext_resource type="Texture2D" uid="uid://67v6fvra775d" path="res://assets/restingArms.png" id="5_dirnv"]
+[ext_resource type="Texture2D" uid="uid://ji54mdaxk0tg" path="res://assets/cutomer_line/customerLine.png" id="2_pg7wn"]
+[ext_resource type="Texture2D" uid="uid://67v6fvra775d" path="res://assets/cutomer_line/restingArms.png" id="3_5vta4"]
+[ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="5_16p48"]
+[ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="6_4eijr"]
 [ext_resource type="Script" path="res://scenes/customer_line/Sprite2D.gd" id="6_qt0fo"]
-[ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/normalNext.png" id="7_ips1v"]
-[ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/pressedNext.png" id="8_kueyq"]
-[ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/hoverNext.png" id="9_68g1n"]
-[ext_resource type="Texture2D" uid="uid://dj0w1sbo4nmp0" path="res://assets/cat1.jpeg" id="10_68fj0"]
+[ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="7_t5lrs"]
+[ext_resource type="Texture2D" uid="uid://bbksx7pkqscxv" path="res://assets/cats/cat1.png" id="8_4iu0w"]
+[ext_resource type="Texture2D" uid="uid://0mex1upu8hmv" path="res://assets/cutomer_line/empty.png" id="9_ycdsr"]
+[ext_resource type="Texture2D" uid="uid://cx2emgf2n6gak" path="res://assets/cutomer_line/fill.png" id="10_ribyt"]
 [ext_resource type="PackedScene" uid="uid://bk2yy2qaah4pg" path="res://scenes/OrderForm/OrderForm.tscn" id="12_1o3d2"]
+[ext_resource type="Texture2D" uid="uid://b88ek1qkts6hn" path="res://assets/cutomer_line/dialogue.png" id="12_6vyqj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjlre"]
 radius = 155.978
@@ -27,13 +28,13 @@ offset_top = -708.087
 offset_right = 1270.06
 offset_bottom = 709.913
 scale = Vector2(1.00707, 1)
-texture = ExtResource("2_ghg8k")
+texture = ExtResource("2_pg7wn")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(15.7153, 47.4165)
 scale = Vector2(1.1705, 1.1728)
-texture = ExtResource("5_dirnv")
+texture = ExtResource("3_5vta4")
 script = ExtResource("6_qt0fo")
 
 [node name="Next" type="TextureButton" parent="."]
@@ -42,15 +43,15 @@ offset_top = 316.11
 offset_right = 1872.2
 offset_bottom = 1316.11
 scale = Vector2(0.4, 0.402615)
-texture_normal = ExtResource("7_ips1v")
-texture_pressed = ExtResource("8_kueyq")
-texture_hover = ExtResource("9_68g1n")
+texture_normal = ExtResource("5_16p48")
+texture_pressed = ExtResource("6_4eijr")
+texture_hover = ExtResource("7_t5lrs")
 metadata/_edit_use_anchors_ = true
 
 [node name="Customer" type="Sprite2D" parent="."]
 position = Vector2(1040, 0)
 scale = Vector2(2.31162, 2.77714)
-texture = ExtResource("10_68fj0")
+texture = ExtResource("8_4iu0w")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="Customer"]
 visible = false
@@ -60,8 +61,8 @@ offset_right = 222.499
 offset_bottom = 92.8371
 scale = Vector2(0.5, 0.42)
 fill_mode = 4
-texture_under = ExtResource("3_o1auf")
-texture_progress = ExtResource("4_g6yia")
+texture_under = ExtResource("9_ycdsr")
+texture_progress = ExtResource("10_ribyt")
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="Customer"]
@@ -74,6 +75,7 @@ offset_left = 537.0
 offset_top = 70.0
 offset_right = 1537.0
 offset_bottom = 320.0
+texture = ExtResource("12_6vyqj")
 metadata/_edit_use_anchors_ = true
 
 [node name="TextLabel" parent="DialoguePlayer" index="1"]

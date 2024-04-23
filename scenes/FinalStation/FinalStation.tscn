@@ -1,14 +1,17 @@
-[gd_scene load_steps=14 format=3 uid="uid://ceqg4sr663xx2"]
+[gd_scene load_steps=17 format=3 uid="uid://ceqg4sr663xx2"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
-[ext_resource type="Texture2D" uid="uid://5grujjlh3pn5" path="res://assets/final_scene.png" id="2_pjje5"]
-[ext_resource type="Texture2D" uid="uid://oei024m3g7qe" path="res://assets/case.png" id="3_c3al2"]
+[ext_resource type="Texture2D" uid="uid://5grujjlh3pn5" path="res://assets/final_station/final_scene.png" id="2_ccllk"]
 [ext_resource type="Script" path="res://scenes/FinalStation/finalcup.gd" id="3_fdyuf"]
+[ext_resource type="Texture2D" uid="uid://c05hs2heu4e82" path="res://assets/final_station/case.png" id="3_u2oyd"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_gn2qx"]
-[ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/normalBack.png" id="6_d1lop"]
-[ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/pressedBack.png" id="7_x6tj0"]
-[ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/hoverBack.png" id="8_p3bsi"]
+[ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/buttons/normalBack.png" id="7_qudjk"]
+[ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/buttons/pressedBack.png" id="8_0wbd3"]
+[ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/buttons/hoverBack.png" id="9_d3pnv"]
+[ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="10_nsn8g"]
+[ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="11_2cme3"]
+[ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="12_2d1uf"]
 
 [sub_resource type="GDScript" id="GDScript_14f8c"]
 script/source = "extends StaticBody2D
@@ -51,21 +54,13 @@ offset_left = -1271.0
 offset_top = -722.0
 offset_right = 1259.0
 offset_bottom = 735.0
-texture = ExtResource("2_pjje5")
+texture = ExtResource("2_ccllk")
 metadata/_edit_use_anchors_ = true
 
 [node name="case" type="Sprite2D" parent="."]
 position = Vector2(79.0432, 4.85161)
 scale = Vector2(0.424686, 0.484817)
-texture = ExtResource("3_c3al2")
-
-[node name="SubmitOrder" type="Button" parent="."]
-offset_left = 887.0
-offset_top = 546.0
-offset_right = 1215.0
-offset_bottom = 673.0
-text = "Submit Order"
-metadata/_edit_use_anchors_ = true
+texture = ExtResource("3_u2oyd")
 
 [node name="cup" type="Node2D" parent="."]
 position = Vector2(-105, 88)
@@ -111,12 +106,21 @@ offset_top = 384.525
 offset_right = -272.743
 offset_bottom = 1384.53
 scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("6_d1lop")
-texture_pressed = ExtResource("7_x6tj0")
-texture_hover = ExtResource("8_p3bsi")
+texture_normal = ExtResource("7_qudjk")
+texture_pressed = ExtResource("8_0wbd3")
+texture_hover = ExtResource("9_d3pnv")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="SubmitOrder" to="." method="_on_submit_order_pressed"]
+[node name="SubmitOrder" type="TextureButton" parent="."]
+offset_left = 792.013
+offset_top = 363.869
+offset_right = 1792.01
+offset_bottom = 1363.87
+scale = Vector2(0.404201, 0.407558)
+texture_normal = ExtResource("10_nsn8g")
+texture_pressed = ExtResource("11_2cme3")
+texture_hover = ExtResource("12_2d1uf")
+
 [connection signal="body_entered" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_entered"]
 [connection signal="body_exited" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_exited"]
 [connection signal="input_event" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_input_event"]
@@ -124,3 +128,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_exited" from="AttachLid" to="." method="_on_attach_lid_body_exited"]
 [connection signal="input_event" from="AttachLid" to="." method="_on_attach_lid_input_event"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="SubmitOrder" to="." method="_on_submit_order_pressed"]
