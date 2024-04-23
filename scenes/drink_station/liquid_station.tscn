@@ -1,7 +1,8 @@
-[gd_scene load_steps=150 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=156 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
+[ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="2_qtkbs"]
 [ext_resource type="Texture2D" uid="uid://d0cw56n8po7l5" path="res://assets/liquid_station/assets/syrup.png" id="3_lew52"]
 [ext_resource type="Texture2D" uid="uid://b4wlosyyn6c26" path="res://assets/liquid_station/assets/syrup_down.png" id="4_g2ujl"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="4_t0iax"]
@@ -98,16 +99,16 @@
 [ext_resource type="Texture2D" uid="uid://ccud6jtklj3ny" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-2/Untitled_Artwork-1 12.png" id="38_3nn0h"]
 [ext_resource type="Texture2D" uid="uid://cem6ffo5l5u56" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-2/Untitled_Artwork-2 13.png" id="39_aquuo"]
 [ext_resource type="Texture2D" uid="uid://ch7wj4lu8fry" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-2/Untitled_Artwork-3 12.png" id="40_1wqun"]
-[ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/normalBack.png" id="40_2pc7h"]
+[ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/buttons/normalBack.png" id="40_2pc7h"]
 [ext_resource type="Texture2D" uid="uid://d70odboirxr7" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-2/Untitled_Artwork-4 9.png" id="41_jxq2w"]
-[ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/pressedBack.png" id="41_rpnfp"]
-[ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/hoverBack.png" id="42_8e33d"]
+[ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/buttons/pressedBack.png" id="41_rpnfp"]
+[ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/buttons/hoverBack.png" id="42_8e33d"]
 [ext_resource type="Texture2D" uid="uid://cnpptp5xdgf12" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-2/Untitled_Artwork-5 9.png" id="42_tjpme"]
 [ext_resource type="Texture2D" uid="uid://bn0acuw5k8qtq" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-2/Untitled_Artwork-6 9.png" id="43_afkj1"]
-[ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/normalNext.png" id="43_m4dw2"]
-[ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/pressedNext.png" id="44_iy20j"]
+[ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="43_m4dw2"]
+[ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="44_iy20j"]
 [ext_resource type="Texture2D" uid="uid://cp1l2bcxphwkr" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-2/Untitled_Artwork-7 8.png" id="44_meh4e"]
-[ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/hoverNext.png" id="45_dwcwo"]
+[ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="45_dwcwo"]
 [ext_resource type="Texture2D" uid="uid://b8qt2dincmeyg" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-1/Untitled_Artwork-1 13.png" id="45_u453q"]
 [ext_resource type="Texture2D" uid="uid://h6tknjciad1f" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-1/Untitled_Artwork-2 14.png" id="46_7c0gi"]
 [ext_resource type="Texture2D" uid="uid://c2y5jdmbdk8yp" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-1/Untitled_Artwork-3 13.png" id="47_x0hyt"]
@@ -131,6 +132,13 @@
 [ext_resource type="Texture2D" uid="uid://b5i05yes152lj" path="res://assets/liquid_station/animations/liquid-pouring/tea-almond-milk-2/Untitled_Artwork-5 13.png" id="88_beps6"]
 [ext_resource type="Texture2D" uid="uid://dy6hvd1gvp8io" path="res://assets/liquid_station/animations/liquid-pouring/tea-almond-milk-2/Untitled_Artwork-6 13.png" id="89_xiakg"]
 [ext_resource type="Texture2D" uid="uid://bgpe6ugbpx524" path="res://assets/liquid_station/animations/liquid-pouring/tea-almond-milk-2/Untitled_Artwork-7 12.png" id="90_wclw7"]
+[ext_resource type="Texture2D" uid="uid://cujo4it0fdse7" path="res://assets/buttons/close.png" id="133_64tsy"]
+[ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="134_xity5"]
+[ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="135_7tirn"]
+[ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="136_2dvsm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vww3g"]
+size = Vector2(1047.66, 1447.97)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bh2m"]
 size = Vector2(253.707, 204.515)
@@ -645,6 +653,43 @@ position = Vector2(805, 477)
 scale = Vector2(0.630954, 0.589065)
 script = ExtResource("1_p4uih")
 
+[node name="order" type="Node2D" parent="."]
+visible = false
+z_index = 15
+scale = Vector2(1, 1)
+
+[node name="ColorRect" type="ColorRect" parent="order"]
+offset_left = -342.339
+offset_top = -507.584
+offset_right = -302.339
+offset_bottom = -467.584
+scale = Vector2(18.0372, 25.3149)
+
+[node name="Label" type="Label" parent="order"]
+offset_left = -309.0
+offset_top = -350.0
+offset_right = 352.0
+offset_bottom = 457.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+
+[node name="outsideOrder" type="Area2D" parent="order"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="order/outsideOrder"]
+
+[node name="trash" type="Sprite2D" parent="."]
+position = Vector2(-1093.58, 259.734)
+scale = Vector2(0.261449, 0.281176)
+texture = ExtResource("2_qtkbs")
+
+[node name="Area2D" type="Area2D" parent="trash"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trash/Area2D"]
+position = Vector2(-8.56171, -17.5938)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_vww3g")
+
 [node name="sugar_syrup_droppable" type="Area2D" parent="."]
 position = Vector2(0, 1.69761)
 
@@ -860,7 +905,7 @@ texture = ExtResource("12_kvpxp")
 
 [node name="coffee nozzle down" type="AnimatedSprite2D" parent="Liquid Types/coffee/coffee nozzle"]
 z_index = 1
-position = Vector2(-478.64, -112.344)
+position = Vector2(179.094, 65.9042)
 scale = Vector2(0.495, 0.495)
 sprite_frames = SubResource("SpriteFrames_y4w8q")
 
@@ -1053,6 +1098,30 @@ texture_hover = ExtResource("45_dwcwo")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
+[node name="close" type="TextureButton" parent="."]
+visible = false
+z_index = 15
+offset_left = 248.83
+offset_top = -485.515
+offset_right = 1748.83
+offset_bottom = 1014.48
+scale = Vector2(0.0770623, 0.0843981)
+texture_normal = ExtResource("133_64tsy")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 984.224
+offset_top = -779.201
+offset_right = 2484.22
+offset_bottom = 1220.8
+scale = Vector2(0.117781, 0.129858)
+texture_normal = ExtResource("134_xity5")
+texture_pressed = ExtResource("135_7tirn")
+texture_hover = ExtResource("136_2dvsm")
+
+[connection signal="input_event" from="order/outsideOrder" to="." method="_on_outside_order_input_event"]
+[connection signal="input_event" from="trash/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="trash/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="trash/Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="body_entered" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_entered"]
 [connection signal="body_exited" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_exited"]
 [connection signal="input_event" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_input_event"]
@@ -1092,3 +1161,5 @@ metadata/_edit_lock_ = true
 [connection signal="animation_finished" from="Milk Types/almond milk/almond_animations" to="Milk Types/almond milk" method="_on_almond_animations_animation_finished"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

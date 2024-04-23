@@ -20,6 +20,8 @@ func _on_next_pressed():
 
 
 
+
+
 func _on_area_2d_mouse_entered() -> void:
 	$trash.texture = openTrash
 
@@ -36,3 +38,27 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 				global.playerOrder.resize(0)
 				print("cup has been deleted")
 				$cup.visible = false
+
+
+func _on_texture_button_pressed() -> void:
+	$order.visible = true
+	$close.visible = true
+	var orderText = ""
+	for item in global.order:
+		orderText += str(item) + "\n"
+	print(orderText)
+	$order/Label.visible = true
+	$order/Label.set_text(orderText)
+	
+
+
+func _on_close_pressed() -> void:
+	print("test")
+	$order.visible = false
+	$order/Label.visible = false
+	$close.visible = false
+
+
+
+func _on_outside_order_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	pass # Replace with function body.
