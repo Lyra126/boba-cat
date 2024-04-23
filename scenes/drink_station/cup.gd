@@ -5,6 +5,7 @@ extends Node2D
 @onready var coffee_drop = $"../Liquid Types/coffee/cup_coffee_droppable/cup_coffee_collision"
 @onready var smoothie_drop = $"../Liquid Types/smoothie/cup_smoothie_droppable/cup_smoothie_collision"
 
+
 var selected
 var offset = Vector2.ZERO
 
@@ -119,3 +120,5 @@ func _on_smoothie_nozzle_down_animation_finished():
 	selected = true
 	liquid_station_global.going_to_pour = false
 	
+
+

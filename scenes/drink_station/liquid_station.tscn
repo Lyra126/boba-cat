@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=90 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
@@ -63,12 +63,16 @@
 [ext_resource type="Texture2D" uid="uid://bn3a4ln7ljd83" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond1.png" id="33_iadle"]
 [ext_resource type="Texture2D" uid="uid://c3bfhfrvyg62l" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond2.png" id="34_1f30t"]
 [ext_resource type="Texture2D" uid="uid://pa157pyurqxk" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond3.png" id="35_ux4h3"]
+[ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="36_218hk"]
 [ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/buttons/normalBack.png" id="64_dl136"]
 [ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/buttons/pressedBack.png" id="65_vqxlk"]
 [ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/buttons/hoverBack.png" id="66_ww47t"]
 [ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="67_f1jcb"]
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="68_hxs0e"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="69_lxqee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q73lv"]
+size = Vector2(1294.15, 1796.34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bh2m"]
 size = Vector2(253.707, 204.515)
@@ -356,6 +360,17 @@ animations = [{
 position = Vector2(805, 477)
 scale = Vector2(0.630954, 0.589065)
 script = ExtResource("1_p4uih")
+
+[node name="trash" type="Sprite2D" parent="." groups=["droppable"]]
+position = Vector2(-1095.17, 288.593)
+scale = Vector2(0.24251, 0.240191)
+texture = ExtResource("36_218hk")
+
+[node name="Area2D" type="Area2D" parent="trash" groups=["droppable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trash/Area2D" groups=["droppable"]]
+position = Vector2(0, -68.7441)
+shape = SubResource("RectangleShape2D_q73lv")
 
 [node name="sugar_syrup_droppable" type="Area2D" parent="."]
 position = Vector2(0, 1.69761)
@@ -765,6 +780,10 @@ texture_hover = ExtResource("69_lxqee")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
+[connection signal="body_entered" from="trash/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="input_event" from="trash/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="trash/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="trash/Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="body_entered" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_entered"]
 [connection signal="body_exited" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_exited"]
 [connection signal="input_event" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_input_event"]
