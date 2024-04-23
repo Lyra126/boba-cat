@@ -22,8 +22,8 @@ func _ready():
 	
 
 func _process(delta):
-	if tea_droppable:
-		print(tea_drop.global_position)
+	#if tea_droppable:
+		#print(tea_drop.global_position)
 	pass
 	
 func _on_cup_pick_up_input_event(viewport, event, shape_idx):
@@ -86,6 +86,7 @@ func handle_liquid_selection(event):
 		liquid_station_global.tea_set_to_pour = false
 		liquid_station_global.coffee_set_to_pour = false
 		liquid_station_global.smoothie_set_to_pour = false
+		liquid_station_global.going_to_pour = false
 		global_position = lerp(global_position, cup_spot.global_position, 1)
 		scale = Vector2(1, 1)  # Reset scale if needed
 	
@@ -118,25 +119,3 @@ func _on_smoothie_nozzle_down_animation_finished():
 	selected = true
 	liquid_station_global.going_to_pour = false
 	
-func insert_liquid_poured(liquid):
-	if global.liquids_poured.size() < 6:
-		global.liquids_poured.append(liquid)
-		#global.playerOrder.append(liquids_poured)
-	else:
-		print("cannot hold anymore liquid")
-	
-func pouring_liquid_into_cup(liquid):
-	if liquid == "tea":
-		pass
-	elif liquid == "coffee":
-		pass
-	elif liquid == "smoothie":
-		pass
-	elif liquid == "cow milk":
-		pass
-	elif liquid == "oat milk":
-		pass
-	elif liquid == "almond milk":
-		pass
-	else:
-		print("this liquid cannot be poured into the cup")

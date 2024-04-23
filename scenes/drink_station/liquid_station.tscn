@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=88 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
@@ -11,27 +11,51 @@
 [ext_resource type="Texture2D" uid="uid://rld0v7fg280q" path="res://assets/liquid_station/assets/tea_nozzle_norm.png" id="10_ykvc5"]
 [ext_resource type="Texture2D" uid="uid://b0lb4fndwpn38" path="res://assets/liquid_station/assets/tea_nozzle_down.png" id="11_lqjrf"]
 [ext_resource type="Texture2D" uid="uid://26n3xfp856d1" path="res://assets/liquid_station/assets/fridge_closed.png" id="12_0otd3"]
+[ext_resource type="Script" path="res://scenes/drink_station/liquid_in_cup.gd" id="12_5lha2"]
 [ext_resource type="Texture2D" uid="uid://bee8e7v1r8ax4" path="res://assets/liquid_station/assets/coffee_nozzle_norm.png" id="12_kvpxp"]
+[ext_resource type="Texture2D" uid="uid://qrg8dyq1mppd" path="res://assets/liquid_station/animations/liquid-pouring/tea-1/Untitled_Artwork-1 6.png" id="12_lk40l"]
 [ext_resource type="Texture2D" uid="uid://l43pqvu43upd" path="res://assets/liquid_station/assets/coffee_nozzle_down.png" id="13_3yeq2"]
 [ext_resource type="Texture2D" uid="uid://d3nshuiqio30k" path="res://assets/liquid_station/assets/background.png" id="13_8b6s5"]
 [ext_resource type="Script" path="res://scenes/drink_station/fridge.gd" id="13_ay75l"]
+[ext_resource type="Texture2D" uid="uid://bps3nhby85cku" path="res://assets/liquid_station/animations/liquid-pouring/tea-1/Untitled_Artwork-2 7.png" id="13_k1t1k"]
+[ext_resource type="Texture2D" uid="uid://ccywp21erwfcg" path="res://assets/liquid_station/animations/liquid-pouring/tea-1/Untitled_Artwork-3 6.png" id="14_aa3v5"]
 [ext_resource type="Texture2D" uid="uid://b41ak5nosuxyo" path="res://assets/liquid_station/assets/fridge_open.png" id="14_dxkqo"]
 [ext_resource type="Script" path="res://scenes/drink_station/coffee.gd" id="14_sdbwb"]
 [ext_resource type="Texture2D" uid="uid://jastphwwwg00" path="res://assets/liquid_station/assets/fridge_semiopen.png" id="14_ulmdc"]
+[ext_resource type="Texture2D" uid="uid://cx4lgt6petvnr" path="res://assets/liquid_station/animations/liquid-pouring/tea-1/Untitled_Artwork-4 3.png" id="15_qrf28"]
 [ext_resource type="Texture2D" uid="uid://yxp224hvvgxa" path="res://assets/liquid_station/assets/coffee_container.png" id="15_rw11m"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="16_it5lc"]
+[ext_resource type="Texture2D" uid="uid://c2if4hovf8m4u" path="res://assets/liquid_station/animations/liquid-pouring/tea-1/Untitled_Artwork-5 3.png" id="16_j2ue5"]
 [ext_resource type="Script" path="res://scenes/drink_station/smoothie.gd" id="17_rhxvo"]
+[ext_resource type="Texture2D" uid="uid://cteitxfdfxq0c" path="res://assets/liquid_station/animations/liquid-pouring/tea-1/Untitled_Artwork-6 3.png" id="17_xlrp2"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="17_yy1ah"]
+[ext_resource type="Texture2D" uid="uid://drh250pmm2nyl" path="res://assets/liquid_station/animations/liquid-pouring/tea-1/Untitled_Artwork-7 2.png" id="18_nby8l"]
 [ext_resource type="Texture2D" uid="uid://bvw8gc7q4yu01" path="res://assets/liquid_station/assets/smoothie_container.png" id="18_rga2s"]
+[ext_resource type="Texture2D" uid="uid://e4cxiy37qsk4" path="res://assets/liquid_station/animations/liquid-pouring/tea-1/Untitled_Artwork-8 2.png" id="19_52idj"]
 [ext_resource type="Texture2D" uid="uid://glunx2udyoje" path="res://assets/liquid_station/assets/smoothie_nozzle_norm.png" id="19_s0ohr"]
+[ext_resource type="Texture2D" uid="uid://y0l1u70q2tof" path="res://assets/liquid_station/animations/liquid-pouring/tea-1/Untitled_Artwork-9 2.png" id="20_082nk"]
 [ext_resource type="Texture2D" uid="uid://cb5q32768nk2s" path="res://assets/liquid_station/assets/smoothie_nozzle_down.png" id="20_hgr5q"]
+[ext_resource type="Texture2D" uid="uid://crc68q028j3m3" path="res://assets/liquid_station/animations/liquid-pouring/tea-2/Untitled_Artwork-1 8.png" id="22_6k5in"]
+[ext_resource type="Texture2D" uid="uid://2pa4eq5cyd2s" path="res://assets/liquid_station/animations/liquid-pouring/tea-milk-2/Untitled_Artwork-1 7.png" id="22_iux76"]
 [ext_resource type="Texture2D" uid="uid://dcege7trhmgrl" path="res://assets/liquid_station/assets/milk_still.png" id="23_3q5kg"]
+[ext_resource type="Texture2D" uid="uid://b0xsbqiddw5tc" path="res://assets/liquid_station/animations/liquid-pouring/tea-milk-2/Untitled_Artwork-2 8.png" id="23_5nu0r"]
+[ext_resource type="Texture2D" uid="uid://bwc8nqhqbjeeg" path="res://assets/liquid_station/animations/liquid-pouring/tea-2/Untitled_Artwork-2 9.png" id="23_c5sbu"]
+[ext_resource type="Texture2D" uid="uid://bswybcrkv5o37" path="res://assets/liquid_station/animations/liquid-pouring/tea-milk-2/Untitled_Artwork-3 7.png" id="24_dxjj4"]
+[ext_resource type="Texture2D" uid="uid://bym5e6ervp1v8" path="res://assets/liquid_station/animations/liquid-pouring/tea-2/Untitled_Artwork-3 8.png" id="24_if3ra"]
 [ext_resource type="Texture2D" uid="uid://bowlp63mrvm1" path="res://assets/liquid_station/animations/milk-animation/milk1.png" id="24_oass6"]
 [ext_resource type="Texture2D" uid="uid://dtbhaxgi3dfn4" path="res://assets/liquid_station/animations/milk-animation/milk2.png" id="25_kocgj"]
+[ext_resource type="Texture2D" uid="uid://c4qbwvxtcb3su" path="res://assets/liquid_station/animations/liquid-pouring/tea-milk-2/Untitled_Artwork-4 4.png" id="25_nethy"]
+[ext_resource type="Texture2D" uid="uid://cxxkvy1q3b6dy" path="res://assets/liquid_station/animations/liquid-pouring/tea-2/Untitled_Artwork-4 5.png" id="25_stjne"]
+[ext_resource type="Texture2D" uid="uid://xxhl73o7ytmo" path="res://assets/liquid_station/animations/liquid-pouring/tea-milk-2/Untitled_Artwork-5 4.png" id="26_0lpnl"]
 [ext_resource type="Script" path="res://scenes/drink_station/oat_milk.gd" id="26_dee6e"]
+[ext_resource type="Texture2D" uid="uid://c85tej215wmri" path="res://assets/liquid_station/animations/liquid-pouring/tea-2/Untitled_Artwork-5 5.png" id="26_houon"]
 [ext_resource type="Texture2D" uid="uid://djvtujhoyqrbd" path="res://assets/liquid_station/animations/milk-animation/milk3.png" id="26_jjmtj"]
 [ext_resource type="Texture2D" uid="uid://co0tmv6jovvjv" path="res://assets/liquid_station/assets/oat-milk-still.png" id="27_8b3bb"]
+[ext_resource type="Texture2D" uid="uid://b5q4jhrsi84dd" path="res://assets/liquid_station/animations/liquid-pouring/tea-2/Untitled_Artwork-6 5.png" id="27_aq6qd"]
+[ext_resource type="Texture2D" uid="uid://lwf53u2tmm6d" path="res://assets/liquid_station/animations/liquid-pouring/tea-milk-2/Untitled_Artwork-6 4.png" id="27_pie4j"]
 [ext_resource type="Texture2D" uid="uid://7b2oxm52g6lm" path="res://assets/liquid_station/animations/oat-milk-animation/oat1.png" id="28_8rug6"]
+[ext_resource type="Texture2D" uid="uid://xjwvvg8j3dv8" path="res://assets/liquid_station/animations/liquid-pouring/tea-2/Untitled_Artwork-7 4.png" id="28_qgpof"]
+[ext_resource type="Texture2D" uid="uid://c0hxhxce6djim" path="res://assets/liquid_station/animations/liquid-pouring/tea-milk-2/Untitled_Artwork-7 3.png" id="28_rhkuk"]
 [ext_resource type="Texture2D" uid="uid://bfhoj7ar02ods" path="res://assets/liquid_station/animations/oat-milk-animation/oat2.png" id="29_ft0m0"]
 [ext_resource type="Texture2D" uid="uid://cnwykukjwyk71" path="res://assets/liquid_station/animations/oat-milk-animation/oat3.png" id="30_3hbfx"]
 [ext_resource type="Script" path="res://scenes/drink_station/almond_milk.gd" id="31_t7563"]
@@ -67,6 +91,91 @@ animations = [{
 size = Vector2(698, 823.5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k1bue"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_lk40l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_k1t1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_aa3v5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qrf28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_j2ue5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xlrp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nby8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_52idj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_082nk")
+}],
+"loop": false,
+"name": &"tea-1",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_6k5in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_c5sbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_if3ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_stjne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_houon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_aq6qd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_qgpof")
+}],
+"loop": false,
+"name": &"tea-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_iux76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5nu0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_dxjj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_nethy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0lpnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_pie4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_rhkuk")
+}],
+"loop": false,
+"name": &"tea-cow-milk-2",
+"speed": 8.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_36dq1"]
 animations = [{
@@ -74,12 +183,12 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("10_ykvc5")
 }, {
-"duration": 15.0,
+"duration": 5.0,
 "texture": ExtResource("11_lqjrf")
 }],
 "loop": false,
 "name": &"default",
-"speed": 7.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h640a"]
@@ -357,13 +466,17 @@ scale = Vector2(0.642054, 0.642054)
 polygon = PackedVector2Array(29.5, -374.4, 109.5, -370.4, 109.5, -369.3, 213.5, -355.2, 213.5, -354, 254.5, -342, 254.5, -340.8, 277.5, -329.8, 277.5, -328.4, 301.5, -307.4, 301.5, -304.2, 304.5, -300.2, 304.5, -288.5, 302.6, -288.5, 294.7, -274.5, 291.2, -274.5, 283, -291.8, 263.1, -279.5, 258.9, -279.5, 200.5, -268.8, 200.5, -268, 180.8, -262.5, 172.9, -262.5, 150.7, -257.5, 140.7, -257.5, 68.6, -251.5, -91.5, -251.5, -91.5, -252.7, -185.5, -262.7, -185.5, -264, -278.5, -286.9, -278.5, -288.4, -288.4, -294.2, -298.4, -274.2, -301.5, -274.9, -301.5, -277, -310.5, -289.9, -310.5, -300, -304.7, -311.5, -303.3, -311.5, -287.3, -327.5, -285.2, -327.5, -276.2, -334.5, -274, -334.5, -247, -347.5, -242.9, -347.5, -219.8, -355.5, -214.8, -355.5, -150.7, -366.5, -148.6, -366.5, -35.5, -374.4, -35.5, -375.5, 29.5, -375.5)
 
 [node name="liquid-in-cup" type="Node2D" parent="cup"]
+script = ExtResource("12_5lha2")
 
 [node name="Polygon2D" type="Polygon2D" parent="cup/liquid-in-cup"]
 clip_children = 1
-polygon = PackedVector2Array(-171.169, 305.569, -109.358, 643.393, -87.1696, 665.461, -50.7168, 677.345, 9.5094, 684.135, 69.7357, 670.554, 109.358, 641.695, 172.754, 297.081, 136.302, 305.569, 66.5659, 298.779, 19.0188, 310.662, -47.547, 305.569, -91.9243, 297.081, -142.641, 303.871)
+polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665.461, -50.7168, 677.345, 9.5094, 684.135, 69.7357, 670.554, 109.358, 641.695, 185.433, 241.06, 155.32, 239.362, 87.1696, 256.338, 12.6792, 261.431, -76.0753, 254.641, -129.962, 246.153, -191.773, 229.177)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cup/liquid-in-cup/Polygon2D"]
+[node name="liquid_animations" type="AnimatedSprite2D" parent="cup/liquid-in-cup/Polygon2D"]
+position = Vector2(-163.816, 285.184)
+scale = Vector2(0.955101, 0.874128)
 sprite_frames = SubResource("SpriteFrames_k1bue")
+animation = &"tea-2"
 
 [node name="Liquid Types" type="Control" parent="."]
 layout_mode = 3
@@ -388,9 +501,7 @@ metadata/_edit_lock_ = true
 position = Vector2(-7.50415, 47.5255)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Liquid Types/tea/TeaContainer/tea static body"]
-position = Vector2(7.50415, -47.5256)
-polygon = PackedVector2Array(36.5, -431.5, 36.5, -430.3, 97.5, -423.3, 97.5, -422, 126.5, -414, 126.5, -412.8, 164.5, -396.8, 164.5, -395.5, 182.5, -381.5, 182.5, -379.3, 186.5, -375.3, 186.5, -369.8, 189.8, -362.5, 190.9, -362.5, 226.5, -346.8, 226.5, -345.5, 250.5, -328.5, 250.5, -326.1, 255.5, -318.1, 255.5, -311.9, 259.9, -299.5, 281.5, -299.5, 281.5, -297.5, 289.5, -291.5, 289.5, -287.9, 297.5, -266.9, 297.5, -260.5, 300.8, -235.5, 298.4, -235.5, 288.4, -223.5, 283.9, -223.5, 269.5, -220.8, 269.5, -219.5, 284.5, -106.6, 284.5, -105.5, 287.5, 91.5, 286.5, 91.5, 285.5, 163.5, 284.4, 163.5, 278.4, 246.5, 277.2, 246.5, 262.5, 324.9, 262.5, 328.7, 273.5, 339.7, 273.5, 343.1, 276, 354.5, 273.8, 354.5, 265.8, 372.5, 264.2, 372.5, 241.2, 390.5, 236.9, 390.5, 216.9, 398.5, 212.6, 398.5, 170.8, 409.5, 164.7, 409.5, 21.6, 426.5, 4.5, 426.5, -57.5, 424.5, -57.5, 423.3, -167.5, 411.3, -167.5, 410.2, -217.5, 400.1, -217.5, 398.9, -254.5, 387, -254.5, 385.5, -272.5, 371.5, -272.5, 369, -281.5, 353, -281.5, 345, -274.7, 332.5, -273.2, 332.5, -268.5, 328.6, -268.5, 326.5, -269.1, 326.5, -282.5, 259.7, -282.5, 251.5, -291.5, 161.6, -291.5, 160.5, -293.5, -17.5, -292.5, -17.5, -290.5, -108.5, -289.3, -108.5, -275.8, -220.5, -295.5, -223.8, -295.5, -225.5, -305.5, -233.5, -305.5, -257.5, -304.2, -257.5, -300.2, -280.5, -298.9, -280.5, -293.9, -293.5, -292.3, -293.5, -286.3, -299.5, -266.5, -299.5, -266.5, -300.3, -263.5, -303.3, -263.5, -308.7, -261.1, -319.5, -259.7, -319.5, -252.7, -332.5, -250.2, -332.5, -231.2, -347.5, -228.1, -347.5, -214.1, -356.5, -210.9, -356.5, -196.5, -361.9, -187.8, -382.5, -186.4, -382.5, -178.4, -391.5, -176, -391.5, -160.1, -402.5, -156.9, -402.5, -101.9, -423.5, -92.9, -423.5, -62.7, -429.5, -51.7, -429.5, -27.5, -431.4, -27.5, -432.5)
-metadata/_edit_lock_ = true
+polygon = PackedVector2Array(-183.301, -398.883, -242.767, -371.282, -254.66, -335.188, -278.446, -335.188, -288.357, -290.602, -280.429, -284.233, -256.642, -282.11, -274.482, -120.75, -272.5, 59.7172, -270.518, 155.259, 1.04266, 299.633, 213.137, 176.49, 284.496, 95.8107, 282.514, -82.5338, 274.585, -195.061, 270.621, -279.987, 292.425, -282.11, 296.389, -296.972, 286.478, -339.435, 262.692, -339.435, 248.817, -373.405, 183.404, -405.252, 173.493, -432.853, 86.2769, -464.7, -50.4943, -468.947, -165.461, -430.73)
 
 [node name="tea nozzle" type="Node2D" parent="Liquid Types/tea"]
 z_index = 5

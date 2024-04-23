@@ -21,6 +21,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#print(liquid_station_global.going_to_pour)
 	pass
 
 func _on_milk_area_input_event(viewport, event, shape_idx):
@@ -45,6 +46,7 @@ func _on_milk_animations_animation_finished():
 	milk_anim.stop()
 	milk_anim.hide()
 	milk_still.show()
+	liquid_station_global.cow_milk_pouring = false
 	
 #func restrict_mouse_area(): < - maybe implement if we have time, want to restrict the mouse area when the animation is playing
 	#var mouse_position = get_viewport().get_mouse_position()
@@ -62,6 +64,7 @@ func _input(event):
 				if cup_droppable:
 					milk_anim.show()
 					milk_still.hide()
+					liquid_station_global.cow_milk_pouring = true
 					if mouse_position.x > cup_droppable_position.x:
 						if Input.is_action_just_pressed("click"):
 							milk_anim.play("pouring_milk_right")
