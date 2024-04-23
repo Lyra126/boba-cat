@@ -41,6 +41,7 @@ func _input(event):
 				if cup_droppable:
 					milk_anim.show()
 					milk_still.hide()
+					liquid_station_global.almond_milk_pouring = true
 					if mouse_position.x > cup_droppable_position.x:
 						if Input.is_action_just_pressed("click"):
 							milk_anim.play("default")
@@ -58,6 +59,7 @@ func _on_almond_animations_animation_finished() -> void:
 	milk_anim.hide()
 	milk_still.show()
 	selected = false
+	liquid_station_global.almond_milk_pouring = false
 
 func _on_almond_area_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.is_in_group('cup_drop'):

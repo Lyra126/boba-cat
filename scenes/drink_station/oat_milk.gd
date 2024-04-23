@@ -39,6 +39,7 @@ func _input(event):
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 				var mouse_position = get_viewport().get_mouse_position()
 				if cup_droppable:
+					liquid_station_global.oat_milk_pouring = true
 					milk_anim.show()
 					milk_still.hide()
 					if mouse_position.x > cup_droppable_position.x:
@@ -64,6 +65,7 @@ func _on_oat_animations_animation_finished() -> void:
 	milk_anim.stop()
 	milk_anim.hide()
 	milk_still.show()
+	liquid_station_global.oat_milk_pouring = false
 
 func _on_oat_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group('cup_drop'):

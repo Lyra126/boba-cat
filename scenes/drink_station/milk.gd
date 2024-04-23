@@ -60,7 +60,6 @@ func _input(event):
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 				var mouse_position = get_viewport().get_mouse_position()
-				print(mouse_position)
 				if cup_droppable:
 					milk_anim.show()
 					milk_still.hide()

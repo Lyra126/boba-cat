@@ -19,6 +19,7 @@ func _on_nozzle_area_input_event(viewport: Node, event: InputEvent, shape_idx: i
 		nozzle_still.hide()
 		liquid_station_global.nozzle_anim_playing = true
 		liquid_station_global.smoothie_set_to_pour = false
+		liquid_station_global.smoothie_pouring = true
 		global.SomethingBeingClickedRn = true
 
 func _on_nozzle_area_mouse_entered():
@@ -36,4 +37,5 @@ func _on_smoothie_nozzle_down_animation_finished() -> void:
 	nozzle_still.scale = Vector2(0.495,0.495)
 	liquid_station_global.nozzle_anim_playing = false
 	global.SomethingBeingClickedRn = false
+	liquid_station_global.smoothie_pouring = false
 
