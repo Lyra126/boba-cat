@@ -15,8 +15,8 @@ func _ready():
 	global.SomethingBeingClickedRn = false;
 	liquid_station_global.coffee_set_to_pour = false;
 	liquid_station_global.tea_set_to_pour = false;
-	overlapMachine = preload("res://assets/overlapMachine.png")
-	finalStation = preload("res://assets/finalStation.png")
+	overlapMachine = preload("res://assets/final_station/overlapMachine.png")
+	finalStation = preload("res://assets/final_station/finalStation.png")
 
 func _process(delta):
 	pass

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bhoh40m4lx3uo"]
 
 [ext_resource type="Script" path="res://scenes/start_screen/main_scene.gd" id="1_lmhu1"]
-[ext_resource type="Texture2D" uid="uid://bte2db3h0d8dv" path="res://assets/store.png" id="2_m3uqy"]
+[ext_resource type="Texture2D" uid="uid://bte2db3h0d8dv" path="res://assets/welcome/store.png" id="2_ff285"]
 
 [node name="MainScene" type="Control"]
 layout_mode = 3
@@ -24,7 +24,7 @@ offset_top = 196.04
 offset_right = 2207.0
 offset_bottom = 1176.96
 scale = Vector2(0.455746, 0.444101)
-texture = ExtResource("2_m3uqy")
+texture = ExtResource("2_ff285")
 expand_mode = 1
 
 [node name="Play" type="Button" parent="."]

@@ -63,12 +63,12 @@
 [ext_resource type="Texture2D" uid="uid://bn3a4ln7ljd83" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond1.png" id="33_iadle"]
 [ext_resource type="Texture2D" uid="uid://c3bfhfrvyg62l" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond2.png" id="34_1f30t"]
 [ext_resource type="Texture2D" uid="uid://pa157pyurqxk" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond3.png" id="35_ux4h3"]
-[ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/normalBack.png" id="40_2pc7h"]
-[ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/pressedBack.png" id="41_rpnfp"]
-[ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/hoverBack.png" id="42_8e33d"]
-[ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/normalNext.png" id="43_m4dw2"]
-[ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/pressedNext.png" id="44_iy20j"]
-[ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/hoverNext.png" id="45_dwcwo"]
+[ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/buttons/normalBack.png" id="64_dl136"]
+[ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/buttons/pressedBack.png" id="65_vqxlk"]
+[ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/buttons/hoverBack.png" id="66_ww47t"]
+[ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="67_f1jcb"]
+[ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="68_hxs0e"]
+[ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="69_lxqee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bh2m"]
 size = Vector2(253.707, 204.515)
@@ -747,9 +747,9 @@ offset_top = 419.309
 offset_right = -261.582
 offset_bottom = 1419.31
 scale = Vector2(0.32, 0.32)
-texture_normal = ExtResource("40_2pc7h")
-texture_pressed = ExtResource("41_rpnfp")
-texture_hover = ExtResource("42_8e33d")
+texture_normal = ExtResource("64_dl136")
+texture_pressed = ExtResource("65_vqxlk")
+texture_hover = ExtResource("66_ww47t")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
@@ -759,9 +759,9 @@ offset_top = 429.494
 offset_right = 1933.51
 offset_bottom = 1429.49
 scale = Vector2(0.32, 0.32)
-texture_normal = ExtResource("43_m4dw2")
-texture_pressed = ExtResource("44_iy20j")
-texture_hover = ExtResource("45_dwcwo")
+texture_normal = ExtResource("67_f1jcb")
+texture_pressed = ExtResource("68_hxs0e")
+texture_hover = ExtResource("69_lxqee")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
