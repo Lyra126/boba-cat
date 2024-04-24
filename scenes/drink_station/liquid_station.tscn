@@ -367,7 +367,7 @@ size = Vector2(253.707, 204.515)
 [sub_resource type="SpriteFrames" id="SpriteFrames_nvx2t"]
 animations = [{
 "frames": [{
-"duration": 3.0,
+"duration": 1.5,
 "texture": ExtResource("4_g2ujl")
 }],
 "loop": false,
@@ -376,7 +376,7 @@ animations = [{
 }]
 
 [sub_resource type="Curve" id="Curve_i7glc"]
-_data = [Vector2(0.0223464, 1), 0.0, 0.0, 0, 0, Vector2(0.994413, 0.200238), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4hdd"]
@@ -1758,16 +1758,15 @@ scale = Vector2(0.513918, 0.533167)
 sprite_frames = SubResource("SpriteFrames_nvx2t")
 
 [node name="sugar_particle" type="CPUParticles2D" parent="sugar syrup"]
-position = Vector2(-673.583, 169.761)
+position = Vector2(-675.168, 193.527)
 scale = Vector2(2.85071, 2.55876)
-emitting = false
-amount = 15
-explosiveness = 1.0
-spread = 180.0
-gravity = Vector2(2.08165e-12, 2.08165e-12)
-initial_velocity_min = 50.0
-initial_velocity_max = 100.0
-scale_amount_min = 10.0
+amount = 55
+explosiveness = 0.08
+spread = 69.09
+gravity = Vector2(2.08165e-12, 980)
+initial_velocity_min = 40.0
+initial_velocity_max = 60.0
+scale_amount_min = 0.0
 scale_amount_max = 15.0
 scale_amount_curve = SubResource("Curve_i7glc")
 
