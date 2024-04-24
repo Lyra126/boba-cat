@@ -179,3 +179,6 @@ func get_liquid_inside_cup(sprite):
 		######### OAT AND OAT ##########
 		if liquid_station_global.oat_milk == 3:
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/oat-milk-2.png"))
+
+#func reset_liquid_inside_cup(sprite):
+	#sprite.delete_texture() 

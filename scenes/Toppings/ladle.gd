@@ -6,6 +6,7 @@ extends Node2D
 var selected
 var off_set = Vector2.ZERO
 var target_position
+var in_ladle_area
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,7 +26,6 @@ func _on_ladle_area_input_event(viewport: Node, event: InputEvent, shape_idx: in
 	elif Input.is_action_just_pressed("click"):	
 		print(get_global_mouse_position())
 
-
 func _physics_process(delta):
 	if selected:
 		target_position = get_global_mouse_position() - off_set
@@ -34,3 +34,9 @@ func _physics_process(delta):
 	else:
 		global_position = lerp(global_position, ladle_area.global_position, 10 * delta)
 		rotation = lerp_angle(rotation, 150.40, 10 * delta)
+
+
+func _on_ladle_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("ladle_area"):
+		in_ladle_area = true
+

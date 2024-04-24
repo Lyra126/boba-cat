@@ -91,7 +91,6 @@ func handle_liquid_selection(event):
 		global_position = lerp(global_position, cup_spot.global_position, 1)
 		scale = Vector2(1, 1)  # Reset scale if needed
 	
-
 func _on_cup_pick_up_body_entered(body):
 	if body.is_in_group('tea-droppable'):
 		tea_droppable = true
