@@ -54,10 +54,13 @@ func _input(event):
 
 func _on_oat_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_action_pressed("click") and not global.SomethingBeingClickedRn and liquid_station_global.fridge_open and not liquid_station_global.going_to_pour:
-		selected = true
-		global.SomethingBeingClickedRn = true;
-		offset = get_global_mouse_position() - global_position
-		global.liquids_poured.append("oat_milk")
+		if liquid_station_global.liquid_layer == 2:
+			shake_sprite()
+		else:
+			selected = true
+			global.SomethingBeingClickedRn = true;
+			offset = get_global_mouse_position() - global_position
+			global.liquids_poured.append("oat_milk")
 
 func _on_oat_animations_animation_finished() -> void:
 	selected = false
@@ -74,3 +77,9 @@ func _on_oat_area_body_entered(body: Node2D) -> void:
 func _on_oat_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group('cup_drop'):
 		cup_droppable = false
+		
+func shake_sprite():
+	var tween = get_tree().create_tween()  # Ensure the Tween node/component is correctly referenced
+	var r_max = 2
+
+	tween.tween_property(self, "rotation_degrees", r_max, 0.05).set_ease(Tween.EASE_IN)

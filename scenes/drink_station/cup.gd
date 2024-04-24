@@ -53,9 +53,9 @@ func _input(event):
 
 func handle_liquid_selection(event):
 	# Determine which liquid is droppable
-	var is_tea = tea_droppable and not liquid_station_global.tea_set_to_pour
-	var is_coffee = coffee_droppable and not liquid_station_global.coffee_set_to_pour
-	var is_smoothie = smoothie_droppable and not liquid_station_global.smoothie_set_to_pour
+	var is_tea = tea_droppable and not liquid_station_global.tea_set_to_pour and not liquid_station_global.liquid_layer == 2
+	var is_coffee = coffee_droppable and not liquid_station_global.coffee_set_to_pour and not liquid_station_global.liquid_layer == 2
+	var is_smoothie = smoothie_droppable and not liquid_station_global.smoothie_set_to_pour and not liquid_station_global.liquid_layer == 2
 	
 	# Reset selections
 	selected = false
@@ -120,5 +120,3 @@ func _on_smoothie_nozzle_down_animation_finished():
 	selected = true
 	liquid_station_global.going_to_pour = false
 	
-
-

@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=156 format=3 uid="uid://cspsfyf0b2txa"]
+=======
+[gd_scene load_steps=301 format=3 uid="uid://cyuy7nmqcphps"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
@@ -73,26 +77,40 @@
 [ext_resource type="Texture2D" uid="uid://bkvn0ghj4kt8" path="res://assets/liquid_station/animations/liquid-pouring/coffee-2/Untitled_Artwork-7 6.png" id="28_8ugcn"]
 [ext_resource type="Texture2D" uid="uid://xjwvvg8j3dv8" path="res://assets/liquid_station/animations/liquid-pouring/tea-2/Untitled_Artwork-7 4.png" id="28_qgpof"]
 [ext_resource type="Texture2D" uid="uid://c0hxhxce6djim" path="res://assets/liquid_station/animations/liquid-pouring/tea-cow-milk-2/Untitled_Artwork-7 3.png" id="28_rhkuk"]
+[ext_resource type="Texture2D" uid="uid://7m80xphkkjbd" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-coffee-2/Untitled_Artwork-1 34.png" id="29_5e8f2"]
+[ext_resource type="Texture2D" uid="uid://um4hc470apqo" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-cow-milk-2/Untitled_Artwork-1 19.png" id="29_droim"]
 [ext_resource type="Texture2D" uid="uid://bfhoj7ar02ods" path="res://assets/liquid_station/animations/oat-milk-animation/oat2.png" id="29_ft0m0"]
 [ext_resource type="Texture2D" uid="uid://de62dd6mpynnv" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-tea-2/Untitled_Artwork-1 15.png" id="29_p8dkf"]
 [ext_resource type="Texture2D" uid="uid://cxk6a35q0y1ht" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-1/Untitled_Artwork-1 11.png" id="29_psjm3"]
 [ext_resource type="Texture2D" uid="uid://cnwykukjwyk71" path="res://assets/liquid_station/animations/oat-milk-animation/oat3.png" id="30_3hbfx"]
+[ext_resource type="Texture2D" uid="uid://yqs157vsyud2" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-coffee-2/Untitled_Artwork-2 35.png" id="30_67ba0"]
+[ext_resource type="Texture2D" uid="uid://uaebrfq4yswk" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-cow-milk-2/Untitled_Artwork-2 20.png" id="30_784wi"]
 [ext_resource type="Texture2D" uid="uid://c1j4rpodtccc1" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-tea-2/Untitled_Artwork-2 16.png" id="30_d2b8j"]
 [ext_resource type="Texture2D" uid="uid://dv2y3gik4hlsk" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-1/Untitled_Artwork-2 12.png" id="30_htno0"]
+[ext_resource type="Texture2D" uid="uid://o6cuno7g8sc1" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-coffee-2/Untitled_Artwork-3 34.png" id="31_pucxt"]
 [ext_resource type="Script" path="res://scenes/drink_station/almond_milk.gd" id="31_t7563"]
 [ext_resource type="Texture2D" uid="uid://dcmm7u2ndhw3w" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-1/Untitled_Artwork-3 11.png" id="31_v0a4x"]
 [ext_resource type="Texture2D" uid="uid://o1pouql8x6gf" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-tea-2/Untitled_Artwork-3 15.png" id="31_wn0lc"]
+[ext_resource type="Texture2D" uid="uid://4psme8x4h4xy" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-cow-milk-2/Untitled_Artwork-3 19.png" id="31_xg15h"]
 [ext_resource type="Texture2D" uid="uid://t2sne5rpi7lv" path="res://assets/liquid_station/assets/almond_still.png" id="32_3hf2e"]
+[ext_resource type="Texture2D" uid="uid://6kpv6m0g2jgb" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-coffee-2/Untitled_Artwork-4 31.png" id="32_emvb1"]
 [ext_resource type="Texture2D" uid="uid://hro0sqo3augl" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-tea-2/Untitled_Artwork-4 12.png" id="32_q2qec"]
 [ext_resource type="Texture2D" uid="uid://cg28opaloe2nl" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-1/Untitled_Artwork-4 8.png" id="32_v7yhg"]
+[ext_resource type="Texture2D" uid="uid://c67tbnpih5w4w" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-cow-milk-2/Untitled_Artwork-4 16.png" id="32_xbfpe"]
+[ext_resource type="Texture2D" uid="uid://325o10bo5i6u" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-coffee-2/Untitled_Artwork-5 31.png" id="33_c0l11"]
 [ext_resource type="Texture2D" uid="uid://bn3a4ln7ljd83" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond1.png" id="33_iadle"]
+[ext_resource type="Texture2D" uid="uid://bshnkmp4mx2im" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-cow-milk-2/Untitled_Artwork-5 16.png" id="33_m1ik7"]
 [ext_resource type="Texture2D" uid="uid://dlfklxu0nsxmk" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-tea-2/Untitled_Artwork-5 12.png" id="33_qk2hf"]
 [ext_resource type="Texture2D" uid="uid://52i4oshfoac" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-1/Untitled_Artwork-5 8.png" id="33_rvb5t"]
 [ext_resource type="Texture2D" uid="uid://c3bfhfrvyg62l" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond2.png" id="34_1f30t"]
 [ext_resource type="Texture2D" uid="uid://bhykytv1cepa1" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-tea-2/Untitled_Artwork-6 12.png" id="34_5ldf8"]
+[ext_resource type="Texture2D" uid="uid://bpoie0a31vxuj" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-cow-milk-2/Untitled_Artwork-6 16.png" id="34_412i7"]
+[ext_resource type="Texture2D" uid="uid://b586nn0gpbu4d" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-coffee-2/Untitled_Artwork-6 31.png" id="34_eiad4"]
 [ext_resource type="Texture2D" uid="uid://hwiwy8iesdhh" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-1/Untitled_Artwork-6 8.png" id="34_i7y7e"]
 [ext_resource type="Texture2D" uid="uid://codeb60dxtehe" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-tea-2/Untitled_Artwork-7 11.png" id="35_2j1ql"]
+[ext_resource type="Texture2D" uid="uid://clm3uv5yui0l1" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-cow-milk-2/Untitled_Artwork-7 15.png" id="35_dx63x"]
 [ext_resource type="Texture2D" uid="uid://cly2ctui0hvy6" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-1/Untitled_Artwork-7 7.png" id="35_rcm0x"]
+[ext_resource type="Texture2D" uid="uid://cb5543h60nfw3" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-coffee-2/Untitled_Artwork-7 30.png" id="35_tekxn"]
 [ext_resource type="Texture2D" uid="uid://pa157pyurqxk" path="res://assets/liquid_station/animations/almond-milk-aniamtion/almond3.png" id="35_ux4h3"]
 [ext_resource type="Texture2D" uid="uid://dxw7qcea3prof" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-1/Untitled_Artwork-8 4.png" id="36_voln5"]
 [ext_resource type="Texture2D" uid="uid://c4i2qsvn5wsaq" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-1/Untitled_Artwork-9 4.png" id="37_1icoa"]
@@ -123,15 +141,68 @@
 [ext_resource type="Texture2D" uid="uid://ban4ammbg1prw" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-2/Untitled_Artwork-3 14.png" id="56_xdfhk"]
 [ext_resource type="Texture2D" uid="uid://cxgjqa22fv6q4" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-2/Untitled_Artwork-4 11.png" id="57_7e4a5"]
 [ext_resource type="Texture2D" uid="uid://cpbk6qpxtgeng" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-2/Untitled_Artwork-5 11.png" id="58_h65r2"]
+[ext_resource type="Texture2D" uid="uid://djthdvjsephm0" path="res://assets/liquid_station/animations/liquid-pouring/coffee-smoothie-2/Untitled_Artwork-1 25.png" id="59_2oeef"]
+[ext_resource type="Texture2D" uid="uid://r74b7r5h6mq7" path="res://assets/liquid_station/animations/liquid-pouring/coffee-almond-milk-2/Untitled_Artwork-1 33.png" id="59_8ygpg"]
 [ext_resource type="Texture2D" uid="uid://b712m6cp1ybvm" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-2/Untitled_Artwork-6 11.png" id="59_c02af"]
+[ext_resource type="Texture2D" uid="uid://21n4dqtbv1pu" path="res://assets/liquid_station/animations/liquid-pouring/coffee-smoothie-2/Untitled_Artwork-2 26.png" id="60_2xidq"]
+[ext_resource type="Texture2D" uid="uid://p84barbnncar" path="res://assets/liquid_station/animations/liquid-pouring/coffee-almond-milk-2/Untitled_Artwork-2 34.png" id="60_7iujd"]
 [ext_resource type="Texture2D" uid="uid://ds0pvhlejdvho" path="res://assets/liquid_station/animations/liquid-pouring/almond-milk-2/Untitled_Artwork-7 10.png" id="60_jyaq6"]
+[ext_resource type="Texture2D" uid="uid://bsmeumaxl27l8" path="res://assets/liquid_station/animations/liquid-pouring/coffee-almond-milk-2/Untitled_Artwork-3 33.png" id="61_fkyg5"]
+[ext_resource type="Texture2D" uid="uid://ckuu4gfw4fb1k" path="res://assets/liquid_station/animations/liquid-pouring/coffee-smoothie-2/Untitled_Artwork-3 25.png" id="61_vfyem"]
+[ext_resource type="Texture2D" uid="uid://sr4ijee7fmg8" path="res://assets/liquid_station/animations/liquid-pouring/coffee-almond-milk-2/Untitled_Artwork-4 30.png" id="62_bl1yl"]
+[ext_resource type="Texture2D" uid="uid://d0xdjgpeeukpi" path="res://assets/liquid_station/animations/liquid-pouring/coffee-smoothie-2/Untitled_Artwork-4 22.png" id="62_jqday"]
+[ext_resource type="Texture2D" uid="uid://duyajkekch4kt" path="res://assets/liquid_station/animations/liquid-pouring/coffee-smoothie-2/Untitled_Artwork-5 22.png" id="63_5y6jt"]
+[ext_resource type="Texture2D" uid="uid://bjo20dlgvptgi" path="res://assets/liquid_station/animations/liquid-pouring/coffee-almond-milk-2/Untitled_Artwork-5 30.png" id="63_ypdlj"]
+[ext_resource type="Texture2D" uid="uid://b7chcnkn25l2a" path="res://assets/liquid_station/animations/liquid-pouring/coffee-almond-milk-2/Untitled_Artwork-6 30.png" id="64_t7vki"]
+[ext_resource type="Texture2D" uid="uid://cyxepkhk10a6u" path="res://assets/liquid_station/animations/liquid-pouring/coffee-smoothie-2/Untitled_Artwork-6 22.png" id="64_vspkg"]
+[ext_resource type="Texture2D" uid="uid://fcdlkihjqttb" path="res://assets/liquid_station/animations/liquid-pouring/coffee-almond-milk-2/Untitled_Artwork-7 29.png" id="65_ftwyi"]
+[ext_resource type="Texture2D" uid="uid://dre1prximb8ch" path="res://assets/liquid_station/animations/liquid-pouring/coffee-smoothie-2/Untitled_Artwork-7 21.png" id="65_lh48t"]
+[ext_resource type="Texture2D" uid="uid://ch4ggqobj87vw" path="res://assets/liquid_station/animations/liquid-pouring/coffee-tea-2/Untitled_Artwork-1 28.png" id="66_mx135"]
+[ext_resource type="Texture2D" uid="uid://cus4ipyger0dl" path="res://assets/liquid_station/animations/liquid-pouring/coffee-tea-2/Untitled_Artwork-2 29.png" id="67_ca18f"]
+[ext_resource type="Texture2D" uid="uid://c88xdpulu4bku" path="res://assets/liquid_station/animations/liquid-pouring/coffee-tea-2/Untitled_Artwork-3 28.png" id="68_4udpb"]
+[ext_resource type="Texture2D" uid="uid://bk6e4xmubgojg" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-tea-2/Untitled_Artwork-1 17.png" id="68_bwgce"]
+[ext_resource type="Texture2D" uid="uid://bfuqmb0m7eof8" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-almond-milk-2/Untitled_Artwork-1 18.png" id="68_x8xir"]
+[ext_resource type="Texture2D" uid="uid://bog8olocr14md" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-tea-2/Untitled_Artwork-2 18.png" id="69_5ys1x"]
+[ext_resource type="Texture2D" uid="uid://cl4bug8lcwojg" path="res://assets/liquid_station/animations/liquid-pouring/coffee-tea-2/Untitled_Artwork-4 25.png" id="69_a5smo"]
+[ext_resource type="Texture2D" uid="uid://i8r0a0ptph8l" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-almond-milk-2/Untitled_Artwork-2 19.png" id="69_sw0il"]
+[ext_resource type="Texture2D" uid="uid://bp0u11ecwi42w" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-tea-2/Untitled_Artwork-3 17.png" id="70_3ue5p"]
+[ext_resource type="Texture2D" uid="uid://bmycvdc84db4w" path="res://assets/liquid_station/animations/liquid-pouring/coffee-tea-2/Untitled_Artwork-5 25.png" id="70_4hpdd"]
+[ext_resource type="Texture2D" uid="uid://c0vwffm5xk6fx" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-almond-milk-2/Untitled_Artwork-3 18.png" id="70_jry0b"]
+[ext_resource type="Texture2D" uid="uid://cc5j3x0tok6m0" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-tea-2/Untitled_Artwork-4 14.png" id="71_6lcei"]
+[ext_resource type="Texture2D" uid="uid://dd0tmiqvt7wra" path="res://assets/liquid_station/animations/liquid-pouring/coffee-tea-2/Untitled_Artwork-6 25.png" id="71_jstq3"]
+[ext_resource type="Texture2D" uid="uid://bcf1pcem4wvv" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-almond-milk-2/Untitled_Artwork-4 15.png" id="71_ximt6"]
+[ext_resource type="Texture2D" uid="uid://b2bn053dhflq6" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-tea-2/Untitled_Artwork-5 14.png" id="72_1r77h"]
+[ext_resource type="Texture2D" uid="uid://blvt8fsj60cn4" path="res://assets/liquid_station/animations/liquid-pouring/coffee-tea-2/Untitled_Artwork-7 24.png" id="72_gbtq3"]
+[ext_resource type="Texture2D" uid="uid://k31t4xl56xaq" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-almond-milk-2/Untitled_Artwork-5 15.png" id="72_xc6ye"]
+[ext_resource type="Texture2D" uid="uid://co1srjkejrsrq" path="res://assets/liquid_station/animations/liquid-pouring/coffee-cow-milk-2/Untitled_Artwork-1 35.png" id="73_a6f21"]
+[ext_resource type="Texture2D" uid="uid://dvd5pi1nr456y" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-almond-milk-2/Untitled_Artwork-6 15.png" id="73_pqx1o"]
+[ext_resource type="Texture2D" uid="uid://kim8mktftu1b" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-tea-2/Untitled_Artwork-6 14.png" id="73_ska73"]
+[ext_resource type="Texture2D" uid="uid://cjot86yjwaieu" path="res://assets/liquid_station/animations/liquid-pouring/coffee-cow-milk-2/Untitled_Artwork-2 36.png" id="74_6pr6r"]
+[ext_resource type="Texture2D" uid="uid://dmr4m3q41bvsm" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-tea-2/Untitled_Artwork-7 13.png" id="74_ff5wg"]
+[ext_resource type="Texture2D" uid="uid://fhng1hoydryf" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-almond-milk-2/Untitled_Artwork-7 14.png" id="74_kxcsu"]
+[ext_resource type="Texture2D" uid="uid://bl78ltsl10tnn" path="res://assets/liquid_station/animations/liquid-pouring/coffee-cow-milk-2/Untitled_Artwork-3 35.png" id="75_gehfu"]
+[ext_resource type="Texture2D" uid="uid://bcchfw5i0o3e5" path="res://assets/liquid_station/animations/liquid-pouring/coffee-cow-milk-2/Untitled_Artwork-4 32.png" id="76_e1jyw"]
+[ext_resource type="Texture2D" uid="uid://es4mgt63j6af" path="res://assets/liquid_station/animations/liquid-pouring/coffee-cow-milk-2/Untitled_Artwork-5 32.png" id="77_qfdss"]
+[ext_resource type="Texture2D" uid="uid://dw6yvq5hem87u" path="res://assets/liquid_station/animations/liquid-pouring/coffee-cow-milk-2/Untitled_Artwork-6 32.png" id="78_qqjn0"]
+[ext_resource type="Texture2D" uid="uid://ddpe5d3pta0um" path="res://assets/liquid_station/animations/liquid-pouring/coffee-cow-milk-2/Untitled_Artwork-7 31.png" id="79_o0pa7"]
+[ext_resource type="Texture2D" uid="uid://6bs1plyqaokj" path="res://assets/liquid_station/animations/liquid-pouring/coffee-oat-milk-2/Untitled_Artwork-1 38.png" id="80_f662o"]
+[ext_resource type="Texture2D" uid="uid://bm54nv2601bve" path="res://assets/liquid_station/animations/liquid-pouring/coffee-oat-milk-2/Untitled_Artwork-2 39.png" id="81_munlp"]
+[ext_resource type="Texture2D" uid="uid://b3q6crmio8wm6" path="res://assets/liquid_station/animations/liquid-pouring/coffee-oat-milk-2/Untitled_Artwork-3 38.png" id="82_st34e"]
+[ext_resource type="Texture2D" uid="uid://dkvhl5s36epum" path="res://assets/liquid_station/animations/liquid-pouring/coffee-oat-milk-2/Untitled_Artwork-4 35.png" id="83_12ppd"]
+[ext_resource type="Texture2D" uid="uid://ce0rkq12dmmdt" path="res://assets/liquid_station/animations/liquid-pouring/coffee-oat-milk-2/Untitled_Artwork-5 35.png" id="84_bkiro"]
 [ext_resource type="Texture2D" uid="uid://vqgekamustgk" path="res://assets/liquid_station/animations/liquid-pouring/tea-almond-milk-2/Untitled_Artwork-1 16.png" id="84_l4g4d"]
 [ext_resource type="Texture2D" uid="uid://bgwa0mpl83rdt" path="res://assets/liquid_station/animations/liquid-pouring/tea-almond-milk-2/Untitled_Artwork-2 17.png" id="85_bhljs"]
+[ext_resource type="Texture2D" uid="uid://cfql3e7dwslme" path="res://assets/liquid_station/animations/liquid-pouring/coffee-oat-milk-2/Untitled_Artwork-6 35.png" id="85_g7d1t"]
+[ext_resource type="Texture2D" uid="uid://dy2l4nkeorsua" path="res://assets/liquid_station/animations/liquid-pouring/coffee-oat-milk-2/Untitled_Artwork-7 34.png" id="86_m4wyj"]
 [ext_resource type="Texture2D" uid="uid://c8e0g0uowreds" path="res://assets/liquid_station/animations/liquid-pouring/tea-almond-milk-2/Untitled_Artwork-3 16.png" id="86_wjg7l"]
 [ext_resource type="Texture2D" uid="uid://c2i60l1incpug" path="res://assets/liquid_station/animations/liquid-pouring/tea-almond-milk-2/Untitled_Artwork-4 13.png" id="87_lntl0"]
 [ext_resource type="Texture2D" uid="uid://b5i05yes152lj" path="res://assets/liquid_station/animations/liquid-pouring/tea-almond-milk-2/Untitled_Artwork-5 13.png" id="88_beps6"]
+[ext_resource type="Texture2D" uid="uid://yy46505ivmm0" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-1/Untitled_Artwork-1 20.png" id="89_7gnov"]
+[ext_resource type="Texture2D" uid="uid://bqjimwa6ffy73" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-1/Untitled_Artwork-1 22.png" id="89_kdnms"]
 [ext_resource type="Texture2D" uid="uid://dy6hvd1gvp8io" path="res://assets/liquid_station/animations/liquid-pouring/tea-almond-milk-2/Untitled_Artwork-6 13.png" id="89_xiakg"]
+[ext_resource type="Texture2D" uid="uid://c1hv06jr874ae" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-1/Untitled_Artwork-2 23.png" id="90_vdltl"]
 [ext_resource type="Texture2D" uid="uid://bgpe6ugbpx524" path="res://assets/liquid_station/animations/liquid-pouring/tea-almond-milk-2/Untitled_Artwork-7 12.png" id="90_wclw7"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://cujo4it0fdse7" path="res://assets/buttons/close.png" id="133_64tsy"]
 [ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="134_xity5"]
 [ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="135_7tirn"]
@@ -139,6 +210,93 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vww3g"]
 size = Vector2(1047.66, 1447.97)
+=======
+[ext_resource type="Texture2D" uid="uid://bdatdvalic56k" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-1/Untitled_Artwork-2 21.png" id="90_xvwrm"]
+[ext_resource type="Texture2D" uid="uid://b8v5jujd83eqq" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-1/Untitled_Artwork-3 20.png" id="91_07v4p"]
+[ext_resource type="Texture2D" uid="uid://65f7irsuqfhi" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-1/Untitled_Artwork-3 22.png" id="91_y2d23"]
+[ext_resource type="Texture2D" uid="uid://ckcamh7ghqqax" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-1/Untitled_Artwork-4 19.png" id="92_gb0n4"]
+[ext_resource type="Texture2D" uid="uid://uro1l8clxybs" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-1/Untitled_Artwork-4 17.png" id="92_kj5at"]
+[ext_resource type="Texture2D" uid="uid://myvys7puxlbl" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-1/Untitled_Artwork-5 19.png" id="93_m2qky"]
+[ext_resource type="Texture2D" uid="uid://8tinfxtqu0sf" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-1/Untitled_Artwork-5 17.png" id="93_x6o1q"]
+[ext_resource type="Texture2D" uid="uid://bjhgb2s50wcsl" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-1/Untitled_Artwork-6 19.png" id="94_gltn4"]
+[ext_resource type="Texture2D" uid="uid://dinrx4hve0rcp" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-1/Untitled_Artwork-6 17.png" id="94_xgotm"]
+[ext_resource type="Texture2D" uid="uid://cod5v325m06k5" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-1/Untitled_Artwork-7 18.png" id="95_jpsv8"]
+[ext_resource type="Texture2D" uid="uid://dgjk8ifegpp3x" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-1/Untitled_Artwork-7 16.png" id="95_powcj"]
+[ext_resource type="Texture2D" uid="uid://cxl06bjr1nr87" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-1/Untitled_Artwork-8 7.png" id="96_rq7sm"]
+[ext_resource type="Texture2D" uid="uid://dfkmdt7d35ufg" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-1/Untitled_Artwork-8 6.png" id="96_xuiv6"]
+[ext_resource type="Texture2D" uid="uid://bqx4fgwadolks" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-1/Untitled_Artwork-9 6.png" id="97_pv6ku"]
+[ext_resource type="Texture2D" uid="uid://eibwi0u8kyv3" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-1/Untitled_Artwork-9 7.png" id="97_r7e88"]
+[ext_resource type="Texture2D" uid="uid://5owfvw5dwosi" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-2/Untitled_Artwork-1 21.png" id="98_fam7y"]
+[ext_resource type="Texture2D" uid="uid://celty8ol35knl" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-2/Untitled_Artwork-1 23.png" id="98_scf1i"]
+[ext_resource type="Texture2D" uid="uid://b1pitoaxglbbp" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-2/Untitled_Artwork-2 22.png" id="99_6rfuo"]
+[ext_resource type="Texture2D" uid="uid://b3y011qh3yutl" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-2/Untitled_Artwork-2 24.png" id="99_cpnkv"]
+[ext_resource type="Texture2D" uid="uid://j3c57nhu8lym" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-2/Untitled_Artwork-3 23.png" id="100_4anm0"]
+[ext_resource type="Texture2D" uid="uid://d1okmjiihc4yd" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-2/Untitled_Artwork-3 21.png" id="100_iga3k"]
+[ext_resource type="Texture2D" uid="uid://cpts5c4xumg3e" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-2/Untitled_Artwork-4 20.png" id="101_8px0r"]
+[ext_resource type="Texture2D" uid="uid://bbjvhd1ms037s" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-2/Untitled_Artwork-4 18.png" id="101_y077a"]
+[ext_resource type="Texture2D" uid="uid://cgtrx8x0yn28y" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-2/Untitled_Artwork-5 20.png" id="102_0yyn2"]
+[ext_resource type="Texture2D" uid="uid://1y26wex76mev" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-2/Untitled_Artwork-5 18.png" id="102_wtdkr"]
+[ext_resource type="Texture2D" uid="uid://lvnfjxd0r5qw" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-2/Untitled_Artwork-6 18.png" id="103_4hn4w"]
+[ext_resource type="Texture2D" uid="uid://ceguuihdsoth7" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-2/Untitled_Artwork-6 20.png" id="103_t4cty"]
+[ext_resource type="Texture2D" uid="uid://sbf75in8h8u5" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-2/Untitled_Artwork-7 19.png" id="104_miosi"]
+[ext_resource type="Texture2D" uid="uid://cehhsk3sqnw8i" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-2/Untitled_Artwork-7 17.png" id="104_vbmjw"]
+[ext_resource type="Texture2D" uid="uid://htx37vtn56js" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-coffee-2/Untitled_Artwork-1 36.png" id="117_yes1g"]
+[ext_resource type="Texture2D" uid="uid://0j2lt6my7bad" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-coffee-2/Untitled_Artwork-2 37.png" id="118_12320"]
+[ext_resource type="Texture2D" uid="uid://du0j4hy2b311h" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-tea-2/Untitled_Artwork-1 32.png" id="119_cmrm8"]
+[ext_resource type="Texture2D" uid="uid://dwkqvurygio1f" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-coffee-2/Untitled_Artwork-3 36.png" id="119_nl11w"]
+[ext_resource type="Texture2D" uid="uid://w2pxxg8ciijs" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-coffee-2/Untitled_Artwork-4 33.png" id="120_44stu"]
+[ext_resource type="Texture2D" uid="uid://dtt5qyn5mhb1k" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-tea-2/Untitled_Artwork-2 33.png" id="120_wbha5"]
+[ext_resource type="Texture2D" uid="uid://crjcxohuco34n" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-coffee-2/Untitled_Artwork-5 33.png" id="121_dlymp"]
+[ext_resource type="Texture2D" uid="uid://ba4gl7c14xloh" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-tea-2/Untitled_Artwork-3 32.png" id="121_s1vqu"]
+[ext_resource type="Texture2D" uid="uid://bbk4jtugdh84u" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-coffee-2/Untitled_Artwork-6 33.png" id="122_esflb"]
+[ext_resource type="Texture2D" uid="uid://df6wm531xeb8c" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-tea-2/Untitled_Artwork-4 29.png" id="122_qo4pp"]
+[ext_resource type="Texture2D" uid="uid://dpcj2gyonf8tv" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-coffee-2/Untitled_Artwork-7 32.png" id="123_2x5fb"]
+[ext_resource type="Texture2D" uid="uid://cpsardyk2ggmc" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-tea-2/Untitled_Artwork-5 29.png" id="123_77w7k"]
+[ext_resource type="Texture2D" uid="uid://b7nngi7v07cyt" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-tea-2/Untitled_Artwork-6 29.png" id="124_88uex"]
+[ext_resource type="Texture2D" uid="uid://dnyvjjykkho1j" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-tea-2/Untitled_Artwork-7 28.png" id="125_3d8ml"]
+[ext_resource type="Texture2D" uid="uid://coyeail21ocxl" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-coffee-2/Untitled_Artwork-1 24.png" id="128_ji875"]
+[ext_resource type="Texture2D" uid="uid://4trgjpvusbws" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-coffee-2/Untitled_Artwork-2 25.png" id="129_gao2v"]
+[ext_resource type="Texture2D" uid="uid://ca8jyqyopahfo" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-coffee-2/Untitled_Artwork-3 24.png" id="130_yq8t6"]
+[ext_resource type="Texture2D" uid="uid://cqdxqjftfudhb" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-coffee-2/Untitled_Artwork-4 21.png" id="131_p02ms"]
+[ext_resource type="Texture2D" uid="uid://cl7ok04unwgqx" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-coffee-2/Untitled_Artwork-5 21.png" id="132_3wkio"]
+[ext_resource type="Texture2D" uid="uid://j7jqcml6fdgh" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-coffee-2/Untitled_Artwork-6 21.png" id="133_yonax"]
+[ext_resource type="Texture2D" uid="uid://bh7olbwad77b6" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-coffee-2/Untitled_Artwork-7 20.png" id="134_dlh43"]
+[ext_resource type="Texture2D" uid="uid://64sqh02ixvc0" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-tea-2/Untitled_Artwork-1 30.png" id="142_k8nd0"]
+[ext_resource type="Texture2D" uid="uid://ckojo8xw6d3j6" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-tea-2/Untitled_Artwork-2 31.png" id="143_2cph8"]
+[ext_resource type="Texture2D" uid="uid://84fsxyqif3w2" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-tea-2/Untitled_Artwork-3 30.png" id="144_n337f"]
+[ext_resource type="Texture2D" uid="uid://b2qu684py7sf1" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-tea-2/Untitled_Artwork-4 27.png" id="145_jx70x"]
+[ext_resource type="Texture2D" uid="uid://c47xggp831tgg" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-tea-2/Untitled_Artwork-5 27.png" id="146_7w4np"]
+[ext_resource type="Texture2D" uid="uid://bklttafubgqbu" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-tea-2/Untitled_Artwork-6 27.png" id="147_fmaaw"]
+[ext_resource type="Texture2D" uid="uid://xsiwuvvjxrx7" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-coffee-2/Untitled_Artwork-1 37.png" id="147_qebn4"]
+[ext_resource type="Texture2D" uid="uid://kyn3l4qys3dg" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-coffee-2/Untitled_Artwork-2 38.png" id="148_8bo04"]
+[ext_resource type="Texture2D" uid="uid://cw1s4alnwvehc" path="res://assets/liquid_station/animations/liquid-pouring/smoothie-tea-2/Untitled_Artwork-7 26.png" id="148_uu20u"]
+[ext_resource type="Texture2D" uid="uid://cg6bq50nasuwd" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-coffee-2/Untitled_Artwork-3 37.png" id="149_8dup4"]
+[ext_resource type="Texture2D" uid="uid://ch4yf1yj5j8cv" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-coffee-2/Untitled_Artwork-4 34.png" id="150_k833e"]
+[ext_resource type="Texture2D" uid="uid://cq6qfbve3orfo" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-coffee-2/Untitled_Artwork-5 34.png" id="151_bxsv4"]
+[ext_resource type="Texture2D" uid="uid://dlaba54u47ci1" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-coffee-2/Untitled_Artwork-6 34.png" id="152_lyhg7"]
+[ext_resource type="Texture2D" uid="uid://cpe7tjwmcsdeg" path="res://assets/liquid_station/animations/liquid-pouring/oat-milk-coffee-2/Untitled_Artwork-7 33.png" id="153_v44vb"]
+[ext_resource type="Texture2D" uid="uid://drekx06cktmd4" path="res://assets/liquid_station/animations/liquid-pouring/tea-coffee-2/Untitled_Artwork-1 26.png" id="158_2mcpm"]
+[ext_resource type="Texture2D" uid="uid://c7qccelfre43r" path="res://assets/liquid_station/animations/liquid-pouring/tea-coffee-2/Untitled_Artwork-2 27.png" id="159_atvpj"]
+[ext_resource type="Texture2D" uid="uid://q7p572pguim5" path="res://assets/liquid_station/animations/liquid-pouring/tea-coffee-2/Untitled_Artwork-3 26.png" id="160_ew5wa"]
+[ext_resource type="Texture2D" uid="uid://d0xcmqsph5pjp" path="res://assets/liquid_station/animations/liquid-pouring/tea-coffee-2/Untitled_Artwork-4 23.png" id="161_avocm"]
+[ext_resource type="Texture2D" uid="uid://b5tsum6guecxo" path="res://assets/liquid_station/animations/liquid-pouring/tea-coffee-2/Untitled_Artwork-5 23.png" id="162_fwy1b"]
+[ext_resource type="Texture2D" uid="uid://cuosko54mkn1l" path="res://assets/liquid_station/animations/liquid-pouring/tea-coffee-2/Untitled_Artwork-6 23.png" id="163_xedb0"]
+[ext_resource type="Texture2D" uid="uid://7s8fcg6ogkje" path="res://assets/liquid_station/animations/liquid-pouring/tea-coffee-2/Untitled_Artwork-7 22.png" id="164_1jo3t"]
+[ext_resource type="Texture2D" uid="uid://cpk38k4gp4v15" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-1 29.png" id="179_wv70d"]
+[ext_resource type="Texture2D" uid="uid://dmh8wo810e46h" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-2 30.png" id="180_ubdjg"]
+[ext_resource type="Texture2D" uid="uid://bvprt1i7y2pck" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-3 29.png" id="181_1rlwi"]
+[ext_resource type="Texture2D" uid="uid://w3g13m1ahwe7" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-4 26.png" id="182_q25ix"]
+[ext_resource type="Texture2D" uid="uid://c1s0cihjsuxo4" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-5 26.png" id="183_e6qrv"]
+[ext_resource type="Texture2D" uid="uid://cnmrtpbueb555" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-6 26.png" id="184_7ahth"]
+[ext_resource type="Texture2D" uid="uid://bkmk0dxd8tn8d" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-7 25.png" id="185_dt2ua"]
+[ext_resource type="Texture2D" uid="uid://bpibwik7tytad" path="res://assets/liquid_station/animations/liquid-pouring/tea-oat-milk-2/Untitled_Artwork-1 31.png" id="186_3ogae"]
+[ext_resource type="Texture2D" uid="uid://bxdp8qwg07xf3" path="res://assets/liquid_station/animations/liquid-pouring/tea-oat-milk-2/Untitled_Artwork-2 32.png" id="187_h3vs4"]
+[ext_resource type="Texture2D" uid="uid://bie8crdhenhco" path="res://assets/liquid_station/animations/liquid-pouring/tea-oat-milk-2/Untitled_Artwork-3 31.png" id="188_buyrm"]
+[ext_resource type="Texture2D" uid="uid://dt3tbyyk2g6pf" path="res://assets/liquid_station/animations/liquid-pouring/tea-oat-milk-2/Untitled_Artwork-4 28.png" id="189_aymv5"]
+[ext_resource type="Texture2D" uid="uid://cu0wtbkbwr1mc" path="res://assets/liquid_station/animations/liquid-pouring/tea-oat-milk-2/Untitled_Artwork-5 28.png" id="190_hn4ef"]
+[ext_resource type="Texture2D" uid="uid://df821cdeg0bao" path="res://assets/liquid_station/animations/liquid-pouring/tea-oat-milk-2/Untitled_Artwork-6 28.png" id="191_jwy0j"]
+[ext_resource type="Texture2D" uid="uid://cs4uq82u58sld" path="res://assets/liquid_station/animations/liquid-pouring/tea-oat-milk-2/Untitled_Artwork-7 27.png" id="192_k4a4q"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bh2m"]
 size = Vector2(253.707, 204.515)
@@ -218,6 +376,58 @@ animations = [{
 }],
 "loop": false,
 "name": &"almond-milk-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_5e8f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_67ba0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_pucxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_emvb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_c0l11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_eiad4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_tekxn")
+}],
+"loop": false,
+"name": &"almond-milk-coffee-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_droim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_784wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_xg15h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_xbfpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_m1ik7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_412i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_dx63x")
+}],
+"loop": false,
+"name": &"almond-milk-cow-milk-2",
 "speed": 8.0
 }, {
 "frames": [{
@@ -306,6 +516,136 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("59_8ygpg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_7iujd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_fkyg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_bl1yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ypdlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_t7vki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ftwyi")
+}],
+"loop": false,
+"name": &"coffee-almond-milk-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("73_a6f21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_6pr6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_gehfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_e1jyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_qfdss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_qqjn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_o0pa7")
+}],
+"loop": false,
+"name": &"coffee-cow-milk-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("80_f662o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_munlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_st34e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_12ppd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_bkiro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_g7d1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_m4wyj")
+}],
+"loop": false,
+"name": &"coffee-oat-milk-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("59_2oeef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_2xidq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_vfyem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_jqday")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_5y6jt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_vspkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_lh48t")
+}],
+"loop": false,
+"name": &"coffee-smoothie-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("66_mx135")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_ca18f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_4udpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_a5smo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_4hpdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_jstq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_gbtq3")
+}],
+"loop": false,
+"name": &"coffee-tea-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("29_psjm3")
 }, {
 "duration": 1.0,
@@ -360,6 +700,304 @@ animations = [{
 }],
 "loop": false,
 "name": &"cow-milk-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("68_x8xir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_sw0il")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_jry0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ximt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_xc6ye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_pqx1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_kxcsu")
+}],
+"loop": false,
+"name": &"cow-milk-almond-milk-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("117_yes1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_12320")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_nl11w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_44stu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_dlymp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_esflb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_2x5fb")
+}],
+"loop": false,
+"name": &"cow-milk-coffee-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("68_bwgce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_5ys1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_3ue5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_6lcei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_1r77h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_ska73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_ff5wg")
+}],
+"loop": false,
+"name": &"cow-milk-tea-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("89_kdnms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_vdltl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_y2d23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_gb0n4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_m2qky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_gltn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_jpsv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_rq7sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_r7e88")
+}],
+"loop": false,
+"name": &"oat-milk-1",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("98_scf1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_cpnkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_4anm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_8px0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_0yyn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_t4cty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_miosi")
+}],
+"loop": false,
+"name": &"oat-milk-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("147_qebn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_8bo04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_8dup4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_k833e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_bxsv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_lyhg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_v44vb")
+}],
+"loop": false,
+"name": &"oat-milk-coffee-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("119_cmrm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_wbha5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_s1vqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_qo4pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_77w7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_88uex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_3d8ml")
+}],
+"loop": false,
+"name": &"oat-milk-tea-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("89_7gnov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_xvwrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_07v4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_kj5at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_x6o1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_xgotm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_powcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_xuiv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_pv6ku")
+}],
+"loop": false,
+"name": &"smoothie-1",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("98_fam7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_6rfuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_iga3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_y077a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_wtdkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_4hn4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_vbmjw")
+}],
+"loop": false,
+"name": &"smoothie-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("128_ji875")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_gao2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_yq8t6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_p02ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_3wkio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_yonax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_dlh43")
+}],
+"loop": false,
+"name": &"smoothie-coffee-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("142_k8nd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_2cph8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_n337f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_jx70x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_7w4np")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_fmaaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_uu20u")
+}],
+"loop": false,
+"name": &"smoothie-tea-2",
 "speed": 8.0
 }, {
 "frames": [{
@@ -448,6 +1086,32 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("158_2mcpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_atvpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_ew5wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_avocm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_fwy1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_xedb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_1jo3t")
+}],
+"loop": false,
+"name": &"tea-coffee-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("22_iux76")
 }, {
 "duration": 1.0,
@@ -470,6 +1134,58 @@ animations = [{
 }],
 "loop": false,
 "name": &"tea-cow-milk-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("186_3ogae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_h3vs4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_buyrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_aymv5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_hn4ef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_jwy0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_k4a4q")
+}],
+"loop": false,
+"name": &"tea-oat-milk-2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("179_wv70d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_ubdjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_1rlwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_q25ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_e6qrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_7ahth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_dt2ua")
+}],
+"loop": false,
+"name": &"tea-smoothie-2",
 "speed": 8.0
 }]
 
@@ -519,12 +1235,12 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("19_s0ohr")
 }, {
-"duration": 20.0,
+"duration": 5.0,
 "texture": ExtResource("20_hgr5q")
 }],
 "loop": false,
 "name": &"default",
-"speed": 10.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0eh5u"]
@@ -790,12 +1506,12 @@ position = Vector2(-14, -320)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cup/cup_sprite/cup_pick_up"]
 position = Vector2(1.00012, 419)
-scale = Vector2(0.641872, 0.641872)
+scale = Vector2(0.669519, 0.669519)
 polygon = PackedVector2Array(-291.8, -312.5, -290.6, -312.5, -284.5, -314.1, -284.5, -311.1, -277.4, -300.5, -276.1, -300.5, -256.1, -291.5, -251.3, -291.5, -151.1, -273.5, -149.4, -273.5, -107.3, -269.5, -87.5, -269.5, 60.5, -267.5, 60.5, -268.4, 147.5, -274.4, 147.5, -275.2, 246.5, -291.2, 246.5, -291.9, 271.5, -300.9, 279.4, -313.5, 284, -313.5, 288, -315.5, 291.4, -315.5, 303.5, -301.2, 303.5, -296.5, 304.6, -277.5, 302.6, -277.5, 290.5, -257.9, 290.5, -252.3, 269.5, -165.5, 269.5, -156.3, 228.5, 61.9, 228.5, 69.7, 204.2, 219.5, 203.2, 219.5, 177.1, 347.5, 175.6, 347.5, 166.6, 362.5, 165.2, 362.5, 142.2, 382.5, 140, 382.5, 98, 403.5, 93.8, 403.5, 48.8, 416.5, 39.5, 416.5, -23.5, 419.5, -23.5, 418.3, -73.5, 413.3, -73.5, 411.9, -127.5, 393.9, -127.5, 392.8, -143.5, 385.8, -143.5, 384.6, -161.5, 372.6, -161.5, 371.4, -173.5, 361.4, -173.5, 359.2, -183.5, 346.2, -183.5, 341.9, -210.5, 217.7, -210.5, 210.5, -238.2, 40.5, -239.1, 40.5, -262.5, -75.3, -262.5, -84.5, -275.2, -162.5, -276.1, -162.5, -296.2, -255.5, -297.2, -255.5, -298.2, -261.5, -310.5, -278.9, -310.5, -290, -298.5, -313, -298.5, -314.7, -296.3, -315.8)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="cup/cup_sprite/cup_pick_up"]
 position = Vector2(2, 420)
-scale = Vector2(0.642054, 0.642054)
+scale = Vector2(0.670251, 0.670251)
 polygon = PackedVector2Array(29.5, -374.4, 109.5, -370.4, 109.5, -369.3, 213.5, -355.2, 213.5, -354, 254.5, -342, 254.5, -340.8, 277.5, -329.8, 277.5, -328.4, 301.5, -307.4, 301.5, -304.2, 304.5, -300.2, 304.5, -288.5, 302.6, -288.5, 294.7, -274.5, 291.2, -274.5, 283, -291.8, 263.1, -279.5, 258.9, -279.5, 200.5, -268.8, 200.5, -268, 180.8, -262.5, 172.9, -262.5, 150.7, -257.5, 140.7, -257.5, 68.6, -251.5, -91.5, -251.5, -91.5, -252.7, -185.5, -262.7, -185.5, -264, -278.5, -286.9, -278.5, -288.4, -288.4, -294.2, -298.4, -274.2, -301.5, -274.9, -301.5, -277, -310.5, -289.9, -310.5, -300, -304.7, -311.5, -303.3, -311.5, -287.3, -327.5, -285.2, -327.5, -276.2, -334.5, -274, -334.5, -247, -347.5, -242.9, -347.5, -219.8, -355.5, -214.8, -355.5, -150.7, -366.5, -148.6, -366.5, -35.5, -374.4, -35.5, -375.5, 29.5, -375.5)
 
 [node name="liquid-in-cup" type="Node2D" parent="cup"]
@@ -809,7 +1525,7 @@ polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665
 position = Vector2(-144.226, 227.479)
 scale = Vector2(0.955101, 0.874128)
 sprite_frames = SubResource("SpriteFrames_k1bue")
-animation = &"tea-almond-milk-2"
+animation = &"coffee-oat-milk-2"
 
 [node name="Liquid Types" type="Control" parent="."]
 layout_mode = 3
@@ -890,8 +1606,8 @@ metadata/_edit_lock_ = true
 [node name="coffee static body" type="StaticBody2D" parent="Liquid Types/coffee/CoffeeContainer" groups=["coffee-droppable"]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Liquid Types/coffee/CoffeeContainer/coffee static body"]
-polygon = PackedVector2Array(36.5, -431.5, 36.5, -430.3, 97.5, -423.3, 97.5, -422, 126.5, -414, 126.5, -412.8, 164.5, -396.8, 164.5, -395.5, 182.5, -381.5, 182.5, -379.3, 186.5, -375.3, 186.5, -369.8, 189.8, -362.5, 190.9, -362.5, 226.5, -346.8, 226.5, -345.5, 250.5, -328.5, 250.5, -326.1, 255.5, -318.1, 255.5, -311.9, 259.9, -299.5, 281.5, -299.5, 281.5, -297.5, 289.5, -291.5, 289.5, -287.9, 297.5, -266.9, 297.5, -260.5, 300.8, -235.5, 298.4, -235.5, 288.4, -223.5, 283.9, -223.5, 269.5, -220.8, 269.5, -219.5, 284.5, -106.6, 284.5, -105.5, 287.5, 91.5, 286.5, 91.5, 285.5, 163.5, 284.4, 163.5, 278.4, 246.5, 277.2, 246.5, 262.5, 324.9, 262.5, 328.7, 273.5, 339.7, 273.5, 343.1, 276, 354.5, 273.8, 354.5, 265.8, 372.5, 264.2, 372.5, 241.2, 390.5, 236.9, 390.5, 216.9, 398.5, 212.6, 398.5, 170.8, 409.5, 164.7, 409.5, 21.6, 426.5, 4.5, 426.5, -57.5, 424.5, -57.5, 423.3, -167.5, 411.3, -167.5, 410.2, -217.5, 400.1, -217.5, 398.9, -254.5, 387, -254.5, 385.5, -272.5, 371.5, -272.5, 369, -281.5, 353, -281.5, 345, -274.7, 332.5, -273.2, 332.5, -268.5, 328.6, -268.5, 326.5, -269.1, 326.5, -282.5, 259.7, -282.5, 251.5, -291.5, 161.6, -291.5, 160.5, -293.5, -17.5, -292.5, -17.5, -290.5, -108.5, -289.3, -108.5, -275.8, -220.5, -295.5, -223.8, -295.5, -225.5, -305.5, -233.5, -305.5, -257.5, -304.2, -257.5, -300.2, -280.5, -298.9, -280.5, -293.9, -293.5, -292.3, -293.5, -286.3, -299.5, -266.5, -299.5, -266.5, -300.3, -263.5, -303.3, -263.5, -308.7, -261.1, -319.5, -259.7, -319.5, -252.7, -332.5, -250.2, -332.5, -231.2, -347.5, -228.1, -347.5, -214.1, -356.5, -210.9, -356.5, -196.5, -361.9, -187.8, -382.5, -186.4, -382.5, -178.4, -391.5, -176, -391.5, -160.1, -402.5, -156.9, -402.5, -101.9, -423.5, -92.9, -423.5, -62.7, -429.5, -51.7, -429.5, -27.5, -431.4, -27.5, -432.5)
-metadata/_edit_lock_ = true
+position = Vector2(-8.53146, 40.9048)
+polygon = PackedVector2Array(-183.301, -398.883, -242.767, -371.282, -254.66, -335.188, -278.446, -335.188, -288.357, -290.602, -280.429, -284.233, -256.642, -282.11, -274.482, -120.75, -272.5, 59.7172, -277.358, 101.856, 1.04266, 299.633, 255.565, 93.3683, 284.496, 95.8107, 282.514, -82.5338, 274.585, -195.061, 270.621, -279.987, 292.425, -282.11, 296.389, -296.972, 286.478, -339.435, 262.692, -339.435, 248.817, -373.405, 183.404, -405.252, 173.493, -432.853, 86.2769, -464.7, -50.4943, -468.947, -165.461, -430.73)
 
 [node name="coffee nozzle" type="Node2D" parent="Liquid Types/coffee"]
 z_index = 5
@@ -936,8 +1652,8 @@ metadata/_edit_lock_ = true
 [node name="smoothie static" type="StaticBody2D" parent="Liquid Types/smoothie/smoothie container" groups=["smoothie-droppable"]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Liquid Types/smoothie/smoothie container/smoothie static"]
-polygon = PackedVector2Array(36.5, -431.5, 36.5, -430.3, 97.5, -423.3, 97.5, -422, 126.5, -414, 126.5, -412.8, 164.5, -396.8, 164.5, -395.5, 182.5, -381.5, 182.5, -379.3, 186.5, -375.3, 186.5, -369.8, 189.8, -362.5, 190.9, -362.5, 226.5, -346.8, 226.5, -345.5, 250.5, -328.5, 250.5, -326.1, 255.5, -318.1, 255.5, -311.9, 259.9, -299.5, 281.5, -299.5, 281.5, -297.5, 289.5, -291.5, 289.5, -287.9, 297.5, -266.9, 297.5, -260.5, 300.8, -235.5, 298.4, -235.5, 288.4, -223.5, 283.9, -223.5, 269.5, -220.8, 269.5, -219.5, 284.5, -106.6, 284.5, -105.5, 287.5, 91.5, 286.5, 91.5, 285.5, 163.5, 284.4, 163.5, 278.4, 246.5, 277.2, 246.5, 262.5, 324.9, 262.5, 328.7, 273.5, 339.7, 273.5, 343.1, 276, 354.5, 273.8, 354.5, 265.8, 372.5, 264.2, 372.5, 241.2, 390.5, 236.9, 390.5, 216.9, 398.5, 212.6, 398.5, 170.8, 409.5, 164.7, 409.5, 21.6, 426.5, 4.5, 426.5, -57.5, 424.5, -57.5, 423.3, -167.5, 411.3, -167.5, 410.2, -217.5, 400.1, -217.5, 398.9, -254.5, 387, -254.5, 385.5, -272.5, 371.5, -272.5, 369, -281.5, 353, -281.5, 345, -274.7, 332.5, -273.2, 332.5, -268.5, 328.6, -268.5, 326.5, -269.1, 326.5, -282.5, 259.7, -282.5, 251.5, -291.5, 161.6, -291.5, 160.5, -293.5, -17.5, -292.5, -17.5, -290.5, -108.5, -289.3, -108.5, -275.8, -220.5, -295.5, -223.8, -295.5, -225.5, -305.5, -233.5, -305.5, -257.5, -304.2, -257.5, -300.2, -280.5, -298.9, -280.5, -293.9, -293.5, -292.3, -293.5, -286.3, -299.5, -266.5, -299.5, -266.5, -300.3, -263.5, -303.3, -263.5, -308.7, -261.1, -319.5, -259.7, -319.5, -252.7, -332.5, -250.2, -332.5, -231.2, -347.5, -228.1, -347.5, -214.1, -356.5, -210.9, -356.5, -196.5, -361.9, -187.8, -382.5, -186.4, -382.5, -178.4, -391.5, -176, -391.5, -160.1, -402.5, -156.9, -402.5, -101.9, -423.5, -92.9, -423.5, -62.7, -429.5, -51.7, -429.5, -27.5, -431.4, -27.5, -432.5)
-metadata/_edit_lock_ = true
+position = Vector2(-8.53146, 40.9048)
+polygon = PackedVector2Array(-183.301, -398.883, -242.767, -371.282, -254.66, -335.188, -278.446, -335.188, -288.357, -290.602, -280.429, -284.233, -256.642, -282.11, -274.482, -120.75, -272.5, 59.7172, -277.358, 101.856, 1.04266, 299.633, 255.565, 93.3683, 284.496, 95.8107, 282.514, -82.5338, 274.585, -195.061, 270.621, -279.987, 292.425, -282.11, 296.389, -296.972, 286.478, -339.435, 262.692, -339.435, 248.817, -373.405, 183.404, -405.252, 173.493, -432.853, 86.2769, -464.7, -50.4943, -468.947, -165.461, -430.73)
 
 [node name="smoothie nozzle" type="Node2D" parent="Liquid Types/smoothie"]
 z_index = 5

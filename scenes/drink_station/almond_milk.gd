@@ -25,7 +25,7 @@ func _physics_process(delta):
 	if selected:
 		target_position = get_global_mouse_position() - offset
 		global_position = lerp(global_position, target_position, 15 * delta) # Smooth animation during dragging
-		look_at(get_global_mouse_position())
+		look_at(get_global_mouse_position() - Vector2(195,195))
 	else:
 		global_position = lerp(global_position, almond_milk_droppable.global_position, 10 * delta)
 		rotation = lerp_angle(rotation, 0, 10 * delta)
@@ -72,7 +72,17 @@ func _on_almond_area_body_shape_exited(body_rid: RID, body: Node2D, body_shape_i
 
 func _on_almond_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_action_pressed("click") and not global.SomethingBeingClickedRn and not liquid_station_global.going_to_pour:
-		selected = true
-		global.SomethingBeingClickedRn = true;
-		offset = get_global_mouse_position() - global_position
-		global.liquids_poured.append("almond_milk")
+		if liquid_station_global.liquid_layer == 2:
+			shake_sprite()
+		else:
+			selected = true
+			global.SomethingBeingClickedRn = true;
+			offset = get_global_mouse_position() - global_position
+			global.liquids_poured.append("almond_milk")
+
+func shake_sprite():
+	var tween = get_tree().create_tween()  # Ensure the Tween node/component is correctly referenced
+	var r_max = 2
+
+	tween.tween_property(self, "rotation_degrees", r_max, 0.05).set_ease(Tween.EASE_IN)
+

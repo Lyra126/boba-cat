@@ -24,3 +24,5 @@ var cow_milk = 0
 var oat_milk = 0
 var almond_milk = 0
 var sugar_syrup = 0
+
+var liquid_layer = 0

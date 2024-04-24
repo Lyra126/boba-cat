@@ -9,10 +9,6 @@ var offset = Vector2.ZERO
 var cup_droppable = false
 var body_ref
 var target_position
-var pouring_milk
-var pour_milk_left = false
-var pour_milk_right = true
-var cup_droppable_position = Vector2(-200,173)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -38,12 +34,8 @@ func _input(event):
 				if cup_droppable:
 					syrup_still.hide()
 					syrup_down.show()
-					if mouse_position.x > cup_droppable_position.x:
-						if Input.is_action_just_pressed("click"):
-							syrup_down.play("default")
-					elif mouse_position.x < cup_droppable_position.x:
-						if Input.is_action_just_pressed("click"):
-							syrup_down.play("default")
+					syrup_down.play("default")
+				
 				else:
 					selected = false
 					smooth_back(get_physics_process_delta_time())
@@ -58,6 +50,9 @@ func _on_syrup_area_input_event(viewport: Node, event: InputEvent, shape_idx: in
 		global.SomethingBeingClickedRn = true;
 		offset = get_global_mouse_position() - global_position
 		#$"../cup/liquid-in-cup/Polygon2D/liquid".start_timer()
+	if Input.is_action_pressed("right_click"):
+		selected = false
+		global.SomethingBeingClickedRn = false;
 
 
 func _on_syrup_area_body_entered(body: Node2D) -> void:
@@ -71,8 +66,8 @@ func _on_syrup_area_body_exited(body: Node2D) -> void:
 
 
 func _on_syrup_down_animation_finished() -> void:
-	selected = false
-	global.SomethingBeingClickedRn = false;
+	#selected = false
+	#global.SomethingBeingClickedRn = false;
 	syrup_down.stop()
 	syrup_down.hide()
 	syrup_still.show()
