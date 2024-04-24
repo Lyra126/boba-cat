@@ -157,25 +157,25 @@ func get_liquid_inside_cup(sprite):
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/oat-milk-almond-milk-2.png"))
 
 		######### TEA AND TEA ##########
-		if liquid_station_global.tea == 2:
+		if liquid_station_global.tea == 3:
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/tea-2.png"))
 			
 		######### COFFEE AND COFFEE ##########
-		if liquid_station_global.coffee == 2:
+		if liquid_station_global.coffee == 3:
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/coffee-2.png"))
 			
 		######### SMOOTHIE AND SMOOTHIE ##########
-		if liquid_station_global.smoothie == 2:
+		if liquid_station_global.smoothie == 3:
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/smoothie-2.png"))
 			
 		######### COW MILK AND COW MILK ##########
-		if liquid_station_global.cow_milk == 2:
+		if liquid_station_global.cow_milk == 3:
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/cow-milk-2.png"))
 			
 		######### ALMOND MILK AND ALMOND MILK ##########
-		if liquid_station_global.almond_milk == 2:
+		if liquid_station_global.almond_milk == 3:
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/almond-milk-2.png"))
 			
 		######### OAT AND OAT ##########
-		if liquid_station_global.oat_milk == 2:
+		if liquid_station_global.oat_milk == 3:
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/oat-milk-2.png"))

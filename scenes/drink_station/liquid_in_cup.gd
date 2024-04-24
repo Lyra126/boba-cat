@@ -463,7 +463,7 @@ func manage_animations():
 		if has_tea_been_poured and liquid_station_global.tea_pouring and not anim.is_playing():
 			anim.play("tea-2")
 			liquid_station_global.liquid_layer += 1 
-			liquid_station_global.tea = 2
+			liquid_station_global.tea = 3
 			if not "tea2" in global.playerOrder:
 				global.playerOrder.append("tea2")
 			
@@ -471,7 +471,7 @@ func manage_animations():
 		elif has_coffee_been_poured and liquid_station_global.coffee_pouring and not anim.is_playing():
 			anim.play("coffee-2")
 			liquid_station_global.liquid_layer += 1
-			liquid_station_global.coffee = 2
+			liquid_station_global.coffee = 3
 			if not "coffee2" in global.playerOrder:
 				global.playerOrder.append("coffee2")
 		
@@ -479,7 +479,7 @@ func manage_animations():
 		elif has_smoothie_been_poured and liquid_station_global.smoothie_pouring and not anim.is_playing():
 			anim.play("smoothie-2")
 			liquid_station_global.liquid_layer += 1
-			liquid_station_global.smoothie = 2
+			liquid_station_global.smoothie = 3
 			if not "smoothie2" in global.playerOrder:
 				global.playerOrder.append("smoothie2")
 			
@@ -488,7 +488,7 @@ func manage_animations():
 		elif has_cow_milk_been_poured and liquid_station_global.cow_milk_pouring and not anim.is_playing():
 			anim.play("cow-milk-2")
 			liquid_station_global.liquid_layer += 1
-			liquid_station_global.cow_milk = 2
+			liquid_station_global.cow_milk = 3
 			if not "cow-milk2" in global.playerOrder:
 				global.playerOrder.append("cow-milk2")
 
@@ -496,7 +496,7 @@ func manage_animations():
 		elif has_oat_milk_been_poured and liquid_station_global.oat_milk_pouring and not anim.is_playing():
 			anim.play("oat-milk-2")
 			liquid_station_global.liquid_layer += 1
-			liquid_station_global.oat_milk = 2
+			liquid_station_global.oat_milk = 3
 			if not "oat-milk2" in global.playerOrder:
 				global.playerOrder.append("oat-milk2")
 
@@ -504,7 +504,7 @@ func manage_animations():
 		elif has_almond_milk_been_poured and liquid_station_global.almond_milk_pouring and not anim.is_playing():
 			anim.play("almond-milk-2")
 			liquid_station_global.liquid_layer += 1
-			liquid_station_global.almond_milk = 2
+			liquid_station_global.almond_milk = 3
 			if not "almond-milk2" in global.playerOrder:
 				global.playerOrder.append("almond-milk2")
 

@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var ladle_area = $"../ladle area"
+
+
 var selected
 var off_set = Vector2.ZERO
 var target_position
@@ -29,5 +32,5 @@ func _physics_process(delta):
 		global_position = lerp(global_position, target_position, 15 * delta) # Smooth animation during dragging
 		#look_at(get_global_mouse_position())
 	else:
-		global_position = lerp(global_position, Vector2.ZERO, 10 * delta)
+		global_position = lerp(global_position, ladle_area.global_position, 10 * delta)
 		rotation = lerp_angle(rotation, 150.40, 10 * delta)

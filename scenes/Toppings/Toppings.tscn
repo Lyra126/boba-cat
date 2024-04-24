@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bv3yw1n541ync"]
+[gd_scene load_steps=19 format=3 uid="uid://bv3yw1n541ync"]
 
 [ext_resource type="Script" path="res://scenes/Toppings/Toppings.gd" id="1_ykgei"]
 [ext_resource type="Texture2D" uid="uid://d0d1aafodbb" path="res://assets/toppings_station/assets/toppings_bar.png" id="2_usov5"]
@@ -17,6 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="12_hk7ft"]
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="13_t2k6o"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="14_wtiin"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nj373"]
+size = Vector2(27.456, 30.167)
 
 [node name="Toppings" type="Node2D"]
 position = Vector2(800, 448)
@@ -73,6 +76,21 @@ polygon = PackedVector2Array(532.643, -48.0758, 538.766, -24.0379, 541.827, -18.
 
 [node name="ladle" type="Node2D" parent="bar"]
 
+[node name="cup_spot" type="StaticBody2D" parent="." groups=["cup_drop", "droppable"]]
+visible = false
+position = Vector2(0, 1)
+scale = Vector2(1, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cup_spot"]
+position = Vector2(1.00012, 419)
+scale = Vector2(0.641872, 0.641872)
+polygon = PackedVector2Array(-291.8, -312.5, -290.6, -312.5, -284.5, -314.1, -284.5, -311.1, -277.4, -300.5, -276.1, -300.5, -256.1, -291.5, -251.3, -291.5, -151.1, -273.5, -149.4, -273.5, -107.3, -269.5, -87.5, -269.5, 60.5, -267.5, 60.5, -268.4, 147.5, -274.4, 147.5, -275.2, 246.5, -291.2, 246.5, -291.9, 271.5, -300.9, 279.4, -313.5, 284, -313.5, 288, -315.5, 291.4, -315.5, 303.5, -301.2, 303.5, -296.5, 304.6, -277.5, 302.6, -277.5, 290.5, -257.9, 290.5, -252.3, 269.5, -165.5, 269.5, -156.3, 228.5, 61.9, 228.5, 69.7, 204.2, 219.5, 203.2, 219.5, 177.1, 347.5, 175.6, 347.5, 166.6, 362.5, 165.2, 362.5, 142.2, 382.5, 140, 382.5, 98, 403.5, 93.8, 403.5, 48.8, 416.5, 39.5, 416.5, -23.5, 419.5, -23.5, 418.3, -73.5, 413.3, -73.5, 411.9, -127.5, 393.9, -127.5, 392.8, -143.5, 385.8, -143.5, 384.6, -161.5, 372.6, -161.5, 371.4, -173.5, 361.4, -173.5, 359.2, -183.5, 346.2, -183.5, 341.9, -210.5, 217.7, -210.5, 210.5, -238.2, 40.5, -239.1, 40.5, -262.5, -75.3, -262.5, -84.5, -275.2, -162.5, -276.1, -162.5, -296.2, -255.5, -297.2, -255.5, -298.2, -261.5, -310.5, -278.9, -310.5, -290, -298.5, -313, -298.5, -314.7, -296.3, -315.8)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="cup_spot"]
+position = Vector2(2, 420)
+scale = Vector2(0.642054, 0.642054)
+polygon = PackedVector2Array(29.5, -374.4, 109.5, -370.4, 109.5, -369.3, 213.5, -355.2, 213.5, -354, 254.5, -342, 254.5, -340.8, 277.5, -329.8, 277.5, -328.4, 301.5, -307.4, 301.5, -304.2, 304.5, -300.2, 304.5, -288.5, 302.6, -288.5, 294.7, -274.5, 291.2, -274.5, 283, -291.8, 263.1, -279.5, 258.9, -279.5, 200.5, -268.8, 200.5, -268, 180.8, -262.5, 172.9, -262.5, 150.7, -257.5, 140.7, -257.5, 68.6, -251.5, -91.5, -251.5, -91.5, -252.7, -185.5, -262.7, -185.5, -264, -278.5, -286.9, -278.5, -288.4, -288.4, -294.2, -298.4, -274.2, -301.5, -274.9, -301.5, -277, -310.5, -289.9, -310.5, -300, -304.7, -311.5, -303.3, -311.5, -287.3, -327.5, -285.2, -327.5, -276.2, -334.5, -274, -334.5, -247, -347.5, -242.9, -347.5, -219.8, -355.5, -214.8, -355.5, -150.7, -366.5, -148.6, -366.5, -35.5, -374.4, -35.5, -375.5, 29.5, -375.5)
+
 [node name="Cup" type="Node2D" parent="."]
 scale = Vector2(1, 1)
 script = ExtResource("4_0yovw")
@@ -117,6 +135,15 @@ polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665
 
 [node name="liquid_sprite" type="Sprite2D" parent="Cup/liquid_inside_cup/Polygon2D"]
 position = Vector2(10.5703, 218.515)
+
+[node name="ladle area" type="Area2D" parent="."]
+position = Vector2(-486.171, -282.247)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ladle area"]
+position = Vector2(29.7656, -23.3161)
+scale = Vector2(4.67479, 9.4158)
+shape = SubResource("RectangleShape2D_nj373")
 
 [node name="LadleHanger" type="Sprite2D" parent="."]
 position = Vector2(-443.87, -278.153)
@@ -171,6 +198,7 @@ texture = ExtResource("3_3mncm")
 metadata/_edit_lock_ = true
 
 [connection signal="mouse_entered" from="bar/dalgona_chunks/Area2D" to="bar/dalgona_chunks" method="_on_area_2d_mouse_entered"]
+[connection signal="input_event" from="Cup/cup_sprite/cup_pick_up" to="Cup" method="_on_cup_pick_up_input_event"]
 [connection signal="input_event" from="ladle/Ladle/ladle area" to="ladle" method="_on_ladle_area_input_event"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
