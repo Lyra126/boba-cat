@@ -94,7 +94,7 @@ func manage_animations():
 				global.playerOrder.append("cow-milk")
 			else:
 				global.playerOrder.append("tea")
-			liquid_station_global.cow_milk = 1
+			liquid_station_global.cow_milk = 2
 			liquid_station_global.tea = 1
 			return  # Again, ensure no further actions are taken this frame
 			
@@ -107,7 +107,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("cow-milk")
 			liquid_station_global.cow_milk = 1
-			liquid_station_global.tea = 1
+			liquid_station_global.tea = 2
 			return
 			
 		######### COW MIlK AND COFFEE #########
@@ -119,7 +119,7 @@ func manage_animations():
 				global.playerOrder.append("cow-milk")
 			else:
 				global.playerOrder.append("coffee")
-			liquid_station_global.cow_milk = 1
+			liquid_station_global.cow_milk = 2
 			liquid_station_global.coffee = 1
 			return  # Again, ensure no further actions are taken this frame
 			
@@ -132,7 +132,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("coffee")
 			liquid_station_global.cow_milk = 1
-			liquid_station_global.coffee = 1
+			liquid_station_global.coffee = 2
 			return
 		
 		######### COW MIlK AND SMOOTHIE #########
@@ -144,7 +144,7 @@ func manage_animations():
 				global.playerOrder.append("cow-milk")
 			else:
 				global.playerOrder.append("smoothie")
-			liquid_station_global.cow_milk = 1
+			liquid_station_global.cow_milk = 2
 			liquid_station_global.smoothie = 1
 			return 
 			
@@ -157,7 +157,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("smoothie")
 			liquid_station_global.cow_milk = 1
-			liquid_station_global.smoothie = 1
+			liquid_station_global.smoothie = 2
 			return
 			
 		######### OAT MIlK AND TEA #########
@@ -169,7 +169,7 @@ func manage_animations():
 				global.playerOrder.append("oat-milk")
 			else:
 				global.playerOrder.append("tea")
-			liquid_station_global.oat_milk = 1
+			liquid_station_global.oat_milk = 2
 			liquid_station_global.tea = 1
 			return
 			
@@ -182,7 +182,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("tea")
 			liquid_station_global.oat_milk = 1
-			liquid_station_global.tea = 1
+			liquid_station_global.tea = 2
 			return
 			
 		######### OAT MIlK AND COFFEE #########
@@ -194,7 +194,7 @@ func manage_animations():
 				global.playerOrder.append("oat-milk")
 			else:
 				global.playerOrder.append("coffee")
-			liquid_station_global.oat_milk = 1
+			liquid_station_global.oat_milk = 2
 			liquid_station_global.coffee = 1
 			return
 			
@@ -207,7 +207,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("coffee")
 			liquid_station_global.oat_milk = 1
-			liquid_station_global.coffee = 1
+			liquid_station_global.coffee = 2
 			return
 			
 		######### OAT MIlK AND SMOOTHIE #########
@@ -219,7 +219,7 @@ func manage_animations():
 				global.playerOrder.append("oat-milk")
 			else:
 				global.playerOrder.append("smoothie")
-			liquid_station_global.oat_milk = 1
+			liquid_station_global.oat_milk = 2
 			liquid_station_global.smoothie = 1
 			return
 			
@@ -232,7 +232,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("smoothie")
 			liquid_station_global.oat_milk = 1
-			liquid_station_global.smoothie = 1
+			liquid_station_global.smoothie = 2
 			return
 			
 		######### ALMOND MIlK AND TEA #########
@@ -244,7 +244,7 @@ func manage_animations():
 				global.playerOrder.append("almond-milk")
 			else:
 				global.playerOrder.append("tea")
-			liquid_station_global.almond_milk = 1
+			liquid_station_global.almond_milk = 2
 			liquid_station_global.tea = 1
 			return
 			
@@ -257,7 +257,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("tea")
 			liquid_station_global.almond_milk = 1
-			liquid_station_global.tea = 1
+			liquid_station_global.tea = 2
 			return
 			
 		######### ALMOND MIlK AND COFFEE #########
@@ -269,7 +269,7 @@ func manage_animations():
 				global.playerOrder.append("almond-milk")
 			else:
 				global.playerOrder.append("coffee")
-			liquid_station_global.almond_milk = 1
+			liquid_station_global.almond_milk = 2
 			liquid_station_global.coffee = 1
 			return
 			
@@ -282,7 +282,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("coffee")
 			liquid_station_global.almond_milk = 1
-			liquid_station_global.coffee = 1
+			liquid_station_global.coffee = 2
 			return
 			
 		######### ALMOND MIlK AND SMOOTHIE #########
@@ -294,7 +294,7 @@ func manage_animations():
 				global.playerOrder.append("almond-milk")
 			else:
 				global.playerOrder.append("smoothie")
-			liquid_station_global.almond_milk = 1
+			liquid_station_global.almond_milk = 2
 			liquid_station_global.smoothie = 1
 			return
 			
@@ -307,7 +307,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("smoothie")
 			liquid_station_global.almond_milk = 1
-			liquid_station_global.smoothie = 1
+			liquid_station_global.smoothie = 2
 			return
 
 		######### TEA AND COFFEE #########
@@ -320,7 +320,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("tea")
 			liquid_station_global.tea = 1
-			liquid_station_global.coffee = 1
+			liquid_station_global.coffee = 2
 			return
 			
 		elif has_coffee_been_poured and liquid_station_global.tea_pouring and not anim.is_playing():
@@ -331,7 +331,7 @@ func manage_animations():
 				global.playerOrder.append("coffee")
 			else:
 				global.playerOrder.append("tea")
-			liquid_station_global.tea = 1
+			liquid_station_global.tea = 2
 			liquid_station_global.coffee = 1
 			return
 			
@@ -345,7 +345,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("smoothie")
 			liquid_station_global.coffee = 1
-			liquid_station_global.smoothie = 1
+			liquid_station_global.smoothie = 2
 			return
 		
 		elif has_smoothie_been_poured and liquid_station_global.coffee_pouring and not anim.is_playing():
@@ -356,7 +356,7 @@ func manage_animations():
 				global.playerOrder.append("coffee")
 			else:
 				global.playerOrder.append("smoothie")
-			liquid_station_global.coffee = 1
+			liquid_station_global.coffee = 2
 			liquid_station_global.smoothie = 1
 			return
 
@@ -370,7 +370,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("smoothie")
 			liquid_station_global.tea = 1
-			liquid_station_global.smoothie = 1
+			liquid_station_global.smoothie = 2
 			return
 		elif has_smoothie_been_poured and liquid_station_global.tea_pouring and not anim.is_playing():
 			anim.play("smoothie-tea-2")
@@ -380,7 +380,7 @@ func manage_animations():
 				global.playerOrder.append("tea")
 			else:
 				global.playerOrder.append("smoothie")
-			liquid_station_global.tea = 1
+			liquid_station_global.tea = 2
 			liquid_station_global.smoothie = 1
 			return
 		
@@ -393,7 +393,7 @@ func manage_animations():
 				global.playerOrder.append("oat-milk")
 			else:
 				global.playerOrder.append("cow-milk")
-			liquid_station_global.cow_milk = 1
+			liquid_station_global.cow_milk = 2
 			liquid_station_global.oat_milk = 1
 			return
 		
@@ -405,7 +405,7 @@ func manage_animations():
 				global.playerOrder.append("oat-milk")
 			else:
 				global.playerOrder.append("cow-milk")
-			liquid_station_global.cow_milk = 1
+			liquid_station_global.cow_milk = 2
 			liquid_station_global.oat_milk = 1
 			return
 		
@@ -419,7 +419,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("almond-milk")
 			liquid_station_global.oat_milk = 1
-			liquid_station_global.almond_milk = 1
+			liquid_station_global.almond_milk = 2
 			return
 
 		if has_almond_milk_been_poured and liquid_station_global.oat_milk_pouring and not anim.is_playing():
@@ -431,7 +431,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("almond-milk")
 			liquid_station_global.almond_milk = 1
-			liquid_station_global.oat_milk = 1
+			liquid_station_global.oat_milk = 2
 			return
 
 		######### COW MILK AND ALMOND MILK #########
@@ -444,7 +444,7 @@ func manage_animations():
 			else:
 				global.playerOrder.append("almond-milk")
 			liquid_station_global.cow_milk = 1
-			liquid_station_global.almond_milk = 1
+			liquid_station_global.almond_milk = 2
 			return
 
 		if has_almond_milk_been_poured and liquid_station_global.cow_milk_pouring and not anim.is_playing():
@@ -455,7 +455,7 @@ func manage_animations():
 				global.playerOrder.append("cow-milk")
 			else:
 				global.playerOrder.append("almond-milk")
-			liquid_station_global.almond_milk = 1
+			liquid_station_global.almond_milk = 2
 			liquid_station_global.cow_milk = 1
 			return
 

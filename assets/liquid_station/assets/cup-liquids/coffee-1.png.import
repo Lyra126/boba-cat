@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkvn0ghj4kt8"
-path="res://.godot/imported/Untitled_Artwork-7 6.png-2452cdacbd4de8909db9f92f9e4085c9.ctex"
+uid="uid://cc0rc71f2qlu3"
+path="res://.godot/imported/coffee-1.png-432c316e2a0ea9814dc5bcad860840b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/liquid_station/animations/liquid-pouring/coffee-2/Untitled_Artwork-7 6.png"
-dest_files=["res://.godot/imported/Untitled_Artwork-7 6.png-2452cdacbd4de8909db9f92f9e4085c9.ctex"]
+source_file="res://assets/liquid_station/assets/cup-liquids/coffee-1.png"
+dest_files=["res://.godot/imported/coffee-1.png-432c316e2a0ea9814dc5bcad860840b8.ctex"]
 
 [params]
 
