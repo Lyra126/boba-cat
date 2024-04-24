@@ -3,6 +3,7 @@ extends Node2D
 @onready var syrup_down = $syrup_down
 @onready var syrup_still = $syrupSprite
 @onready var syrup_position = $"../sugar_syrup_droppable"
+@onready var particle = $sugar_particle
 
 var selected
 var offset = Vector2.ZERO
@@ -17,7 +18,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	particle_explosion()
 	
 func _physics_process(delta):
 	if selected:
@@ -64,10 +65,14 @@ func _on_syrup_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group('cup_drop'):
 		cup_droppable = false
 
-
 func _on_syrup_down_animation_finished() -> void:
 	#selected = false
 	#global.SomethingBeingClickedRn = false;
 	syrup_down.stop()
 	syrup_down.hide()
 	syrup_still.show()
+	particle.emitting = false
+
+func particle_explosion():
+	if syrup_down.is_playing():
+		particle.emitting = true

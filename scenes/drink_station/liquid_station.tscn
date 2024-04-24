@@ -1,4 +1,4 @@
-[gd_scene load_steps=377 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=378 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
@@ -367,16 +367,17 @@ size = Vector2(253.707, 204.515)
 [sub_resource type="SpriteFrames" id="SpriteFrames_nvx2t"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_lew52")
-}, {
-"duration": 5.0,
+"duration": 3.0,
 "texture": ExtResource("4_g2ujl")
 }],
 "loop": false,
 "name": &"default",
-"speed": 7.0
+"speed": 6.0
 }]
+
+[sub_resource type="Curve" id="Curve_i7glc"]
+_data = [Vector2(0.0223464, 1), 0.0, 0.0, 0, 0, Vector2(0.994413, 0.200238), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4hdd"]
 size = Vector2(698, 823.5)
@@ -1755,6 +1756,20 @@ polygon = PackedVector2Array(24.5, -467.4, 24.5, -466, 40.5, -461, 40.5, -459.3,
 position = Vector2(-738.564, 361.59)
 scale = Vector2(0.513918, 0.533167)
 sprite_frames = SubResource("SpriteFrames_nvx2t")
+
+[node name="sugar_particle" type="CPUParticles2D" parent="sugar syrup"]
+position = Vector2(-673.583, 169.761)
+scale = Vector2(2.85071, 2.55876)
+emitting = false
+amount = 15
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(2.08165e-12, 2.08165e-12)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 10.0
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_i7glc")
 
 [node name="fridge" type="Node2D" parent="."]
 z_index = 2
