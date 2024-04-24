@@ -398,7 +398,7 @@ func manage_animations():
 			return
 		
 		if has_oat_milk_been_poured and liquid_station_global.cow_milk_pouring and not anim.is_playing():
-			anim.play("oat-milk-milk-milk-2")
+			anim.play("oat-milk-cow-milk-2")
 			liquid_station_global.liquid_layer += 1
 			has_cow_milk_been_poured = true
 			if "cow-milk" in global.playerOrder:
