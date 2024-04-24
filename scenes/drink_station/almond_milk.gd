@@ -85,4 +85,3 @@ func shake_sprite():
 	var r_max = 2
 
 	tween.tween_property(self, "rotation_degrees", r_max, 0.05).set_ease(Tween.EASE_IN)
-
