@@ -1713,10 +1713,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 45
 horizontal_alignment = 1
 
-[node name="outsideOrder" type="Area2D" parent="order"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="order/outsideOrder"]
-
 [node name="trash" type="Sprite2D" parent="."]
 position = Vector2(-884.375, 602.65)
 scale = Vector2(0.0895684, 0.0963266)
@@ -2170,7 +2166,6 @@ texture_normal = ExtResource("134_xity5")
 texture_pressed = ExtResource("135_7tirn")
 texture_hover = ExtResource("136_2dvsm")
 
-[connection signal="input_event" from="order/outsideOrder" to="." method="_on_outside_order_input_event"]
 [connection signal="input_event" from="trash/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="trash/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="trash/Area2D" to="." method="_on_area_2d_mouse_exited"]

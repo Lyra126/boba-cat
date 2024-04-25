@@ -4,11 +4,14 @@ extends Node2D
 @onready var syrup_still = $syrupSprite
 @onready var syrup_position = $"../sugar_syrup_droppable"
 @onready var particle = $sugar_particle
+var syrupLevels = ["syrup", "syrup-25", "syrup-50", "syrup-75", "syrup-100"]
 
 var selected
 var offset = Vector2.ZERO
 var cup_droppable = false
 var body_ref
+var syrupIndex
+var syrupAdded = false
 var target_position
 
 # Called when the node enters the scene tree for the first time.
@@ -35,6 +38,24 @@ func _input(event):
 				if cup_droppable:
 					syrup_still.hide()
 					syrup_down.show()
+					if not syrupAdded:
+						global.playerOrder.append("syrup-25")
+						syrupAdded = true
+					else:
+						for syrupLevel in syrupLevels:
+							syrupIndex = global.playerOrder.find(syrupLevel)
+							if syrupIndex != -1:
+								if(syrupLevel) == "syrup-25":
+									global.playerOrder.remove(syrupLevel)
+									global.playerOrder.append("syrup-50")
+								elif(syrupLevel) == "syrup-50":
+									global.playerOrder.remove(syrupLevel)
+									global.playerOrder.append("syrup-75")
+								elif(syrupLevel) == "syrup-75":
+									global.playerOrder.remove(syrupLevel)
+									global.playerOrder.append("syrup-100")
+								elif(syrupLevel) == "syrup-100":
+									print("You have enough sugar already!")
 					syrup_down.play("default")
 				
 				else:
