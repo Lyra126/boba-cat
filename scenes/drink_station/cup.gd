@@ -94,6 +94,7 @@ func handle_liquid_selection(event):
 func _on_cup_pick_up_body_entered(body):
 	if body.is_in_group('tea-droppable'):
 		tea_droppable = true
+		#print("bruh")
 	elif body.is_in_group('coffee-droppable'):
 		coffee_droppable = true
 	elif body.is_in_group('smoothie-droppable'):

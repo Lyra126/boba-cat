@@ -27,11 +27,11 @@ func _process(delta):
 		#print(tea_drop.global_position)
 	pass
 	
-func _on_cup_pick_up_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("click") and not global.SomethingBeingClickedRn:
-		selected = true
-		global.SomethingBeingClickedRn = true;
-		offset = get_global_mouse_position() - global_position
+#func _on_cup_pick_up_input_event(viewport, event, shape_idx):
+	#if Input.is_action_just_pressed("click") and not global.SomethingBeingClickedRn:
+		#selected = true
+		#global.SomethingBeingClickedRn = true;
+		#offset = get_global_mouse_position() - global_position
 
 func _physics_process(delta):
 	if selected:

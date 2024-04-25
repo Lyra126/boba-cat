@@ -19,9 +19,6 @@ func _on_next_pressed():
 	get_tree().change_scene_to_file("res://scenes/Toppings/Toppings.tscn")
 
 
-
-
-
 func _on_area_2d_mouse_entered() -> void:
 	$trash.texture = openTrash
 
@@ -38,7 +35,6 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 				global.playerOrder.resize(0)
 				print("cup has been deleted")
 				$cup.visible = false
-
 
 func _on_texture_button_pressed() -> void:
 	$order.visible = true
