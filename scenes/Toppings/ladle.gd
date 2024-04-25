@@ -29,22 +29,26 @@ var fruit_jelly_ladle
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	global.SomethingBeingClickedRn = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(global.SomethingBeingClickedRn)
+	#print(global.SomethingBeingClickedRn)
+	pass
 
 func _on_ladle_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if Input.is_action_pressed("click") and not global.SomethingBeingClickedRn:
-		selected = true
-		global.SomethingBeingClickedRn = true;
-		off_set = get_global_mouse_position() - global_position
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not global.SomethingBeingClickedRn:
+	#Input.is_action_pressed("click") and not global.SomethingBeingClickedRn:
+			selected = true
+			#print('bruh')
+			global.SomethingBeingClickedRn = true;
+			off_set = get_global_mouse_position() - global_position
 		
-	if Input.is_action_pressed("right_click"):
-		selected = false
-		global.SomethingBeingClickedRn = false;
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			selected = false
+			global.SomethingBeingClickedRn = false;
 
 
 func _input(event):

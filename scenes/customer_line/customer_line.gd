@@ -31,7 +31,7 @@ func move_customer():
 
 
 func _on_next_pressed():
-	get_tree().change_scene_to_file("res://scenes/drink_station/liquid_station.tscn")
+	get_tree().change_scene_to_file("res://scenes/Toppings/Toppings.tscn")
 
 	
 	

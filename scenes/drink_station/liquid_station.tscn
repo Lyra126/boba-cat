@@ -1801,7 +1801,6 @@ scale = Vector2(1.06, 1.06)
 texture = ExtResource("14_ulmdc")
 
 [node name="cup_spot" type="StaticBody2D" parent="." groups=["cup_drop", "droppable"]]
-visible = false
 position = Vector2(0, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cup_spot"]
@@ -1857,7 +1856,7 @@ polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665
 position = Vector2(-144.226, 227.479)
 scale = Vector2(0.955101, 0.874128)
 sprite_frames = SubResource("SpriteFrames_k1bue")
-animation = &"almond-milk-oat-milk-2"
+animation = &"tea-almond-milk-2"
 
 [node name="Liquid Types" type="Control" parent="."]
 layout_mode = 3

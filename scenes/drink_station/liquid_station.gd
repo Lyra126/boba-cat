@@ -7,25 +7,21 @@ func _ready():
 	$Back.pressed.connect(self._on_back_pressed)
 	$Next.pressed.connect(self._on_next_pressed)
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 func _on_back_pressed():
-	get_tree().change_scene_to_file("res://scenes/customer_line/customer_line.tscn")
-
-func _on_next_pressed():
 	get_tree().change_scene_to_file("res://scenes/Toppings/Toppings.tscn")
 
+func _on_next_pressed():
+	get_tree().change_scene_to_file("res://scenes/FinalStation/FinalStation.tscn")
 
 func _on_area_2d_mouse_entered() -> void:
 	$trash.texture = openTrash
 
-
 func _on_area_2d_mouse_exited() -> void:
 	$trash.texture = closeTrash
-
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
@@ -46,7 +42,6 @@ func _on_texture_button_pressed() -> void:
 	$order/Label.visible = true
 	$order/Label.set_text(orderText)
 	
-
 
 func _on_close_pressed() -> void:
 	print("test")

@@ -17,9 +17,9 @@ var target_position
 
 
 func _ready():
+	if not global.hasCup:
+		$".".hide()
 	global.SomethingBeingClickedRn = false;
-	liquid_station_global.coffee_set_to_pour = false;
-	liquid_station_global.tea_set_to_pour = false;
 	
 
 func _process(delta):
@@ -28,10 +28,11 @@ func _process(delta):
 	pass
 	
 func _on_cup_pick_up_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("click") and not global.SomethingBeingClickedRn:
-		selected = true
-		global.SomethingBeingClickedRn = true;
-		offset = get_global_mouse_position() - global_position
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not global.SomethingBeingClickedRn and global.hasCup:
+			selected = true
+			global.SomethingBeingClickedRn = true;
+			offset = get_global_mouse_position() - global_position
 
 func _physics_process(delta):
 	if selected:
