@@ -140,16 +140,16 @@ position = Vector2(2, 420)
 scale = Vector2(0.642054, 0.642054)
 polygon = PackedVector2Array(29.5, -374.4, 109.5, -370.4, 109.5, -369.3, 213.5, -355.2, 213.5, -354, 254.5, -342, 254.5, -340.8, 277.5, -329.8, 277.5, -328.4, 301.5, -307.4, 301.5, -304.2, 304.5, -300.2, 304.5, -288.5, 302.6, -288.5, 294.7, -274.5, 291.2, -274.5, 283, -291.8, 263.1, -279.5, 258.9, -279.5, 200.5, -268.8, 200.5, -268, 180.8, -262.5, 172.9, -262.5, 150.7, -257.5, 140.7, -257.5, 68.6, -251.5, -91.5, -251.5, -91.5, -252.7, -185.5, -262.7, -185.5, -264, -278.5, -286.9, -278.5, -288.4, -288.4, -294.2, -298.4, -274.2, -301.5, -274.9, -301.5, -277, -310.5, -289.9, -310.5, -300, -304.7, -311.5, -303.3, -311.5, -287.3, -327.5, -285.2, -327.5, -276.2, -334.5, -274, -334.5, -247, -347.5, -242.9, -347.5, -219.8, -355.5, -214.8, -355.5, -150.7, -366.5, -148.6, -366.5, -35.5, -374.4, -35.5, -375.5, 29.5, -375.5)
 
-[node name="liquid_inside_cup" type="Node2D" parent="Cup"]
+[node name="stuff_inside_cup" type="Node2D" parent="Cup"]
 script = ExtResource("7_unvub")
 
-[node name="Polygon2D" type="Polygon2D" parent="Cup/liquid_inside_cup"]
+[node name="Polygon2D" type="Polygon2D" parent="Cup/stuff_inside_cup"]
 clip_children = 1
 position = Vector2(1.10243, 22.0889)
 scale = Vector2(0.730068, 0.730068)
 polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665.461, -50.7168, 677.345, 9.5094, 684.135, 69.7357, 670.554, 109.358, 641.695, 155.32, 380.264, 172.754, 290.291, 182.264, 251.246, 191.773, 241.06, 193.358, 225.781, 145.811, 200.317, 76.0752, 188.434, -17.434, 186.737, -90.3395, 193.527, -158.49, 207.108, -191.773, 227.479)
 
-[node name="liquid_sprite" type="Sprite2D" parent="Cup/liquid_inside_cup/Polygon2D"]
+[node name="liquid_sprite" type="Sprite2D" parent="Cup/stuff_inside_cup/Polygon2D"]
 position = Vector2(10.5703, 218.515)
 
 [node name="LadleHanger" type="Sprite2D" parent="."]
@@ -211,7 +211,7 @@ position = Vector2(1.0419, 662.588)
 shape = SubResource("RectangleShape2D_1w4ow")
 
 [node name="trash" type="Sprite2D" parent="."]
-position = Vector2(-552.317, 435.642)
+position = Vector2(-601.926, 458.958)
 scale = Vector2(0.0848312, 0.0883697)
 texture = ExtResource("19_73j2n")
 
@@ -254,11 +254,11 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Back" type="TextureButton" parent="."]
-offset_left = -849.973
-offset_top = 303.109
-offset_right = 150.027
-offset_bottom = 1303.11
-scale = Vector2(0.23887, 0.253328)
+offset_left = -870.919
+offset_top = 344.832
+offset_right = 129.081
+offset_bottom = 1344.83
+scale = Vector2(0.22, 0.229)
 texture_normal = ExtResource("9_t6ws1")
 texture_pressed = ExtResource("10_e7gxs")
 texture_hover = ExtResource("11_7ilvd")
@@ -274,11 +274,11 @@ scale = Vector2(0.0836853, 0.0817412)
 texture_normal = ExtResource("23_4srwc")
 
 [node name="Next" type="TextureButton" parent="."]
-offset_left = 599.721
-offset_top = 298.2
-offset_right = 1599.72
-offset_bottom = 1298.2
-scale = Vector2(0.246159, 0.260965)
+offset_left = 641.614
+offset_top = 346.059
+offset_right = 1641.61
+offset_bottom = 1346.06
+scale = Vector2(0.22, 0.233)
 texture_normal = ExtResource("12_hk7ft")
 texture_pressed = ExtResource("13_t2k6o")
 texture_hover = ExtResource("14_wtiin")

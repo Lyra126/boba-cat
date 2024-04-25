@@ -39,25 +39,25 @@ func _input(event):
 					syrup_still.hide()
 					syrup_down.show()
 					syrup_down.play('default')
-					#if not syrupAdded:
-						#global.playerOrder.append("syrup-25")
-						#syrupAdded = true
-					#else:
-						#for syrupLevel in syrupLevels:
-							#syrupIndex = global.playerOrder.find(syrupLevel)
-							#if syrupIndex != -1:
-								#if(syrupLevel) == "syrup-25":
-									#global.playerOrder.remove(syrupLevel)
-									#global.playerOrder.append("syrup-50")
-								#elif(syrupLevel) == "syrup-50":
-									#global.playerOrder.remove(syrupLevel)
-									#global.playerOrder.append("syrup-75")
-								#elif(syrupLevel) == "syrup-75":
-									#global.playerOrder.remove(syrupLevel)
-									#global.playerOrder.append("syrup-100")
-								#elif(syrupLevel) == "syrup-100":
-									#print("You have enough sugar already!")
-					#syrup_down.play("default")
+					if not syrupAdded:
+						global.playerOrder.append("syrup-25")
+						syrupAdded = true
+					else:
+						for syrupLevel in syrupLevels:
+							syrupIndex = global.playerOrder.find(syrupLevel)
+							if syrupIndex != -1:
+								if(syrupLevel) == "syrup-25":
+									global.playerOrder.remove(syrupLevel)
+									global.playerOrder.append("syrup-50")
+								elif(syrupLevel) == "syrup-50":
+									global.playerOrder.remove(syrupLevel)
+									global.playerOrder.append("syrup-75")
+								elif(syrupLevel) == "syrup-75":
+									global.playerOrder.remove(syrupLevel)
+									global.playerOrder.append("syrup-100")
+								elif(syrupLevel) == "syrup-100":
+									print("You have enough sugar already!")
+					syrup_down.play("default")
 				
 				else:
 					selected = false

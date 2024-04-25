@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ceqg4sr663xx2"]
+[gd_scene load_steps=18 format=3 uid="uid://ceqg4sr663xx2"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://5grujjlh3pn5" path="res://assets/final_station/final_scene.png" id="2_ccllk"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c05hs2heu4e82" path="res://assets/final_station/case.png" id="3_u2oyd"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_gn2qx"]
+[ext_resource type="Script" path="res://scenes/Toppings/liquid_inside_cup.gd" id="7_e7diu"]
 [ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/buttons/normalBack.png" id="7_qudjk"]
 [ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/buttons/pressedBack.png" id="8_0wbd3"]
 [ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/buttons/hoverBack.png" id="9_d3pnv"]
@@ -93,6 +94,18 @@ texture = ExtResource("5_gn2qx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cup/cup_sprite/cup_pick_up"]
 position = Vector2(-23, 376.25)
 shape = SubResource("RectangleShape2D_c37ek")
+
+[node name="stuff_inside_cup" type="Node2D" parent="cup"]
+script = ExtResource("7_e7diu")
+
+[node name="Polygon2D" type="Polygon2D" parent="cup/stuff_inside_cup"]
+clip_children = 1
+position = Vector2(-20.1943, -61.2706)
+scale = Vector2(0.997704, 0.997704)
+polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665.461, -50.7168, 677.345, 9.5094, 684.135, 69.7357, 670.554, 109.358, 641.695, 155.32, 380.264, 172.754, 290.291, 182.264, 251.246, 191.773, 241.06, 193.358, 225.781, 145.811, 200.317, 76.0752, 188.434, -17.434, 186.737, -90.3395, 193.527, -158.49, 207.108, -191.773, 227.479)
+
+[node name="liquid_sprite" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(10.5703, 218.515)
 
 [node name="AttachLid" type="Area2D" parent="." groups=["droppable"]]
 

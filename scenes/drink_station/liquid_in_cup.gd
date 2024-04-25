@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var anim = $Polygon2D/liquid_animations
+@onready var sprite = $Polygon2D/Sprite2D
 #var layer = 0
 var wait_for_next_layer = false
 
@@ -13,7 +14,9 @@ var has_oat_milk_been_poured = false
 var has_almond_milk_been_poured = false
 
 func _ready() -> void:
+	global.get_liquid_inside_cup(sprite)
 	anim.hide()
+	#sprite.hide()
 
 func _process(delta: float) -> void:
 	manage_animations()
@@ -513,10 +516,21 @@ func allow_next_layer():
 	wait_for_next_layer = false  # Reset this flag to allow progression to the next layer
 
 func reset_animation():
-	anim.stop()
-	anim.hide()
 	liquid_station_global.liquid_layer = 0
+	liquid_station_global.tea = 0
+	liquid_station_global.coffee = 0
+	liquid_station_global.smoothie = 0
+	liquid_station_global.oat_milk = 0
+	liquid_station_global.cow_milk = 0
+	liquid_station_global.almond_milk = 0
+
 	has_tea_been_poured = false
 	has_coffee_been_poured = false
+	has_smoothie_been_poured = false
 	has_cow_milk_been_poured = false
+	has_oat_milk_been_poured = false
+	has_almond_milk_been_poured = false
 	wait_for_next_layer = false  # Ensure that layer transitions can happen after reset
+
+func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	reset_animation()

@@ -12,7 +12,6 @@ var target_position
 
 func _ready():
 	global.SomethingBeingClickedRn = false;
-	pass
 	
 func _process(delta):
 	pass
