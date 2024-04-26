@@ -37,7 +37,12 @@ func _input(event):
 				var mouse_position = get_viewport().get_mouse_position()
 				if cup_droppable:
 					syrup_still.hide()
+<<<<<<< HEAD
 						
+=======
+					syrup_down.show()
+					syrup_down.play('default')
+>>>>>>> da762ce225983a66541bf2d4675cd0c8358af4bc
 					if not syrupAdded:
 						global.playerOrder.append("syrup-25")
 						syrupAdded = true
@@ -80,20 +85,20 @@ func smooth_back(delta):
 	global_position = lerp(global_position, Vector2.ZERO, 10 * delta)
 
 func _on_syrup_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if Input.is_action_pressed("click") and not global.SomethingBeingClickedRn:
-		selected = true
-		global.SomethingBeingClickedRn = true;
-		offset = get_global_mouse_position() - global_position
-		#$"../cup/liquid-in-cup/Polygon2D/liquid".start_timer()
-	if Input.is_action_pressed("right_click"):
-		selected = false
-		global.SomethingBeingClickedRn = false;
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not global.SomethingBeingClickedRn:
+			selected = true
+			global.SomethingBeingClickedRn = true;
+			offset = get_global_mouse_position() - global_position
+			#$"../cup/liquid-in-cup/Polygon2D/liquid".start_timer()
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			selected = false
+			global.SomethingBeingClickedRn = false;
 
 
 func _on_syrup_area_body_entered(body: Node2D) -> void:
-	if body.is_in_group('cup_drop'):
+	if body.is_in_group('cup_drop')and global.hasCup:
 		cup_droppable = true
-
 
 func _on_syrup_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group('cup_drop'):

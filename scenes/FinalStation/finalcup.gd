@@ -12,11 +12,8 @@ var overlapMachine
 var finalStation
 
 func _ready():
-	global.SomethingBeingClickedRn = false;
-	liquid_station_global.coffee_set_to_pour = false;
-	liquid_station_global.tea_set_to_pour = false;
-	overlapMachine = preload("res://assets/final_station/overlapMachine.png")
-	finalStation = preload("res://assets/final_station/finalStation.png")
+	if not global.hasCup:
+		$".".hide()
 
 func _process(delta):
 	pass

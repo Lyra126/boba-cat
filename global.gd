@@ -24,6 +24,7 @@ var toppings_inserted = []
 var liquids_poured = []
 var syrups_poured = []
 var desserts_picked = []
+var hasCup = false
 
 func get_customer_texture(customer):
 	match customer:

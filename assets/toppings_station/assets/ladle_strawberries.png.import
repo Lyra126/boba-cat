@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0d1aafodbb"
-path="res://.godot/imported/toppings_bar.png-b46c99ff875c5a6286d3279e6c4a2087.ctex"
+uid="uid://3dgcdgurn56h"
+path="res://.godot/imported/ladle_strawberries.png-56b3623cc66744c8d3305580655b96b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/toppings_station/assets/toppings_bar.png"
-dest_files=["res://.godot/imported/toppings_bar.png-b46c99ff875c5a6286d3279e6c4a2087.ctex"]
+source_file="res://assets/toppings_station/assets/ladle_strawberries.png"
+dest_files=["res://.godot/imported/ladle_strawberries.png-56b3623cc66744c8d3305580655b96b1.ctex"]
 
 [params]
 
