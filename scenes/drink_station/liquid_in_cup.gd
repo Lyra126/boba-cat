@@ -28,6 +28,7 @@ func manage_animations():
 			liquid_station_global.liquid_layer += 1
 			liquid_station_global.tea = 1
 			global.playerOrder.append("tea")
+			print(global.playerOrder)
 			has_tea_been_poured = true
 			wait_for_next_layer = true  # Prevent immediate transition to the next layer
 			return  # Exit the function to ensure no further actions are taken this frame

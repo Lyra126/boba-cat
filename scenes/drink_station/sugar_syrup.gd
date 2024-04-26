@@ -37,26 +37,39 @@ func _input(event):
 				var mouse_position = get_viewport().get_mouse_position()
 				if cup_droppable:
 					syrup_still.hide()
-					syrup_down.show()
+						
 					if not syrupAdded:
 						global.playerOrder.append("syrup-25")
 						syrupAdded = true
+						print("level = 25")
+						syrup_down.show()
+						syrup_down.play("default")
 					else:
 						for syrupLevel in syrupLevels:
 							syrupIndex = global.playerOrder.find(syrupLevel)
 							if syrupIndex != -1:
 								if(syrupLevel) == "syrup-25":
-									global.playerOrder.remove(syrupLevel)
+									global.playerOrder.remove_at(syrupIndex)
 									global.playerOrder.append("syrup-50")
+									print("level = 50")
+									syrup_down.show()
+									syrup_down.play("default")
 								elif(syrupLevel) == "syrup-50":
-									global.playerOrder.remove(syrupLevel)
+									global.playerOrder.remove_at(syrupIndex)
 									global.playerOrder.append("syrup-75")
+									print("level = 75")
+									syrup_down.show()
+									syrup_down.play("default")
 								elif(syrupLevel) == "syrup-75":
-									global.playerOrder.remove(syrupLevel)
+									global.playerOrder.remove_at(syrupIndex)
 									global.playerOrder.append("syrup-100")
+									print("level = 100")
+									syrup_down.show()
+									syrup_down.play("default")
 								elif(syrupLevel) == "syrup-100":
 									print("You have enough sugar already!")
-					syrup_down.play("default")
+									syrup_down.show()
+								break
 				
 				else:
 					selected = false

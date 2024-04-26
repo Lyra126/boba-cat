@@ -13,9 +13,12 @@ script = ExtResource("1_kehyn")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 0
-offset_left = -231.0
-offset_top = -34.0
-offset_right = 233.0
-offset_bottom = 42.0
+offset_left = 579.0
+offset_top = 426.0
+offset_right = 1043.0
+offset_bottom = 502.0
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
