@@ -37,12 +37,6 @@ func _input(event):
 				var mouse_position = get_viewport().get_mouse_position()
 				if cup_droppable:
 					syrup_still.hide()
-<<<<<<< HEAD
-						
-=======
-					syrup_down.show()
-					syrup_down.play('default')
->>>>>>> da762ce225983a66541bf2d4675cd0c8358af4bc
 					if not syrupAdded:
 						global.playerOrder.append("syrup-25")
 						syrupAdded = true

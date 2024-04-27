@@ -10,20 +10,21 @@ var smoothie_droppable = false
 var target_position
 var overlapMachine
 var finalStation
+var original_position
+var openMachine = preload("res://assets/final_station/openMachine.png")
+var closeMachine = preload("res://assets/final_station/closeMachine.png")
 
-func _ready():
-	if not global.hasCup:
-		$".".hide()
 
 func _process(delta):
 	pass
 	
 func _on_cup_pick_up_input_event(viewport, event, shape_idx):
-	
 	if Input.is_action_just_pressed("click") and not global.SomethingBeingClickedRn:
+		scale = Vector2(1,1)
 		selected = true
 		global.SomethingBeingClickedRn = true;
 		offset = get_global_mouse_position() - global_position
+	
 
 func _physics_process(delta):
 	if selected:
@@ -33,34 +34,39 @@ func _physics_process(delta):
 			scale = Vector2(0.75, 0.75)
 		else:
 			scale = Vector2(1, 1)
+			
 
-func _input(event):
-	if selected:
+
+func _on_attach_lid_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	#if event is InputEventMouseButton:
+		#if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and selected:
+			#print("snap to machine")
+			#global.SomethingBeingClickedRn = true
+			##$".".position = $"../AttachLid".position
+			#global_position.x = $"../AttachLid".position.x+100
+			#global_position.y = $"../AttachLid".position.y+100
+			#selected = AudioEffectSpectrumAnalyzerInstance
+	if selected and $Lid.visible == false:
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-				if tea_droppable:
-					print("placeholder")
-				else:
-					if global_position.x < -600 and global_position.x > -1000 and global_position.y < 100 and global_position.y > -500:
-						global_position.x = -814.25
-						global_position.y = 50
-						scale = Vector2(0.5, 0.5)
-						addLid()
-					else:
-						global_position = lerp(global_position, Vector2.ZERO, 1)
-					selected = false
-					global.SomethingBeingClickedRn = false;
-					
-		if liquid_station_global.nozzle_anim_playing:
+				get_tree().paused = true
+				scale = Vector2(0.60, 0.60)
+				$".".position.x = $"../AttachLid".position.x
+				$".".position.y = $"../AttachLid".position.y
+				print("snap")
+				addLid()
+				get_tree().paused = false
+				
 			selected = false
-			return
-
+			global.SomethingBeingClickedRn = false;
+				
 func addLid():
 	#wait one second
 	await get_tree().create_timer(1.0).timeout
+	$".".position.y = $".".position.y - 30
+	$"../machine".texture = closeMachine
 	#move cup up
-	global_position.y = -30
 	await get_tree().create_timer(2.0).timeout
-	global_position.y = 50
+	$"../machine".texture = openMachine
+	$".".position.y = $".".position.y + 30
 	$Lid.visible = true
-	

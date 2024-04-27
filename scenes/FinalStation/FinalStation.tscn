@@ -1,16 +1,19 @@
-[gd_scene load_steps=18 format=3 uid="uid://ceqg4sr663xx2"]
+[gd_scene load_steps=22 format=3 uid="uid://ceqg4sr663xx2"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
-[ext_resource type="Texture2D" uid="uid://5grujjlh3pn5" path="res://assets/final_station/final_scene.png" id="2_ccllk"]
+[ext_resource type="Texture2D" uid="uid://yfs1ito40fo4" path="res://assets/final_station/final_bg.png" id="2_jbb60"]
+[ext_resource type="Texture2D" uid="uid://dgrc0fqly7e50" path="res://assets/final_station/openMachine.png" id="3_bwd7n"]
 [ext_resource type="Script" path="res://scenes/FinalStation/finalcup.gd" id="3_fdyuf"]
-[ext_resource type="Texture2D" uid="uid://c05hs2heu4e82" path="res://assets/final_station/case.png" id="3_u2oyd"]
+[ext_resource type="Texture2D" uid="uid://bhs10ky3rsusa" path="res://assets/final_station/fullCookieCase.png" id="4_6l0m1"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
+[ext_resource type="Texture2D" uid="uid://bxpfb5nkcvbdp" path="res://assets/final_station/cookie.png" id="5_fly4n"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_gn2qx"]
 [ext_resource type="Script" path="res://scenes/Toppings/liquid_inside_cup.gd" id="7_e7diu"]
 [ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/buttons/normalBack.png" id="7_qudjk"]
 [ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/buttons/pressedBack.png" id="8_0wbd3"]
 [ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/buttons/hoverBack.png" id="9_d3pnv"]
 [ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="10_nsn8g"]
+[ext_resource type="Texture2D" uid="uid://cjhj7pjoqngfc" path="res://assets/final_station/lid.png" id="10_sw1nl"]
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="11_2cme3"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="12_2d1uf"]
 
@@ -43,7 +46,10 @@ size = Vector2(354, 487.883)
 size = Vector2(334, 481.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3fie"]
-size = Vector2(244.5, 382.75)
+size = Vector2(244.5, 519.119)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ioiw2"]
+size = Vector2(255.034, 365.783)
 
 [node name="FinalStation" type="Node2D"]
 position = Vector2(807, 450)
@@ -55,13 +61,24 @@ offset_left = -1271.0
 offset_top = -722.0
 offset_right = 1259.0
 offset_bottom = 735.0
-texture = ExtResource("2_ccllk")
+texture = ExtResource("2_jbb60")
 metadata/_edit_use_anchors_ = true
+
+[node name="machine" type="Sprite2D" parent="."]
+position = Vector2(-891.608, -124.524)
+scale = Vector2(0.57989, 0.533915)
+texture = ExtResource("3_bwd7n")
 
 [node name="case" type="Sprite2D" parent="."]
 position = Vector2(79.0432, 4.85161)
 scale = Vector2(0.424686, 0.484817)
-texture = ExtResource("3_u2oyd")
+texture = ExtResource("4_6l0m1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(55.3303, 48.5158)
+scale = Vector2(0.167166, 0.157229)
+texture = ExtResource("5_fly4n")
 
 [node name="cup" type="Node2D" parent="."]
 position = Vector2(-105, 88)
@@ -107,10 +124,17 @@ polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665
 [node name="liquid_sprite" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
 position = Vector2(10.5703, 218.515)
 
+[node name="Lid" type="Sprite2D" parent="cup"]
+visible = false
+position = Vector2(-22.3022, 158.668)
+scale = Vector2(0.636206, 0.571847)
+texture = ExtResource("10_sw1nl")
+
 [node name="AttachLid" type="Area2D" parent="." groups=["droppable"]]
+position = Vector2(-878.961, 35.5783)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttachLid"]
-position = Vector2(-814.25, 294.625)
+position = Vector2(1.58087, -3.23438)
 shape = SubResource("RectangleShape2D_k3fie")
 
 [node name="Back" type="TextureButton" parent="."]
@@ -134,11 +158,16 @@ texture_normal = ExtResource("10_nsn8g")
 texture_pressed = ExtResource("11_2cme3")
 texture_hover = ExtResource("12_2d1uf")
 
+[node name="InitialPos" type="Area2D" parent="."]
+position = Vector2(-129.631, 363.869)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InitialPos"]
+position = Vector2(3.16177, 4.57764e-05)
+shape = SubResource("RectangleShape2D_ioiw2")
+
 [connection signal="body_entered" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_entered"]
 [connection signal="body_exited" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_exited"]
 [connection signal="input_event" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_input_event"]
-[connection signal="body_entered" from="AttachLid" to="." method="_on_attach_lid_body_entered"]
-[connection signal="body_exited" from="AttachLid" to="." method="_on_attach_lid_body_exited"]
-[connection signal="input_event" from="AttachLid" to="." method="_on_attach_lid_input_event"]
+[connection signal="input_event" from="AttachLid" to="cup" method="_on_attach_lid_input_event"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="SubmitOrder" to="." method="_on_submit_order_pressed"]
