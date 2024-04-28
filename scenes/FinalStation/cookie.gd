@@ -25,15 +25,12 @@ func _on_case_collision_input_event(viewport: Node, event: InputEvent, shape_idx
 			print("cookie")
 			selected = !selected
 			$".".visible = !$".".visible
-			
-			if selected == true:
-				print("cookie selected")	
+		
 
 func _on_cookie_spot_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if selected:
 				selected = false
-				print("deselect cookie")
 				$".".position.x = $"../cookieSpot".position.x
 				$".".position.y = $"../cookieSpot".position.y
