@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ceqg4sr663xx2"]
+[gd_scene load_steps=32 format=3 uid="uid://ceqg4sr663xx2"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://yfs1ito40fo4" path="res://assets/final_station/final_bg.png" id="2_10xh1"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://bbnyrf5wrgce2" path="res://assets/final_station/lid machine/lid machine open/lid_machine_top.png" id="19_r3ofr"]
 [ext_resource type="Texture2D" uid="uid://554nig4kbyt3" path="res://assets/final_station/lid machine/lid machine open/lid_machine_middle_back.png" id="20_n6xst"]
 [ext_resource type="Texture2D" uid="uid://gyo466pymk15" path="res://assets/final_station/lid machine/lid machine open/lid_machine_middle_front.png" id="21_vcbix"]
+[ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="26_mnhwn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3fie"]
 size = Vector2(244.5, 519.119)
@@ -56,6 +57,9 @@ size = Vector2(255.034, 365.783)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ri56t"]
 size = Vector2(367.809, 203.106)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2k6q"]
+size = Vector2(1047.66, 1447.97)
 
 [node name="FinalStation" type="Node2D"]
 position = Vector2(807, 450)
@@ -272,6 +276,18 @@ shape = SubResource("RectangleShape2D_ri56t")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="caseCollision"]
 polygon = PackedVector2Array(-550.141, -359.017, -458.451, -414.002, 630.765, -417.236, 714.551, -355.783, 695.581, 401.064, 30.0364, 399.447, 28.4556, 150.399, -281.394, 148.782, -279.813, 399.447, -543.818, 401.064)
 
+[node name="trash" type="Sprite2D" parent="."]
+position = Vector2(-641.831, 580.573)
+scale = Vector2(0.169965, 0.191544)
+texture = ExtResource("26_mnhwn")
+
+[node name="trash" type="Area2D" parent="trash"]
+scale = Vector2(1, 0.998819)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trash/trash"]
+position = Vector2(-8.56171, -17.5938)
+shape = SubResource("RectangleShape2D_g2k6q")
+
 [connection signal="input_event" from="AttachLid" to="cup" method="_on_attach_lid_input_event"]
 [connection signal="input_event" from="Area2D" to="cookie" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="cookie" method="_on_area_2d_mouse_entered"]
@@ -283,3 +299,6 @@ polygon = PackedVector2Array(-550.141, -359.017, -458.451, -414.002, 630.765, -4
 [connection signal="input_event" from="InitialPos" to="cup" method="_on_initial_pos_input_event"]
 [connection signal="input_event" from="cookieSpot" to="cookie" method="_on_cookie_spot_input_event"]
 [connection signal="input_event" from="caseCollision" to="cookie" method="_on_case_collision_input_event"]
+[connection signal="input_event" from="trash/trash" to="." method="_on_trash_input_event"]
+[connection signal="mouse_entered" from="trash/trash" to="." method="_on_trash_mouse_entered"]
+[connection signal="mouse_exited" from="trash/trash" to="." method="_on_trash_mouse_exited"]

@@ -20,22 +20,6 @@ func _on_back_pressed():
 func _on_next_pressed():
 	get_tree().change_scene_to_file("res://scenes/FinalStation/FinalStation.tscn")
 
-func _on_area_2d_mouse_entered() -> void:
-	$trash.texture = openTrash
-
-func _on_area_2d_mouse_exited() -> void:
-	$trash.texture = closeTrash
-
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if event.pressed:
-				$trash.texture = closeTrash
-				print("cup has been deleted")
-				$cup.visible = false
-				global.reset_drink()
-				global.trash_clicked = true
-				global.hasCup = false
 
 func _on_texture_button_pressed() -> void:
 	$order.visible = true
@@ -54,5 +38,22 @@ func _on_close_pressed() -> void:
 	$order/Label.visible = false
 	$close.visible = false
 
-func _on_outside_order_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
+
+func _on_trash_mouse_exited() -> void:
+	$trash.texture = closeTrash
+
+
+
+func _on_trash_mouse_entered() -> void:
+	$trash.texture = openTrash
+
+
+func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if event.pressed:
+				$trash.texture = closeTrash
+				print("cup has been deleted")
+				$cup.visible = false
+				global.hasCup = false
+				global.reset_drink()
