@@ -237,37 +237,38 @@ scale = Vector2(1, 0.998819)
 position = Vector2(-8.56171, -17.5938)
 shape = SubResource("RectangleShape2D_c73js")
 
-[node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 729.808
-offset_top = -528.906
-offset_right = 2229.81
-offset_bottom = 1471.09
-scale = Vector2(0.0842439, 0.0999293)
-texture_normal = ExtResource("20_pfya0")
-texture_pressed = ExtResource("21_qobrt")
-texture_hover = ExtResource("22_3ycls")
-
-[node name="orderForm" type="Node2D" parent="."]
+[node name="OrderForm" type="Node2D" parent="."]
 visible = false
-
-[node name="ColorRect" type="ColorRect" parent="orderForm"]
 z_index = 15
-offset_left = -286.632
-offset_top = -445.459
-offset_right = -246.632
-offset_bottom = -405.459
-scale = Vector2(15.404, 22.8355)
+scale = Vector2(1, 1)
 
-[node name="Label" type="Label" parent="orderForm"]
-offset_left = -261.276
-offset_top = -311.699
-offset_right = 252.724
-offset_bottom = 320.301
-scale = Vector2(1.08957, 1.14639)
+[node name="ColorRect" type="ColorRect" parent="OrderForm"]
+auto_translate_mode = 1
+offset_left = -342.339
+offset_top = -507.584
+offset_right = -302.339
+offset_bottom = -467.584
+scale = Vector2(18.0372, 25.3149)
+
+[node name="Label" type="Label" parent="OrderForm"]
+auto_translate_mode = 1
+offset_left = -309.0
+offset_top = -350.0
+offset_right = 352.0
+offset_bottom = 457.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 45
 horizontal_alignment = 1
-autowrap_mode = 3
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 702.247
+offset_top = -530.134
+offset_right = 1202.25
+offset_bottom = 169.866
+scale = Vector2(0.288519, 0.33947)
+texture_normal = ExtResource("20_pfya0")
+texture_pressed = ExtResource("21_qobrt")
+texture_hover = ExtResource("22_3ycls")
 
 [node name="Back" type="TextureButton" parent="."]
 offset_left = -870.919

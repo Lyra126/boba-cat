@@ -2220,11 +2220,11 @@ scale = Vector2(0.0770623, 0.0843981)
 texture_normal = ExtResource("133_64tsy")
 
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 1039.7
-offset_top = -775.806
-offset_right = 2539.7
-offset_bottom = 1224.19
-scale = Vector2(0.124216, 0.136953)
+offset_left = 1040.0
+offset_top = -776.0
+offset_right = 1540.0
+offset_bottom = -76.0
+scale = Vector2(0.344599, 0.37583)
 texture_normal = ExtResource("134_xity5")
 texture_pressed = ExtResource("135_7tirn")
 texture_hover = ExtResource("136_2dvsm")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://ceqg4sr663xx2"]
+[gd_scene load_steps=36 format=3 uid="uid://ceqg4sr663xx2"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://yfs1ito40fo4" path="res://assets/final_station/final_bg.png" id="2_10xh1"]
@@ -26,6 +26,10 @@
 [ext_resource type="Texture2D" uid="uid://554nig4kbyt3" path="res://assets/final_station/lid machine/lid machine open/lid_machine_middle_back.png" id="20_n6xst"]
 [ext_resource type="Texture2D" uid="uid://gyo466pymk15" path="res://assets/final_station/lid machine/lid machine open/lid_machine_middle_front.png" id="21_vcbix"]
 [ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="26_mnhwn"]
+[ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="27_a376f"]
+[ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="28_44bcf"]
+[ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="29_lctq5"]
+[ext_resource type="Texture2D" uid="uid://cujo4it0fdse7" path="res://assets/buttons/close.png" id="30_m0gv4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3fie"]
 size = Vector2(244.5, 519.119)
@@ -288,6 +292,50 @@ scale = Vector2(1, 0.998819)
 position = Vector2(-8.56171, -17.5938)
 shape = SubResource("RectangleShape2D_g2k6q")
 
+[node name="TextureButton" type="TextureButton" parent="."]
+auto_translate_mode = 1
+visible = false
+offset_left = 1029.14
+offset_top = -698.628
+offset_right = 1529.14
+offset_bottom = 1.37225
+scale = Vector2(0.344599, 0.37583)
+texture_normal = ExtResource("27_a376f")
+texture_pressed = ExtResource("28_44bcf")
+texture_hover = ExtResource("29_lctq5")
+
+[node name="order" type="Node2D" parent="."]
+visible = false
+z_index = 15
+
+[node name="ColorRect" type="ColorRect" parent="order"]
+auto_translate_mode = 1
+offset_left = -342.339
+offset_top = -507.584
+offset_right = -302.339
+offset_bottom = -467.584
+scale = Vector2(18.0372, 25.3149)
+
+[node name="Label" type="Label" parent="order"]
+auto_translate_mode = 1
+offset_left = -309.0
+offset_top = -350.0
+offset_right = 352.0
+offset_bottom = 457.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+
+[node name="close" type="TextureButton" parent="."]
+visible = false
+z_index = 16
+offset_left = 246.615
+offset_top = -494.861
+offset_right = 1746.61
+offset_bottom = 1005.14
+scale = Vector2(0.0744199, 0.0808258)
+texture_normal = ExtResource("30_m0gv4")
+
 [connection signal="input_event" from="AttachLid" to="cup" method="_on_attach_lid_input_event"]
 [connection signal="input_event" from="Area2D" to="cookie" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="cookie" method="_on_area_2d_mouse_entered"]
@@ -302,3 +350,5 @@ shape = SubResource("RectangleShape2D_g2k6q")
 [connection signal="input_event" from="trash/trash" to="." method="_on_trash_input_event"]
 [connection signal="mouse_entered" from="trash/trash" to="." method="_on_trash_mouse_entered"]
 [connection signal="mouse_exited" from="trash/trash" to="." method="_on_trash_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]

@@ -57,18 +57,18 @@ func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 
 func _on_close_pressed() -> void:
 	print("test")
-	$orderForm.visible = false
-	$orderForm/Label.visible = false
+	$OrderForm.visible = false
+	$OrderForm/Label.visible = false
 	$close.visible = false
 
 
 func _on_texture_button_pressed() -> void:
-	$orderForm.visible = true
+	$OrderForm.visible = true
 	$close.visible = true
 	var orderText = ""
 	for item in global.order:
 		orderText += str(item) + "\n"
 	print(orderText)
-	$orderForm/Label.visible = true
-	$orderForm/Label.set_text(orderText)
+	$OrderForm/Label.visible = true
+	$OrderForm/Label.set_text(orderText)
 
