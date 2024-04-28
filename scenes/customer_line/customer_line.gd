@@ -61,11 +61,10 @@ func nextCustomer():
 	$OrderForm.generate_order()
 	$OrderForm.showOrder()
 	global.dialogueCompleted = false
-	global.visitedCustomers.append(global.currCustomer)
 	$Customer.visible = false;
-	$Customer.position = Vector2(1040, 0)
-	var cat_number = global.currCustomer.substr(0 + "cat".length()).to_int() + 1
-	global.currCustomer = "cat" + str(cat_number)
+	$Customer.position = Vector2(8040, 0)
+	var randomIndex = randi() % global.allCustomers.size()
+	global.currCustomer = global.allCustomers[randomIndex]
 	$Customer.texture = global.get_customer_texture(global.currCustomer)
 	$Customer.visible = true;
 	await get_tree().create_timer(1.0).timeout

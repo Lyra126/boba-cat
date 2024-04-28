@@ -3,12 +3,12 @@
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
 [ext_resource type="Texture2D" uid="uid://mt3wkqwq7v4" path="res://assets/cutomer_line/customerline_bg.png" id="2_0iumo"]
 [ext_resource type="PackedScene" uid="uid://vbjyytkea21g" path="res://scenes/Dialogue/dialogue_player.tscn" id="2_8ynne"]
-[ext_resource type="Texture2D" uid="uid://67v6fvra775d" path="res://assets/cutomer_line/restingArms.png" id="3_5vta4"]
+[ext_resource type="Texture2D" uid="uid://bhpqwr1ul8njn" path="res://assets/cutomer_line/restingArms.png" id="3_5vta4"]
 [ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="5_16p48"]
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="6_4eijr"]
 [ext_resource type="Script" path="res://scenes/customer_line/Sprite2D.gd" id="6_qt0fo"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="7_t5lrs"]
-[ext_resource type="Texture2D" uid="uid://bbksx7pkqscxv" path="res://assets/cats/cat1.png" id="8_4iu0w"]
+[ext_resource type="Texture2D" uid="uid://no2v4pbnhq8s" path="res://assets/cats/cat1.png" id="8_4iu0w"]
 [ext_resource type="Texture2D" uid="uid://0mex1upu8hmv" path="res://assets/cutomer_line/empty.png" id="9_ycdsr"]
 [ext_resource type="Texture2D" uid="uid://diri1mm8pslx5" path="res://assets/cutomer_line/overlayCustomerLine.png" id="10_g66uf"]
 [ext_resource type="Texture2D" uid="uid://cx2emgf2n6gak" path="res://assets/cutomer_line/fill.png" id="10_ribyt"]
@@ -32,23 +32,22 @@ texture = ExtResource("2_0iumo")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(84.8625, 286.08)
+position = Vector2(28.2875, 548.451)
 scale = Vector2(0.743653, 0.732593)
 texture = ExtResource("3_5vta4")
 script = ExtResource("6_qt0fo")
 
 [node name="Customer" type="Sprite2D" parent="."]
-position = Vector2(1040, 0)
-scale = Vector2(2.31162, 2.77714)
+position = Vector2(1040.35, 12.6444)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("8_4iu0w")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="Customer"]
-visible = false
-offset_left = -77.5012
-offset_top = -207.163
-offset_right = 222.499
-offset_bottom = 92.8371
-scale = Vector2(0.5, 0.42)
+offset_left = -386.147
+offset_top = -1585.07
+offset_right = -86.1466
+offset_bottom = -1285.07
+scale = Vector2(2.50615, 2.60017)
 fill_mode = 4
 texture_under = ExtResource("9_ycdsr")
 texture_progress = ExtResource("10_ribyt")

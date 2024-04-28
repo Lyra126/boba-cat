@@ -5,7 +5,6 @@ var prevOrderFinished = false
 var currOrderFinished = false
 var currCustomer = "cat1"
 var allCustomers = ["cat1", "cat2", "cat3", "cat4", "cat5", "cat6", "cat7", "cat8", "cat9", "cat10"]
-var visitedCustomers = []
 var cat1 = preload("res://assets/cats/cat1.png")
 var cat2 = preload("res://assets/cats/cat2.png")
 var cat3 = preload("res://assets/cats/cat3.png")
