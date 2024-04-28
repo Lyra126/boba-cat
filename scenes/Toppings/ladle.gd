@@ -65,7 +65,7 @@ func _on_ladle_area_input_event(viewport: Node, event: InputEvent, shape_idx: in
 
 
 func _input(event):
-	if selected:
+	if selected and global.hasCup:
 		global.SomethingBeingClickedRn = true
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:

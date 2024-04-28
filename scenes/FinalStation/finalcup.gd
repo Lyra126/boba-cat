@@ -23,7 +23,7 @@ func _on_cup_pick_up_input_event(viewport, event, shape_idx):
 		selected = true
 		global.SomethingBeingClickedRn = true;
 		offset = get_global_mouse_position() - global_position
-	
+
 
 func _physics_process(delta):
 	if selected:
@@ -58,8 +58,6 @@ func addLid():
 	$Lid.visible = true
 	hasLid = true
 	scale = Vector2(0.75, 0.75)
-	
-
 
 
 func _on_initial_pos_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

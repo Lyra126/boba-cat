@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ceqg4sr663xx2"]
+[gd_scene load_steps=23 format=3 uid="uid://ceqg4sr663xx2"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://yfs1ito40fo4" path="res://assets/final_station/final_bg.png" id="2_jbb60"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="10_nsn8g"]
 [ext_resource type="Texture2D" uid="uid://cjhj7pjoqngfc" path="res://assets/final_station/lid.png" id="10_sw1nl"]
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="11_2cme3"]
+[ext_resource type="Texture2D" uid="uid://xjwvvg8j3dv8" path="res://assets/liquid_station/animations/liquid-pouring/tea-2/Untitled_Artwork-7 4.png" id="11_fu6um"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="12_2d1uf"]
 
 [sub_resource type="GDScript" id="GDScript_14f8c"]
@@ -39,12 +40,6 @@ func select():
 func deselect():
 	modulate = Color.WHITE
 "
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijsh8"]
-size = Vector2(354, 487.883)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c37ek"]
-size = Vector2(334, 481.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3fie"]
 size = Vector2(244.5, 519.119)
@@ -96,18 +91,18 @@ scale = Vector2(0.167166, 0.157229)
 texture = ExtResource("5_fly4n")
 script = ExtResource("6_dke8q")
 
+[node name="cup_spot" type="StaticBody2D" parent="." groups=["cup_drop", "droppable"]]
+position = Vector2(-105, 88)
+scale = Vector2(0.75, 0.75)
+script = SubResource("GDScript_14f8c")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cup_spot"]
+polygon = PackedVector2Array(-298.427, 477.794, -534.503, 708.514, -523.963, 753.795, 999.991, 753.795, 1008.42, 695.576, 753.376, 471.325)
+
 [node name="cup" type="Node2D" parent="."]
 position = Vector2(-105, 88)
 scale = Vector2(0.75, 0.75)
 script = ExtResource("3_fdyuf")
-
-[node name="cup_spot" type="StaticBody2D" parent="cup" groups=["cup_drop", "droppable"]]
-script = SubResource("GDScript_14f8c")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cup/cup_spot"]
-position = Vector2(-21, 377)
-shape = SubResource("RectangleShape2D_ijsh8")
-one_way_collision_margin = 0.0
 
 [node name="cup_sprite" type="Node2D" parent="cup"]
 
@@ -124,18 +119,24 @@ texture = ExtResource("5_gn2qx")
 
 [node name="cup_pick_up" type="Area2D" parent="cup/cup_sprite"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cup/cup_sprite/cup_pick_up"]
-position = Vector2(-23, 376.25)
-shape = SubResource("RectangleShape2D_c37ek")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cup/cup_sprite/cup_pick_up"]
+position = Vector2(-18, 362)
+scale = Vector2(0.641872, 0.641872)
+polygon = PackedVector2Array(-291.8, -312.5, -290.6, -312.5, -284.5, -314.1, -284.5, -311.1, -277.4, -300.5, -276.1, -300.5, -256.1, -291.5, -251.3, -291.5, -151.1, -273.5, -149.4, -273.5, -107.3, -269.5, -87.5, -269.5, 60.5, -267.5, 60.5, -268.4, 147.5, -274.4, 147.5, -275.2, 246.5, -291.2, 246.5, -291.9, 271.5, -300.9, 279.4, -313.5, 284, -313.5, 288, -315.5, 291.4, -315.5, 303.5, -301.2, 303.5, -296.5, 304.6, -277.5, 302.6, -277.5, 290.5, -257.9, 290.5, -252.3, 269.5, -165.5, 269.5, -156.3, 228.5, 61.9, 228.5, 69.7, 204.2, 219.5, 203.2, 219.5, 177.1, 347.5, 175.6, 347.5, 166.6, 362.5, 165.2, 362.5, 142.2, 382.5, 140, 382.5, 98, 403.5, 93.8, 403.5, 48.8, 416.5, 39.5, 416.5, -23.5, 419.5, -23.5, 418.3, -73.5, 413.3, -73.5, 411.9, -127.5, 393.9, -127.5, 392.8, -143.5, 385.8, -143.5, 384.6, -161.5, 372.6, -161.5, 371.4, -173.5, 361.4, -173.5, 359.2, -183.5, 346.2, -183.5, 341.9, -210.5, 217.7, -210.5, 210.5, -238.2, 40.5, -239.1, 40.5, -262.5, -75.3, -262.5, -84.5, -275.2, -162.5, -276.1, -162.5, -296.2, -255.5, -297.2, -255.5, -298.2, -261.5, -310.5, -278.9, -310.5, -290, -298.5, -313, -298.5, -314.7, -296.3, -315.8)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="cup/cup_sprite/cup_pick_up"]
+position = Vector2(-18.0866, 361.356)
+scale = Vector2(0.642054, 0.642054)
+polygon = PackedVector2Array(29.5, -374.4, 109.5, -370.4, 109.5, -369.3, 213.5, -355.2, 213.5, -354, 254.5, -342, 254.5, -340.8, 277.5, -329.8, 277.5, -328.4, 301.5, -307.4, 301.5, -304.2, 304.5, -300.2, 304.5, -288.5, 302.6, -288.5, 294.7, -274.5, 291.2, -274.5, 283, -291.8, 263.1, -279.5, 258.9, -279.5, 200.5, -268.8, 200.5, -268, 180.8, -262.5, 172.9, -262.5, 150.7, -257.5, 140.7, -257.5, 68.6, -251.5, -91.5, -251.5, -91.5, -252.7, -185.5, -262.7, -185.5, -264, -278.5, -286.9, -278.5, -288.4, -288.4, -294.2, -298.4, -274.2, -301.5, -274.9, -301.5, -277, -310.5, -289.9, -310.5, -300, -304.7, -311.5, -303.3, -311.5, -287.3, -327.5, -285.2, -327.5, -276.2, -334.5, -274, -334.5, -247, -347.5, -242.9, -347.5, -219.8, -355.5, -214.8, -355.5, -150.7, -366.5, -148.6, -366.5, -35.5, -374.4, -35.5, -375.5, 29.5, -375.5)
 
 [node name="stuff_inside_cup" type="Node2D" parent="cup"]
 script = ExtResource("7_e7diu")
 
 [node name="Polygon2D" type="Polygon2D" parent="cup/stuff_inside_cup"]
 clip_children = 1
-position = Vector2(-20.1943, -61.2706)
+position = Vector2(-20.1944, -56.9581)
 scale = Vector2(0.997704, 0.997704)
-polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665.461, -50.7168, 677.345, 9.5094, 684.135, 69.7357, 670.554, 109.358, 641.695, 155.32, 380.264, 172.754, 290.291, 182.264, 251.246, 191.773, 241.06, 193.358, 225.781, 145.811, 200.317, 76.0752, 188.434, -17.434, 186.737, -90.3395, 193.527, -158.49, 207.108, -191.773, 227.479)
+polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665.461, -50.7168, 677.345, 9.5094, 684.135, 69.7357, 670.554, 109.358, 641.695, 155.32, 380.264, 172.754, 290.291, 182.264, 251.246, 191.773, 241.06, 185.915, 226.928, 145.774, 203.155, 76.056, 194.51, -14.7888, 190.187, -90.3395, 193.527, -158.49, 207.108, -191.773, 227.479)
 
 [node name="toppings-5" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
 position = Vector2(-7.55016, 213.472)
@@ -157,7 +158,8 @@ position = Vector2(-4.5301, 485.776)
 scale = Vector2(0.911684, 0.93467)
 
 [node name="liquid_sprite" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
-position = Vector2(10.5703, 218.515)
+position = Vector2(-137.324, 224.767)
+texture = ExtResource("11_fu6um")
 
 [node name="Lid" type="Sprite2D" parent="cup"]
 visible = false
@@ -173,22 +175,22 @@ position = Vector2(1.58087, -3.23438)
 shape = SubResource("RectangleShape2D_k3fie")
 
 [node name="Back" type="TextureButton" parent="."]
-offset_left = -1272.74
-offset_top = 384.525
-offset_right = -272.743
-offset_bottom = 1384.53
-scale = Vector2(0.4, 0.4)
+offset_left = -1255.21
+offset_top = 449.58
+offset_right = -255.207
+offset_bottom = 1449.58
+scale = Vector2(0.32, 0.32)
 texture_normal = ExtResource("7_qudjk")
 texture_pressed = ExtResource("8_0wbd3")
 texture_hover = ExtResource("9_d3pnv")
 metadata/_edit_use_anchors_ = true
 
 [node name="SubmitOrder" type="TextureButton" parent="."]
-offset_left = 792.013
-offset_top = 363.869
-offset_right = 1792.01
-offset_bottom = 1363.87
-scale = Vector2(0.404201, 0.407558)
+offset_left = 913.74
+offset_top = 435.025
+offset_right = 1913.74
+offset_bottom = 1435.03
+scale = Vector2(0.32, 0.323)
 texture_normal = ExtResource("10_nsn8g")
 texture_pressed = ExtResource("11_2cme3")
 texture_hover = ExtResource("12_2d1uf")

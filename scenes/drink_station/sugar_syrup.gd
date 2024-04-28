@@ -14,6 +14,7 @@ var body_ref
 var syrupIndex
 var syrupAdded = false
 var target_position
+var syrup_level_max = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -71,9 +72,11 @@ func _input(event):
 									print("level = 100")
 									syrup_down.show()
 									syrup_down.play("default")
+									syrup_level_max = true
+									#syrup_down.play("default")
 								elif(syrupLevel) == "syrup-100":
-									print("You have enough sugar already!")
-									selected = false
+									syrup_down.show()
+									syrup_down.play("default")
 								break
 				
 				else:
@@ -82,7 +85,7 @@ func _input(event):
 					global.SomethingBeingClickedRn = false
 					
 func smooth_back(delta):
-	global_position = lerp(global_position, Vector2.ZERO, 10 * delta)
+	global_position = lerp(global_position, syrup_position.global_position, 10 * delta)
 
 func _on_syrup_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
@@ -113,5 +116,5 @@ func _on_syrup_down_animation_finished() -> void:
 	particle.emitting = false
 
 func particle_explosion():
-	if syrup_down.is_playing():
+	if syrup_down.is_playing() and not syrup_level_max:
 		particle.emitting = true

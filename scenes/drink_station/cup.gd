@@ -48,7 +48,6 @@ func _input(event):
 		if liquid_station_global.nozzle_anim_playing:
 			selected = false
 			return
-
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			handle_liquid_selection(event)
 
