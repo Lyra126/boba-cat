@@ -4,6 +4,7 @@ extends Node2D
 @onready var openTrash = preload("res://assets/buttons/openTrash.png")
 @onready var closeTrash = preload("res://assets/buttons/closeTrash.png")
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if not global.hasCup:
@@ -49,11 +50,10 @@ func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if event.pressed:
 				$trash.texture = closeTrash
-				global.playerOrder.resize(0)
 				print("cup has been deleted")
 				$Cup.visible = false
 				global.hasCup = false
-
+				global.reset_drink()
 
 func _on_close_pressed() -> void:
 	print("test")

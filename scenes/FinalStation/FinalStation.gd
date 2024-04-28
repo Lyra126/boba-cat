@@ -5,8 +5,8 @@ var cup_in_attach_lid = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	global.hasCup = true
-
-	pass # Replace with function body.
+	#if not global.hasCup:
+		#$cup.hide().
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44c792d6-38c7-4ba3-b6f4-4d28abd89b49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/toppings_station/assets/bar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/toppings_station/assets/ladle_boba_pearls.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/toppings_station/assets/ladle_boba_pearls.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/toppings_station/assets/ladle_dalgona.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/toppings_station/assets/ladle_dalgona.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/toppings_station/assets/ladle_fruit_jelly.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/toppings_station/assets/ladle_fruit_jelly.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/toppings_station/assets/ladle_popping_boba.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/toppings_station/assets/ladle_popping_boba.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/toppings_station/assets/ladle_strawberries.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/toppings_station/assets/ladle_strawberries.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/Toppings/toppings_station_global.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/toppings_station/assets/toppings_bar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/toppings_station/assets/toppings_bar.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/assets/toppings_station/assets/bar.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/Toppings/Toppings.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/Toppings/Toppings.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/Toppings/cup.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/Toppings/cup.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/Toppings/dalgona_chunks.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/Toppings/ladle.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/Toppings/ladle.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/drink_station/cup.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/drink_station/cup.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/drink_station/sugar_syrup.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/drink_station/sugar_syrup.gd" afterDir="false" />
-    </list>
+    <list default="true" id="44c792d6-38c7-4ba3-b6f4-4d28abd89b49" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,17 +14,18 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2fbQxpygB0l8JBZLoAkwu7gVd9z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/rachelpu/Coding/boba-cat1"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rachelpu/Coding/boba-cat1&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
