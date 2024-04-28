@@ -83,7 +83,6 @@ func _input(event):
 				elif dalgona:
 					global.SomethingBeingClickedRn = true
 					sprite.set_texture(ladle_dalgona)
-					print(dalgona_ladle)
 					dalgona_ladle = true
 					popping_boba_ladle = false
 					boba_pearls_ladle = false
@@ -118,7 +117,6 @@ func _input(event):
 					strawberries_ladle = false
 					
 				elif cup_droppable:
-					print("POOP")
 					global.SomethingBeingClickedRn = true
 					if toppings_station_global.toppings_layers < 5:
 						if popping_boba_ladle:
@@ -205,7 +203,6 @@ func _physics_process(delta):
 func _on_scoopable_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group('cup_drop'):
 		cup_droppable = true
-		print('bro')
 		
 	if body.is_in_group('ladle_area'):
 		in_ladle_area = true

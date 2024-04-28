@@ -1,4 +1,4 @@
-[gd_scene load_steps=379 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=378 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
@@ -418,6 +418,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("53_p8n7q")
+}],
+"loop": false,
+"name": &"almond-milk-1-still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("54_esol1")
 }, {
 "duration": 1.0,
@@ -603,6 +611,14 @@ animations = [{
 "loop": false,
 "name": &"coffee-1",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_tdamv")
+}],
+"loop": false,
+"name": &"coffee-1-still",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -794,6 +810,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("37_1icoa")
+}],
+"loop": false,
+"name": &"cow-milk-1-still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("38_3nn0h")
 }, {
 "duration": 1.0,
@@ -979,6 +1003,14 @@ animations = [{
 "loop": false,
 "name": &"oat-milk-1",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("147_hscwa")
+}],
+"loop": false,
+"name": &"oat-milk-1-still",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1170,6 +1202,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("177_c01ta")
+}],
+"loop": true,
+"name": &"smoothie-1-still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("178_ry2x2")
 }, {
 "duration": 1.0,
@@ -1358,6 +1398,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("20_082nk")
+}],
+"loop": true,
+"name": &"tea-1-still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("22_6k5in")
 }, {
 "duration": 1.0,
@@ -1511,33 +1559,6 @@ animations = [{
 "loop": false,
 "name": &"tea-smoothie-2",
 "speed": 8.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_52c8j"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("53_p8n7q")
-}],
-"loop": false,
-"name": &"almond-milk-1",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("60_jyaq6")
-}],
-"loop": false,
-"name": &"almond-milk-2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("20_082nk")
-}],
-"loop": false,
-"name": &"tea-1",
-"speed": 5.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_36dq1"]
@@ -1907,16 +1928,9 @@ scale = Vector2(0.911684, 0.93467)
 position = Vector2(-144.226, 227.479)
 scale = Vector2(0.955101, 0.874128)
 sprite_frames = SubResource("SpriteFrames_k1bue")
-animation = &"almond-milk-1"
-
-[node name="liquid_animations_still" type="AnimatedSprite2D" parent="cup/liquid-in-cup/Polygon2D"]
-position = Vector2(-144.226, 227.479)
-scale = Vector2(0.955, 0.874)
-sprite_frames = SubResource("SpriteFrames_52c8j")
-animation = &"tea-1"
+animation = &"tea-1-still"
 
 [node name="Sprite2D" type="Sprite2D" parent="cup/liquid-in-cup/Polygon2D"]
-visible = false
 position = Vector2(-144.226, 227.479)
 
 [node name="Liquid Types" type="Control" parent="."]

@@ -1,17 +1,17 @@
 extends Node2D
 @onready var openTrash = preload("res://assets/buttons/openTrash.png")
 @onready var closeTrash = preload("res://assets/buttons/closeTrash.png")
-@onready var anim = $"cup/liquid-in-cup/Polygon2D/liquid_animations_still"
+@onready var anim = $"cup/liquid-in-cup/Polygon2D/liquid_animations"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	anim.hide()
 	$Back.pressed.connect(self._on_back_pressed)
 	$Next.pressed.connect(self._on_next_pressed)
-	get_liquid_inside_cup_animation(anim)
+	#get_liquid_inside_cup_animation(anim)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#print(liquid_station_global.liquid_layer)
 	pass
 
 func _on_back_pressed():
@@ -54,13 +54,13 @@ func _on_close_pressed() -> void:
 	$order/Label.visible = false
 	$close.visible = false
 
-func get_liquid_inside_cup_animation(anim):
-	if liquid_station_global.liquid_layer == 1:
-		anim.show()
-		anim.modulate.a = 0.8
-		if liquid_station_global.tea == 1:
-			anim.play("tea-1")
-			anim.pause()
+#func get_liquid_inside_cup_animation(anim):
+	#if liquid_station_global.liquid_layer == 1:
+		#anim_2.show()
+		#anim_2.modulate.a = 0.8
+		#if liquid_station_global.tea == 1:
+			#anim_2.play("tea-1")
+			#anim_2.pause()
 		#elif liquid_station_global.coffee == 1:
 			#sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/coffee-1.png"))
 		#elif liquid_station_global.smoothie == 1:

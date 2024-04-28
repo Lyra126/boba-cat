@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var anim = $Polygon2D/liquid_animations
 @onready var sprite = $Polygon2D/Sprite2D
+@onready var anim_2 = $Polygon2D/liquid_animations_still
 
 @onready var t5 = $"Polygon2D/toppings-5"
 @onready var t4 = $"Polygon2D/toppings-4"
@@ -24,11 +25,77 @@ func _ready() -> void:
 	anim.modulate.a = 0.8
 	global.get_toppings_inside_cup(t1, t2, t3, t4, t5)
 	anim.hide()
-	#sprite.hide()
+	sprite.hide()
+	
+	if liquid_station_global.liquid_layer == 1:
+		anim.show()
+		if liquid_station_global.tea == 1:
+			anim.play("tea-1-still")
+			anim.pause()
+			has_tea_been_poured = true
+			
+		if liquid_station_global.coffee == 1:
+			anim.play("coffee-1-still")
+			anim.pause()
+			has_coffee_been_poured = true
+			
+		if liquid_station_global.smoothie == 1:
+			anim.play("smoothie-1-still")
+			anim.pause()
+			has_smoothie_been_poured = true
+			
+		if liquid_station_global.cow_milk == 1:
+			anim.play("cow-milk-1-still")
+			anim.pause()
+			has_cow_milk_been_poured = true
+			
+		if liquid_station_global.oat_milk == 1:
+			anim.play("oat-milk-1-still")
+			anim.pause()
+			has_oat_milk_been_poured = true
+			
+		if liquid_station_global.almond_milk == 1:
+			anim.play("almond-milk-1-still")
+			anim.pause()
+			has_almond_milk_been_poured = true
+			
+# the SPRITE version of the liquid will only show if the max number of layers is reached
+	if liquid_station_global.liquid_layer == 2:
+		sprite.show()
+		sprite.modulate.a = 0.8
+		global.get_liquid_inside_cup(sprite)
 
 func _process(delta: float) -> void:
 	manage_animations()
 	allow_next_layer()
+	
+func allow_next_layer():
+	wait_for_next_layer = false  # Reset this flag to allow progression to the next layer
+
+func reset_animation():
+	liquid_station_global.liquid_layer = 0
+	liquid_station_global.tea = 0
+	liquid_station_global.coffee = 0
+	liquid_station_global.smoothie = 0
+	liquid_station_global.oat_milk = 0
+	liquid_station_global.cow_milk = 0
+	liquid_station_global.almond_milk = 0
+	
+	sprite.set_texture(null)
+
+	has_tea_been_poured = false
+	has_coffee_been_poured = false
+	has_smoothie_been_poured = false
+	has_cow_milk_been_poured = false
+	has_oat_milk_been_poured = false
+	has_almond_milk_been_poured = false
+	wait_for_next_layer = false  # Ensure that layer transitions can happen after reset
+
+func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if event.pressed:
+				reset_animation()
 
 func manage_animations():
 	anim.modulate.a = 0.8
@@ -101,6 +168,7 @@ func manage_animations():
 		######### COW MILK AND TEA ##########
 		if has_tea_been_poured and liquid_station_global.cow_milk_pouring and not anim.is_playing():
 			anim.play("tea-cow-milk-2")
+			print("tea-cow-milk-success")
 			liquid_station_global.liquid_layer += 1
 			has_cow_milk_been_poured = true
 			if "tea" in global.playerOrder:
@@ -520,32 +588,3 @@ func manage_animations():
 			liquid_station_global.almond_milk = 3
 			if not "almond-milk2" in global.playerOrder:
 				global.playerOrder.append("almond-milk2")
-
-
-func allow_next_layer():
-	wait_for_next_layer = false  # Reset this flag to allow progression to the next layer
-
-func reset_animation():
-	liquid_station_global.liquid_layer = 0
-	liquid_station_global.tea = 0
-	liquid_station_global.coffee = 0
-	liquid_station_global.smoothie = 0
-	liquid_station_global.oat_milk = 0
-	liquid_station_global.cow_milk = 0
-	liquid_station_global.almond_milk = 0
-	
-	sprite.set_texture(null)
-
-	has_tea_been_poured = false
-	has_coffee_been_poured = false
-	has_smoothie_been_poured = false
-	has_cow_milk_been_poured = false
-	has_oat_milk_been_poured = false
-	has_almond_milk_been_poured = false
-	wait_for_next_layer = false  # Ensure that layer transitions can happen after reset
-
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if event.pressed:
-				reset_animation()
