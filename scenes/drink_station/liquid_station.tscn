@@ -1,4 +1,4 @@
-[gd_scene load_steps=378 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=379 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
@@ -1513,6 +1513,33 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_52c8j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_p8n7q")
+}],
+"loop": false,
+"name": &"almond-milk-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("60_jyaq6")
+}],
+"loop": false,
+"name": &"almond-milk-2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_082nk")
+}],
+"loop": false,
+"name": &"tea-1",
+"speed": 5.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_36dq1"]
 animations = [{
 "frames": [{
@@ -1851,17 +1878,46 @@ script = ExtResource("12_5lha2")
 
 [node name="Polygon2D" type="Polygon2D" parent="cup/liquid-in-cup"]
 clip_children = 1
+light_mask = 256
+visibility_layer = 256
+position = Vector2(1.5849, 0)
 polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665.461, -50.7168, 677.345, 9.5094, 684.135, 69.7357, 670.554, 109.358, 641.695, 155.32, 380.264, 172.754, 290.291, 182.264, 251.246, 191.773, 241.06, 193.358, 225.781, 145.811, 200.317, 76.0752, 188.434, -17.434, 186.737, -90.3395, 193.527, -158.49, 207.108, -191.773, 227.479)
+
+[node name="toppings-5" type="Sprite2D" parent="cup/liquid-in-cup/Polygon2D"]
+modulate = Color(1, 1, 1, 0.380392)
+position = Vector2(-7.55016, 213.472)
+scale = Vector2(1.04942, 1.04942)
+
+[node name="toppings-4" type="Sprite2D" parent="cup/liquid-in-cup/Polygon2D"]
+position = Vector2(4.53011, 267.261)
+scale = Vector2(-0.996138, 1.08427)
+
+[node name="toppings-3" type="Sprite2D" parent="cup/liquid-in-cup/Polygon2D"]
+position = Vector2(-4.53011, 342.901)
+
+[node name="toppings-2" type="Sprite2D" parent="cup/liquid-in-cup/Polygon2D"]
+position = Vector2(9.06022, 403.413)
+scale = Vector2(-0.88023, 1.01495)
+
+[node name="toppings-1" type="Sprite2D" parent="cup/liquid-in-cup/Polygon2D"]
+position = Vector2(-4.5301, 485.776)
+scale = Vector2(0.911684, 0.93467)
 
 [node name="liquid_animations" type="AnimatedSprite2D" parent="cup/liquid-in-cup/Polygon2D"]
 position = Vector2(-144.226, 227.479)
 scale = Vector2(0.955101, 0.874128)
 sprite_frames = SubResource("SpriteFrames_k1bue")
-animation = &"tea-almond-milk-2"
+animation = &"almond-milk-1"
+
+[node name="liquid_animations_still" type="AnimatedSprite2D" parent="cup/liquid-in-cup/Polygon2D"]
+position = Vector2(-144.226, 227.479)
+scale = Vector2(0.955, 0.874)
+sprite_frames = SubResource("SpriteFrames_52c8j")
+animation = &"tea-1"
 
 [node name="Sprite2D" type="Sprite2D" parent="cup/liquid-in-cup/Polygon2D"]
+visible = false
 position = Vector2(-144.226, 227.479)
-scale = Vector2(0.874, 0.874)
 
 [node name="Liquid Types" type="Control" parent="."]
 layout_mode = 3

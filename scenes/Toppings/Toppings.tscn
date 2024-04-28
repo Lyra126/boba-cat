@@ -1,9 +1,8 @@
-[gd_scene load_steps=27 format=3 uid="uid://bv3yw1n541ync"]
+[gd_scene load_steps=26 format=3 uid="uid://bv3yw1n541ync"]
 
 [ext_resource type="Script" path="res://scenes/Toppings/Toppings.gd" id="1_ykgei"]
-[ext_resource type="Texture2D" path="res://assets/toppings_station/assets/bar.png" id="2_4bx8k"]
+[ext_resource type="Texture2D" uid="uid://bk0gxcyege8wb" path="res://assets/toppings_station/assets/bar.png" id="2_4bx8k"]
 [ext_resource type="Texture2D" uid="uid://bbb8o2vqkuhj5" path="res://assets/toppings_station/assets/toppings_bg.png" id="3_3mncm"]
-[ext_resource type="Script" path="res://scenes/Toppings/dalgona_chunks.gd" id="3_g217m"]
 [ext_resource type="Script" path="res://scenes/Toppings/cup.gd" id="4_0yovw"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_rrssr"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_vh8md"]
@@ -53,18 +52,15 @@ metadata/_edit_lock_ = true
 
 [node name="popping boba collision" type="CollisionPolygon2D" parent="bar/popping_boba/StaticBody2D"]
 z_index = 1
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-284.689, -49.7928, -293.872, -41.2079, -304.586, -37.7739, -304.586, -25.7549, -315.301, -20.6039, -315.301, -12.019, -322.953, -5.15098, -322.953, 5.15098, -333.668, 0, -339.79, 8.58497, -365.81, 60.0948, -359.687, 66.9628, -215.812, 65.2458, -185.201, 18.8869, -151.528, -51.5098, -159.181, -61.8118, -166.834, -56.6608, -177.548, -65.2458, -185.201, -56.6608, -200.507, -66.9628, -209.69, -54.9438, -223.465, -56.6608, -237.241, -60.0948, -249.485, -49.7928, -269.383, -48.0759)
 
 [node name="dalgona_chunks" type="Node2D" parent="bar"]
-script = ExtResource("3_g217m")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="bar/dalgona_chunks" groups=["dalgona_chunks"]]
 
 [node name="dalgona collision" type="CollisionPolygon2D" parent="bar/dalgona_chunks/StaticBody2D"]
 z_index = 1
 position = Vector2(1.53058, 0)
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-55.1011, -42.9249, -65.8152, -34.3399, -62.754, -27.4719, -64.2846, -13.736, -88.7739, -5.15098, -116.324, 20.6039, -137.753, 65.2458, -131.63, 75.5478, 44.387, 65.2458, 52.0399, 29.1889, 65.8152, -68.6798, 38.2646, -58.3778, 36.734, -53.2268, 29.0811, -58.3778, 0, -65.2458, -3.06117, -53.2268, -16.8364, -63.5288, -30.6117, -60.0948, -30.6117, -46.3589, -38.2646, -46.3589, -39.7952, -39.4909)
 
 [node name="fruit_jelly" type="Node2D" parent="bar"]
@@ -72,7 +68,6 @@ polygon = PackedVector2Array(-55.1011, -42.9249, -65.8152, -34.3399, -62.754, -2
 [node name="StaticBody2D" type="StaticBody2D" parent="bar/fruit_jelly" groups=["fruit_jelly"]]
 
 [node name="fruit jelly collision" type="CollisionPolygon2D" parent="bar/fruit_jelly/StaticBody2D"]
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(154.589, -77.2648, 145.406, -65.2458, 145.406, -56.6608, 139.283, -53.2268, 120.916, -34.3399, 120.916, -20.6039, 120.916, -10.302, 113.263, -3.43399, 102.549, 15.453, 96.4268, 63.5288, 105.61, 77.2648, 133.161, 82.4157, 269.383, 78.9818, 272.444, 68.6798, 255.608, -56.6608, 235.71, -42.9249, 220.404, -58.3778, 220.404, -75.5478, 194.384, -77.2648, 182.14, -65.2458)
 
 [node name="boba_balls" type="Node2D" parent="bar"]
@@ -80,7 +75,6 @@ polygon = PackedVector2Array(154.589, -77.2648, 145.406, -65.2458, 145.406, -56.
 [node name="StaticBody2D" type="StaticBody2D" parent="bar/boba_balls" groups=["boba_balls"]]
 
 [node name="balls collision" type="CollisionPolygon2D" parent="bar/boba_balls/StaticBody2D"]
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(301.525, -58.3778, 307.647, -66.9628, 316.831, -60.0948, 316.831, -53.2268, 326.015, -65.2458, 338.259, -61.8118, 339.79, -53.2268, 350.504, -53.2268, 353.565, -51.5098, 356.626, -42.9249, 361.218, -56.6608, 371.932, -60.0948, 376.524, -51.5098, 378.054, -44.6419, 388.768, -49.7928, 394.891, -42.9249, 396.421, -32.6229, 404.074, -44.6419, 411.727, -44.6419, 417.85, -39.4909, 420.911, -30.9059, 427.033, -32.6229, 433.155, -30.9059, 437.747, -37.7739, 446.931, -36.0569, 454.584, -29.1889, 492.848, 56.6608, 492.848, 68.6798, 482.134, 75.5478, 324.484, 73.8308, 315.3, 66.9628, 298.464, -56.6608)
 
 [node name="strawberry_slices" type="Node2D" parent="bar"]
@@ -88,7 +82,6 @@ polygon = PackedVector2Array(301.525, -58.3778, 307.647, -66.9628, 316.831, -60.
 [node name="StaticBody2D" type="StaticBody2D" parent="bar/strawberry_slices" groups=["strawberry_slices"]]
 
 [node name="strawberry collision" type="CollisionPolygon2D" parent="bar/strawberry_slices/StaticBody2D"]
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(532.643, -48.0758, 538.766, -24.0379, 541.827, -18.8869, 529.582, -20.6039, 577.03, 66.9628, 587.745, 70.3968, 616.826, 72.1138, 725.497, 70.3968, 742.333, 56.6608, 740.803, 48.0758, 710.191, -6.86798, 697.947, -5.15098, 697.947, -10.302, 699.477, -25.7549, 685.702, -25.7549, 685.702, -36.0569, 674.988, -51.5098, 653.56, -48.0758, 650.498, -46.3589, 644.376, -61.8118, 638.254, -65.2458, 630.601, -58.3778, 629.07, -54.9438, 621.417, -51.5098, 610.703, -60.0948, 596.928, -61.8118, 586.214, -46.3589, 584.683, -39.4909, 570.908, -37.7739, 558.663, -42.9249, 538.766, -49.7928)
 
 [node name="ladle" type="Node2D" parent="bar"]
@@ -108,10 +101,10 @@ scale = Vector2(0.642054, 0.642054)
 polygon = PackedVector2Array(29.5, -374.4, 109.5, -370.4, 109.5, -369.3, 213.5, -355.2, 213.5, -354, 254.5, -342, 254.5, -340.8, 277.5, -329.8, 277.5, -328.4, 301.5, -307.4, 301.5, -304.2, 304.5, -300.2, 304.5, -288.5, 302.6, -288.5, 294.7, -274.5, 291.2, -274.5, 283, -291.8, 263.1, -279.5, 258.9, -279.5, 200.5, -268.8, 200.5, -268, 180.8, -262.5, 172.9, -262.5, 150.7, -257.5, 140.7, -257.5, 68.6, -251.5, -91.5, -251.5, -91.5, -252.7, -185.5, -262.7, -185.5, -264, -278.5, -286.9, -278.5, -288.4, -288.4, -294.2, -298.4, -274.2, -301.5, -274.9, -301.5, -277, -310.5, -289.9, -310.5, -300, -304.7, -311.5, -303.3, -311.5, -287.3, -327.5, -285.2, -327.5, -276.2, -334.5, -274, -334.5, -247, -347.5, -242.9, -347.5, -219.8, -355.5, -214.8, -355.5, -150.7, -366.5, -148.6, -366.5, -35.5, -374.4, -35.5, -375.5, 29.5, -375.5)
 
 [node name="Cup" type="Node2D" parent="."]
-visible = false
 script = ExtResource("4_0yovw")
 
 [node name="cup_sprite" type="Node2D" parent="Cup"]
+z_index = 14
 position = Vector2(11.0243, 257.704)
 scale = Vector2(0.718907, 0.718907)
 
@@ -145,12 +138,32 @@ script = ExtResource("7_unvub")
 
 [node name="Polygon2D" type="Polygon2D" parent="Cup/stuff_inside_cup"]
 clip_children = 1
+z_index = 10
 position = Vector2(1.10243, 22.0889)
 scale = Vector2(0.730068, 0.730068)
 polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665.461, -50.7168, 677.345, 9.5094, 684.135, 69.7357, 670.554, 109.358, 641.695, 155.32, 380.264, 172.754, 290.291, 182.264, 251.246, 191.773, 241.06, 193.358, 225.781, 145.811, 200.317, 76.0752, 188.434, -17.434, 186.737, -90.3395, 193.527, -158.49, 207.108, -191.773, 227.479)
 
+[node name="toppings-5" type="Sprite2D" parent="Cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(-7.55016, 213.472)
+scale = Vector2(1.04942, 1.04942)
+
+[node name="toppings-4" type="Sprite2D" parent="Cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(4.53011, 267.261)
+scale = Vector2(-0.996138, 1.08427)
+
+[node name="toppings-3" type="Sprite2D" parent="Cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(-4.53011, 342.901)
+
+[node name="toppings-2" type="Sprite2D" parent="Cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(9.06022, 403.413)
+scale = Vector2(-0.88023, 1.01495)
+
+[node name="toppings-1" type="Sprite2D" parent="Cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(-4.5301, 485.776)
+scale = Vector2(0.911684, 0.93467)
+
 [node name="liquid_sprite" type="Sprite2D" parent="Cup/stuff_inside_cup/Polygon2D"]
-position = Vector2(10.5703, 218.515)
+position = Vector2(10.5704, 218.515)
 
 [node name="LadleHanger" type="Sprite2D" parent="."]
 position = Vector2(-443.87, -278.153)
@@ -211,8 +224,8 @@ position = Vector2(1.0419, 662.588)
 shape = SubResource("RectangleShape2D_1w4ow")
 
 [node name="trash" type="Sprite2D" parent="."]
-position = Vector2(-601.926, 458.958)
-scale = Vector2(0.0848312, 0.0883697)
+position = Vector2(-608.541, 479.82)
+scale = Vector2(0.0666689, 0.0694499)
 texture = ExtResource("19_73j2n")
 
 [node name="trash" type="Area2D" parent="trash"]
@@ -291,6 +304,7 @@ texture_hover = ExtResource("14_wtiin")
 [connection signal="mouse_entered" from="CupDispenser/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="CupDispenser/Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="input_event" from="trash/trash" to="." method="_on_trash_input_event"]
+[connection signal="input_event" from="trash/trash" to="ladle" method="_on_trash_input_event"]
 [connection signal="mouse_entered" from="trash/trash" to="." method="_on_trash_mouse_entered"]
 [connection signal="mouse_exited" from="trash/trash" to="." method="_on_trash_mouse_exited"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

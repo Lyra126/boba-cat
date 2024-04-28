@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var anim = $"../cup/liquid-in-cup/Polygon2D/liquid_animations"
 @onready var syrup_down = $syrup_down
 @onready var syrup_still = $syrupSprite
 @onready var syrup_position = $"../sugar_syrup_droppable"
@@ -37,12 +38,17 @@ func _input(event):
 				var mouse_position = get_viewport().get_mouse_position()
 				if cup_droppable:
 					syrup_still.hide()
+					syrup_down.show()
+					syrup_down.play('default')
+
 					if not syrupAdded:
 						global.playerOrder.append("syrup-25")
 						syrupAdded = true
 						print("level = 25")
 						syrup_down.show()
 						syrup_down.play("default")
+						# try to make the drink lighter every time sugar is added.?
+						
 					else:
 						for syrupLevel in syrupLevels:
 							syrupIndex = global.playerOrder.find(syrupLevel)
@@ -67,7 +73,7 @@ func _input(event):
 									syrup_down.play("default")
 								elif(syrupLevel) == "syrup-100":
 									print("You have enough sugar already!")
-									syrup_down.show()
+									selected = false
 								break
 				
 				else:

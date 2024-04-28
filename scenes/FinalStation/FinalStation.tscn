@@ -121,6 +121,25 @@ position = Vector2(-20.1943, -61.2706)
 scale = Vector2(0.997704, 0.997704)
 polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665.461, -50.7168, 677.345, 9.5094, 684.135, 69.7357, 670.554, 109.358, 641.695, 155.32, 380.264, 172.754, 290.291, 182.264, 251.246, 191.773, 241.06, 193.358, 225.781, 145.811, 200.317, 76.0752, 188.434, -17.434, 186.737, -90.3395, 193.527, -158.49, 207.108, -191.773, 227.479)
 
+[node name="toppings-5" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(-7.55016, 213.472)
+scale = Vector2(1.04942, 1.04942)
+
+[node name="toppings-4" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(4.53011, 267.261)
+scale = Vector2(-0.996138, 1.08427)
+
+[node name="toppings-3" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(-4.53011, 342.901)
+
+[node name="toppings-2" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(9.06022, 403.413)
+scale = Vector2(-0.88023, 1.01495)
+
+[node name="toppings-1" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(-4.5301, 485.776)
+scale = Vector2(0.911684, 0.93467)
+
 [node name="liquid_sprite" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
 position = Vector2(10.5703, 218.515)
 

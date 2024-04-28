@@ -4,7 +4,8 @@ var cup_in_attach_lid = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	global.hasCup = true
+	if not global.hasCup:
+		$cup.hide()
 	pass # Replace with function body.
 
 

@@ -3,11 +3,23 @@ extends Node2D
 @onready var ladle_area = $"../LadleHanger/ladle body"
 @onready var sprite = $Ladle
 @onready var anim = $Ladle/AnimatedSprite2D
+@onready var t5 = $"../Cup/stuff_inside_cup/Polygon2D/toppings-5"
+@onready var t4 = $"../Cup/stuff_inside_cup/Polygon2D/toppings-4"
+@onready var t3 = $"../Cup/stuff_inside_cup/Polygon2D/toppings-3"
+@onready var t2 = $"../Cup/stuff_inside_cup/Polygon2D/toppings-2"
+@onready var t1 = $"../Cup/stuff_inside_cup/Polygon2D/toppings-1"
+
+var ladle = preload("res://assets/toppings_station/assets/ladle.png")
 var ladle_dalgona = preload("res://assets/toppings_station/assets/ladle_dalgona.png")
 var ladle_fruit_jelly = preload("res://assets/toppings_station/assets/ladle_fruit_jelly.png")
 var ladle_popping_boba = preload("res://assets/toppings_station/assets/ladle_popping_boba.png")
 var ladle_boba_pearls = preload("res://assets/toppings_station/assets/ladle_boba_pearls.png")
 var ladle_strawberries = preload("res://assets/toppings_station/assets/ladle_strawberries.png")
+var boba_topping = preload("res://assets/toppings_station/assets/toppings-in-cup/boba-pearls.png")
+var dalgona_topping = preload("res://assets/toppings_station/assets/toppings-in-cup/dalgona-chunks.png")
+var fruitJelly_topping = preload("res://assets/toppings_station/assets/toppings-in-cup/fruit-jelly.png")
+var poppingBoba_topping = preload("res://assets/toppings_station/assets/toppings-in-cup/popping-boba.png")
+var strawberrySlices_topping = preload("res://assets/toppings_station/assets/toppings-in-cup/strawberry-slices.png")
 
 var selected = false
 var off_set = Vector2.ZERO
@@ -35,6 +47,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#print(global.SomethingBeingClickedRn)
+	#print(layer)
 	pass
 
 func _on_ladle_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
@@ -56,51 +69,102 @@ func _input(event):
 		global.SomethingBeingClickedRn = true
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				
 				var mouse_position = get_viewport().get_mouse_position()
 				if popping_boba:
 					global.SomethingBeingClickedRn = true
 					sprite.set_texture(ladle_popping_boba)
 					popping_boba_ladle = true
+					boba_pearls_ladle = false
+					strawberries_ladle = false
+					dalgona_ladle = false
+					fruit_jelly_ladle = false
 						
 				elif dalgona:
 					global.SomethingBeingClickedRn = true
 					sprite.set_texture(ladle_dalgona)
+					print(dalgona_ladle)
 					dalgona_ladle = true
+					popping_boba_ladle = false
+					boba_pearls_ladle = false
+					strawberries_ladle = false
+					fruit_jelly_ladle = false
 					
 				elif fruit_jelly:
 					global.SomethingBeingClickedRn = true
 					sprite.set_texture(ladle_fruit_jelly)
-					fruit_jelly = true
+					fruit_jelly_ladle = true
+					popping_boba_ladle = false
+					boba_pearls_ladle = false
+					strawberries_ladle = false
+					dalgona_ladle = false
 					
 				elif strawberries:
 					global.SomethingBeingClickedRn = true
 					sprite.set_texture(ladle_strawberries)
 					strawberries_ladle = true
+					popping_boba_ladle = false
+					boba_pearls_ladle = false
+					dalgona_ladle = false
+					fruit_jelly_ladle = false
 					
 				elif boba_pearls:
 					global.SomethingBeingClickedRn = true
 					sprite.set_texture(ladle_boba_pearls)
 					boba_pearls_ladle = true
+					popping_boba_ladle = false
+					dalgona_ladle = false
+					fruit_jelly_ladle = false
+					strawberries_ladle = false
 					
 				elif cup_droppable:
 					print("POOP")
 					global.SomethingBeingClickedRn = true
-					if popping_boba_ladle:
-						# adding into the cup
-						global.toppings_inserted.append("popping-boba")
-						
-					elif boba_pearls_ladle:
-						global.toppings_inserted.append("boba-pearls")
-						
-					elif dalgona_ladle:
-						global.toppings_inserted.append("dalgona-chunks")
-					
-					elif fruit_jelly_ladle:
-						global.toppings_inserted.append("fruit-jelly")
-						
-					elif strawberries_ladle:
-						global.toppings_inserted.append("strawberry-slices")
-		
+					if toppings_station_global.toppings_layers < 5:
+						if popping_boba_ladle:
+							handle_layer(toppings_station_global.toppings_layers, poppingBoba_topping)
+							global.toppings_inserted.append("poppingBoba")
+							global.topping_sprites.append("res://assets/toppings_station/assets/toppings-in-cup/popping-boba.png")
+							toppings_station_global.toppings_layers += 1
+							popping_boba_ladle = false
+							sprite.set_texture(ladle)
+							
+						elif boba_pearls_ladle:
+							global.toppings_inserted.append("bobaBalls")
+							handle_layer(toppings_station_global.toppings_layers, boba_topping)
+							global.topping_sprites.append("res://assets/toppings_station/assets/toppings-in-cup/boba-pearls.png")
+							toppings_station_global.toppings_layers += 1
+							boba_pearls_ladle = false
+							sprite.set_texture(ladle)
+							
+						elif dalgona_ladle:
+							global.toppings_inserted.append("dalgonaChunks")
+							handle_layer(toppings_station_global.toppings_layers, dalgona_topping)
+							global.topping_sprites.append("res://assets/toppings_station/assets/toppings-in-cup/dalgona-chunks.png")
+							toppings_station_global.toppings_layers += 1
+							dalgona_ladle = false
+							sprite.set_texture(ladle)
+							
+						elif fruit_jelly_ladle:
+							global.toppings_inserted.append("fruitJelly")
+							handle_layer(toppings_station_global.toppings_layers, fruitJelly_topping)
+							toppings_station_global.toppings_layers += 1
+							global.topping_sprites.append("res://assets/toppings_station/assets/toppings-in-cup/fruit-jelly.png")
+							fruit_jelly_ladle = false
+							sprite.set_texture(ladle)
+							
+						elif strawberries_ladle:
+							global.toppings_inserted.append("strawberrySlices")
+							handle_layer(toppings_station_global.toppings_layers, strawberrySlices_topping)
+							toppings_station_global.toppings_layers += 1
+							global.topping_sprites.append("res://assets/toppings_station/assets/toppings-in-cup/strawberry-slices.png")
+							strawberries_ladle = false
+							sprite.set_texture(ladle)
+							
+					else:
+						selected = false
+						#print(global.toppings_inserted)
+
 				#else:
 					#selected = false
 					#smooth_back(get_physics_process_delta_time())
@@ -109,6 +173,22 @@ func _input(event):
 func smooth_back(delta):
 	global_position = lerp(global_position, Vector2.ZERO, 10 * delta)
 
+func handle_layer(layer, toppings):
+	if toppings_station_global.toppings_layers == 0:
+		t1.set_texture(toppings)
+		
+	elif toppings_station_global.toppings_layers == 1:
+		t2.set_texture(toppings)
+		
+	elif toppings_station_global.toppings_layers == 2:
+		t3.set_texture(toppings)
+		
+	elif toppings_station_global.toppings_layers == 3:
+		t4.set_texture(toppings)
+		
+	elif toppings_station_global.toppings_layers == 4:
+		t5.set_texture(toppings)
+		
 func handle_toppings_pick():
 	pass
 	
@@ -167,3 +247,31 @@ func _on_scoopable_area_body_exited(body: Node2D) -> void:
 		
 	if body.is_in_group('boba_balls'):
 		boba_pearls = false
+
+func trash_clicked():
+	#boba_pearls_ladle = false
+	#popping_boba_ladle = false
+	#dalgona_ladle = false
+	#fruit_jelly_ladle = false
+	#strawberries_ladle = false
+	#popping_boba = false
+	#dalgona = false
+	#boba_pearls = false
+	#strawberries = false
+	#fruit_jelly = false
+	toppings_station_global.toppings_layers = 0
+	t5.set_texture(null)
+	t4.set_texture(null)
+	t3.set_texture(null)
+	t2.set_texture(null)
+	t1.set_texture(null)
+
+func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if event.pressed:
+				t5.set_texture(null)
+				t4.set_texture(null)
+				t3.set_texture(null)
+				t2.set_texture(null)
+				t1.set_texture(null)

@@ -16,6 +16,13 @@ var cat7 = preload("res://assets/cats/cat7.png")
 var cat8 = preload("res://assets/cats/cat8.png")
 var cat9 = preload("res://assets/cats/cat9.png")
 var cat10 = preload("res://assets/cats/cat10.png")
+
+var bobaBalls = preload("res://assets/toppings_station/assets/toppings-in-cup/boba-pearls.png")
+var dalgonaChunks = preload("res://assets/toppings_station/assets/toppings-in-cup/dalgona-chunks.png")
+var fruitJelly = preload("res://assets/toppings_station/assets/toppings-in-cup/fruit-jelly.png")
+var poppingBoba = preload("res://assets/toppings_station/assets/toppings-in-cup/popping-boba.png")
+var strawberrySlices = preload("res://assets/toppings_station/assets/toppings-in-cup/strawberry-slices.png")
+
 var dialogueCompleted = false
 var order = []
 var playerOrder = []
@@ -25,7 +32,14 @@ var liquids_poured = []
 var syrups_poured = []
 var desserts_picked = []
 var hasCup = false
+var topping_sprites = []
+var trash_clicked
+var topping_sprite
+var toppings_sprites
 
+func _process(delta):
+	pass
+	
 func get_customer_texture(customer):
 	match customer:
 		"cat1":
@@ -181,5 +195,21 @@ func get_liquid_inside_cup(sprite):
 		if liquid_station_global.oat_milk == 3:
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/oat-milk-2.png"))
 
-#func reset_liquid_inside_cup(sprite):
-	#sprite.delete_texture() 
+func get_toppings_inside_cup(t1, t2, t3, t4, t5):
+	toppings_sprites = [t1, t2, t3, t4, t5]
+	for i in range(toppings_sprites.size()):
+		topping_sprite = toppings_sprites[i]
+		if topping_sprite and i < toppings_inserted.size() and toppings_inserted[i]:
+			topping_sprite.set_texture(load(topping_sprites[i]))
+			print(topping_sprites[i])
+		
+func reset_drink():
+	playerOrder.resize(0)
+	toppings_inserted.resize(0)
+	liquids_poured.resize(0)
+	syrups_poured.resize(0)
+	toppings_station_global.toppings_layers = 0
+	topping_sprite.texture = null
+	topping_sprites.resize(0)
+	trash_clicked = true
+	#toppings_sprites.texture = null

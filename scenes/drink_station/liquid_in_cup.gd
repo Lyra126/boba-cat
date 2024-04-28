@@ -2,6 +2,13 @@ extends Node2D
 
 @onready var anim = $Polygon2D/liquid_animations
 @onready var sprite = $Polygon2D/Sprite2D
+
+@onready var t5 = $"Polygon2D/toppings-5"
+@onready var t4 = $"Polygon2D/toppings-4"
+@onready var t3 = $"Polygon2D/toppings-3"
+@onready var t2 = $"Polygon2D/toppings-2"
+@onready var t1 = $"Polygon2D/toppings-1"
+
 #var layer = 0
 var wait_for_next_layer = false
 
@@ -14,7 +21,8 @@ var has_oat_milk_been_poured = false
 var has_almond_milk_been_poured = false
 
 func _ready() -> void:
-	global.get_liquid_inside_cup(sprite)
+	anim.modulate.a = 0.8
+	global.get_toppings_inside_cup(t1, t2, t3, t4, t5)
 	anim.hide()
 	#sprite.hide()
 
@@ -23,6 +31,7 @@ func _process(delta: float) -> void:
 	allow_next_layer()
 
 func manage_animations():
+	anim.modulate.a = 0.8
 	# Handle the first pour of liquid
 	if liquid_station_global.liquid_layer == 0 and not wait_for_next_layer:
 		if liquid_station_global.tea_pouring and not anim.is_playing():
@@ -524,6 +533,8 @@ func reset_animation():
 	liquid_station_global.oat_milk = 0
 	liquid_station_global.cow_milk = 0
 	liquid_station_global.almond_milk = 0
+	
+	sprite.set_texture(null)
 
 	has_tea_been_poured = false
 	has_coffee_been_poured = false
@@ -534,4 +545,7 @@ func reset_animation():
 	wait_for_next_layer = false  # Ensure that layer transitions can happen after reset
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	reset_animation()
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if event.pressed:
+				reset_animation()
