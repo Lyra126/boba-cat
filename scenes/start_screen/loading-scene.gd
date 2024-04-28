@@ -1,7 +1,7 @@
 extends Control
 
 const TARGET_SCENE_PATH:String = "res://scenes/customer_line/customer_line.tscn"
-const LOADING_DELAY:float = 0.7 # Adjust the delay time as needed
+const LOADING_DELAY:float = 1 # Adjust the delay time as needed
 const PROGRESS_INCREMENT:float = 5 # Adjust the progress increment as needed
 
 var loading_status : int
@@ -9,7 +9,7 @@ var progress : Array[float]
 var loading_delay_timer: float = LOADING_DELAY
 var progress_value: float = 0.0
 
-@onready var progress_bar : ProgressBar = $ProgressBar
+@onready var progress_bar  = $TextureProgressBar
 
 func _ready() -> void:
 	# Start the asynchronous loading process

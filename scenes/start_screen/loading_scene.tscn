@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dye73s1kcpais"]
+[gd_scene load_steps=5 format=3 uid="uid://dye73s1kcpais"]
 
 [ext_resource type="Script" path="res://scenes/start_screen/loading-scene.gd" id="1_kehyn"]
+[ext_resource type="Texture2D" uid="uid://bxcyxe8mba5tf" path="res://assets/welcome/loading_bg.png" id="2_ux7f7"]
+[ext_resource type="Texture2D" uid="uid://caoq41chejsa3" path="res://assets/welcome/emptyProgress.png" id="3_yehe0"]
+[ext_resource type="Texture2D" uid="uid://b7jbpnymihjaw" path="res://assets/welcome/fullProgress.png" id="4_culyc"]
 
 [node name="loading-scene" type="Control"]
 layout_mode = 3
@@ -11,14 +14,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kehyn")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-layout_mode = 0
-offset_left = 579.0
-offset_top = 426.0
-offset_right = 1043.0
-offset_bottom = 502.0
-
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(0.800164, 0.719781)
+texture = ExtResource("2_ux7f7")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 638.0
+offset_right = 2377.0
+offset_bottom = 1138.0
+scale = Vector2(0.409398, 0.245966)
+texture_under = ExtResource("3_yehe0")
+texture_progress = ExtResource("4_culyc")
