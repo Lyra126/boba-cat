@@ -8,7 +8,7 @@ var cup_in_attach_lid = false
 func _ready():
 	if not global.hasCup:
 		$cup.hide()
-	if global.order.empty() == 0:
+	if global.order != []:
 		$TextureButton.visible = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
