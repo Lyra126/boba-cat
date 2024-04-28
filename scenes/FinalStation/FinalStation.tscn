@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ceqg4sr663xx2"]
+[gd_scene load_steps=24 format=3 uid="uid://ceqg4sr663xx2"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://yfs1ito40fo4" path="res://assets/final_station/final_bg.png" id="2_jbb60"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
 [ext_resource type="Texture2D" uid="uid://bxpfb5nkcvbdp" path="res://assets/final_station/cookie.png" id="5_fly4n"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_gn2qx"]
+[ext_resource type="Script" path="res://scenes/FinalStation/cookie.gd" id="6_dke8q"]
 [ext_resource type="Script" path="res://scenes/Toppings/liquid_inside_cup.gd" id="7_e7diu"]
 [ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/buttons/normalBack.png" id="7_qudjk"]
 [ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/buttons/pressedBack.png" id="8_0wbd3"]
@@ -51,6 +52,9 @@ size = Vector2(244.5, 519.119)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ioiw2"]
 size = Vector2(255.034, 365.783)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ri56t"]
+size = Vector2(367.809, 203.106)
+
 [node name="FinalStation" type="Node2D"]
 position = Vector2(807, 450)
 scale = Vector2(0.632565, 0.618355)
@@ -74,11 +78,23 @@ position = Vector2(79.0432, 4.85161)
 scale = Vector2(0.424686, 0.484817)
 texture = ExtResource("4_6l0m1")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+position = Vector2(79.0432, 4.85168)
+scale = Vector2(0.424686, 0.484817)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(-14.3201, -21.1833)
+scale = Vector2(0.85105, 1.1066)
+build_mode = 1
+polygon = PackedVector2Array(-1734.69, -667.734, -1478.18, -768.636, 1512.96, -768.636, 1739.03, -661.798, 1695.56, 727.087, 1004.29, 694.443, -113.037, 694.443, -117.385, 296.77, -921.688, 270.061, -952.121, 302.706, -995.597, 359.092, -952.121, 715.216, -1695.56, 730.055, -1730.34, -641.024)
+
+[node name="cookie" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(55.3303, 48.5158)
 scale = Vector2(0.167166, 0.157229)
 texture = ExtResource("5_fly4n")
+script = ExtResource("6_dke8q")
 
 [node name="cup" type="Node2D" parent="."]
 position = Vector2(-105, 88)
@@ -165,9 +181,26 @@ position = Vector2(-129.631, 363.869)
 position = Vector2(3.16177, 4.57764e-05)
 shape = SubResource("RectangleShape2D_ioiw2")
 
+[node name="cookieSpot" type="Area2D" parent="."]
+position = Vector2(268.747, 491.627)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cookieSpot"]
+position = Vector2(-1.58082, 6.46879)
+shape = SubResource("RectangleShape2D_ri56t")
+
+[node name="caseCollision" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="caseCollision"]
+polygon = PackedVector2Array(-550.141, -359.017, -458.451, -414.002, 630.765, -417.236, 714.551, -355.783, 695.581, 401.064, 30.0364, 399.447, 28.4556, 150.399, -281.394, 148.782, -279.813, 399.447, -543.818, 401.064)
+
+[connection signal="input_event" from="Area2D" to="cookie" method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="cookie" method="_on_area_2d_mouse_entered"]
 [connection signal="body_entered" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_entered"]
 [connection signal="body_exited" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_exited"]
 [connection signal="input_event" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_input_event"]
 [connection signal="input_event" from="AttachLid" to="cup" method="_on_attach_lid_input_event"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="SubmitOrder" to="." method="_on_submit_order_pressed"]
+[connection signal="input_event" from="InitialPos" to="cup" method="_on_initial_pos_input_event"]
+[connection signal="input_event" from="cookieSpot" to="cookie" method="_on_cookie_spot_input_event"]
+[connection signal="input_event" from="caseCollision" to="cookie" method="_on_case_collision_input_event"]

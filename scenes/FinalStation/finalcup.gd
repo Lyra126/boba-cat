@@ -13,14 +13,13 @@ var finalStation
 var original_position
 var openMachine = preload("res://assets/final_station/openMachine.png")
 var closeMachine = preload("res://assets/final_station/closeMachine.png")
-
+var hasLid
 
 func _process(delta):
 	pass
 	
 func _on_cup_pick_up_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click") and not global.SomethingBeingClickedRn:
-		scale = Vector2(1,1)
 		selected = true
 		global.SomethingBeingClickedRn = true;
 		offset = get_global_mouse_position() - global_position
@@ -30,22 +29,9 @@ func _physics_process(delta):
 	if selected:
 		target_position = get_global_mouse_position() - offset
 		global_position = lerp(global_position, target_position, 15 * delta)
-		if global_position.y < -100:
-			scale = Vector2(0.75, 0.75)
-		else:
-			scale = Vector2(1, 1)
-			
 
 
 func _on_attach_lid_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	#if event is InputEventMouseButton:
-		#if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and selected:
-			#print("snap to machine")
-			#global.SomethingBeingClickedRn = true
-			##$".".position = $"../AttachLid".position
-			#global_position.x = $"../AttachLid".position.x+100
-			#global_position.y = $"../AttachLid".position.y+100
-			#selected = AudioEffectSpectrumAnalyzerInstance
 	if selected and $Lid.visible == false:
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -70,3 +56,17 @@ func addLid():
 	$"../machine".texture = openMachine
 	$".".position.y = $".".position.y + 30
 	$Lid.visible = true
+	hasLid = true
+	scale = Vector2(0.75, 0.75)
+	
+
+
+
+func _on_initial_pos_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if selected and hasLid:
+				selected = false
+				print("deselect cookie")
+				$".".position.x = $"../InitialPos".position.x
+				$".".position.y = $"../InitialPos".position.y-310
