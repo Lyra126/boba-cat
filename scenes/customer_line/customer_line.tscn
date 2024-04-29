@@ -38,7 +38,7 @@ texture = ExtResource("3_5vta4")
 script = ExtResource("6_qt0fo")
 
 [node name="Customer" type="Sprite2D" parent="."]
-position = Vector2(1175.5, 12.6444)
+position = Vector2(1437.95, 0)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("8_4iu0w")
 
@@ -68,17 +68,19 @@ scale = Vector2(0.630762, 0.591461)
 metadata/_edit_use_anchors_ = true
 
 [node name="TextLabel" parent="DialoguePlayer" index="1"]
-offset_left = 150.4
-offset_top = 30.4
-offset_right = 42.8
-offset_bottom = -20.5
+anchor_left = 0.12925
+anchor_bottom = 0.282
+offset_left = 37.2
+offset_top = 41.4
+offset_right = 79.8
+offset_bottom = -15.8
 theme_type_variation = &"HeaderLarge"
 horizontal_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="DialogArea" type="Area2D" parent="DialoguePlayer"]
-position = Vector2(722, 446)
+position = Vector2(812, 458)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialoguePlayer/DialogArea"]
 position = Vector2(-3, -1)

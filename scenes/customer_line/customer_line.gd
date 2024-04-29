@@ -62,7 +62,7 @@ func nextCustomer():
 	$OrderForm.showOrder()
 	global.dialogueCompleted = false
 	$Customer.visible = false;
-	$Customer.position = Vector2(8040, 0)
+	$Customer.position.x =  800
 	var randomIndex = randi() % global.allCustomers.size()
 	global.currCustomer = global.allCustomers[randomIndex]
 	$Customer.texture = global.get_customer_texture(global.currCustomer)
