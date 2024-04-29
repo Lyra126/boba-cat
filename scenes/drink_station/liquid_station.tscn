@@ -1,8 +1,9 @@
-[gd_scene load_steps=378 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=379 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
 [ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="2_qtkbs"]
+[ext_resource type="Texture2D" uid="uid://d3xsx378u0t3q" path="res://assets/buttons/orderPaper.png" id="2_ufbkq"]
 [ext_resource type="Texture2D" uid="uid://d0cw56n8po7l5" path="res://assets/liquid_station/assets/syrup.png" id="3_lew52"]
 [ext_resource type="Texture2D" uid="uid://b4wlosyyn6c26" path="res://assets/liquid_station/assets/syrup_down.png" id="4_g2ujl"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="4_t0iax"]
@@ -1745,12 +1746,14 @@ script = ExtResource("1_p4uih")
 visible = false
 z_index = 15
 
-[node name="ColorRect" type="ColorRect" parent="order"]
-offset_left = -342.339
-offset_top = -507.584
-offset_right = -302.339
-offset_bottom = -467.584
-scale = Vector2(18.0372, 25.3149)
+[node name="TextureRect" type="TextureRect" parent="order"]
+auto_translate_mode = 1
+offset_left = -344.164
+offset_top = -502.615
+offset_right = 155.836
+offset_bottom = 197.385
+scale = Vector2(1.46752, 1.43387)
+texture = ExtResource("2_ufbkq")
 
 [node name="Label" type="Label" parent="order"]
 offset_left = -309.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://ceqg4sr663xx2"]
+[gd_scene load_steps=39 format=3 uid="uid://ceqg4sr663xx2"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://b2e4xjp33bts3" path="res://assets/final_station/final-bg.png" id="2_h5y2t"]
@@ -28,6 +28,11 @@
 [ext_resource type="Texture2D" uid="uid://bbnyrf5wrgce2" path="res://assets/final_station/lid machine/lid machine open/lid_machine_top.png" id="19_r3ofr"]
 [ext_resource type="Texture2D" uid="uid://554nig4kbyt3" path="res://assets/final_station/lid machine/lid machine open/lid_machine_middle_back.png" id="20_n6xst"]
 [ext_resource type="Texture2D" uid="uid://gyo466pymk15" path="res://assets/final_station/lid machine/lid machine open/lid_machine_middle_front.png" id="21_vcbix"]
+[ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="29_sx6wd"]
+[ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="30_pvshn"]
+[ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="31_pscrj"]
+[ext_resource type="Texture2D" uid="uid://cujo4it0fdse7" path="res://assets/buttons/close.png" id="32_8v7le"]
+[ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="33_kkjyx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4t4gr"]
 size = Vector2(373.342, 105.414)
@@ -59,6 +64,9 @@ func deselect():
 	modulate = Color.WHITE
 "
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxnaj"]
+size = Vector2(1047.66, 1447.97)
+
 [node name="FinalStation" type="Node2D"]
 position = Vector2(807, 450)
 scale = Vector2(0.632565, 0.618355)
@@ -74,6 +82,28 @@ scale = Vector2(0.996372, 0.940023)
 texture = ExtResource("2_h5y2t")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
+
+[node name="OrderForm" type="Node2D" parent="."]
+visible = false
+z_index = 15
+
+[node name="ColorRect" type="ColorRect" parent="OrderForm"]
+auto_translate_mode = 1
+offset_left = -342.339
+offset_top = -507.584
+offset_right = -302.339
+offset_bottom = -467.584
+scale = Vector2(18.0372, 25.3149)
+
+[node name="Label" type="Label" parent="OrderForm"]
+auto_translate_mode = 1
+offset_left = -309.0
+offset_top = -350.0
+offset_right = 352.0
+offset_bottom = 457.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
 
 [node name="tongs_closed_place" type="StaticBody2D" parent="."]
 position = Vector2(-3.16173, 0)
@@ -397,6 +427,29 @@ texture_hover = ExtResource("12_2d1uf")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tray"]
 polygon = PackedVector2Array(-333.563, 426.939, -515.362, 609.682, -502.715, 643.643, 637.089, 643.643, 651.316, 606.448, 464.774, 430.174)
 
+[node name="TextureButton" type="TextureButton" parent="."]
+auto_translate_mode = 1
+visible = false
+offset_left = 1043.37
+offset_top = -688.925
+offset_right = 1543.37
+offset_bottom = 11.0753
+scale = Vector2(0.288519, 0.33947)
+texture_normal = ExtResource("29_sx6wd")
+texture_pressed = ExtResource("30_pvshn")
+texture_hover = ExtResource("31_pscrj")
+
+[node name="close" type="TextureButton" parent="."]
+auto_translate_mode = 1
+visible = false
+z_index = 16
+offset_left = 214.998
+offset_top = -467.369
+offset_right = 1715.0
+offset_bottom = 1032.63
+scale = Vector2(0.0836853, 0.0817412)
+texture_normal = ExtResource("32_8v7le")
+
 [node name="cookies on tray" type="Node2D" parent="."]
 
 [node name="cookie1" type="Sprite2D" parent="cookies on tray"]
@@ -423,6 +476,18 @@ rotation = -0.388033
 scale = Vector2(0.238093, 0.285194)
 skew = -0.0651635
 
+[node name="trash" type="Sprite2D" parent="."]
+position = Vector2(605.471, 87.3285)
+scale = Vector2(0.21752, 0.219043)
+texture = ExtResource("33_kkjyx")
+
+[node name="trash" type="Area2D" parent="trash"]
+scale = Vector2(1, 0.998819)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trash/trash"]
+position = Vector2(-8.56171, -17.5938)
+shape = SubResource("RectangleShape2D_kxnaj")
+
 [connection signal="input_event" from="tongs/tongs img/grab tongs" to="tongs" method="_on_area_2d_input_event"]
 [connection signal="body_entered" from="tongs/tongs img/tongs grab area" to="tongs" method="_on_tongs_grab_area_body_entered"]
 [connection signal="body_exited" from="tongs/tongs img/tongs grab area" to="tongs" method="_on_tongs_grab_area_body_exited"]
@@ -434,3 +499,8 @@ skew = -0.0651635
 [connection signal="input_event" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_input_event"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="SubmitOrder" to="." method="_on_submit_order_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]
+[connection signal="input_event" from="trash/trash" to="." method="_on_trash_input_event"]
+[connection signal="mouse_entered" from="trash/trash" to="." method="_on_trash_mouse_entered"]
+[connection signal="mouse_exited" from="trash/trash" to="." method="_on_trash_mouse_exited"]

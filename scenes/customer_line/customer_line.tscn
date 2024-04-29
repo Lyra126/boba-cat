@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c77yg5d4yjufk"]
+[gd_scene load_steps=19 format=3 uid="uid://c77yg5d4yjufk"]
 
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
 [ext_resource type="Texture2D" uid="uid://mt3wkqwq7v4" path="res://assets/cutomer_line/customerline_bg.png" id="2_0iumo"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="7_t5lrs"]
 [ext_resource type="Texture2D" uid="uid://no2v4pbnhq8s" path="res://assets/cats/cat1.png" id="8_4iu0w"]
 [ext_resource type="Texture2D" uid="uid://0mex1upu8hmv" path="res://assets/cutomer_line/empty.png" id="9_ycdsr"]
+[ext_resource type="Texture2D" uid="uid://d3xsx378u0t3q" path="res://assets/buttons/orderPaper.png" id="10_8a3xe"]
 [ext_resource type="Texture2D" uid="uid://diri1mm8pslx5" path="res://assets/cutomer_line/overlayCustomerLine.png" id="10_g66uf"]
 [ext_resource type="Texture2D" uid="uid://cx2emgf2n6gak" path="res://assets/cutomer_line/fill.png" id="10_ribyt"]
 [ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="13_j6sap"]
@@ -24,28 +25,6 @@ radius = 155.978
 position = Vector2(776, 448)
 scale = Vector2(0.636324, 0.632691)
 script = ExtResource("1_go1ct")
-
-[node name="order" type="Node2D" parent="."]
-visible = false
-z_index = 15
-
-[node name="ColorRect" type="ColorRect" parent="order"]
-auto_translate_mode = 1
-offset_left = -342.339
-offset_top = -507.584
-offset_right = -302.339
-offset_bottom = -467.584
-scale = Vector2(18.0372, 25.3149)
-
-[node name="Label" type="Label" parent="order"]
-auto_translate_mode = 1
-offset_left = -309.0
-offset_top = -350.0
-offset_right = 352.0
-offset_bottom = 457.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 45
-horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -1250.94
@@ -111,16 +90,35 @@ position = Vector2(812, 458)
 position = Vector2(-3, -1)
 shape = SubResource("CircleShape2D_kjlre")
 
-[node name="TextureButton" type="TextureButton" parent="DialoguePlayer"]
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="overlay" type="TextureRect" parent="."]
 offset_left = -1251.0
 offset_top = -702.0
 offset_right = 1289.0
 offset_bottom = 710.0
 texture = ExtResource("10_g66uf")
+
+[node name="order" type="Node2D" parent="."]
+visible = false
+z_index = 15
+
+[node name="TextureRect" type="TextureRect" parent="order"]
+offset_left = -344.164
+offset_top = -502.615
+offset_right = 155.836
+offset_bottom = 197.385
+scale = Vector2(1.46752, 1.43387)
+texture = ExtResource("10_8a3xe")
+
+[node name="Label" type="Label" parent="order"]
+auto_translate_mode = 1
+offset_left = -309.0
+offset_top = -350.0
+offset_right = 352.0
+offset_bottom = 457.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Next" type="TextureButton" parent="."]
 offset_left = 872.197
@@ -149,7 +147,7 @@ metadata/_edit_use_anchors_ = true
 [node name="close" type="TextureButton" parent="."]
 auto_translate_mode = 1
 visible = false
-z_index = 15
+z_index = 16
 offset_left = 248.83
 offset_top = -485.515
 offset_right = 1748.83
