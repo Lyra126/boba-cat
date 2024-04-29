@@ -6,8 +6,8 @@ var cup_in_attach_lid = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#if not global.hasCup:
-		#$cup.hide()
+	if not global.hasCup:
+		$cup.hide()
 	if global.order != []:
 		pass
 		#$TextureButton.visible = true

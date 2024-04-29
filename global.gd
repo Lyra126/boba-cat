@@ -218,9 +218,12 @@ func reset_drink():
 	playerOrder.resize(0)
 	toppings_inserted.resize(0)
 	liquids_poured.resize(0)
+	liquid_station_global.liquid_layer = 0
 	syrups_poured.resize(0)
 	toppings_station_global.toppings_layers = 0
 	topping_sprite.texture = null
 	topping_sprites.resize(0)
-	trash_clicked = true
+	cookies_sprites.resize(0)
+	cookies_added.resize(0)
+	final_station_global.cookie_layers = 0
 	#toppings_sprites.texture = null
