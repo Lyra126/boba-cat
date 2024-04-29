@@ -1,29 +1,36 @@
 extends Node2D
 
+@onready var cup_spot = $"../cup_spot"
+
 var selected
 var offset = Vector2.ZERO
-
-var tea_droppable = false
-var coffee_droppable = false
-var smoothie_droppable = false
 
 var target_position
 var overlapMachine
 var finalStation
 var original_position
-var openMachine = preload("res://assets/final_station/openMachine.png")
-var closeMachine = preload("res://assets/final_station/closeMachine.png")
 var hasLid
+var tray_droppable
+var cup_down
 
 func _process(delta):
 	pass
 	
 func _on_cup_pick_up_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("click") and not global.SomethingBeingClickedRn:
+	if Input.is_action_just_pressed("click") and not global.SomethingBeingClickedRn and not cup_down:
 		selected = true
 		global.SomethingBeingClickedRn = true;
 		offset = get_global_mouse_position() - global_position
 
+func _input(event):
+	if selected:
+		if event is InputEventMouseButton:
+			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				if tray_droppable:
+					$".".global_position.x = cup_spot.global_position.x
+					$".".global_position.y = cup_spot.global_position.y
+					selected = false
+					global.SomethingBeingClickedRn = false
 
 func _physics_process(delta):
 	if selected:
@@ -33,7 +40,6 @@ func _physics_process(delta):
 			scale = Vector2(0.60, 0.60)
 		else:
 			scale = Vector2(0.75, 0.75)
-
 
 func _on_attach_lid_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if selected and $Lid.visible == false:
@@ -65,12 +71,20 @@ func addLid():
 	scale = Vector2(0.60, 0.60)
 	pass
 
+#func _on_initial_pos_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	#if event is InputEventMouseButton:
+		#if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			#if selected and hasLid:
+				##selected = false
+		#
+				#$".".position.x = $"../InitialPos".position.x
+				#$".".position.y = $"../InitialPos".position.y-310
 
-func _on_initial_pos_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if selected and hasLid:
-				selected = false
-				print("deselect cookie")
-				$".".position.x = $"../InitialPos".position.x
-				$".".position.y = $"../InitialPos".position.y-310
+
+func _on_cup_pick_up_body_entered(body: Node2D) -> void:
+	if body.is_in_group('tray'):
+		tray_droppable = true
+
+func _on_cup_pick_up_body_exited(body: Node2D) -> void:
+	if body.is_in_group('tray'):
+		tray_droppable = false

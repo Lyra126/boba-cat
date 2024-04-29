@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgrc0fqly7e50"
-path="res://.godot/imported/openMachine.png-15263e4f0e7db608898180c803237d66.ctex"
+uid="uid://b8jvod4ek43bp"
+path="res://.godot/imported/tongs_cat.png-5366d236e25e2b8e062d4785fe3fca03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/final_station/openMachine.png"
-dest_files=["res://.godot/imported/openMachine.png-15263e4f0e7db608898180c803237d66.ctex"]
+source_file="res://assets/final_station/tongs/tongs_cat.png"
+dest_files=["res://.godot/imported/tongs_cat.png-5366d236e25e2b8e062d4785fe3fca03.ctex"]
 
 [params]
 

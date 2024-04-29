@@ -2229,10 +2229,11 @@ scale = Vector2(0.344599, 0.37583)
 texture_normal = ExtResource("134_xity5")
 texture_pressed = ExtResource("135_7tirn")
 texture_hover = ExtResource("136_2dvsm")
+metadata/_edit_use_anchors_ = true
 
 [node name="trash" type="Sprite2D" parent="."]
-position = Vector2(-1117.36, 271.617)
-scale = Vector2(0.229887, 0.261751)
+position = Vector2(-890.715, 602.65)
+scale = Vector2(0.103193, 0.117496)
 texture = ExtResource("2_qtkbs")
 
 [node name="trash" type="Area2D" parent="trash"]

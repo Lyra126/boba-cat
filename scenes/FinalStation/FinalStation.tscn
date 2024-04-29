@@ -1,13 +1,17 @@
-[gd_scene load_steps=36 format=3 uid="uid://ceqg4sr663xx2"]
+[gd_scene load_steps=33 format=3 uid="uid://d3uxtyc6i7orl"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
-[ext_resource type="Texture2D" uid="uid://yfs1ito40fo4" path="res://assets/final_station/final_bg.png" id="2_10xh1"]
+[ext_resource type="Texture2D" uid="uid://b2e4xjp33bts3" path="res://assets/final_station/final-bg.png" id="2_h5y2t"]
+[ext_resource type="Texture2D" uid="uid://6mqqtrolwi62" path="res://assets/final_station/tongs/tongs_closed.png" id="2_rq8lh"]
+[ext_resource type="Script" path="res://scenes/FinalStation/tongs.gd" id="2_xn26s"]
 [ext_resource type="Script" path="res://scenes/FinalStation/finalcup.gd" id="3_fdyuf"]
-[ext_resource type="Texture2D" uid="uid://bhs10ky3rsusa" path="res://assets/final_station/fullCookieCase.png" id="4_6l0m1"]
+[ext_resource type="Texture2D" uid="uid://0edy7rqaln65" path="res://assets/final_station/test.png" id="3_xkumw"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
-[ext_resource type="Texture2D" uid="uid://bxpfb5nkcvbdp" path="res://assets/final_station/cookie.png" id="5_fly4n"]
+[ext_resource type="Texture2D" uid="uid://658y711o0e5o" path="res://assets/final_station/cookie_cat.png" id="4_ij11g"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_gn2qx"]
+[ext_resource type="Texture2D" uid="uid://ob70xcok41yy" path="res://assets/final_station/choco_cookie.png" id="5_wa4pf"]
 [ext_resource type="Script" path="res://scenes/FinalStation/cookie.gd" id="6_dke8q"]
+[ext_resource type="Texture2D" uid="uid://2cogrigjf03b" path="res://assets/final_station/sugar_cookie.png" id="6_qx2ym"]
 [ext_resource type="Script" path="res://scenes/Toppings/liquid_inside_cup.gd" id="7_e7diu"]
 [ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/buttons/normalBack.png" id="7_qudjk"]
 [ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/buttons/pressedBack.png" id="8_0wbd3"]
@@ -16,23 +20,22 @@
 [ext_resource type="Texture2D" uid="uid://da4ofainic75h" path="res://assets/final_station/lid machine/lid machine close/Untitled_Artwork-3 55.png" id="9_jm2cp"]
 [ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="10_nsn8g"]
 [ext_resource type="Texture2D" uid="uid://dndk45tkclobk" path="res://assets/final_station/lid machine/lid machine close/Untitled_Artwork-4 51.png" id="10_ofb81"]
-[ext_resource type="Texture2D" uid="uid://cjhj7pjoqngfc" path="res://assets/final_station/lid.png" id="10_sw1nl"]
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="11_2cme3"]
-[ext_resource type="Texture2D" uid="uid://xjwvvg8j3dv8" path="res://assets/liquid_station/animations/liquid-pouring/tea-2/Untitled_Artwork-7 4.png" id="11_fu6um"]
 [ext_resource type="Texture2D" uid="uid://b41oecjf6pspk" path="res://assets/final_station/lid machine/lid machine close/Untitled_Artwork-6 50.png" id="11_yrg7s"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="12_2d1uf"]
 [ext_resource type="Texture2D" uid="uid://46hk5lyxa5wi" path="res://assets/final_station/lid machine/lid machine open/lid_machine_bottom.png" id="18_0h5g6"]
+[ext_resource type="Texture2D" uid="uid://cjp3by1d0qdyk" path="res://assets/final_station/lid.png" id="19_cqdi6"]
 [ext_resource type="Texture2D" uid="uid://bbnyrf5wrgce2" path="res://assets/final_station/lid machine/lid machine open/lid_machine_top.png" id="19_r3ofr"]
 [ext_resource type="Texture2D" uid="uid://554nig4kbyt3" path="res://assets/final_station/lid machine/lid machine open/lid_machine_middle_back.png" id="20_n6xst"]
 [ext_resource type="Texture2D" uid="uid://gyo466pymk15" path="res://assets/final_station/lid machine/lid machine open/lid_machine_middle_front.png" id="21_vcbix"]
-[ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="26_mnhwn"]
-[ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="27_a376f"]
-[ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="28_44bcf"]
-[ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="29_lctq5"]
-[ext_resource type="Texture2D" uid="uid://cujo4it0fdse7" path="res://assets/buttons/close.png" id="30_m0gv4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4t4gr"]
+size = Vector2(373.342, 105.414)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3fie"]
 size = Vector2(244.5, 519.119)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a53br"]
 
 [sub_resource type="GDScript" id="GDScript_14f8c"]
 script/source = "extends StaticBody2D
@@ -56,37 +59,161 @@ func deselect():
 	modulate = Color.WHITE
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ioiw2"]
-size = Vector2(255.034, 365.783)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ri56t"]
-size = Vector2(367.809, 203.106)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2k6q"]
-size = Vector2(1047.66, 1447.97)
-
 [node name="FinalStation" type="Node2D"]
 position = Vector2(807, 450)
 scale = Vector2(0.632565, 0.618355)
 script = ExtResource("1_ixfov")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="background" type="TextureRect" parent="."]
+z_index = -20
 offset_left = -1271.02
 offset_top = -721.269
 offset_right = 1258.98
 offset_bottom = 814.731
 scale = Vector2(0.996372, 0.940023)
-texture = ExtResource("2_10xh1")
+texture = ExtResource("2_h5y2t")
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="tongs_closed_place" type="StaticBody2D" parent="."]
+position = Vector2(-3.16173, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tongs_closed_place"]
+z_index = 1
+position = Vector2(-135.954, -520.737)
+shape = SubResource("RectangleShape2D_4t4gr")
+
+[node name="tongs" type="Node2D" parent="."]
+script = ExtResource("2_xn26s")
+
+[node name="tongs img" type="Sprite2D" parent="tongs"]
+z_index = 1
+position = Vector2(-172.314, -439.877)
+rotation = 0.798865
+scale = Vector2(0.403336, 0.380738)
+texture = ExtResource("2_rq8lh")
+
+[node name="grab tongs" type="Area2D" parent="tongs/tongs img"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tongs/tongs img/grab tongs"]
+polygon = PackedVector2Array(-529.824, 6.57861, -494.602, 104.823, -513.249, 123.979, -499.252, 137.605, -523.905, 134.926, -520.427, 164.96, -500.831, 184.036, -368.757, 221.993, -352.367, 221.958, 217.125, -497.51, 296.094, -617.843, 286.61, -669.713, 214.635, -707.796, 134.311, -642.082, 132.867, -590.188)
+
+[node name="tongs grab area" type="Area2D" parent="tongs/tongs img"]
+z_index = 5
+position = Vector2(21.9483, -7.86194)
+scale = Vector2(0.985113, 0.958009)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tongs/tongs img/tongs grab area"]
+position = Vector2(-90.0156, 33.1561)
+polygon = PackedVector2Array(-427.474, 86.6188, -404.565, 92.7648, -86.0088, 333.778, 19.5005, 342.834, 46.8289, 293.182, -17.7544, 252.371, -294.666, 37.2461, -354.187, 55.4576)
 
 [node name="case" type="Sprite2D" parent="."]
-position = Vector2(79.0432, 4.85161)
-scale = Vector2(0.424686, 0.484817)
-texture = ExtResource("4_6l0m1")
+position = Vector2(-99.5946, -187.595)
+scale = Vector2(0.584151, 0.580784)
+texture = ExtResource("3_xkumw")
+
+[node name="catCookie2" type="Sprite2D" parent="case" groups=["cat-cookie"]]
+position = Vector2(-493.033, 255.008)
+scale = Vector2(-0.350112, 0.40153)
+texture = ExtResource("4_ij11g")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="case/catCookie2" groups=["cat-cookie"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="case/catCookie2/StaticBody2D"]
+polygon = PackedVector2Array(331, -455.8, 331, -453.9, 344, -442.9, 344, -439, 350.6, -415, 348.8, -415, 340.3, -348.8, 343.2, -343, 344.8, -343, 403, -288.9, 403, -286.7, 433, -250.7, 433, -248.5, 447, -220.5, 447, -216.3, 453, -197.3, 453, -191.4, 457, -172.2, 457, -145, 455.9, -145, 454.9, -120, 453.7, -120, 444.6, -77, 443.3, -77, 431.3, -49, 430.1, -49, 410.1, -18, 408.9, -18, 385.9, 7, 383.9, 7, 357.8, 31, 355.7, 31, 338.7, 44, 336.5, 44, 293.5, 66, 289.1, 66, 221.3, 85, 211.3, 85, 37.1, 110, 34, 110, -77, 109, -77, 110, -252, 114, -252, 112.9, -375, 106.9, -375, 105.8, -420, 101.8, -420, 100.7, -460, 93.7, -460, 92.4, -497, 80.5, -497, 79.2, -537, 59.2, -537, 57.9, -565, 34.9, -565, 32.7, -580, 15.8, -580, 12.5, -597, -16.5, -597, -19.7, -607, -53.7, -607, -55, -608, -97, -606.5, -97, -594.6, -149, -593.4, -149, -579.4, -184, -578.1, -184, -564.2, -209, -563, -209, -543, -236, -541.9, -236, -512.9, -267, -510.7, -267, -480.8, -294, -478.6, -294, -468, -301.1, -468, -302.1, -461.8, -370, -460.7, -370, -456.6, -389, -455.4, -389, -447.4, -409, -445.8, -409, -432.8, -422, -428.3, -422, -413, -424.3, -413, -422.4, -404, -419.4, -404, -417.9, -349.3, -370, -347.3, -370, -340.3, -364, -337.9, -364, -330, -363.2, -195.2, -393, -193.2, -393, -98.1, -403, 25, -403, 25, -401.9, 186.1, -391.1, 271.4, -446, 274.5, -446, 289.5, -454, 294.6, -454, 304, -457.4, 304, -459.3)
+
+[node name="catCookie" type="Sprite2D" parent="case" groups=["cat-cookie"]]
+position = Vector2(75.7754, 233.898)
+rotation = -0.100868
+scale = Vector2(0.358681, 0.392423)
+texture = ExtResource("4_ij11g")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="case/catCookie" groups=["cat-cookie"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="case/catCookie/StaticBody2D2"]
+polygon = PackedVector2Array(331, -455.8, 331, -453.9, 344, -442.9, 344, -439, 350.6, -415, 348.8, -415, 340.3, -348.8, 343.2, -343, 344.8, -343, 403, -288.9, 403, -286.7, 433, -250.7, 433, -248.5, 447, -220.5, 447, -216.3, 453, -197.3, 453, -191.4, 457, -172.2, 457, -145, 455.9, -145, 454.9, -120, 453.7, -120, 444.6, -77, 443.3, -77, 431.3, -49, 430.1, -49, 410.1, -18, 408.9, -18, 385.9, 7, 383.9, 7, 357.8, 31, 355.7, 31, 338.7, 44, 336.5, 44, 293.5, 66, 289.1, 66, 221.3, 85, 211.3, 85, 37.1, 110, 34, 110, -77, 109, -77, 110, -252, 114, -252, 112.9, -375, 106.9, -375, 105.8, -420, 101.8, -420, 100.7, -460, 93.7, -460, 92.4, -497, 80.5, -497, 79.2, -537, 59.2, -537, 57.9, -565, 34.9, -565, 32.7, -580, 15.8, -580, 12.5, -597, -16.5, -597, -19.7, -607, -53.7, -607, -55, -608, -97, -606.5, -97, -594.6, -149, -593.4, -149, -579.4, -184, -578.1, -184, -564.2, -209, -563, -209, -543, -236, -541.9, -236, -512.9, -267, -510.7, -267, -480.8, -294, -478.6, -294, -468, -301.1, -468, -302.1, -461.8, -370, -460.7, -370, -456.6, -389, -455.4, -389, -447.4, -409, -445.8, -409, -432.8, -422, -428.3, -422, -413, -424.3, -413, -422.4, -404, -419.4, -404, -417.9, -349.3, -370, -347.3, -370, -340.3, -364, -337.9, -364, -330, -363.2, -195.2, -393, -193.2, -393, -98.1, -403, 25, -403, 25, -401.9, 186.1, -391.1, 271.4, -446, 274.5, -446, 289.5, -454, 294.6, -454, 304, -457.4, 304, -459.3)
+
+[node name="ChocoCookie4" type="Sprite2D" parent="case" groups=["chocolate-cookie"]]
+position = Vector2(430.296, 233.898)
+rotation = 0.241594
+scale = Vector2(0.361164, 0.38205)
+texture = ExtResource("5_wa4pf")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="case/ChocoCookie4" groups=["chocolate-cookie"]]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="case/ChocoCookie4/StaticBody2D2"]
+polygon = PackedVector2Array(-93, -398.9, -93, -397.7, -42.6, -388, -41.2, -388, 3.90002, -393, 8.09998, -393, 58, -388.8, 58, -387.7, 124, -377.7, 124, -376.4, 191.3, -354, 195.2, -354, 249, -345.7, 249, -344.5, 290, -334.6, 290, -333.3, 333, -312.2, 333, -311.1, 363, -291.1, 363, -289.9, 391, -265.9, 391, -264.8, 423, -231.8, 423, -229.7, 441, -205.7, 441, -201.5, 454, -176.5, 454, -171.3, 460, -152.3, 460, -148, 461, -121, 459.8, -121, 456.7, -99, 455.5, -99, 448.5, -74, 447.3, -74, 429.3, -37, 428, -37, 401, -2, 399.8, -2, 363.8, 35, 361.7, 35, 336.8, 57, 334.5, 57, 305.6, 77, 303.4, 77, 255.4, 99, 251.3, 99, 207.3, 113, 198.4, 113, 162.2, 121, 150.2, 121, 93.1, 127, 90, 127, 27, 126, 27, 124.9, -36.2, 120, -37, 120, -120, 119, -120, 117.9, -162, 114.9, -162, 113.7, -201.3, 107, -203.7, 107, -261.9, 115, -266, 115, -303, 116, -303, 114.7, -354.3, 106, -363.1, 106, -415, 100.8, -415, 99.7, -449, 93.7, -449, 92.5, -506, 76.5, -506, 75.1, -559, 40.1, -559, 37.7, -602, -10.2, -602, -12.5, -616, -37.5, -616, -67, -616.7, -67, -622, -97.8, -622, -100.1, -617.8, -148, -616.5, -148, -609.6, -176, -608.2, -176, -576.2, -236, -575, -236, -553, -264, -551.8, -264, -511.8, -303, -509.7, -303, -481.7, -324, -478.6, -324, -445.6, -345, -443.5, -345, -418.5, -358, -415.4, -358, -400.4, -365, -396.1, -365, -372.2, -371, -370, -371, -347, -371.9, -304.4, -388, -298.1, -388, -275.3, -394, -269.3, -394, -245.2, -398, -232.1, -398, -185, -400.9, -185, -402.1)
+
+[node name="ChocoCookie2" type="Sprite2D" parent="case" groups=["chocolate-cookie"]]
+position = Vector2(94.7192, -139.225)
+scale = Vector2(-0.340438, 0.392877)
+texture = ExtResource("5_wa4pf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="case/ChocoCookie2" groups=["chocolate-cookie"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="case/ChocoCookie2/StaticBody2D"]
+polygon = PackedVector2Array(-93, -398.9, -93, -397.7, -42.6, -388, -41.2, -388, 3.90002, -393, 8.09998, -393, 58, -388.8, 58, -387.7, 124, -377.7, 124, -376.4, 191.3, -354, 195.2, -354, 249, -345.7, 249, -344.5, 290, -334.6, 290, -333.3, 333, -312.2, 333, -311.1, 363, -291.1, 363, -289.9, 391, -265.9, 391, -264.8, 423, -231.8, 423, -229.7, 441, -205.7, 441, -201.5, 454, -176.5, 454, -171.3, 460, -152.3, 460, -148, 461, -121, 459.8, -121, 456.7, -99, 455.5, -99, 448.5, -74, 447.3, -74, 429.3, -37, 428, -37, 401, -2, 399.8, -2, 363.8, 35, 361.7, 35, 336.8, 57, 334.5, 57, 305.6, 77, 303.4, 77, 255.4, 99, 251.3, 99, 207.3, 113, 198.4, 113, 162.2, 121, 150.2, 121, 93.1, 127, 90, 127, 27, 126, 27, 124.9, -36.2, 120, -37, 120, -120, 119, -120, 117.9, -162, 114.9, -162, 113.7, -201.3, 107, -203.7, 107, -261.9, 115, -266, 115, -303, 116, -303, 114.7, -354.3, 106, -363.1, 106, -415, 100.8, -415, 99.7, -449, 93.7, -449, 92.5, -506, 76.5, -506, 75.1, -559, 40.1, -559, 37.7, -602, -10.2, -602, -12.5, -616, -37.5, -616, -67, -616.7, -67, -622, -97.8, -622, -100.1, -617.8, -148, -616.5, -148, -609.6, -176, -608.2, -176, -576.2, -236, -575, -236, -553, -264, -551.8, -264, -511.8, -303, -509.7, -303, -481.7, -324, -478.6, -324, -445.6, -345, -443.5, -345, -418.5, -358, -415.4, -358, -400.4, -365, -396.1, -365, -372.2, -371, -370, -371, -347, -371.9, -304.4, -388, -298.1, -388, -275.3, -394, -269.3, -394, -245.2, -398, -232.1, -398, -185, -400.9, -185, -402.1)
+
+[node name="ChocoCookie" type="Sprite2D" parent="case" groups=["chocolate-cookie"]]
+position = Vector2(-379.256, -138.838)
+scale = Vector2(0.339727, 0.339727)
+texture = ExtResource("5_wa4pf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="case/ChocoCookie" groups=["chocolate-cookie"]]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="case/ChocoCookie/StaticBody2D"]
+polygon = PackedVector2Array(-93, -398.9, -93, -397.7, -42.6, -388, -41.2, -388, 3.90002, -393, 8.09998, -393, 58, -388.8, 58, -387.7, 124, -377.7, 124, -376.4, 191.3, -354, 195.2, -354, 249, -345.7, 249, -344.5, 290, -334.6, 290, -333.3, 333, -312.2, 333, -311.1, 363, -291.1, 363, -289.9, 391, -265.9, 391, -264.8, 423, -231.8, 423, -229.7, 441, -205.7, 441, -201.5, 454, -176.5, 454, -171.3, 460, -152.3, 460, -148, 461, -121, 459.8, -121, 456.7, -99, 455.5, -99, 448.5, -74, 447.3, -74, 429.3, -37, 428, -37, 401, -2, 399.8, -2, 363.8, 35, 361.7, 35, 336.8, 57, 334.5, 57, 305.6, 77, 303.4, 77, 255.4, 99, 251.3, 99, 207.3, 113, 198.4, 113, 162.2, 121, 150.2, 121, 93.1, 127, 90, 127, 27, 126, 27, 124.9, -36.2, 120, -37, 120, -120, 119, -120, 117.9, -162, 114.9, -162, 113.7, -201.3, 107, -203.7, 107, -261.9, 115, -266, 115, -303, 116, -303, 114.7, -354.3, 106, -363.1, 106, -415, 100.8, -415, 99.7, -449, 93.7, -449, 92.5, -506, 76.5, -506, 75.1, -559, 40.1, -559, 37.7, -602, -10.2, -602, -12.5, -616, -37.5, -616, -67, -616.7, -67, -622, -97.8, -622, -100.1, -617.8, -148, -616.5, -148, -609.6, -176, -608.2, -176, -576.2, -236, -575, -236, -553, -264, -551.8, -264, -511.8, -303, -509.7, -303, -481.7, -324, -478.6, -324, -445.6, -345, -443.5, -345, -418.5, -358, -415.4, -358, -400.4, -365, -396.1, -365, -372.2, -371, -370, -371, -347, -371.9, -304.4, -388, -298.1, -388, -275.3, -394, -269.3, -394, -245.2, -398, -232.1, -398, -185, -400.9, -185, -402.1)
+
+[node name="SugarCookie3" type="Sprite2D" parent="case" groups=["sugar-cookie"]]
+position = Vector2(480.391, 563.851)
+rotation = -0.216512
+scale = Vector2(0.336058, 0.383492)
+skew = 0.0289087
+texture = ExtResource("6_qx2ym")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="case/SugarCookie3" groups=["sugar-cookie"]]
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="case/SugarCookie3/StaticBody2D2"]
+polygon = PackedVector2Array(-147, -397.9, -109, -395.9, -109, -394.7, -24.7, -381, -20.9, -381, 102, -371.9, 102, -370.8, 179, -361.8, 179, -360.7, 216, -353.7, 216, -352.5, 246, -343.5, 246, -342.4, 269, -333.4, 269, -332.1, 326.6, -296, 329.5, -296, 346, -287.2, 346, -286, 382, -260, 382, -258.8, 418, -223.8, 418, -221.7, 434, -202.7, 434, -200.5, 446, -176.5, 446, -173.3, 456, -141.3, 456, -130.3, 458.4, -116, 456.9, -116, 455.9, -91, 454.7, -91, 452.7, -80, 451.3, -80, 440.3, -57, 439.1, -57, 424.1, -33, 423, -33, 377, 24, 375.8, 24, 351.8, 47, 349.6, 47, 323, 64.1, 323, 64.9, 293.7, 90, 290.5, 90, 271.5, 101, 268.3, 101, 241.3, 110, 233.1, 110, 212.2, 115, 204.2, 115, 167.1, 119, 164, 119, 76, 117, 76, 117.8, -16, 126.2, -16, 124.9, -35, 123.9, -35, 122.6, -76.1, 113, -130, 113, -130, 111.8, -191.3, 104, -208, 104, -269, 105, -269, 103.9, -331, 99.9, -331, 98.6, -398.1, 83, -404.1, 83, -485, 71.7, -485, 70.3, -504, 61.3, -504, 59.9, -532.7, 36, -534.6, 36, -575, 7, -575, 5.80005, -587, -6.20001, -587, -8.40002, -605, -37.4, -605, -40.6, -618, -69.6, -618, -74, -623.3, -109, -621.8, -109, -615.8, -158, -614.5, -158, -604.5, -194, -603.3, -194, -592.3, -217, -591, -217, -574, -241, -572.9, -241, -551.9, -264, -549.9, -264, -510, -300.9, -510, -302.8, -488.9, -325, -486.8, -325, -465.7, -342, -463.5, -342, -438.5, -355, -435.4, -355, -324.3, -395, -320.1, -395, -270, -397.9, -270, -399, -147, -399)
+
+[node name="SugarCookie2" type="Sprite2D" parent="case" groups=["sugar-cookie"]]
+position = Vector2(-563.827, 609.186)
+rotation = 0.121493
+scale = Vector2(-0.356197, 0.40157)
+texture = ExtResource("6_qx2ym")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="case/SugarCookie2" groups=["sugar-cookie"]]
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="case/SugarCookie2/StaticBody2D2"]
+polygon = PackedVector2Array(-147, -397.9, -109, -395.9, -109, -394.7, -24.7, -381, -20.9, -381, 102, -371.9, 102, -370.8, 179, -361.8, 179, -360.7, 216, -353.7, 216, -352.5, 246, -343.5, 246, -342.4, 269, -333.4, 269, -332.1, 326.6, -296, 329.5, -296, 346, -287.2, 346, -286, 382, -260, 382, -258.8, 418, -223.8, 418, -221.7, 434, -202.7, 434, -200.5, 446, -176.5, 446, -173.3, 456, -141.3, 456, -130.3, 458.4, -116, 456.9, -116, 455.9, -91, 454.7, -91, 452.7, -80, 451.3, -80, 440.3, -57, 439.1, -57, 424.1, -33, 423, -33, 377, 24, 375.8, 24, 351.8, 47, 349.6, 47, 323, 64.1, 323, 64.9, 293.7, 90, 290.5, 90, 271.5, 101, 268.3, 101, 241.3, 110, 233.1, 110, 212.2, 115, 204.2, 115, 167.1, 119, 164, 119, 76, 117, 76, 117.8, -16, 126.2, -16, 124.9, -35, 123.9, -35, 122.6, -76.1, 113, -130, 113, -130, 111.8, -191.3, 104, -208, 104, -269, 105, -269, 103.9, -331, 99.9, -331, 98.6, -398.1, 83, -404.1, 83, -485, 71.7, -485, 70.3, -504, 61.3, -504, 59.9, -532.7, 36, -534.6, 36, -575, 7, -575, 5.80005, -587, -6.20001, -587, -8.40002, -605, -37.4, -605, -40.6, -618, -69.6, -618, -74, -623.3, -109, -621.8, -109, -615.8, -158, -614.5, -158, -604.5, -194, -603.3, -194, -592.3, -217, -591, -217, -574, -241, -572.9, -241, -551.9, -264, -549.9, -264, -510, -300.9, -510, -302.8, -488.9, -325, -486.8, -325, -465.7, -342, -463.5, -342, -438.5, -355, -435.4, -355, -324.3, -395, -320.1, -395, -270, -397.9, -270, -399, -147, -399)
+
+[node name="SugarCookie" type="Sprite2D" parent="case" groups=["sugar-cookie"]]
+position = Vector2(435.708, -136.44)
+rotation = 0.258296
+scale = Vector2(0.333546, 0.401232)
+texture = ExtResource("6_qx2ym")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="case/SugarCookie" groups=["sugar-cookie"]]
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="case/SugarCookie/StaticBody2D2"]
+polygon = PackedVector2Array(-147, -397.9, -109, -395.9, -109, -394.7, -24.7, -381, -20.9, -381, 102, -371.9, 102, -370.8, 179, -361.8, 179, -360.7, 216, -353.7, 216, -352.5, 246, -343.5, 246, -342.4, 269, -333.4, 269, -332.1, 326.6, -296, 329.5, -296, 346, -287.2, 346, -286, 382, -260, 382, -258.8, 418, -223.8, 418, -221.7, 434, -202.7, 434, -200.5, 446, -176.5, 446, -173.3, 456, -141.3, 456, -130.3, 458.4, -116, 456.9, -116, 455.9, -91, 454.7, -91, 452.7, -80, 451.3, -80, 440.3, -57, 439.1, -57, 424.1, -33, 423, -33, 377, 24, 375.8, 24, 351.8, 47, 349.6, 47, 323, 64.1, 323, 64.9, 293.7, 90, 290.5, 90, 271.5, 101, 268.3, 101, 241.3, 110, 233.1, 110, 212.2, 115, 204.2, 115, 167.1, 119, 164, 119, 76, 117, 76, 117.8, -16, 126.2, -16, 124.9, -35, 123.9, -35, 122.6, -76.1, 113, -130, 113, -130, 111.8, -191.3, 104, -208, 104, -269, 105, -269, 103.9, -331, 99.9, -331, 98.6, -398.1, 83, -404.1, 83, -485, 71.7, -485, 70.3, -504, 61.3, -504, 59.9, -532.7, 36, -534.6, 36, -575, 7, -575, 5.80005, -587, -6.20001, -587, -8.40002, -605, -37.4, -605, -40.6, -618, -69.6, -618, -74, -623.3, -109, -621.8, -109, -615.8, -158, -614.5, -158, -604.5, -194, -603.3, -194, -592.3, -217, -591, -217, -574, -241, -572.9, -241, -551.9, -264, -549.9, -264, -510, -300.9, -510, -302.8, -488.9, -325, -486.8, -325, -465.7, -342, -463.5, -342, -438.5, -355, -435.4, -355, -324.3, -395, -320.1, -395, -270, -397.9, -270, -399, -147, -399)
+
+[node name="CatCookie" type="Sprite2D" parent="case" groups=["cat-cookie"]]
+position = Vector2(-164.344, 606.352)
+rotation = -0.100868
+scale = Vector2(0.348892, 0.432746)
+texture = ExtResource("4_ij11g")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="case/CatCookie" groups=["cat-cookie"]]
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="case/CatCookie/StaticBody2D2"]
+position = Vector2(-2.00684, 1.19287)
+polygon = PackedVector2Array(331, -455.8, 331, -453.9, 344, -442.9, 344, -439, 350.6, -415, 348.8, -415, 340.3, -348.8, 343.2, -343, 344.8, -343, 403, -288.9, 403, -286.7, 433, -250.7, 433, -248.5, 447, -220.5, 447, -216.3, 453, -197.3, 453, -191.4, 457, -172.2, 457, -145, 455.9, -145, 454.9, -120, 453.7, -120, 444.6, -77, 443.3, -77, 431.3, -49, 430.1, -49, 410.1, -18, 408.9, -18, 385.9, 7, 383.9, 7, 357.8, 31, 355.7, 31, 338.7, 44, 336.5, 44, 293.5, 66, 289.1, 66, 221.3, 85, 211.3, 85, 37.1, 110, 34, 110, -77, 109, -77, 110, -252, 114, -252, 112.9, -375, 106.9, -375, 105.8, -420, 101.8, -420, 100.7, -460, 93.7, -460, 92.4, -497, 80.5, -497, 79.2, -537, 59.2, -537, 57.9, -565, 34.9, -565, 32.7, -580, 15.8, -580, 12.5, -597, -16.5, -597, -19.7, -607, -53.7, -607, -55, -608, -97, -606.5, -97, -594.6, -149, -593.4, -149, -579.4, -184, -578.1, -184, -564.2, -209, -563, -209, -543, -236, -541.9, -236, -512.9, -267, -510.7, -267, -480.8, -294, -478.6, -294, -468, -301.1, -468, -302.1, -461.8, -370, -460.7, -370, -456.6, -389, -455.4, -389, -447.4, -409, -445.8, -409, -432.8, -422, -428.3, -422, -413, -424.3, -413, -422.4, -404, -419.4, -404, -417.9, -349.3, -370, -347.3, -370, -340.3, -364, -337.9, -364, -330, -363.2, -195.2, -393, -193.2, -393, -98.1, -403, 25, -403, 25, -401.9, 186.1, -391.1, 271.4, -446, 274.5, -446, 289.5, -454, 294.6, -454, 304, -457.4, 304, -459.3)
 
 [node name="lid machine" type="Node2D" parent="."]
 
 [node name="lid machine normal sprite" type="Sprite2D" parent="lid machine"]
+position = Vector2(1.58087, 32.3439)
 
 [node name="bottom" type="Sprite2D" parent="lid machine/lid machine normal sprite"]
 position = Vector2(-916.902, -166.571)
@@ -111,6 +238,7 @@ texture = ExtResource("21_vcbix")
 
 [node name="lid machine close sprite" type="Sprite2D" parent="lid machine"]
 visible = false
+position = Vector2(1.58087, 32.3439)
 
 [node name="bottom" type="Sprite2D" parent="lid machine/lid machine close sprite"]
 position = Vector2(-916.902, -166.571)
@@ -140,10 +268,10 @@ position = Vector2(-921.644, -205.384)
 texture = ExtResource("11_yrg7s")
 
 [node name="AttachLid" type="Area2D" parent="." groups=["droppable"]]
-position = Vector2(-878.961, 35.5784)
+position = Vector2(-877.38, 67.9223)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttachLid"]
-position = Vector2(1.58087, -3.23438)
+position = Vector2(-9.48538, 69.5392)
 shape = SubResource("RectangleShape2D_k3fie")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -161,15 +289,17 @@ polygon = PackedVector2Array(-1734.69, -667.734, -1478.18, -768.636, 1512.96, -7
 visible = false
 position = Vector2(55.3303, 48.5158)
 scale = Vector2(0.167166, 0.157229)
-texture = ExtResource("5_fly4n")
+texture = SubResource("CompressedTexture2D_a53br")
 script = ExtResource("6_dke8q")
 
 [node name="cup_spot" type="StaticBody2D" parent="." groups=["cup_drop", "droppable"]]
+visible = false
 position = Vector2(-105, 88)
 scale = Vector2(0.75, 0.75)
 script = SubResource("GDScript_14f8c")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cup_spot"]
+scale = Vector2(1.01932, 0.972242)
 polygon = PackedVector2Array(-298.427, 477.794, -534.503, 708.514, -523.963, 753.795, 999.991, 753.795, 1008.42, 695.576, 753.376, 471.325)
 
 [node name="cup" type="Node2D" parent="."]
@@ -232,20 +362,21 @@ scale = Vector2(0.911684, 0.93467)
 
 [node name="liquid_sprite" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
 position = Vector2(-137.324, 224.767)
-texture = ExtResource("11_fu6um")
 
 [node name="Lid" type="Sprite2D" parent="cup"]
 visible = false
-position = Vector2(-22.3022, 158.668)
-scale = Vector2(0.636206, 0.571847)
-texture = ExtResource("10_sw1nl")
+modulate = Color(1, 1, 1, 0.862745)
+z_index = 20
+position = Vector2(-39.1648, 225.512)
+scale = Vector2(0.658418, 0.608428)
+texture = ExtResource("19_cqdi6")
 
 [node name="Back" type="TextureButton" parent="."]
-offset_left = -1255.21
-offset_top = 449.58
-offset_right = -255.207
-offset_bottom = 1449.58
-scale = Vector2(0.32, 0.32)
+offset_left = -1264.69
+offset_top = 452.814
+offset_right = -264.689
+offset_bottom = 1452.81
+scale = Vector2(0.323103, 0.294544)
 texture_normal = ExtResource("7_qudjk")
 texture_pressed = ExtResource("8_0wbd3")
 texture_hover = ExtResource("9_d3pnv")
@@ -261,81 +392,40 @@ texture_normal = ExtResource("10_nsn8g")
 texture_pressed = ExtResource("11_2cme3")
 texture_hover = ExtResource("12_2d1uf")
 
-[node name="InitialPos" type="Area2D" parent="."]
-position = Vector2(-129.631, 363.869)
+[node name="tray" type="StaticBody2D" parent="." groups=["tray"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InitialPos"]
-position = Vector2(3.16177, 4.57764e-05)
-shape = SubResource("RectangleShape2D_ioiw2")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tray"]
+polygon = PackedVector2Array(-333.563, 426.939, -515.362, 609.682, -502.715, 643.643, 637.089, 643.643, 651.316, 606.448, 464.774, 430.174)
 
-[node name="cookieSpot" type="Area2D" parent="."]
-position = Vector2(268.747, 491.627)
+[node name="cookies on tray" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cookieSpot"]
-position = Vector2(-1.58082, 6.46879)
-shape = SubResource("RectangleShape2D_ri56t")
+[node name="cookie1" type="Sprite2D" parent="cookies on tray"]
+position = Vector2(183.888, 529.547)
+scale = Vector2(0.259285, 0.283733)
 
-[node name="caseCollision" type="Area2D" parent="."]
+[node name="cookie2" type="Sprite2D" parent="cookies on tray"]
+position = Vector2(370.43, 518.226)
+rotation = 0.298138
+scale = Vector2(0.259285, 0.283733)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="caseCollision"]
-polygon = PackedVector2Array(-550.141, -359.017, -458.451, -414.002, 630.765, -417.236, 714.551, -355.783, 695.581, 401.064, 30.0364, 399.447, 28.4556, 150.399, -281.394, 148.782, -279.813, 399.447, -543.818, 401.064)
+[node name="cookie3" type="Sprite2D" parent="cookies on tray"]
+position = Vector2(255.027, 450.304)
+scale = Vector2(0.284308, 0.284308)
 
-[node name="trash" type="Sprite2D" parent="."]
-position = Vector2(-641.831, 580.573)
-scale = Vector2(0.169965, 0.191544)
-texture = ExtResource("26_mnhwn")
+[node name="cookie4" type="Sprite2D" parent="cookies on tray"]
+position = Vector2(318.262, 424.429)
+rotation = 0.558294
+scale = Vector2(0.258055, 0.277474)
 
-[node name="trash" type="Area2D" parent="trash"]
-scale = Vector2(1, 0.998819)
+[node name="cookie5" type="Sprite2D" parent="cookies on tray"]
+position = Vector2(239.219, 361.358)
+rotation = -0.388033
+scale = Vector2(0.238093, 0.285194)
+skew = -0.0651635
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="trash/trash"]
-position = Vector2(-8.56171, -17.5938)
-shape = SubResource("RectangleShape2D_g2k6q")
-
-[node name="TextureButton" type="TextureButton" parent="."]
-auto_translate_mode = 1
-visible = false
-offset_left = 1029.14
-offset_top = -698.628
-offset_right = 1529.14
-offset_bottom = 1.37225
-scale = Vector2(0.344599, 0.37583)
-texture_normal = ExtResource("27_a376f")
-texture_pressed = ExtResource("28_44bcf")
-texture_hover = ExtResource("29_lctq5")
-
-[node name="order" type="Node2D" parent="."]
-visible = false
-z_index = 15
-
-[node name="ColorRect" type="ColorRect" parent="order"]
-auto_translate_mode = 1
-offset_left = -342.339
-offset_top = -507.584
-offset_right = -302.339
-offset_bottom = -467.584
-scale = Vector2(18.0372, 25.3149)
-
-[node name="Label" type="Label" parent="order"]
-auto_translate_mode = 1
-offset_left = -309.0
-offset_top = -350.0
-offset_right = 352.0
-offset_bottom = 457.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 45
-horizontal_alignment = 1
-
-[node name="close" type="TextureButton" parent="."]
-visible = false
-z_index = 16
-offset_left = 246.615
-offset_top = -494.861
-offset_right = 1746.61
-offset_bottom = 1005.14
-scale = Vector2(0.0744199, 0.0808258)
-texture_normal = ExtResource("30_m0gv4")
-
+[connection signal="input_event" from="tongs/tongs img/grab tongs" to="tongs" method="_on_area_2d_input_event"]
+[connection signal="body_entered" from="tongs/tongs img/tongs grab area" to="tongs" method="_on_tongs_grab_area_body_entered"]
+[connection signal="body_exited" from="tongs/tongs img/tongs grab area" to="tongs" method="_on_tongs_grab_area_body_exited"]
 [connection signal="input_event" from="AttachLid" to="cup" method="_on_attach_lid_input_event"]
 [connection signal="input_event" from="Area2D" to="cookie" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="cookie" method="_on_area_2d_mouse_entered"]
@@ -344,11 +434,3 @@ texture_normal = ExtResource("30_m0gv4")
 [connection signal="input_event" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_input_event"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="SubmitOrder" to="." method="_on_submit_order_pressed"]
-[connection signal="input_event" from="InitialPos" to="cup" method="_on_initial_pos_input_event"]
-[connection signal="input_event" from="cookieSpot" to="cookie" method="_on_cookie_spot_input_event"]
-[connection signal="input_event" from="caseCollision" to="cookie" method="_on_case_collision_input_event"]
-[connection signal="input_event" from="trash/trash" to="." method="_on_trash_input_event"]
-[connection signal="mouse_entered" from="trash/trash" to="." method="_on_trash_mouse_entered"]
-[connection signal="mouse_exited" from="trash/trash" to="." method="_on_trash_mouse_exited"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
-[connection signal="pressed" from="close" to="." method="_on_close_pressed"]

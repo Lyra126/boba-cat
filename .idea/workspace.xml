@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44c792d6-38c7-4ba3-b6f4-4d28abd89b49" name="Changes" comment="" />
+    <list default="true" id="44c792d6-38c7-4ba3-b6f4-4d28abd89b49" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/global.gd" beforeDir="false" afterPath="$PROJECT_DIR$/global.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/FinalStation/FinalStation.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/FinalStation/FinalStation.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/FinalStation/tongs.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/FinalStation/tongs.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/Toppings/ladle.gd" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/Toppings/ladle.gd" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

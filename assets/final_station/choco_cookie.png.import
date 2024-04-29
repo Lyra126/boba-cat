@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjp3by1d0qdyk"
-path="res://.godot/imported/lid.png-d3ba5df9ffc0b9aa2959f6e7a14ce254.ctex"
+uid="uid://ob70xcok41yy"
+path="res://.godot/imported/choco_cookie.png-766c47b0aa789fade666ea1fe623fc76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/final_station/lid.png"
-dest_files=["res://.godot/imported/lid.png-d3ba5df9ffc0b9aa2959f6e7a14ce254.ctex"]
+source_file="res://assets/final_station/choco_cookie.png"
+dest_files=["res://.godot/imported/choco_cookie.png-766c47b0aa789fade666ea1fe623fc76.ctex"]
 
 [params]
 
