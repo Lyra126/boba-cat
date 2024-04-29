@@ -1,0 +1,136 @@
+extends Node2D
+
+@onready var tongs_place = $"../tongs_closed_place"
+@onready var tongs_sprite = $"tongs img"
+@onready var c1 = $"../cookies on tray/cookie1"
+@onready var c2 = $"../cookies on tray/cookie2"
+@onready var c3 = $"../cookies on tray/cookie3"
+@onready var c4 = $"../cookies on tray/cookie4"
+@onready var c5 = $"../cookies on tray/cookie5"
+
+var cat_cookie_sprite = preload("res://assets/final_station/cookie_cat.png")
+var sugar_cookie_sprite = preload("res://assets/final_station/sugar_cookie.png")
+var choco_cookie_sprite = preload("res://assets/final_station/choco_cookie.png")
+
+var tongs_closed
+var selected
+var off_set
+var target_position
+var cat_cookie
+var chocolate_cookie
+var sugar_cookie
+var tray_droppable
+var layer = 0
+
+var cat_cookie_tongs
+var chocolate_cookie_tongs
+var sugar_cookie_tongs
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not global.SomethingBeingClickedRn:
+			selected = true
+			tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_opened.png")
+			global.SomethingBeingClickedRn = true;
+			off_set = get_global_mouse_position() - global_position
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			selected = false
+			tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_closed.png")
+			global.SomethingBeingClickedRn = false;
+
+func _input(event):
+	if selected:
+		global.SomethingBeingClickedRn = true
+		if event is InputEventMouseButton:
+			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				var mouse_position = get_viewport().get_mouse_position()
+				if cat_cookie:
+					tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_cat.png")
+					cat_cookie_tongs = true
+					chocolate_cookie_tongs = false
+					sugar_cookie_tongs = false
+				if chocolate_cookie:
+					tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_choco.png")
+					cat_cookie_tongs = false
+					chocolate_cookie_tongs = true
+					sugar_cookie_tongs = false
+				if sugar_cookie:
+					tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_sugar.png")
+					cat_cookie_tongs = false
+					chocolate_cookie_tongs= false
+					sugar_cookie_tongs= true
+				elif tray_droppable:
+					if layer < 5:
+						if cat_cookie_tongs:
+							handle_cookie_layers(layer, cat_cookie_sprite)
+							layer += 1
+							cat_cookie_tongs = false
+							tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_opened.png")
+							global.cookies_added.append("catCookie")
+						
+						elif sugar_cookie_tongs:
+							handle_cookie_layers(layer, sugar_cookie_sprite)
+							layer += 1
+							sugar_cookie_tongs = false
+							tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_opened.png")
+							global.cookies_added.append("sugarCookie")
+							
+						elif chocolate_cookie_tongs:
+							handle_cookie_layers(layer, choco_cookie_sprite)
+							layer += 1
+							chocolate_cookie_tongs = false
+							tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_opened.png")
+							global.cookies_added.append("chocolateCookie")
+							
+func handle_cookie_layers(layer, cookie):
+	if layer == 0:
+		c1.set_texture(cookie)
+		print("layer0")
+	elif layer == 1:
+		c2.texture = cookie
+	elif layer == 2:
+		c3.texture = cookie
+	elif layer == 3:
+		c4.texture = cookie
+	elif layer == 4:
+		c5.texture = cookie
+					
+func _physics_process(delta):
+	if selected:
+		target_position = get_global_mouse_position() - off_set
+		global_position = lerp(global_position, target_position, 15 * delta) # Smooth animation during dragging
+	else:
+		global_position = lerp(global_position, tongs_place.global_position, 10 * delta)
+		rotation = lerp_angle(rotation, 0, 10 * delta)
+
+func _on_tongs_grab_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group('cat-cookie') or body.is_in_group('cat-cookie-2'):
+		cat_cookie = true
+		
+	if body.is_in_group('chocolate-cookie') or body.is_in_group('chocolate-cookie-2'):
+		chocolate_cookie = true
+
+	if body.is_in_group('sugar-cookie'):
+		sugar_cookie = true
+		
+	if body.is_in_group('tray'):
+		tray_droppable = true
+		
+func _on_tongs_grab_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group('cat-cookie'):
+		cat_cookie = false
+	if body.is_in_group('chocolate-cookie'):
+		chocolate_cookie = false
+	if body.is_in_group('sugar-cookie'):
+		sugar_cookie = false
+	if body.is_in_group('tray'):
+		tray_droppable = false

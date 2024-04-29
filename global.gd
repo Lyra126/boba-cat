@@ -32,6 +32,7 @@ var syrups_poured = []
 var desserts_picked = []
 var hasCup = false
 var topping_sprites = []
+var cookies_added = []
 var trash_clicked
 var topping_sprite
 var toppings_sprites

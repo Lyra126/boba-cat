@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxpfb5nkcvbdp"
-path="res://.godot/imported/cookie.png-035a9a0bc5f7e6eba4f50cfa6cb00a7d.ctex"
+uid="uid://b37pfusaomxy3"
+path="res://.godot/imported/tongs_sugar.png-1a752d326b2abbe260762560a77e7a5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/final_station/cookie.png"
-dest_files=["res://.godot/imported/cookie.png-035a9a0bc5f7e6eba4f50cfa6cb00a7d.ctex"]
+source_file="res://assets/final_station/tongs/tongs_sugar.png"
+dest_files=["res://.godot/imported/tongs_sugar.png-1a752d326b2abbe260762560a77e7a5e.ctex"]
 
 [params]
 

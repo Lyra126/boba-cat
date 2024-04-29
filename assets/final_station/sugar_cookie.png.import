@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v76yuqy8mxwq"
-path="res://.godot/imported/closeMachine.png-fcd6faee09927e74fce9e378505f2357.ctex"
+uid="uid://2cogrigjf03b"
+path="res://.godot/imported/sugar_cookie.png-b6c5f63307790adbf00ddb7501737397.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/final_station/closeMachine.png"
-dest_files=["res://.godot/imported/closeMachine.png-fcd6faee09927e74fce9e378505f2357.ctex"]
+source_file="res://assets/final_station/sugar_cookie.png"
+dest_files=["res://.godot/imported/sugar_cookie.png-b6c5f63307790adbf00ddb7501737397.ctex"]
 
 [params]
 

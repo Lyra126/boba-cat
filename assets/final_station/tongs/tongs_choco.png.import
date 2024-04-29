@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjp3by1d0qdyk"
-path="res://.godot/imported/lid.png-d3ba5df9ffc0b9aa2959f6e7a14ce254.ctex"
+uid="uid://dhn3iik5xmugg"
+path="res://.godot/imported/tongs_choco.png-f4f45b27995364d9bd4053a03bd9d919.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/final_station/lid.png"
-dest_files=["res://.godot/imported/lid.png-d3ba5df9ffc0b9aa2959f6e7a14ce254.ctex"]
+source_file="res://assets/final_station/tongs/tongs_choco.png"
+dest_files=["res://.godot/imported/tongs_choco.png-f4f45b27995364d9bd4053a03bd9d919.ctex"]
 
 [params]
 

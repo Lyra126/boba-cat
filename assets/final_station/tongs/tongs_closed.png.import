@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjp3by1d0qdyk"
-path="res://.godot/imported/lid.png-d3ba5df9ffc0b9aa2959f6e7a14ce254.ctex"
+uid="uid://6mqqtrolwi62"
+path="res://.godot/imported/tongs_closed.png-cc2f925c207e2a32b6c5df69d70b1c46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/final_station/lid.png"
-dest_files=["res://.godot/imported/lid.png-d3ba5df9ffc0b9aa2959f6e7a14ce254.ctex"]
+source_file="res://assets/final_station/tongs/tongs_closed.png"
+dest_files=["res://.godot/imported/tongs_closed.png-cc2f925c207e2a32b6c5df69d70b1c46.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ethms5ddolvr"
-path="res://.godot/imported/overlapMachine.png-ca82558a6050b6eb6c6c2e965eeb7c8f.ctex"
+uid="uid://dadwe2e5ognlx"
+path="res://.godot/imported/tongs_opened.png-dc70948c4d2b6b3b315344928e459e4d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/final_station/overlapMachine.png"
-dest_files=["res://.godot/imported/overlapMachine.png-ca82558a6050b6eb6c6c2e965eeb7c8f.ctex"]
+source_file="res://assets/final_station/tongs/tongs_opened.png"
+dest_files=["res://.godot/imported/tongs_opened.png-dc70948c4d2b6b3b315344928e459e4d.ctex"]
 
 [params]
 

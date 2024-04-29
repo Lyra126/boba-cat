@@ -11,8 +11,6 @@ var target_position
 var overlapMachine
 var finalStation
 var original_position
-var openMachine = preload("res://assets/final_station/openMachine.png")
-var closeMachine = preload("res://assets/final_station/closeMachine.png")
 var hasLid
 
 func _process(delta):
@@ -65,7 +63,6 @@ func addLid():
 	scale = Vector2(0.60, 0.60)
 	pass
 
-
 func _on_initial_pos_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -74,3 +71,5 @@ func _on_initial_pos_input_event(viewport: Node, event: InputEvent, shape_idx: i
 				print("deselect cookie")
 				$".".position.x = $"../InitialPos".position.x
 				$".".position.y = $"../InitialPos".position.y-310
+
+

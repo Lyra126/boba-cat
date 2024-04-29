@@ -226,8 +226,8 @@ position = Vector2(1.0419, 662.588)
 shape = SubResource("RectangleShape2D_1w4ow")
 
 [node name="trash" type="Sprite2D" parent="."]
-position = Vector2(-520.346, 423.371)
-scale = Vector2(0.15357, 0.16966)
+position = Vector2(-607.438, 470.003)
+scale = Vector2(0.0780581, 0.0862365)
 texture = ExtResource("19_73j2n")
 
 [node name="trash" type="Area2D" parent="trash"]
@@ -240,7 +240,6 @@ shape = SubResource("RectangleShape2D_c73js")
 [node name="OrderForm" type="Node2D" parent="."]
 visible = false
 z_index = 15
-scale = Vector2(1, 1)
 
 [node name="ColorRect" type="ColorRect" parent="OrderForm"]
 auto_translate_mode = 1
@@ -271,9 +270,9 @@ texture_pressed = ExtResource("21_qobrt")
 texture_hover = ExtResource("22_3ycls")
 
 [node name="Back" type="TextureButton" parent="."]
-offset_left = -870.919
+offset_left = -872.021
 offset_top = 344.832
-offset_right = 129.081
+offset_right = 127.979
 offset_bottom = 1344.83
 scale = Vector2(0.22, 0.229)
 texture_normal = ExtResource("9_t6ws1")
