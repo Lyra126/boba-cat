@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bv3yw1n541ync"]
+[gd_scene load_steps=29 format=3 uid="uid://bv3yw1n541ync"]
 
 [ext_resource type="Script" path="res://scenes/Toppings/Toppings.gd" id="1_ykgei"]
 [ext_resource type="Texture2D" uid="uid://bk0gxcyege8wb" path="res://assets/toppings_station/assets/bar.png" id="2_4bx8k"]
@@ -19,10 +19,12 @@
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="14_wtiin"]
 [ext_resource type="Texture2D" uid="uid://cm3l7eiytexgp" path="res://assets/toppings_station/assets/cupDispenser.png" id="18_1dfv5"]
 [ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="19_73j2n"]
+[ext_resource type="Texture2D" uid="uid://c8d5vphoajw5q" path="res://assets/buttons/normalClose.png" id="20_jag3e"]
 [ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="20_pfya0"]
 [ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="21_qobrt"]
+[ext_resource type="Texture2D" uid="uid://c5xubj61n6qem" path="res://assets/buttons/pressedClose.png" id="21_sqma7"]
 [ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="22_3ycls"]
-[ext_resource type="Texture2D" uid="uid://cujo4it0fdse7" path="res://assets/buttons/close.png" id="23_4srwc"]
+[ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="22_fxphv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nj373"]
 size = Vector2(27.456, 24.2066)
@@ -290,7 +292,9 @@ offset_top = -435.642
 offset_right = 1697.33
 offset_bottom = 1064.36
 scale = Vector2(0.0836853, 0.0817412)
-texture_normal = ExtResource("23_4srwc")
+texture_normal = ExtResource("20_jag3e")
+texture_pressed = ExtResource("21_sqma7")
+texture_hover = ExtResource("22_fxphv")
 
 [node name="Next" type="TextureButton" parent="."]
 offset_left = 641.614

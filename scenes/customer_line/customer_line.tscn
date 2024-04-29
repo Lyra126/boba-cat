@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c77yg5d4yjufk"]
+[gd_scene load_steps=21 format=3 uid="uid://c77yg5d4yjufk"]
 
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
 [ext_resource type="Texture2D" uid="uid://mt3wkqwq7v4" path="res://assets/cutomer_line/customerline_bg.png" id="2_0iumo"]
@@ -16,7 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="13_j6sap"]
 [ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="14_d6cro"]
 [ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="15_fc2q1"]
-[ext_resource type="Texture2D" uid="uid://cujo4it0fdse7" path="res://assets/buttons/close.png" id="16_sbgl8"]
+[ext_resource type="Texture2D" uid="uid://c8d5vphoajw5q" path="res://assets/buttons/normalClose.png" id="17_406tn"]
+[ext_resource type="Texture2D" uid="uid://c5xubj61n6qem" path="res://assets/buttons/pressedClose.png" id="18_6rf5t"]
+[ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="19_xjh45"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjlre"]
 radius = 155.978
@@ -146,14 +148,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="close" type="TextureButton" parent="."]
 auto_translate_mode = 1
-visible = false
 z_index = 16
 offset_left = 248.83
 offset_top = -485.515
 offset_right = 1748.83
 offset_bottom = 1014.48
 scale = Vector2(0.0770623, 0.0843981)
-texture_normal = ExtResource("16_sbgl8")
+texture_normal = ExtResource("17_406tn")
+texture_pressed = ExtResource("18_6rf5t")
+texture_hover = ExtResource("19_xjh45")
 
 [connection signal="timeout" from="Customer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="input_event" from="DialoguePlayer/DialogArea" to="DialoguePlayer" method="_on_dialog_area_input_event"]

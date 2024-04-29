@@ -1,9 +1,10 @@
-[gd_scene load_steps=39 format=3 uid="uid://ceqg4sr663xx2"]
+[gd_scene load_steps=42 format=3 uid="uid://ceqg4sr663xx2"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://b2e4xjp33bts3" path="res://assets/final_station/final-bg.png" id="2_h5y2t"]
 [ext_resource type="Texture2D" uid="uid://6mqqtrolwi62" path="res://assets/final_station/tongs/tongs_closed.png" id="2_rq8lh"]
 [ext_resource type="Script" path="res://scenes/FinalStation/tongs.gd" id="2_xn26s"]
+[ext_resource type="Texture2D" uid="uid://d3xsx378u0t3q" path="res://assets/buttons/orderPaper.png" id="3_1ukjj"]
 [ext_resource type="Script" path="res://scenes/FinalStation/finalcup.gd" id="3_fdyuf"]
 [ext_resource type="Texture2D" uid="uid://0edy7rqaln65" path="res://assets/final_station/test.png" id="3_xkumw"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
@@ -31,8 +32,10 @@
 [ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="29_sx6wd"]
 [ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="30_pvshn"]
 [ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="31_pscrj"]
-[ext_resource type="Texture2D" uid="uid://cujo4it0fdse7" path="res://assets/buttons/close.png" id="32_8v7le"]
 [ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="33_kkjyx"]
+[ext_resource type="Texture2D" uid="uid://c8d5vphoajw5q" path="res://assets/buttons/normalClose.png" id="33_td8ja"]
+[ext_resource type="Texture2D" uid="uid://c5xubj61n6qem" path="res://assets/buttons/pressedClose.png" id="34_hsdpk"]
+[ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="35_23xwa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4t4gr"]
 size = Vector2(373.342, 105.414)
@@ -87,13 +90,14 @@ metadata/_edit_lock_ = true
 visible = false
 z_index = 15
 
-[node name="ColorRect" type="ColorRect" parent="OrderForm"]
+[node name="TextureRect" type="TextureRect" parent="OrderForm"]
 auto_translate_mode = 1
-offset_left = -342.339
-offset_top = -507.584
-offset_right = -302.339
-offset_bottom = -467.584
-scale = Vector2(18.0372, 25.3149)
+offset_left = -344.164
+offset_top = -502.615
+offset_right = 155.836
+offset_bottom = 197.385
+scale = Vector2(1.46752, 1.43387)
+texture = ExtResource("3_1ukjj")
 
 [node name="Label" type="Label" parent="OrderForm"]
 auto_translate_mode = 1
@@ -448,7 +452,9 @@ offset_top = -467.369
 offset_right = 1715.0
 offset_bottom = 1032.63
 scale = Vector2(0.0836853, 0.0817412)
-texture_normal = ExtResource("32_8v7le")
+texture_normal = ExtResource("33_td8ja")
+texture_pressed = ExtResource("34_hsdpk")
+texture_hover = ExtResource("35_23xwa")
 
 [node name="cookies on tray" type="Node2D" parent="."]
 

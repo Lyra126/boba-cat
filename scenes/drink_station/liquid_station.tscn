@@ -1,4 +1,4 @@
-[gd_scene load_steps=379 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=381 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
@@ -211,7 +211,6 @@
 [ext_resource type="Texture2D" uid="uid://bbk4jtugdh84u" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-coffee-2/Untitled_Artwork-6 33.png" id="130_2g5h8"]
 [ext_resource type="Texture2D" uid="uid://dpcj2gyonf8tv" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-coffee-2/Untitled_Artwork-7 32.png" id="131_rh071"]
 [ext_resource type="Texture2D" uid="uid://bk6e4xmubgojg" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-tea-2/Untitled_Artwork-1 17.png" id="132_1du8v"]
-[ext_resource type="Texture2D" uid="uid://cujo4it0fdse7" path="res://assets/buttons/close.png" id="133_64tsy"]
 [ext_resource type="Texture2D" uid="uid://bog8olocr14md" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-tea-2/Untitled_Artwork-2 18.png" id="133_ik8ti"]
 [ext_resource type="Texture2D" uid="uid://bp0u11ecwi42w" path="res://assets/liquid_station/animations/liquid-pouring/cow-milk-tea-2/Untitled_Artwork-3 17.png" id="134_6dkai"]
 [ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="134_xity5"]
@@ -358,6 +357,9 @@
 [ext_resource type="Texture2D" uid="uid://c1s0cihjsuxo4" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-5 26.png" id="247_rjrua"]
 [ext_resource type="Texture2D" uid="uid://cnmrtpbueb555" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-6 26.png" id="248_cpw5i"]
 [ext_resource type="Texture2D" uid="uid://bkmk0dxd8tn8d" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-7 25.png" id="249_pv728"]
+[ext_resource type="Texture2D" uid="uid://c8d5vphoajw5q" path="res://assets/buttons/normalClose.png" id="354_3wj6e"]
+[ext_resource type="Texture2D" uid="uid://c5xubj61n6qem" path="res://assets/buttons/pressedClose.png" id="355_qd2hn"]
+[ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="356_8sbse"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bh2m"]
 size = Vector2(253.707, 204.515)
@@ -2220,7 +2222,9 @@ offset_top = -485.515
 offset_right = 1748.83
 offset_bottom = 1014.48
 scale = Vector2(0.0770623, 0.0843981)
-texture_normal = ExtResource("133_64tsy")
+texture_normal = ExtResource("354_3wj6e")
+texture_pressed = ExtResource("355_qd2hn")
+texture_hover = ExtResource("356_8sbse")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 visible = false
