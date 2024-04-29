@@ -9,8 +9,7 @@ func _ready():
 	if not global.hasCup:
 		$cup.hide()
 	if global.order != []:
-		pass
-		#$TextureButton.visible = true
+		$TextureButton.visible = true
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

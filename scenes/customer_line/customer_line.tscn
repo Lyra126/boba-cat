@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c77yg5d4yjufk"]
+[gd_scene load_steps=18 format=3 uid="uid://c77yg5d4yjufk"]
 
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
 [ext_resource type="Texture2D" uid="uid://mt3wkqwq7v4" path="res://assets/cutomer_line/customerline_bg.png" id="2_0iumo"]
@@ -12,7 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://0mex1upu8hmv" path="res://assets/cutomer_line/empty.png" id="9_ycdsr"]
 [ext_resource type="Texture2D" uid="uid://diri1mm8pslx5" path="res://assets/cutomer_line/overlayCustomerLine.png" id="10_g66uf"]
 [ext_resource type="Texture2D" uid="uid://cx2emgf2n6gak" path="res://assets/cutomer_line/fill.png" id="10_ribyt"]
-[ext_resource type="PackedScene" uid="uid://bk2yy2qaah4pg" path="res://scenes/OrderForm/OrderForm.tscn" id="12_1o3d2"]
+[ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="13_j6sap"]
+[ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="14_d6cro"]
+[ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="15_fc2q1"]
+[ext_resource type="Texture2D" uid="uid://cujo4it0fdse7" path="res://assets/buttons/close.png" id="16_sbgl8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjlre"]
 radius = 155.978
@@ -21,6 +24,28 @@ radius = 155.978
 position = Vector2(776, 448)
 scale = Vector2(0.636324, 0.632691)
 script = ExtResource("1_go1ct")
+
+[node name="order" type="Node2D" parent="."]
+visible = false
+z_index = 15
+
+[node name="ColorRect" type="ColorRect" parent="order"]
+auto_translate_mode = 1
+offset_left = -342.339
+offset_top = -507.584
+offset_right = -302.339
+offset_bottom = -467.584
+scale = Vector2(18.0372, 25.3149)
+
+[node name="Label" type="Label" parent="order"]
+auto_translate_mode = 1
+offset_left = -309.0
+offset_top = -350.0
+offset_right = 352.0
+offset_bottom = 457.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -1250.94
@@ -38,7 +63,7 @@ texture = ExtResource("3_5vta4")
 script = ExtResource("6_qt0fo")
 
 [node name="Customer" type="Sprite2D" parent="."]
-position = Vector2(1437.95, 0)
+position = Vector2(1302.8, -6.3222)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("8_4iu0w")
 
@@ -90,16 +115,6 @@ shape = SubResource("CircleShape2D_kjlre")
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="OrderForm" parent="." instance=ExtResource("12_1o3d2")]
-visible = false
-position = Vector2(-672.613, -232.341)
-scale = Vector2(1.7721, 1.88484)
-
-[node name="Label" parent="OrderForm" index="1"]
-theme_type_variation = &"HeaderSmall"
-horizontal_alignment = 1
-autowrap_mode = 2
-
 [node name="overlay" type="TextureRect" parent="."]
 offset_left = -1251.0
 offset_top = -702.0
@@ -118,10 +133,35 @@ texture_pressed = ExtResource("6_4eijr")
 texture_hover = ExtResource("7_t5lrs")
 metadata/_edit_use_anchors_ = true
 
+[node name="TextureButton" type="TextureButton" parent="."]
+auto_translate_mode = 1
+visible = false
+offset_left = 1062.35
+offset_top = -681.217
+offset_right = 1562.35
+offset_bottom = 18.7828
+scale = Vector2(0.344599, 0.37583)
+texture_normal = ExtResource("13_j6sap")
+texture_pressed = ExtResource("14_d6cro")
+texture_hover = ExtResource("15_fc2q1")
+metadata/_edit_use_anchors_ = true
+
+[node name="close" type="TextureButton" parent="."]
+auto_translate_mode = 1
+visible = false
+z_index = 15
+offset_left = 248.83
+offset_top = -485.515
+offset_right = 1748.83
+offset_bottom = 1014.48
+scale = Vector2(0.0770623, 0.0843981)
+texture_normal = ExtResource("16_sbgl8")
+
 [connection signal="timeout" from="Customer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="input_event" from="DialoguePlayer/DialogArea" to="DialoguePlayer" method="_on_dialog_area_input_event"]
 [connection signal="mouse_entered" from="DialoguePlayer/DialogArea" to="DialoguePlayer" method="_on_dialog_area_mouse_entered"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]
 
 [editable path="DialoguePlayer"]
-[editable path="OrderForm"]

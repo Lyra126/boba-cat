@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://d3uxtyc6i7orl"]
+[gd_scene load_steps=33 format=3 uid="uid://ceqg4sr663xx2"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://b2e4xjp33bts3" path="res://assets/final_station/final-bg.png" id="2_h5y2t"]
