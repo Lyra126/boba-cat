@@ -71,6 +71,7 @@ func _input(event):
 				
 				var mouse_position = get_viewport().get_mouse_position()
 				if popping_boba:
+					$"../AudioStreamPlayer2D".play()
 					global.SomethingBeingClickedRn = true
 					sprite.set_texture(ladle_popping_boba)
 					popping_boba_ladle = true
@@ -80,6 +81,7 @@ func _input(event):
 					fruit_jelly_ladle = false
 						
 				elif dalgona:
+					$"../AudioStreamPlayer2D".play()
 					global.SomethingBeingClickedRn = true
 					sprite.set_texture(ladle_dalgona)
 					dalgona_ladle = true
@@ -89,6 +91,7 @@ func _input(event):
 					fruit_jelly_ladle = false
 					
 				elif fruit_jelly:
+					$"../AudioStreamPlayer2D".play()
 					global.SomethingBeingClickedRn = true
 					sprite.set_texture(ladle_fruit_jelly)
 					fruit_jelly_ladle = true
@@ -98,6 +101,7 @@ func _input(event):
 					dalgona_ladle = false
 					
 				elif strawberries:
+					$"../AudioStreamPlayer2D".play()
 					global.SomethingBeingClickedRn = true
 					sprite.set_texture(ladle_strawberries)
 					strawberries_ladle = true
@@ -107,6 +111,7 @@ func _input(event):
 					fruit_jelly_ladle = false
 					
 				elif boba_pearls:
+					$"../AudioStreamPlayer2D".play()
 					global.SomethingBeingClickedRn = true
 					sprite.set_texture(ladle_boba_pearls)
 					boba_pearls_ladle = true

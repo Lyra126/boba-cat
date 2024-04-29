@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bv3yw1n541ync"]
+[gd_scene load_steps=30 format=3 uid="uid://bv3yw1n541ync"]
 
 [ext_resource type="Script" path="res://scenes/Toppings/Toppings.gd" id="1_ykgei"]
 [ext_resource type="Texture2D" uid="uid://bk0gxcyege8wb" path="res://assets/toppings_station/assets/bar.png" id="2_4bx8k"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://c5xubj61n6qem" path="res://assets/buttons/pressedClose.png" id="21_sqma7"]
 [ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="22_3ycls"]
 [ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="22_fxphv"]
+[ext_resource type="AudioStream" uid="uid://5yoqiq3mg1fh" path="res://assets/audio/pickTopping.mp3" id="26_17rix"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nj373"]
 size = Vector2(27.456, 24.2066)
@@ -39,6 +40,10 @@ size = Vector2(1047.66, 1447.97)
 position = Vector2(800, 448)
 scale = Vector2(0.907088, 0.814889)
 script = ExtResource("1_ykgei")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2(1, 1)
+stream = ExtResource("26_17rix")
 
 [node name="bar" type="Node2D" parent="."]
 
