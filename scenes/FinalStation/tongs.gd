@@ -20,7 +20,7 @@ var cat_cookie
 var chocolate_cookie
 var sugar_cookie
 var tray_droppable
-var layer = 0
+#var layer = 0
 
 var cat_cookie_tongs
 var chocolate_cookie_tongs
@@ -28,8 +28,7 @@ var sugar_cookie_tongs
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	global.get_cookies(c1,c2,c3,c4,c5)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -69,39 +68,41 @@ func _input(event):
 					chocolate_cookie_tongs= false
 					sugar_cookie_tongs= true
 				elif tray_droppable:
-					if layer < 5:
+					if final_station_global.cookie_layers < 5:
 						if cat_cookie_tongs:
-							handle_cookie_layers(layer, cat_cookie_sprite)
-							layer += 1
+							handle_cookie_layers(final_station_global.cookie_layers, cat_cookie_sprite)
+							final_station_global.cookie_layers += 1
 							cat_cookie_tongs = false
 							tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_opened.png")
 							global.cookies_added.append("catCookie")
+							global.cookies_sprites.append("res://assets/final_station/cookie_cat.png")
 						
 						elif sugar_cookie_tongs:
-							handle_cookie_layers(layer, sugar_cookie_sprite)
-							layer += 1
+							handle_cookie_layers(final_station_global.cookie_layers, sugar_cookie_sprite)
+							final_station_global.cookie_layers += 1
 							sugar_cookie_tongs = false
 							tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_opened.png")
 							global.cookies_added.append("sugarCookie")
+							global.cookies_sprites.append("res://assets/final_station/sugar_cookie.png")
 							
 						elif chocolate_cookie_tongs:
-							handle_cookie_layers(layer, choco_cookie_sprite)
-							layer += 1
+							handle_cookie_layers(final_station_global.cookie_layers, choco_cookie_sprite)
+							final_station_global.cookie_layers += 1
 							chocolate_cookie_tongs = false
 							tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_opened.png")
 							global.cookies_added.append("chocolateCookie")
+							global.cookies_sprites.append("res://assets/final_station/choco_cookie.png")
 							
 func handle_cookie_layers(layer, cookie):
-	if layer == 0:
-		c1.set_texture(cookie)
-		print("layer0")
-	elif layer == 1:
+	if final_station_global.cookie_layers == 0:
+		c1.texture = cookie
+	elif final_station_global.cookie_layers == 1:
 		c2.texture = cookie
-	elif layer == 2:
+	elif final_station_global.cookie_layers == 2:
 		c3.texture = cookie
-	elif layer == 3:
+	elif final_station_global.cookie_layers == 3:
 		c4.texture = cookie
-	elif layer == 4:
+	elif final_station_global.cookie_layers == 4:
 		c5.texture = cookie
 					
 func _physics_process(delta):

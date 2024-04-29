@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://d3uxtyc6i7orl"]
+[gd_scene load_steps=33 format=3 uid="uid://d3uxtyc6i7orl"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://b2e4xjp33bts3" path="res://assets/final_station/final-bg.png" id="2_h5y2t"]
@@ -21,7 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="10_nsn8g"]
 [ext_resource type="Texture2D" uid="uid://dndk45tkclobk" path="res://assets/final_station/lid machine/lid machine close/Untitled_Artwork-4 51.png" id="10_ofb81"]
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="11_2cme3"]
-[ext_resource type="Texture2D" uid="uid://xjwvvg8j3dv8" path="res://assets/liquid_station/animations/liquid-pouring/tea-2/Untitled_Artwork-7 4.png" id="11_fu6um"]
 [ext_resource type="Texture2D" uid="uid://b41oecjf6pspk" path="res://assets/final_station/lid machine/lid machine close/Untitled_Artwork-6 50.png" id="11_yrg7s"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="12_2d1uf"]
 [ext_resource type="Texture2D" uid="uid://46hk5lyxa5wi" path="res://assets/final_station/lid machine/lid machine open/lid_machine_bottom.png" id="18_0h5g6"]
@@ -59,9 +58,6 @@ func select():
 func deselect():
 	modulate = Color.WHITE
 "
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ioiw2"]
-size = Vector2(255.034, 365.783)
 
 [node name="FinalStation" type="Node2D"]
 position = Vector2(807, 450)
@@ -275,7 +271,7 @@ texture = ExtResource("11_yrg7s")
 position = Vector2(-877.38, 67.9223)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttachLid"]
-position = Vector2(1.58087, -3.23438)
+position = Vector2(-9.48538, 69.5392)
 shape = SubResource("RectangleShape2D_k3fie")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -366,7 +362,6 @@ scale = Vector2(0.911684, 0.93467)
 
 [node name="liquid_sprite" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
 position = Vector2(-137.324, 224.767)
-texture = ExtResource("11_fu6um")
 
 [node name="Lid" type="Sprite2D" parent="cup"]
 visible = false
@@ -396,13 +391,6 @@ scale = Vector2(0.32, 0.323)
 texture_normal = ExtResource("10_nsn8g")
 texture_pressed = ExtResource("11_2cme3")
 texture_hover = ExtResource("12_2d1uf")
-
-[node name="InitialPos" type="Area2D" parent="."]
-position = Vector2(-129.631, 363.869)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InitialPos"]
-position = Vector2(3.16177, 4.57764e-05)
-shape = SubResource("RectangleShape2D_ioiw2")
 
 [node name="tray" type="StaticBody2D" parent="." groups=["tray"]]
 
@@ -446,4 +434,3 @@ skew = -0.0651635
 [connection signal="input_event" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_input_event"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="SubmitOrder" to="." method="_on_submit_order_pressed"]
-[connection signal="input_event" from="InitialPos" to="cup" method="_on_initial_pos_input_event"]

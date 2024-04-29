@@ -43,7 +43,6 @@ var fruit_jelly_ladle
 func _ready() -> void:
 	global.SomethingBeingClickedRn = false
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#print(global.SomethingBeingClickedRn)

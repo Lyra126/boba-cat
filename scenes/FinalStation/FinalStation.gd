@@ -6,13 +6,12 @@ var cup_in_attach_lid = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if not global.hasCup:
-		$cup.hide()
-
+	#if not global.hasCup:
+		#$cup.hide()
 	if global.order != []:
-		$TextureButton.visible = true
-
-
+		pass
+		#$TextureButton.visible = true
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -48,7 +47,6 @@ func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 				global.hasCup = false
 				global.reset_drink()
 
-
 func _on_texture_button_pressed() -> void:
 	$order.visible = true
 	$close.visible = true
@@ -58,7 +56,7 @@ func _on_texture_button_pressed() -> void:
 	print(orderText)
 	$order/Label.visible = true
 	$order/Label.set_text(orderText)
-	
+
 
 func _on_close_pressed() -> void:
 	print("test")

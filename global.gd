@@ -33,9 +33,12 @@ var desserts_picked = []
 var hasCup = false
 var topping_sprites = []
 var cookies_added = []
+var cookies_sprites = []
 var trash_clicked
 var topping_sprite
 var toppings_sprites
+var cookie_sprite
+var cookie_sprites_locations
 
 func _process(delta):
 	pass
@@ -203,6 +206,14 @@ func get_toppings_inside_cup(t1, t2, t3, t4, t5):
 			topping_sprite.set_texture(load(topping_sprites[i]))
 			print(topping_sprites[i])
 		
+func get_cookies(c1,c2,c3,c4,c5):
+	cookie_sprites_locations = [c1, c2, c3, c4, c5]
+	for i in range(cookie_sprites_locations.size()):
+		cookie_sprite = cookie_sprites_locations[i]
+		if cookie_sprite and i < cookies_added.size() and cookies_added[i]:
+			cookie_sprite.set_texture(load(cookies_sprites[i]))
+			print(cookies_sprites[i])
+			
 func reset_drink():
 	playerOrder.resize(0)
 	toppings_inserted.resize(0)
