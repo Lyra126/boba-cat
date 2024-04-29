@@ -1,14 +1,42 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwtjyl3dll2e1"]
+[gd_scene load_steps=15 format=3 uid="uid://dwtjyl3dll2e1"]
 
 [ext_resource type="Script" path="res://scenes/Rate/rate.gd" id="1_6u8ji"]
 [ext_resource type="Texture2D" uid="uid://dxrasnos0pmau" path="res://assets/rate/rate.png" id="2_v238p"]
-[ext_resource type="Texture2D" uid="uid://bbksx7pkqscxv" path="res://assets/cats/cat1.png" id="3_m2tf4"]
+[ext_resource type="Texture2D" uid="uid://no2v4pbnhq8s" path="res://assets/cats/cat1.png" id="3_m2tf4"]
 [ext_resource type="Texture2D" uid="uid://doyijlo53a272" path="res://assets/rate/emptyStars.png" id="4_afqof"]
 [ext_resource type="Texture2D" uid="uid://decqfronbg1e3" path="res://assets/rate/fullStars.png" id="5_fudmb"]
 [ext_resource type="Texture2D" uid="uid://b88ek1qkts6hn" path="res://assets/cutomer_line/dialogue.png" id="6_f8gjd"]
+[ext_resource type="Texture2D" uid="uid://c7cre5rll2or2" path="res://assets/rate/overlayTray.png" id="7_4k1jg"]
+[ext_resource type="Script" path="res://scenes/FinalStation/finalcup.gd" id="8_i1btk"]
+[ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="9_lfoyv"]
+[ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="10_me8f5"]
+[ext_resource type="Script" path="res://scenes/Toppings/liquid_inside_cup.gd" id="11_g78so"]
+[ext_resource type="Texture2D" uid="uid://cjp3by1d0qdyk" path="res://assets/final_station/lid.png" id="12_m5u1c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vdxh8"]
 radius = 167.547
+
+[sub_resource type="GDScript" id="GDScript_u32wg"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	modulate = Color(Color.MEDIUM_AQUAMARINE, 0.7)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	#print(global_position)
+	pass
+
+func select():
+	for child in get_tree().get_nodes_in_group(\"droppable\"):
+		child.deselect()
+	modulate = Color.BLUE
+
+func deselect():
+	modulate = Color.WHITE
+"
 
 [node name="Rate" type="Node2D"]
 script = ExtResource("1_6u8ji")
@@ -20,50 +48,173 @@ scale = Vector2(0.800277, 0.719555)
 texture = ExtResource("2_v238p")
 
 [node name="Customer" type="Sprite2D" parent="."]
-position = Vector2(770, 333)
-scale = Vector2(1.84265, 2.15613)
+position = Vector2(477, 435)
+scale = Vector2(0.221558, 0.25453)
 texture = ExtResource("3_m2tf4")
 
 [node name="Rating" type="TextureProgressBar" parent="."]
 visible = false
-offset_left = 474.0
-offset_top = 571.0
-offset_right = 2974.0
-offset_bottom = 1571.0
-scale = Vector2(0.440489, 0.373984)
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 2508.0
+offset_bottom = 1016.0
+scale = Vector2(0.233563, 0.203656)
 texture_under = ExtResource("4_afqof")
 texture_progress = ExtResource("5_fudmb")
 
 [node name="Notif" type="TextureRect" parent="."]
 visible = false
-offset_left = 931.0
-offset_top = 22.0
-offset_right = 1931.0
-offset_bottom = 272.0
-scale = Vector2(0.66145, 1.22595)
+offset_left = 600.0
+offset_top = 24.0
+offset_right = 2600.0
+offset_bottom = 524.0
+scale = Vector2(0.498067, 0.607163)
 texture = ExtResource("6_f8gjd")
 
 [node name="Clear" type="Label" parent="."]
 visible = false
-offset_left = 1113.0
-offset_top = 98.0
-offset_right = 1416.0
-offset_bottom = 235.0
+offset_left = 808.0
+offset_top = 80.0
+offset_right = 1111.0
+offset_bottom = 217.0
+scale = Vector2(1.96237, 1.23365)
 theme_type_variation = &"HeaderLarge"
 theme_override_font_sizes/font_size = 100
 text = "CLEAR"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 973.0
-offset_top = 100.0
-offset_right = 1013.0
-offset_bottom = 123.0
+visible = false
+offset_left = 672.0
+offset_top = 88.0
+offset_right = 1520.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+autowrap_mode = 3
 
 [node name="DiagArea" type="Area2D" parent="."]
-position = Vector2(770, 344)
+position = Vector2(479, 438)
+scale = Vector2(0.955433, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DiagArea"]
-position = Vector2(-8, 23)
+position = Vector2(-3.8743e-06, 2)
+scale = Vector2(1.2711, 1.2306)
 shape = SubResource("CircleShape2D_vdxh8")
 
+[node name="overlayTray" type="TextureRect" parent="."]
+offset_top = 16.0
+offset_right = 2000.0
+offset_bottom = 1266.0
+scale = Vector2(0.798598, 0.71955)
+texture = ExtResource("7_4k1jg")
+
+[node name="cup_spot" type="StaticBody2D" parent="." groups=["cup_drop", "droppable"]]
+visible = false
+position = Vector2(-105, 88)
+scale = Vector2(0.75, 0.75)
+script = SubResource("GDScript_u32wg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cup_spot"]
+scale = Vector2(1.01932, 0.972242)
+polygon = PackedVector2Array(-298.427, 477.794, -534.503, 708.514, -523.963, 753.795, 999.991, 753.795, 1008.42, 695.576, 753.376, 471.325)
+
+[node name="cup" type="Node2D" parent="."]
+position = Vector2(358, 458)
+scale = Vector2(0.381286, 0.41674)
+script = ExtResource("8_i1btk")
+
+[node name="cup_sprite" type="Node2D" parent="cup"]
+
+[node name="FrontCup" type="Sprite2D" parent="cup/cup_sprite"]
+z_index = 5
+position = Vector2(-18, 362)
+scale = Vector2(0.641872, 0.641872)
+texture = ExtResource("9_lfoyv")
+
+[node name="BackCup" type="Sprite2D" parent="cup/cup_sprite"]
+position = Vector2(-18, 362)
+scale = Vector2(0.642054, 0.642054)
+texture = ExtResource("10_me8f5")
+
+[node name="cup_pick_up" type="Area2D" parent="cup/cup_sprite"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cup/cup_sprite/cup_pick_up"]
+position = Vector2(-18, 362)
+scale = Vector2(0.641872, 0.641872)
+polygon = PackedVector2Array(-291.8, -312.5, -290.6, -312.5, -284.5, -314.1, -284.5, -311.1, -277.4, -300.5, -276.1, -300.5, -256.1, -291.5, -251.3, -291.5, -151.1, -273.5, -149.4, -273.5, -107.3, -269.5, -87.5, -269.5, 60.5, -267.5, 60.5, -268.4, 147.5, -274.4, 147.5, -275.2, 246.5, -291.2, 246.5, -291.9, 271.5, -300.9, 279.4, -313.5, 284, -313.5, 288, -315.5, 291.4, -315.5, 303.5, -301.2, 303.5, -296.5, 304.6, -277.5, 302.6, -277.5, 290.5, -257.9, 290.5, -252.3, 269.5, -165.5, 269.5, -156.3, 228.5, 61.9, 228.5, 69.7, 204.2, 219.5, 203.2, 219.5, 177.1, 347.5, 175.6, 347.5, 166.6, 362.5, 165.2, 362.5, 142.2, 382.5, 140, 382.5, 98, 403.5, 93.8, 403.5, 48.8, 416.5, 39.5, 416.5, -23.5, 419.5, -23.5, 418.3, -73.5, 413.3, -73.5, 411.9, -127.5, 393.9, -127.5, 392.8, -143.5, 385.8, -143.5, 384.6, -161.5, 372.6, -161.5, 371.4, -173.5, 361.4, -173.5, 359.2, -183.5, 346.2, -183.5, 341.9, -210.5, 217.7, -210.5, 210.5, -238.2, 40.5, -239.1, 40.5, -262.5, -75.3, -262.5, -84.5, -275.2, -162.5, -276.1, -162.5, -296.2, -255.5, -297.2, -255.5, -298.2, -261.5, -310.5, -278.9, -310.5, -290, -298.5, -313, -298.5, -314.7, -296.3, -315.8)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="cup/cup_sprite/cup_pick_up"]
+position = Vector2(-18.0866, 361.356)
+scale = Vector2(0.642054, 0.642054)
+polygon = PackedVector2Array(29.5, -374.4, 109.5, -370.4, 109.5, -369.3, 213.5, -355.2, 213.5, -354, 254.5, -342, 254.5, -340.8, 277.5, -329.8, 277.5, -328.4, 301.5, -307.4, 301.5, -304.2, 304.5, -300.2, 304.5, -288.5, 302.6, -288.5, 294.7, -274.5, 291.2, -274.5, 283, -291.8, 263.1, -279.5, 258.9, -279.5, 200.5, -268.8, 200.5, -268, 180.8, -262.5, 172.9, -262.5, 150.7, -257.5, 140.7, -257.5, 68.6, -251.5, -91.5, -251.5, -91.5, -252.7, -185.5, -262.7, -185.5, -264, -278.5, -286.9, -278.5, -288.4, -288.4, -294.2, -298.4, -274.2, -301.5, -274.9, -301.5, -277, -310.5, -289.9, -310.5, -300, -304.7, -311.5, -303.3, -311.5, -287.3, -327.5, -285.2, -327.5, -276.2, -334.5, -274, -334.5, -247, -347.5, -242.9, -347.5, -219.8, -355.5, -214.8, -355.5, -150.7, -366.5, -148.6, -366.5, -35.5, -374.4, -35.5, -375.5, 29.5, -375.5)
+
+[node name="stuff_inside_cup" type="Node2D" parent="cup"]
+script = ExtResource("11_g78so")
+
+[node name="Polygon2D" type="Polygon2D" parent="cup/stuff_inside_cup"]
+clip_children = 1
+position = Vector2(-20.1944, -56.9581)
+scale = Vector2(0.997704, 0.997704)
+polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665.461, -50.7168, 677.345, 9.5094, 684.135, 69.7357, 670.554, 109.358, 641.695, 155.32, 380.264, 172.754, 290.291, 182.264, 251.246, 191.773, 241.06, 185.915, 226.928, 145.774, 203.155, 76.056, 194.51, -14.7888, 190.187, -90.3395, 193.527, -158.49, 207.108, -191.773, 227.479)
+
+[node name="toppings-5" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(-7.55016, 213.472)
+scale = Vector2(1.04942, 1.04942)
+
+[node name="toppings-4" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(4.53011, 267.261)
+scale = Vector2(-0.996138, 1.08427)
+
+[node name="toppings-3" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(-4.53011, 342.901)
+
+[node name="toppings-2" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(9.06022, 403.413)
+scale = Vector2(-0.88023, 1.01495)
+
+[node name="toppings-1" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(-4.5301, 485.776)
+scale = Vector2(0.911684, 0.93467)
+
+[node name="liquid_sprite" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
+position = Vector2(-137.324, 224.767)
+
+[node name="Lid" type="Sprite2D" parent="cup"]
+visible = false
+modulate = Color(1, 1, 1, 0.862745)
+z_index = 20
+position = Vector2(-39.1648, 225.512)
+scale = Vector2(0.658418, 0.608428)
+texture = ExtResource("12_m5u1c")
+
+[node name="cookies on tray" type="Node2D" parent="."]
+position = Vector2(328, 176)
+
+[node name="cookie1" type="Sprite2D" parent="cookies on tray"]
+position = Vector2(183.888, 529.547)
+scale = Vector2(0.259285, 0.283733)
+
+[node name="cookie2" type="Sprite2D" parent="cookies on tray"]
+position = Vector2(370.43, 518.226)
+rotation = 0.298138
+scale = Vector2(0.259285, 0.283733)
+
+[node name="cookie3" type="Sprite2D" parent="cookies on tray"]
+position = Vector2(255.027, 450.304)
+scale = Vector2(0.284308, 0.284308)
+
+[node name="cookie4" type="Sprite2D" parent="cookies on tray"]
+position = Vector2(318.262, 424.429)
+rotation = 0.558294
+scale = Vector2(0.258055, 0.277474)
+
+[node name="cookie5" type="Sprite2D" parent="cookies on tray"]
+position = Vector2(239.219, 361.358)
+rotation = -0.388033
+scale = Vector2(0.238093, 0.285194)
+skew = -0.0651635
+
 [connection signal="input_event" from="DiagArea" to="." method="_on_diag_area_input_event"]
+[connection signal="body_entered" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_entered"]
+[connection signal="body_exited" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_exited"]
+[connection signal="input_event" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_input_event"]

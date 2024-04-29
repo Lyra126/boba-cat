@@ -7,6 +7,7 @@ var OrderForm
 @onready var percentage_of_time
 var nextCustomerCalled = false
 
+
 var boba_options = ["Regular Boba"]
 var drink_options = ["Tea", "Coffee", "Juice"]
 var syrup_options = ["25% Sugar", "50% Sugar", "75% Sugar"]
@@ -16,6 +17,9 @@ var topping_options = ["Popping Boba Pearls", "Dalgona Chunks", "Fruit Jelly"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var randomIndex = randi() % global.allCustomers.size()
+	global.currCustomer = global.allCustomers[randomIndex]
+	$Customer.texture = global.get_customer_texture(global.currCustomer)
 	$Next.pressed.connect(self._on_next_pressed)
 	get_tree().paused = true
 	await get_tree().create_timer(1.0).timeout
@@ -48,11 +52,11 @@ func _process(delta):
 	if global.order != []:
 		$TextureButton.visible = true
 		
-	if global.dialogueCompleted:
+	if global.dialogueCompleted and not global.orderShown:
 		$order.visible = true
 		generate_order()
 		showOrder()
-		global.dialogueCompleted = false
+		global.orderShown = true
 		
 	if progress_bar.value == 100 and not nextCustomerCalled:
 		timer.stop()

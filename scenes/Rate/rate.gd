@@ -7,8 +7,11 @@ var selected_text = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Customer.texture = global.get_customer_texture(global.currCustomer)
 	await get_tree().create_timer(1.0).timeout
 	rateOrder()
+	global.dialogueCompleted = false
+	global.orderShown = false
 	#$Clear.visible = true
 	#await get_tree().create_timer(1.0).timeout
 	#get_tree().change_scene_to_file("res://scenes/customer_line/customer_line.tscn")
@@ -49,6 +52,7 @@ func checkOrder():
 		ordersMatch = true
 	else:
 		print("Arrays have different lengths, cannot compare elements.")
+
 	
 func showDialogue():
 	$Label.visible = true;
@@ -63,14 +67,10 @@ func showDialogue():
 		$Label.text = selected_text.pop_front()
 	get_tree().paused = false
 		
-	
-	
-
 
 func _on_diag_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-				await get_tree().create_timer(1.0).timeout
 				$Label.visible = false
 				$Clear.visible = true
 				await get_tree().create_timer(1.0).timeout

@@ -148,6 +148,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="close" type="TextureButton" parent="."]
 auto_translate_mode = 1
+visible = false
 z_index = 16
 offset_left = 248.83
 offset_top = -485.515

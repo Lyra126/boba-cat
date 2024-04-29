@@ -17,7 +17,10 @@ func _process(delta):
 
 
 func _on_submit_order_pressed():
-	get_tree().change_scene_to_file("res://scenes/Rate/rate.tscn")
+	if global.order != []:
+		get_tree().change_scene_to_file("res://scenes/Rate/rate.tscn")
+	else:
+		print("You haven't made their order yet!")
 
 
 func _on_back_pressed():

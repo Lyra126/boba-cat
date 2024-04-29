@@ -36,13 +36,14 @@ func finish():
 	global.dialogueCompleted = true
 		
 func display_dialogue(text_key):
-	if in_progress:
-		next_line()
-	else:
-		background.visible = true
-		in_progress = true
-		selected_text = scene_text[text_key].duplicate()
-		show_text()
+	if not global.dialogueCompleted:
+		if in_progress:
+			next_line()
+		else:
+			background.visible = true
+			in_progress = true
+			selected_text = scene_text[text_key].duplicate()
+			show_text()
 
 
 func _on_dialog_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
