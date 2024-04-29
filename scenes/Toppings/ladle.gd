@@ -125,6 +125,7 @@ func _input(event):
 					if toppings_station_global.toppings_layers < 5:
 						if popping_boba_ladle:
 							handle_layer(toppings_station_global.toppings_layers, poppingBoba_topping)
+							global.playerOrder.append("popping-boba")
 							global.toppings_inserted.append("poppingBoba")
 							global.topping_sprites.append("res://assets/toppings_station/assets/toppings-in-cup/popping-boba.png")
 							toppings_station_global.toppings_layers += 1
@@ -132,6 +133,7 @@ func _input(event):
 							sprite.set_texture(ladle)
 							
 						elif boba_pearls_ladle:
+							global.playerOrder.append("boba")
 							global.toppings_inserted.append("bobaBalls")
 							handle_layer(toppings_station_global.toppings_layers, boba_topping)
 							global.topping_sprites.append("res://assets/toppings_station/assets/toppings-in-cup/boba-pearls.png")
@@ -140,6 +142,7 @@ func _input(event):
 							sprite.set_texture(ladle)
 							
 						elif dalgona_ladle:
+							global.playerOrder.append("dalgona-chunks")
 							global.toppings_inserted.append("dalgonaChunks")
 							handle_layer(toppings_station_global.toppings_layers, dalgona_topping)
 							global.topping_sprites.append("res://assets/toppings_station/assets/toppings-in-cup/dalgona-chunks.png")
@@ -148,6 +151,7 @@ func _input(event):
 							sprite.set_texture(ladle)
 							
 						elif fruit_jelly_ladle:
+							global.playerOrder.append("fruit-jelly")
 							global.toppings_inserted.append("fruitJelly")
 							handle_layer(toppings_station_global.toppings_layers, fruitJelly_topping)
 							toppings_station_global.toppings_layers += 1
@@ -156,6 +160,7 @@ func _input(event):
 							sprite.set_texture(ladle)
 							
 						elif strawberries_ladle:
+							global.playerOrder.append("strawberries")
 							global.toppings_inserted.append("strawberrySlices")
 							handle_layer(toppings_station_global.toppings_layers, strawberrySlices_topping)
 							toppings_station_global.toppings_layers += 1

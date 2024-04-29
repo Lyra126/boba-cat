@@ -56,6 +56,7 @@ func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 				$Cup.visible = false
 				global.hasCup = false
 				global.reset_drink()
+				global.playerOrder = []
 
 func _on_close_pressed() -> void:
 	print("test")
@@ -70,7 +71,6 @@ func _on_texture_button_pressed() -> void:
 	var orderText = ""
 	for item in global.order:
 		orderText += str(item) + "\n"
-	print(orderText)
 	$OrderForm/Label.visible = true
 	$OrderForm/Label.set_text(orderText)
 

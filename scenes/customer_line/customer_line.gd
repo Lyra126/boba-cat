@@ -8,11 +8,10 @@ var OrderForm
 var nextCustomerCalled = false
 
 
-var boba_options = ["Regular Boba"]
-var drink_options = ["Tea", "Coffee", "Juice"]
-var syrup_options = ["25% Sugar", "50% Sugar", "75% Sugar"]
-var milk_options = ["Oat Milk", "Almond Milk", "Regular Milk"]
-var topping_options = ["Popping Boba Pearls", "Dalgona Chunks", "Fruit Jelly"]
+var drink_options = ["tea", "coffee", "smoothie"]
+var syrup_options = ["sugar-25", "sugar-50", "sugar-75", "sugar-100"]
+var milk_options = ["oat-milk", "almond-milk", "cow-milk"]
+var topping_options = ["boba", "popping-boba", "dalgona-chunks", "fruit-jelly", "strawberries"]
 
 
 # Called when the node enters the scene tree for the first time.
@@ -85,15 +84,14 @@ func nextCustomer():
 	nextCustomerCalled = false
 
 func generate_order():
-	var boba = boba_options[randi() % boba_options.size()]
 	var drink = drink_options[randi() % drink_options.size()]
-	var syrup = syrup_options[randi() % syrup_options.size()]
 	var milk = milk_options[randi() % milk_options.size()]
+	var syrup = syrup_options[randi() % syrup_options.size()]
 	var topping = topping_options[randi() % topping_options.size()]
 
-	global.order = [boba, drink, syrup, milk, topping]
+	global.order = [topping, drink, milk, syrup]
 	# Print the order (you can replace this with your order processing logic)
-	print("Customer ordered:", boba, drink, syrup, milk, "with", topping)
+	print("Customer ordered: ", drink, ", ", milk, ", ",syrup, ", with ", topping)
 	
 func showOrder():
 	$order.visible = true
@@ -121,6 +119,5 @@ func _on_texture_button_pressed() -> void:
 	var orderText = ""
 	for item in global.order:
 		orderText += str(item) + "\n"
-	print(orderText)
 	$order/Label.visible = true
 	$order/Label.set_text(orderText)

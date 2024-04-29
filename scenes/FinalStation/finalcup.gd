@@ -9,7 +9,6 @@ var target_position
 var overlapMachine
 var finalStation
 var original_position
-var hasLid
 var tray_droppable
 var cup_down
 
@@ -67,19 +66,9 @@ func addLid():
 	$"../lid machine/lid machine normal sprite".show()
 	$".".position.y = $".".position.y + 120
 	$Lid.visible = true
-	hasLid = true
+	global.hasLid = true
 	scale = Vector2(0.60, 0.60)
 	pass
-
-#func _on_initial_pos_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	#if event is InputEventMouseButton:
-		#if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			#if selected and hasLid:
-				##selected = false
-		#
-				#$".".position.x = $"../InitialPos".position.x
-				#$".".position.y = $"../InitialPos".position.y-310
-
 
 func _on_cup_pick_up_body_entered(body: Node2D) -> void:
 	if body.is_in_group('tray'):

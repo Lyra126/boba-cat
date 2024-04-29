@@ -5,7 +5,7 @@ extends Node2D
 @onready var syrup_still = $syrupSprite
 @onready var syrup_position = $"../sugar_syrup_droppable"
 @onready var particle = $sugar_particle
-var syrupLevels = ["syrup", "syrup-25", "syrup-50", "syrup-75", "syrup-100"]
+var syrupLevels = ["sugar", "sugar-25", "sugar-50", "sugar-75", "sugar-100"]
 
 var selected
 var offset = Vector2.ZERO
@@ -43,7 +43,7 @@ func _input(event):
 					syrup_down.play('default')
 
 					if not syrupAdded:
-						global.playerOrder.append("syrup-25")
+						global.playerOrder.append("sugar-25")
 						syrupAdded = true
 						print("level = 25")
 						syrup_down.show()
@@ -54,27 +54,27 @@ func _input(event):
 						for syrupLevel in syrupLevels:
 							syrupIndex = global.playerOrder.find(syrupLevel)
 							if syrupIndex != -1:
-								if(syrupLevel) == "syrup-25":
+								if(syrupLevel) == "sugar-25":
 									global.playerOrder.remove_at(syrupIndex)
-									global.playerOrder.append("syrup-50")
+									global.playerOrder.append("sugar-50")
 									print("level = 50")
 									syrup_down.show()
 									syrup_down.play("default")
-								elif(syrupLevel) == "syrup-50":
+								elif(syrupLevel) == "sugar-50":
 									global.playerOrder.remove_at(syrupIndex)
-									global.playerOrder.append("syrup-75")
+									global.playerOrder.append("sugar-75")
 									print("level = 75")
 									syrup_down.show()
 									syrup_down.play("default")
-								elif(syrupLevel) == "syrup-75":
+								elif(syrupLevel) == "sugar-75":
 									global.playerOrder.remove_at(syrupIndex)
-									global.playerOrder.append("syrup-100")
+									global.playerOrder.append("sugar-100")
 									print("level = 100")
 									syrup_down.show()
 									syrup_down.play("default")
 									syrup_level_max = true
 									#syrup_down.play("default")
-								elif(syrupLevel) == "syrup-100":
+								elif(syrupLevel) == "sugar-100":
 									syrup_down.show()
 									syrup_down.play("default")
 								break

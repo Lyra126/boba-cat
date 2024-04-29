@@ -7,15 +7,19 @@ var selected_text = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if(global.hasLid):
+		$cup/Lid.visible = true
 	$Customer.texture = global.get_customer_texture(global.currCustomer)
 	await get_tree().create_timer(1.0).timeout
 	rateOrder()
+	
+func reset():
 	global.dialogueCompleted = false
 	global.orderShown = false
-	#$Clear.visible = true
-	#await get_tree().create_timer(1.0).timeout
-	#get_tree().change_scene_to_file("res://scenes/customer_line/customer_line.tscn")
-	
+	global.hasCup = false
+	global.reset_drink()
+	global.playerOrder = []
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,8 +33,11 @@ func rateOrder():
 	await get_tree().create_timer(1.0).timeout
 	scene_text = load_scene_text()
 	$Notif.visible = true
+	var orderRating = checkOrder()
+	print(orderRating)
+	rating.value = orderRating
 	showDialogue()
-	rating.value = 50
+	reset()
 	
 	
 	
@@ -42,27 +49,32 @@ func load_scene_text():
 		return (json_as_dict)
 		
 		
-func checkOrder():
-	var ordersMatch = false
+func checkOrder() -> int:
+	var matchingComponents = 0
 	print("checking if player made order correctly...")
-	if len(global.order) == len(global.playerOrder):
-		for i in range(len(global.order)):
-			if global.order[i] != global.playerOrder[i]:
-				return
-		ordersMatch = true
+	print("Player made: ", global.playerOrder)
+	print("Order was: ", global.order)
+	for playerItem in global.playerOrder:
+		if playerItem in global.order:
+			matchingComponents += 1
+	print(matchingComponents)
+	if global.hasLid:
+		return int(float(matchingComponents) / len(global.order) * 100)
 	else:
-		print("Arrays have different lengths, cannot compare elements.")
+		# Subtract 30 percents if missing lid
+		return int(float(matchingComponents) / len(global.order) * 100 - 30)
+
 
 	
 func showDialogue():
 	$Label.visible = true;
-	if $Rating.value <= 30 and $Rating.value >= 0:
+	if rating.value <= 30 and rating.value >= 0:
 		selected_text = scene_text["bad"].duplicate()
 		$Label.text = selected_text.pop_front()
-	elif $Rating.value <= 60 and $Rating.value > 30:
+	elif rating.value <= 60 and rating.value > 30:
 		selected_text = scene_text["good"].duplicate()
 		$Label.text = selected_text.pop_front()
-	elif $Rating.value <= 100 and $Rating.value > 60:
+	elif rating.value <= 100 and rating.value > 60:
 		selected_text = scene_text["excellent"].duplicate()
 		$Label.text = selected_text.pop_front()
 	get_tree().paused = false

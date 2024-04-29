@@ -33,6 +33,7 @@ var liquids_poured = []
 var syrups_poured = []
 var desserts_picked = []
 var hasCup = false
+var hasLid = false
 var topping_sprites = []
 var cookies_added = []
 var cookies_sprites = []
