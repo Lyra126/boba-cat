@@ -1,4 +1,4 @@
-[gd_scene load_steps=381 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=383 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
@@ -360,6 +360,8 @@
 [ext_resource type="Texture2D" uid="uid://c8d5vphoajw5q" path="res://assets/buttons/normalClose.png" id="354_3wj6e"]
 [ext_resource type="Texture2D" uid="uid://c5xubj61n6qem" path="res://assets/buttons/pressedClose.png" id="355_qd2hn"]
 [ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="356_8sbse"]
+[ext_resource type="AudioStream" uid="uid://jyl62k2pxvwo" path="res://assets/audio/firstLiquid.mp3" id="361_6y4l1"]
+[ext_resource type="AudioStream" uid="uid://d1y3ijknx00yo" path="res://assets/audio/secondLiquid.mp3" id="362_42ipl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bh2m"]
 size = Vector2(253.707, 204.515)
@@ -2249,6 +2251,12 @@ scale = Vector2(1, 0.998819)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="trash/trash"]
 position = Vector2(-8.56171, -17.5938)
 shape = SubResource("RectangleShape2D_l5jj6")
+
+[node name="liquid1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("361_6y4l1")
+
+[node name="liquid2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("362_42ipl")
 
 [connection signal="body_entered" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_entered"]
 [connection signal="body_exited" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_exited"]

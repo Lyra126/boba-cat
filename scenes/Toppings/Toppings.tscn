@@ -41,7 +41,7 @@ position = Vector2(800, 448)
 scale = Vector2(0.907088, 0.814889)
 script = ExtResource("1_ykgei")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="pickToppingAudio" type="AudioStreamPlayer2D" parent="."]
 scale = Vector2(1, 1)
 stream = ExtResource("26_17rix")
 
