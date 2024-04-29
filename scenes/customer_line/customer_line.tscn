@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c77yg5d4yjufk"]
+[gd_scene load_steps=22 format=3 uid="uid://c77yg5d4yjufk"]
 
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
 [ext_resource type="Texture2D" uid="uid://mt3wkqwq7v4" path="res://assets/cutomer_line/customerline_bg.png" id="2_0iumo"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scenes/customer_line/Sprite2D.gd" id="6_qt0fo"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="7_t5lrs"]
 [ext_resource type="Texture2D" uid="uid://no2v4pbnhq8s" path="res://assets/cats/cat1.png" id="8_4iu0w"]
+[ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="9_w6uy6"]
 [ext_resource type="Texture2D" uid="uid://0mex1upu8hmv" path="res://assets/cutomer_line/empty.png" id="9_ycdsr"]
 [ext_resource type="Texture2D" uid="uid://d3xsx378u0t3q" path="res://assets/buttons/orderPaper.png" id="10_8a3xe"]
 [ext_resource type="Texture2D" uid="uid://diri1mm8pslx5" path="res://assets/cutomer_line/overlayCustomerLine.png" id="10_g66uf"]
@@ -75,14 +76,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TextLabel" parent="DialoguePlayer" index="1"]
 anchor_left = 0.12925
-anchor_bottom = 0.282
+anchor_top = 0.0884444
+anchor_bottom = 0.315333
 offset_left = 37.2
-offset_top = 41.4
+offset_top = 28.4
 offset_right = 79.8
-offset_bottom = -15.8
+offset_bottom = -28.8
 theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0.985527, 0.988698, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("9_w6uy6")
+theme_override_font_sizes/font_size = 55
 horizontal_alignment = 1
-autowrap_mode = 2
+vertical_alignment = 1
+autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="DialogArea" type="Area2D" parent="DialoguePlayer"]
@@ -117,9 +125,14 @@ offset_left = -309.0
 offset_top = -350.0
 offset_right = 352.0
 offset_bottom = 457.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 45
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("9_w6uy6")
+theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="Next" type="TextureButton" parent="."]

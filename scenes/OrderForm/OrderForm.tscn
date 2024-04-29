@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bk2yy2qaah4pg"]
+[gd_scene load_steps=3 format=3 uid="uid://bk2yy2qaah4pg"]
 
 [ext_resource type="Script" path="res://scenes/OrderForm/OrderForm.gd" id="1_yiyrc"]
+[ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="2_lgool"]
 
 [node name="OrderForm" type="Node2D"]
 position = Vector2(304, 240)
@@ -18,3 +19,11 @@ offset_left = -281.0
 offset_top = -209.0
 offset_right = -106.0
 offset_bottom = -2.0
+theme_override_colors/font_color = Color(0.986752, 0.986752, 0.986752, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_lgool")
+theme_override_font_sizes/font_size = 55
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

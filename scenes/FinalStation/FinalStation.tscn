@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://ceqg4sr663xx2"]
+[gd_scene load_steps=43 format=3 uid="uid://ceqg4sr663xx2"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://b2e4xjp33bts3" path="res://assets/final_station/final-bg.png" id="2_h5y2t"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://0edy7rqaln65" path="res://assets/final_station/test.png" id="3_xkumw"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
 [ext_resource type="Texture2D" uid="uid://658y711o0e5o" path="res://assets/final_station/cookie_cat.png" id="4_ij11g"]
+[ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="4_jqbhk"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_gn2qx"]
 [ext_resource type="Texture2D" uid="uid://ob70xcok41yy" path="res://assets/final_station/choco_cookie.png" id="5_wa4pf"]
 [ext_resource type="Script" path="res://scenes/FinalStation/cookie.gd" id="6_dke8q"]
@@ -105,9 +106,14 @@ offset_left = -309.0
 offset_top = -350.0
 offset_right = 352.0
 offset_bottom = 457.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 45
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("4_jqbhk")
+theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="tongs_closed_place" type="StaticBody2D" parent="."]
 position = Vector2(-3.16173, 0)

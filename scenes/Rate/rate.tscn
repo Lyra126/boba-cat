@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dwtjyl3dll2e1"]
+[gd_scene load_steps=16 format=3 uid="uid://dwtjyl3dll2e1"]
 
 [ext_resource type="Script" path="res://scenes/Rate/rate.gd" id="1_6u8ji"]
 [ext_resource type="Texture2D" uid="uid://dxrasnos0pmau" path="res://assets/rate/rate.png" id="2_v238p"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://decqfronbg1e3" path="res://assets/rate/fullStars.png" id="5_fudmb"]
 [ext_resource type="Texture2D" uid="uid://b88ek1qkts6hn" path="res://assets/cutomer_line/dialogue.png" id="6_f8gjd"]
 [ext_resource type="Texture2D" uid="uid://c7cre5rll2or2" path="res://assets/rate/overlayTray.png" id="7_4k1jg"]
+[ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="7_lsw0c"]
 [ext_resource type="Script" path="res://scenes/FinalStation/finalcup.gd" id="8_i1btk"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="9_lfoyv"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="10_me8f5"]
@@ -73,23 +74,35 @@ texture = ExtResource("6_f8gjd")
 
 [node name="Clear" type="Label" parent="."]
 visible = false
-offset_left = 808.0
+offset_left = 864.0
 offset_top = 80.0
-offset_right = 1111.0
-offset_bottom = 217.0
-scale = Vector2(1.96237, 1.23365)
+offset_right = 1198.0
+offset_bottom = 248.0
+scale = Vector2(1.33964, 0.999813)
 theme_type_variation = &"HeaderLarge"
-theme_override_font_sizes/font_size = 100
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("7_lsw0c")
+theme_override_font_sizes/font_size = 150
 text = "CLEAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Label" type="Label" parent="."]
 visible = false
 offset_left = 672.0
-offset_top = 88.0
-offset_right = 1520.0
-offset_bottom = 248.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+offset_top = 96.0
+offset_right = 1528.0
+offset_bottom = 264.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_lsw0c")
+theme_override_font_sizes/font_size = 55
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="DiagArea" type="Area2D" parent="."]
