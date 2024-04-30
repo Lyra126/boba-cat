@@ -5,8 +5,13 @@ var scene_text = {}
 var selected_text = []
 @export_file("*.json") var scene_text_file
 
+var straw_p = preload("res://assets/final_station/straw_p.png")
+var straw_y = preload("res://assets/final_station/straw_y.png")
+var straw_g = preload("res://assets/final_station/straw_g.png")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	get_straw()
 	if(global.hasLid):
 		$cup/Lid.visible = true
 	$Customer.texture = global.get_customer_texture(global.currCustomer)
@@ -19,8 +24,6 @@ func reset():
 	global.hasCup = false
 	global.reset_drink()
 	global.playerOrder = []
-
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -64,7 +67,6 @@ func checkOrder() -> int:
 		# Subtract 30 percents if missing lid
 		return int(float(matchingComponents) / len(global.order) * 100 - 30)
 
-
 	
 func showDialogue():
 	$Label.visible = true;
@@ -81,12 +83,22 @@ func showDialogue():
 		
 
 func _on_diag_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-		if event is InputEventMouseButton:
-			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-				$Label.visible = false
-				$Clear.visible = true
-				await get_tree().create_timer(1.0).timeout
-				$Notif.visible = false
-				$Clear.visible = false
-				get_tree().change_scene_to_file("res://scenes/customer_line/customer_line.tscn")
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			$Label.visible = false
+			$Clear.visible = true
+			await get_tree().create_timer(1.0).timeout
+			$Notif.visible = false
+			$Clear.visible = false
+			get_tree().change_scene_to_file("res://scenes/customer_line/customer_line.tscn")
 
+func get_straw():
+	if global.straw_sprite == 'pink straw':
+		$"cookies on tray/straw".show()
+		$"cookies on tray/straw".set_texture(straw_p)
+	elif global.straw_sprite == 'yellow straw':
+		$"cookies on tray/straw".show()
+		$"cookies on tray/straw".set_texture(straw_y)
+	elif global.straw_sprite == 'green straw':
+		$"cookies on tray/straw".show()
+		$"cookies on tray/straw".set_texture(straw_g)

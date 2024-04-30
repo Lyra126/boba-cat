@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://d3uxtyc6i7orl"]
+[gd_scene load_steps=44 format=3 uid="uid://d3uxtyc6i7orl"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://b2e4xjp33bts3" path="res://assets/final_station/final-bg.png" id="2_h5y2t"]
@@ -12,7 +12,6 @@
 [ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="4_jqbhk"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_gn2qx"]
 [ext_resource type="Texture2D" uid="uid://ob70xcok41yy" path="res://assets/final_station/choco_cookie.png" id="5_wa4pf"]
-[ext_resource type="Script" path="res://scenes/FinalStation/cookie.gd" id="6_dke8q"]
 [ext_resource type="Texture2D" uid="uid://2cogrigjf03b" path="res://assets/final_station/sugar_cookie.png" id="6_qx2ym"]
 [ext_resource type="Script" path="res://scenes/Toppings/liquid_inside_cup.gd" id="7_e7diu"]
 [ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/buttons/normalBack.png" id="7_qudjk"]
@@ -37,14 +36,15 @@
 [ext_resource type="Texture2D" uid="uid://c8d5vphoajw5q" path="res://assets/buttons/normalClose.png" id="33_td8ja"]
 [ext_resource type="Texture2D" uid="uid://c5xubj61n6qem" path="res://assets/buttons/pressedClose.png" id="34_hsdpk"]
 [ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="35_23xwa"]
+[ext_resource type="Script" path="res://scenes/FinalStation/stuff_on_tray.gd" id="36_8comx"]
+[ext_resource type="Texture2D" uid="uid://c3khs7734oh3m" path="res://assets/final_station/straw_p.png" id="37_vpufv"]
+[ext_resource type="Texture2D" uid="uid://c4uhdiq1aj0ga" path="res://assets/final_station/straw_container.png" id="38_ul6ud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4t4gr"]
 size = Vector2(373.342, 105.414)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3fie"]
 size = Vector2(244.5, 519.119)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a53br"]
 
 [sub_resource type="GDScript" id="GDScript_14f8c"]
 script/source = "extends StaticBody2D
@@ -116,7 +116,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="tongs_closed_place" type="StaticBody2D" parent="."]
-position = Vector2(-3.16173, 0)
+position = Vector2(-28.8421, 2.83029)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tongs_closed_place"]
 z_index = 1
@@ -124,6 +124,7 @@ position = Vector2(-135.954, -520.737)
 shape = SubResource("RectangleShape2D_4t4gr")
 
 [node name="tongs" type="Node2D" parent="."]
+position = Vector2(-25.6803, 2.83029)
 script = ExtResource("2_xn26s")
 
 [node name="tongs img" type="Sprite2D" parent="tongs"]
@@ -148,7 +149,7 @@ position = Vector2(-90.0156, 33.1561)
 polygon = PackedVector2Array(-427.474, 86.6188, -404.565, 92.7648, -86.0088, 333.778, 19.5005, 342.834, 46.8289, 293.182, -17.7544, 252.371, -294.666, 37.2461, -354.187, 55.4576)
 
 [node name="case" type="Sprite2D" parent="."]
-position = Vector2(-99.5946, -187.595)
+position = Vector2(-125.275, -184.765)
 scale = Vector2(0.584151, 0.580784)
 texture = ExtResource("3_xkumw")
 
@@ -325,13 +326,6 @@ scale = Vector2(0.85105, 1.1066)
 build_mode = 1
 polygon = PackedVector2Array(-1734.69, -667.734, -1478.18, -768.636, 1512.96, -768.636, 1739.03, -661.798, 1695.56, 727.087, 1004.29, 694.443, -113.037, 694.443, -117.385, 296.77, -921.688, 270.061, -952.121, 302.706, -995.597, 359.092, -952.121, 715.216, -1695.56, 730.055, -1730.34, -641.024)
 
-[node name="cookie" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(55.3303, 48.5158)
-scale = Vector2(0.167166, 0.157229)
-texture = SubResource("CompressedTexture2D_a53br")
-script = ExtResource("6_dke8q")
-
 [node name="cup_spot" type="StaticBody2D" parent="." groups=["cup_drop", "droppable"]]
 visible = false
 position = Vector2(-105, 88)
@@ -462,35 +456,43 @@ texture_normal = ExtResource("33_td8ja")
 texture_pressed = ExtResource("34_hsdpk")
 texture_hover = ExtResource("35_23xwa")
 
-[node name="cookies on tray" type="Node2D" parent="."]
+[node name="stuff on tray" type="Node2D" parent="."]
+script = ExtResource("36_8comx")
 
-[node name="cookie1" type="Sprite2D" parent="cookies on tray"]
+[node name="cookie1" type="Sprite2D" parent="stuff on tray"]
 position = Vector2(183.888, 529.547)
 scale = Vector2(0.259285, 0.283733)
 
-[node name="cookie2" type="Sprite2D" parent="cookies on tray"]
+[node name="cookie2" type="Sprite2D" parent="stuff on tray"]
 position = Vector2(370.43, 518.226)
 rotation = 0.298138
 scale = Vector2(0.259285, 0.283733)
 
-[node name="cookie3" type="Sprite2D" parent="cookies on tray"]
+[node name="cookie3" type="Sprite2D" parent="stuff on tray"]
 position = Vector2(255.027, 450.304)
 scale = Vector2(0.284308, 0.284308)
 
-[node name="cookie4" type="Sprite2D" parent="cookies on tray"]
+[node name="cookie4" type="Sprite2D" parent="stuff on tray"]
 position = Vector2(318.262, 424.429)
 rotation = 0.558294
 scale = Vector2(0.258055, 0.277474)
 
-[node name="cookie5" type="Sprite2D" parent="cookies on tray"]
+[node name="cookie5" type="Sprite2D" parent="stuff on tray"]
 position = Vector2(239.219, 361.358)
 rotation = -0.388033
 scale = Vector2(0.238093, 0.285194)
 skew = -0.0651635
 
+[node name="straw" type="Sprite2D" parent="stuff on tray"]
+z_index = 30
+position = Vector2(102.756, 588.659)
+rotation = 0.0292632
+scale = Vector2(0.364012, 0.340707)
+texture = ExtResource("37_vpufv")
+
 [node name="trash" type="Sprite2D" parent="."]
-position = Vector2(605.471, 87.3285)
-scale = Vector2(0.21752, 0.219043)
+position = Vector2(-880.542, 609.682)
+scale = Vector2(0.111106, 0.111884)
 texture = ExtResource("33_kkjyx")
 
 [node name="trash" type="Area2D" parent="trash"]
@@ -500,12 +502,21 @@ scale = Vector2(1, 0.998819)
 position = Vector2(-8.56171, -17.5938)
 shape = SubResource("RectangleShape2D_kxnaj")
 
+[node name="straw_container" type="Sprite2D" parent="."]
+position = Vector2(607.052, 9.70317)
+scale = Vector2(0.511331, 0.511331)
+texture = ExtResource("38_ul6ud")
+
+[node name="straw area" type="Area2D" parent="straw_container"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="straw_container/straw area"]
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(-68.5, -730.6, -68.5, -728.7, -60.1, -718.6, -53.5, -728, -48, -728, -44.5, -726.2, -44.5, -724.7, -28.9, -704.5, -22.4, -712, -19.9, -712, -12.5, -713.4, -12.5, -710.6, -0.400024, -691, 8.70001, -700, 14.3, -700, 19.5, -694.8, 19.5, -689, 33, -570.8, 40.7, -643, 42.1, -643, 45.1, -651, 52.3, -651, 60.3, -643.8, 74.5, -664, 79.3, -664, 87.8, -656.3, 104.5, -677, 112.7, -677, 117.6, -668.1, 127.5, -681, 133.2, -681, 138.5, -677, 138.5, -674.4, 140.6, -668.8, 148.7, -676, 156.3, -676, 160.5, -671.8, 160.5, -668.9, 153.1, -590.4, 155.4, -594, 158.1, -594, 165.5, -595.4, 165.5, -593, 170.5, -589, 170.5, -586.5, 180.3, -569.5, 188.7, -577, 194, -577, 197.5, -575.2, 197.5, -573.5, 207.5, -552.6, 215.7, -560, 221.2, -560, 226.5, -556, 226.5, -350, 225.5, -350, 222.7, -234, 258.1, -340, 259.1, -340, 284.1, -404, 285.5, -404, 290.5, -411, 298.3, -411, 304.5, -404.8, 304.5, -401.4, 305.7, -398.5, 313.4, -411, 316.1, -411, 323.5, -412.4, 323.5, -410, 327.5, -407, 327.5, -404, 334, -377.1, 345.5, -378.2, 345.5, -375.8, 350.5, -370.8, 350.5, -354, 361.5, -355.2, 361.5, -352.8, 367.5, -346.8, 367.5, -342.7, 363.1, -327, 375.5, -328.2, 375.5, -325.7, 380.9, -319.3, 379.8, -317, 378.8, -317, 273.5, -65.7, 273.5, -56, 270.5, 457, 269.5, 457, 269.5, 469, 267.8, 469, 264.8, 476, 263.1, 476, 233.1, 496, 229.9, 496, 181.8, 513, 176.9, 513, 113.7, 525, 102.7, 525, 49.6, 530, -120.5, 530, -120.5, 528.9, -184.5, 524.9, -184.5, 523.8, -219.5, 519.8, -219.5, 518.7, -270.5, 507.6, -270.5, 506.4, -303.5, 495.4, -303.5, 494.1, -332.5, 477.1, -332.5, 475.7, -338.5, 467.7, -338.5, 412, -339.5, 412, -339.5, 409, -337.5, 300, -338.5, 300, -340.5, -64, -409.5, -242.6, -409.5, -245.7, -455.5, -385.7, -455.5, -395, -453.5, -395, -450.5, -399, -447.6, -399, -441.5, -400.6, -441.5, -398.4, -435.7, -396.1, -437.8, -412, -435.1, -412, -427.7, -417.3, -425.5, -416.2, -425.5, -415, -400.3, -396.3, -394.5, -404, -386.5, -404, -386.5, -401.9, -373.6, -388, -369.6, -394, -366.8, -394, -357.5, -395.3, -357.5, -392.9, -351.5, -387.9, -351.5, -384.5, -345.7, -373.8, -338.4, -382, -333.8, -382, -327.5, -377, -327.5, -373.3, -315.7, -335.1, -313.2, -337, -308.3, -337, -302.5, -335.5, -302.5, -340, -304.8, -358, -302.3, -358, -297.3, -363, -290.1, -363, -287.5, -362, -287.5, -377.7, -281.4, -385, -270.9, -385, -270.5, -384.7, -270.5, -385.3, -264, -410, -262.6, -410, -257.6, -418, -251.4, -418, -241.5, -403.4, -238.9, -411, -237.5, -411, -234.5, -415, -231.6, -415, -225.5, -416.6, -225.5, -414, -220.5, -410, -220.5, -406.4, -196.5, -341.4, -196.5, -337.3, -176.5, -276.3, -176.5, -272, -154.5, -194.3, -154.5, -214, -158.5, -323, -158.5, -517, -155.8, -517, -146.5, -521, -146.5, -518, -140.4, -513.7, -128.7, -536, -122.8, -536, -114.4, -529.3, -99.6, -553, -92.5, -553, -86.6, -545.2, -85.5, -547.5, -85.5, -550, -105.7, -723, -103.5, -723, -100.5, -727, -91.5, -727, -91.5, -725.1, -84.5, -720.7, -77.5, -729.7, -77.5, -732.4)
+
 [connection signal="input_event" from="tongs/tongs img/grab tongs" to="tongs" method="_on_area_2d_input_event"]
 [connection signal="body_entered" from="tongs/tongs img/tongs grab area" to="tongs" method="_on_tongs_grab_area_body_entered"]
 [connection signal="body_exited" from="tongs/tongs img/tongs grab area" to="tongs" method="_on_tongs_grab_area_body_exited"]
 [connection signal="input_event" from="AttachLid" to="cup" method="_on_attach_lid_input_event"]
-[connection signal="input_event" from="Area2D" to="cookie" method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="Area2D" to="cookie" method="_on_area_2d_mouse_entered"]
 [connection signal="body_entered" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_entered"]
 [connection signal="body_exited" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_exited"]
 [connection signal="input_event" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_input_event"]
@@ -515,5 +526,7 @@ shape = SubResource("RectangleShape2D_kxnaj")
 [connection signal="pressed" from="close" to="." method="_on_close_pressed"]
 [connection signal="input_event" from="trash/trash" to="." method="_on_trash_input_event"]
 [connection signal="input_event" from="trash/trash" to="tongs" method="_on_trash_input_event"]
+[connection signal="input_event" from="trash/trash" to="stuff on tray" method="_on_trash_input_event"]
 [connection signal="mouse_entered" from="trash/trash" to="." method="_on_trash_mouse_entered"]
 [connection signal="mouse_exited" from="trash/trash" to="." method="_on_trash_mouse_exited"]
+[connection signal="input_event" from="straw_container/straw area" to="stuff on tray" method="_on_straw_area_input_event"]

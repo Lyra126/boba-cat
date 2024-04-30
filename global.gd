@@ -42,6 +42,8 @@ var topping_sprite
 var toppings_sprites
 var cookie_sprite
 var cookie_sprites_locations
+var hasStraw
+var straw_sprite
 
 func _process(delta):
 	pass
@@ -230,4 +232,6 @@ func reset_drink():
 	hasLid = false
 	cookies_added.resize(0)
 	final_station_global.cookie_layers = 0
+	hasStraw = false
+	straw_sprite = null
 	#toppings_sprites.texture = null

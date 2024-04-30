@@ -2,11 +2,11 @@ extends Node2D
 
 @onready var tongs_place = $"../tongs_closed_place"
 @onready var tongs_sprite = $"tongs img"
-@onready var c1 = $"../cookies on tray/cookie1"
-@onready var c2 = $"../cookies on tray/cookie2"
-@onready var c3 = $"../cookies on tray/cookie3"
-@onready var c4 = $"../cookies on tray/cookie4"
-@onready var c5 = $"../cookies on tray/cookie5"
+@onready var c1 = $"../stuff on tray/cookie1"
+@onready var c2 = $"../stuff on tray/cookie2"
+@onready var c3 = $"../stuff on tray/cookie3"
+@onready var c4 = $"../stuff on tray/cookie4"
+@onready var c5 = $"../stuff on tray/cookie5"
 
 var cat_cookie_sprite = preload("res://assets/final_station/cookie_cat.png")
 var sugar_cookie_sprite = preload("res://assets/final_station/sugar_cookie.png")

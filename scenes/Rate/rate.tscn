@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dwtjyl3dll2e1"]
+[gd_scene load_steps=17 format=3 uid="uid://dwtjyl3dll2e1"]
 
 [ext_resource type="Script" path="res://scenes/Rate/rate.gd" id="1_6u8ji"]
 [ext_resource type="Texture2D" uid="uid://dxrasnos0pmau" path="res://assets/rate/rate.png" id="2_v238p"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="10_me8f5"]
 [ext_resource type="Script" path="res://scenes/Toppings/liquid_inside_cup.gd" id="11_g78so"]
 [ext_resource type="Texture2D" uid="uid://cjp3by1d0qdyk" path="res://assets/final_station/lid.png" id="12_m5u1c"]
+[ext_resource type="Texture2D" uid="uid://c3khs7734oh3m" path="res://assets/final_station/straw_p.png" id="14_hnpyh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vdxh8"]
 radius = 167.547
@@ -230,6 +231,14 @@ position = Vector2(285.078, 359.988)
 rotation = -0.388033
 scale = Vector2(0.2, 0.219)
 skew = -0.0651635
+
+[node name="straw" type="Sprite2D" parent="cookies on tray"]
+visible = false
+z_index = 10
+position = Vector2(213.391, 571.706)
+rotation = 0.0169261
+scale = Vector2(0.361315, 0.303499)
+texture = ExtResource("14_hnpyh")
 
 [connection signal="input_event" from="DiagArea" to="." method="_on_diag_area_input_event"]
 [connection signal="body_entered" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_entered"]
