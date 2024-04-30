@@ -40,6 +40,7 @@ func display_dialogue(text_key):
 		if in_progress:
 			next_line()
 		else:
+			$"../meow".play()
 			background.visible = true
 			in_progress = true
 			selected_text = scene_text[text_key].duplicate()

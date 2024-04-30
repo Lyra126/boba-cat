@@ -39,6 +39,7 @@ func rateOrder():
 	var orderRating = checkOrder()
 	print(orderRating)
 	rating.value = orderRating
+	$meow.play()
 	showDialogue()
 	reset()
 	
