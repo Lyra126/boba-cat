@@ -12,7 +12,7 @@ var drink_options = ["tea", "coffee", "smoothie"]
 var syrup_options = ["sugar-25", "sugar-50", "sugar-75", "sugar-100"]
 var milk_options = ["oat-milk", "almond-milk", "cow-milk"]
 var topping_options = ["boba", "popping-boba", "dalgona-chunks", "fruit-jelly", "strawberries"]
-
+var cookie_options = ["chocolate-cookie", "sugar-cookie", "cat-cookie"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -43,7 +43,8 @@ func move_customer():
 
 
 func _on_next_pressed():
-	get_tree().change_scene_to_file("res://scenes/Toppings/Toppings.tscn")
+	if global.dialogueCompleted and $Customer/TextureProgressBar.visible:
+		get_tree().change_scene_to_file("res://scenes/Toppings/Toppings.tscn")
 
 	
 	
@@ -88,10 +89,14 @@ func generate_order():
 	var milk = milk_options[randi() % milk_options.size()]
 	var syrup = syrup_options[randi() % syrup_options.size()]
 	var topping = topping_options[randi() % topping_options.size()]
-
 	global.order = [topping, drink, milk, syrup]
-	# Print the order (you can replace this with your order processing logic)
-	print("Customer ordered: ", drink, ", ", milk, ", ",syrup, ", with ", topping)
+	
+	var num_cookies = randi() % 6
+	print("num cookies:", num_cookies)
+	for i in range(num_cookies):
+		var cookie = cookie_options[randi() % cookie_options.size()]
+		global.order.append(cookie)
+	print(global.order)
 	
 func showOrder():
 	$order.visible = true
