@@ -254,23 +254,6 @@ func _on_scoopable_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group('boba_balls'):
 		boba_pearls = false
 
-func trash_clicked():
-	#boba_pearls_ladle = false
-	#popping_boba_ladle = false
-	#dalgona_ladle = false
-	#fruit_jelly_ladle = false
-	#strawberries_ladle = false
-	#popping_boba = false
-	#dalgona = false
-	#boba_pearls = false
-	#strawberries = false
-	#fruit_jelly = false
-	toppings_station_global.toppings_layers = 0
-	t5.set_texture(null)
-	t4.set_texture(null)
-	t3.set_texture(null)
-	t2.set_texture(null)
-	t1.set_texture(null)
 
 func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
@@ -281,3 +264,5 @@ func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 				t3.set_texture(null)
 				t2.set_texture(null)
 				t1.set_texture(null)
+				$"../Cup/stuff_inside_cup/Polygon2D/liquid_sprite".set_texture(null)
+				

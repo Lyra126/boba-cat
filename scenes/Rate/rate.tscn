@@ -132,11 +132,13 @@ scale = Vector2(1.01932, 0.972242)
 polygon = PackedVector2Array(-298.427, 477.794, -534.503, 708.514, -523.963, 753.795, 999.991, 753.795, 1008.42, 695.576, 753.376, 471.325)
 
 [node name="cup" type="Node2D" parent="."]
-position = Vector2(358, 458)
-scale = Vector2(0.381286, 0.41674)
+position = Vector2(354, 425)
+scale = Vector2(0.451316, 0.493282)
 script = ExtResource("8_i1btk")
 
 [node name="cup_sprite" type="Node2D" parent="cup"]
+position = Vector2(14.6271, 89.7369)
+scale = Vector2(1, 0.857278)
 
 [node name="FrontCup" type="Sprite2D" parent="cup/cup_sprite"]
 z_index = 5
@@ -162,69 +164,71 @@ scale = Vector2(0.642054, 0.642054)
 polygon = PackedVector2Array(29.5, -374.4, 109.5, -370.4, 109.5, -369.3, 213.5, -355.2, 213.5, -354, 254.5, -342, 254.5, -340.8, 277.5, -329.8, 277.5, -328.4, 301.5, -307.4, 301.5, -304.2, 304.5, -300.2, 304.5, -288.5, 302.6, -288.5, 294.7, -274.5, 291.2, -274.5, 283, -291.8, 263.1, -279.5, 258.9, -279.5, 200.5, -268.8, 200.5, -268, 180.8, -262.5, 172.9, -262.5, 150.7, -257.5, 140.7, -257.5, 68.6, -251.5, -91.5, -251.5, -91.5, -252.7, -185.5, -262.7, -185.5, -264, -278.5, -286.9, -278.5, -288.4, -288.4, -294.2, -298.4, -274.2, -301.5, -274.9, -301.5, -277, -310.5, -289.9, -310.5, -300, -304.7, -311.5, -303.3, -311.5, -287.3, -327.5, -285.2, -327.5, -276.2, -334.5, -274, -334.5, -247, -347.5, -242.9, -347.5, -219.8, -355.5, -214.8, -355.5, -150.7, -366.5, -148.6, -366.5, -35.5, -374.4, -35.5, -375.5, 29.5, -375.5)
 
 [node name="stuff_inside_cup" type="Node2D" parent="cup"]
+position = Vector2(17.2498, 63.3416)
 script = ExtResource("11_g78so")
 
 [node name="Polygon2D" type="Polygon2D" parent="cup/stuff_inside_cup"]
 clip_children = 1
 position = Vector2(-20.1944, -56.9581)
 scale = Vector2(0.997704, 0.997704)
-polygon = PackedVector2Array(-172.754, 293.686, -109.358, 643.393, -87.1696, 665.461, -50.7168, 677.345, 9.5094, 684.135, 69.7357, 670.554, 109.358, 641.695, 155.32, 380.264, 172.754, 290.291, 182.264, 251.246, 191.773, 241.06, 185.915, 226.928, 145.774, 203.155, 76.056, 194.51, -14.7888, 190.187, -90.3395, 193.527, -158.49, 207.108, -191.773, 227.479)
+polygon = PackedVector2Array(-172.754, 293.686, -110.311, 588.949, -83.6613, 605.205, -39.2446, 619.428, 9.61395, 619.428, 67.3558, 611.3, 107.331, 586.918, 155.32, 380.264, 172.754, 290.291, 182.264, 251.246, 191.773, 241.06, 185.915, 226.928, 145.774, 203.155, 76.056, 194.51, -14.7888, 190.187, -90.3395, 193.527, -158.49, 207.108, -191.773, 227.479)
 
 [node name="toppings-5" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
-position = Vector2(-7.55016, 213.472)
+position = Vector2(2.34118, 164.068)
 scale = Vector2(1.04942, 1.04942)
 
 [node name="toppings-4" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
-position = Vector2(4.53011, 267.261)
+position = Vector2(14.4215, 217.856)
 scale = Vector2(-0.996138, 1.08427)
 
 [node name="toppings-3" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
-position = Vector2(-4.53011, 342.901)
+position = Vector2(5.36123, 293.497)
 
 [node name="toppings-2" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
-position = Vector2(9.06022, 403.413)
+position = Vector2(18.9516, 354.008)
 scale = Vector2(-0.88023, 1.01495)
 
 [node name="toppings-1" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
-position = Vector2(-4.5301, 485.776)
+position = Vector2(5.36124, 436.372)
 scale = Vector2(0.911684, 0.93467)
 
 [node name="liquid_sprite" type="Sprite2D" parent="cup/stuff_inside_cup/Polygon2D"]
-position = Vector2(-137.324, 224.767)
+position = Vector2(-127.433, 175.363)
 
 [node name="Lid" type="Sprite2D" parent="cup"]
 visible = false
 modulate = Color(1, 1, 1, 0.862745)
 z_index = 20
-position = Vector2(-39.1648, 225.512)
+position = Vector2(-21.915, 288.854)
 scale = Vector2(0.658418, 0.608428)
 texture = ExtResource("12_m5u1c")
 
 [node name="cookies on tray" type="Node2D" parent="."]
-position = Vector2(328, 176)
+position = Vector2(374, 356)
+scale = Vector2(0.712308, 0.696163)
 
 [node name="cookie1" type="Sprite2D" parent="cookies on tray"]
-position = Vector2(183.888, 529.547)
-scale = Vector2(0.259285, 0.283733)
+position = Vector2(229.747, 528.177)
+scale = Vector2(0.2, 0.219)
 
 [node name="cookie2" type="Sprite2D" parent="cookies on tray"]
-position = Vector2(370.43, 518.226)
+position = Vector2(416.289, 516.856)
 rotation = 0.298138
-scale = Vector2(0.259285, 0.283733)
+scale = Vector2(0.2, 0.219)
 
 [node name="cookie3" type="Sprite2D" parent="cookies on tray"]
-position = Vector2(255.027, 450.304)
-scale = Vector2(0.284308, 0.284308)
+position = Vector2(300.886, 448.934)
+scale = Vector2(0.2, 0.219)
 
 [node name="cookie4" type="Sprite2D" parent="cookies on tray"]
-position = Vector2(318.262, 424.429)
+position = Vector2(364.121, 423.059)
 rotation = 0.558294
-scale = Vector2(0.258055, 0.277474)
+scale = Vector2(0.2, 0.219)
 
 [node name="cookie5" type="Sprite2D" parent="cookies on tray"]
-position = Vector2(239.219, 361.358)
+position = Vector2(285.078, 359.988)
 rotation = -0.388033
-scale = Vector2(0.238093, 0.285194)
+scale = Vector2(0.2, 0.219)
 skew = -0.0651635
 
 [connection signal="input_event" from="DiagArea" to="." method="_on_diag_area_input_event"]
