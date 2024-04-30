@@ -21,6 +21,7 @@ global="*res://global.gd"
 liquid_station_global="*res://scenes/drink_station/liquid_station_global.gd"
 toppings_station_global="*res://scenes/Toppings/toppings_station_global.gd"
 final_station_global="*res://scenes/FinalStation/final_station_global.gd"
+Bg="*res://scenes/start_screen/bg.tscn"
 
 [display]
 
