@@ -42,6 +42,7 @@ func _input(event):
 					syrup_still.hide()
 					syrup_down.show()
 					syrup_down.play('default')
+					$"../sugar".play()
 
 					if not syrupAdded:
 						global.playerOrder.append("sugar-25")

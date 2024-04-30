@@ -43,6 +43,7 @@ func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if event.pressed:
+				$trashCan.play()
 				$trash.texture = closeTrash
 				print("cup has been deleted")
 				$cup.visible = false

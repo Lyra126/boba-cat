@@ -1,4 +1,4 @@
-[gd_scene load_steps=385 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=387 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
@@ -364,6 +364,8 @@
 [ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="356_8sbse"]
 [ext_resource type="AudioStream" uid="uid://jyl62k2pxvwo" path="res://assets/audio/firstLiquid.mp3" id="361_6y4l1"]
 [ext_resource type="AudioStream" uid="uid://d1y3ijknx00yo" path="res://assets/audio/secondLiquid.mp3" id="362_42ipl"]
+[ext_resource type="AudioStream" uid="uid://bu75c5lc21vy8" path="res://assets/audio/squirt.mp3" id="365_qeh1s"]
+[ext_resource type="AudioStream" uid="uid://bt6i4yfc6fxvp" path="res://assets/audio/trashCan.mp3" id="366_ha8ig"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bh2m"]
 size = Vector2(253.707, 204.515)
@@ -2112,7 +2114,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Milk Types/cow milk droppable"]
 position = Vector2(867.87, -232.124)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_nciqo")
 
 [node name="oat milk droppable" type="Area2D" parent="Milk Types"]
@@ -2271,6 +2272,12 @@ stream = ExtResource("361_6y4l1")
 
 [node name="liquid2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("362_42ipl")
+
+[node name="sugar" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("365_qeh1s")
+
+[node name="trashCan" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("366_ha8ig")
 
 [connection signal="body_entered" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_entered"]
 [connection signal="body_exited" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_exited"]
