@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="13_t2k6o"]
 [ext_resource type="Texture2D" uid="uid://d3xsx378u0t3q" path="res://assets/buttons/orderPaper.png" id="13_xxs8s"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="14_wtiin"]
-[ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="15_4wxot"]
+[ext_resource type="FontFile" uid="uid://b733oejs22hhv" path="res://assets/fonts/AlanisHand.ttf" id="16_v6c0e"]
 [ext_resource type="Texture2D" uid="uid://cm3l7eiytexgp" path="res://assets/toppings_station/assets/cupDispenser.png" id="18_1dfv5"]
 [ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="19_73j2n"]
 [ext_resource type="Texture2D" uid="uid://c8d5vphoajw5q" path="res://assets/buttons/normalClose.png" id="20_jag3e"]
@@ -276,7 +276,7 @@ offset_bottom = 457.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("15_4wxot")
+theme_override_fonts/font = ExtResource("16_v6c0e")
 theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1

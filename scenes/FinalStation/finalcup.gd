@@ -45,6 +45,7 @@ func _on_attach_lid_input_event(viewport: Node, event: InputEvent, shape_idx: in
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 				get_tree().paused = true
+				$"../sealMachine".play()
 				scale = Vector2(0.60, 0.60)
 				$".".position.x = $"../AttachLid".position.x
 				$".".position.y = $"../AttachLid".position.y

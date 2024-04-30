@@ -62,13 +62,16 @@ func checkOrder() -> int:
 		if playerItem in global.order:
 			matchingComponents += 1
 	print(matchingComponents)
-	if global.hasLid:
+	if global.hasLid and global.hasStraw:
 		return int(float(matchingComponents) / len(global.order) * 100)
+	elif not global.hasLid:
+		# Subtract 15 percents if missing lid
+		return int(float(matchingComponents) / len(global.order) * 100 - 15)
+	elif not global.hasStraw:
+		return int(float(matchingComponents) / len(global.order) * 100 - 15)
 	else:
-		# Subtract 30 percents if missing lid
 		return int(float(matchingComponents) / len(global.order) * 100 - 30)
-
-	
+		
 func showDialogue():
 	$Label.visible = true;
 	if rating.value <= 30 and rating.value >= 0:

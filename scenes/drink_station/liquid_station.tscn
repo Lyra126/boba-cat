@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
 [ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="2_qtkbs"]
 [ext_resource type="Texture2D" uid="uid://d3xsx378u0t3q" path="res://assets/buttons/orderPaper.png" id="2_ufbkq"]
-[ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="3_72dyc"]
 [ext_resource type="Texture2D" uid="uid://d0cw56n8po7l5" path="res://assets/liquid_station/assets/syrup.png" id="3_lew52"]
+[ext_resource type="FontFile" uid="uid://b733oejs22hhv" path="res://assets/fonts/AlanisHand.ttf" id="3_yu6tx"]
 [ext_resource type="Texture2D" uid="uid://b4wlosyyn6c26" path="res://assets/liquid_station/assets/syrup_down.png" id="4_g2ujl"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="4_t0iax"]
 [ext_resource type="Script" path="res://scenes/drink_station/cup.gd" id="6_68ikd"]
@@ -1771,7 +1771,7 @@ offset_bottom = 457.0
 theme_override_colors/font_color = Color(0.986752, 0.986752, 0.986752, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("3_72dyc")
+theme_override_fonts/font = ExtResource("3_yu6tx")
 theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1

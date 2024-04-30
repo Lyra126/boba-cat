@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c77yg5d4yjufk"]
+[gd_scene load_steps=24 format=3 uid="uid://c77yg5d4yjufk"]
 
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
 [ext_resource type="Texture2D" uid="uid://mt3wkqwq7v4" path="res://assets/cutomer_line/customerline_bg.png" id="2_0iumo"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://d3xsx378u0t3q" path="res://assets/buttons/orderPaper.png" id="10_8a3xe"]
 [ext_resource type="Texture2D" uid="uid://diri1mm8pslx5" path="res://assets/cutomer_line/overlayCustomerLine.png" id="10_g66uf"]
 [ext_resource type="Texture2D" uid="uid://cx2emgf2n6gak" path="res://assets/cutomer_line/fill.png" id="10_ribyt"]
+[ext_resource type="FontFile" uid="uid://b733oejs22hhv" path="res://assets/fonts/AlanisHand.ttf" id="12_0mxkt"]
 [ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="13_j6sap"]
 [ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="14_d6cro"]
 [ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="15_fc2q1"]
@@ -129,7 +130,7 @@ offset_bottom = 457.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("9_w6uy6")
+theme_override_fonts/font = ExtResource("12_0mxkt")
 theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1

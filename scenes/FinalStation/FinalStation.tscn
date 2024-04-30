@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://d3uxtyc6i7orl"]
+[gd_scene load_steps=46 format=3 uid="uid://d3uxtyc6i7orl"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://b2e4xjp33bts3" path="res://assets/final_station/final-bg.png" id="2_h5y2t"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://0edy7rqaln65" path="res://assets/final_station/test.png" id="3_xkumw"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
 [ext_resource type="Texture2D" uid="uid://658y711o0e5o" path="res://assets/final_station/cookie_cat.png" id="4_ij11g"]
-[ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="4_jqbhk"]
+[ext_resource type="FontFile" uid="uid://b733oejs22hhv" path="res://assets/fonts/AlanisHand.ttf" id="4_oewmm"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_gn2qx"]
 [ext_resource type="Texture2D" uid="uid://ob70xcok41yy" path="res://assets/final_station/choco_cookie.png" id="5_wa4pf"]
 [ext_resource type="Texture2D" uid="uid://2cogrigjf03b" path="res://assets/final_station/sugar_cookie.png" id="6_qx2ym"]
@@ -40,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://c3khs7734oh3m" path="res://assets/final_station/straw_p.png" id="37_vpufv"]
 [ext_resource type="Texture2D" uid="uid://c4uhdiq1aj0ga" path="res://assets/final_station/straw_container.png" id="38_ul6ud"]
 [ext_resource type="AudioStream" uid="uid://bt6i4yfc6fxvp" path="res://assets/audio/trashCan.mp3" id="40_nk8k6"]
+[ext_resource type="AudioStream" uid="uid://decrq7ep6v7ya" path="res://assets/audio/sealMachine.mp3" id="41_0cm57"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4t4gr"]
 size = Vector2(373.342, 105.414)
@@ -110,7 +111,7 @@ offset_bottom = 457.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("4_jqbhk")
+theme_override_fonts/font = ExtResource("4_oewmm")
 theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -515,6 +516,9 @@ polygon = PackedVector2Array(-68.5, -730.6, -68.5, -728.7, -60.1, -718.6, -53.5,
 
 [node name="trashCan" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("40_nk8k6")
+
+[node name="sealMachine" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("41_0cm57")
 
 [connection signal="input_event" from="tongs/tongs img/grab tongs" to="tongs" method="_on_area_2d_input_event"]
 [connection signal="body_entered" from="tongs/tongs img/tongs grab area" to="tongs" method="_on_tongs_grab_area_body_entered"]
