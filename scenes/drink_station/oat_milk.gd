@@ -27,7 +27,7 @@ func _physics_process(delta):
 	if selected:
 		target_position = get_global_mouse_position() - offset
 		global_position = lerp(global_position, target_position, 15 * delta) # Smooth animation during dragging
-		look_at(get_global_mouse_position())
+		look_at(get_global_mouse_position() + Vector2(30,30))
 	else:
 		global_position = lerp(global_position, oat_milk_droppable.global_position, 10 * delta)
 		rotation = lerp_angle(rotation, 0, 10 * delta)
@@ -56,7 +56,7 @@ func _on_oat_area_input_event(viewport: Node, event: InputEvent, shape_idx: int)
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not global.SomethingBeingClickedRn:
 				if liquid_station_global.fridge_open and not liquid_station_global.going_to_pour:
-					if liquid_station_global.liquid_layer == 2:
+					if liquid_station_global.liquid_layer == 2 or global.hasLid:
 						shake_sprite()
 					else:
 						selected = true

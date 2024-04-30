@@ -227,6 +227,7 @@ func reset_drink():
 	topping_sprite.texture = null
 	topping_sprites.resize(0)
 	cookies_sprites.resize(0)
+	hasLid = false
 	cookies_added.resize(0)
 	final_station_global.cookie_layers = 0
 	#toppings_sprites.texture = null

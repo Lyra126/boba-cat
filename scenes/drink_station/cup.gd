@@ -19,6 +19,8 @@ var target_position
 func _ready():
 	if not global.hasCup:
 		$".".hide()
+	if global.hasLid:
+		$Lid.show()
 	global.SomethingBeingClickedRn = false;
 	
 
@@ -53,9 +55,9 @@ func _input(event):
 
 func handle_liquid_selection(event):
 	# Determine which liquid is droppable
-	var is_tea = tea_droppable and not liquid_station_global.tea_set_to_pour and not liquid_station_global.liquid_layer == 2
-	var is_coffee = coffee_droppable and not liquid_station_global.coffee_set_to_pour and not liquid_station_global.liquid_layer == 2
-	var is_smoothie = smoothie_droppable and not liquid_station_global.smoothie_set_to_pour and not liquid_station_global.liquid_layer == 2
+	var is_tea = tea_droppable and not liquid_station_global.tea_set_to_pour and not liquid_station_global.liquid_layer == 2 and not global.hasLid
+	var is_coffee = coffee_droppable and not liquid_station_global.coffee_set_to_pour and not liquid_station_global.liquid_layer == 2 and not global.hasLid
+	var is_smoothie = smoothie_droppable and not liquid_station_global.smoothie_set_to_pour and not liquid_station_global.liquid_layer == 2 and not global.hasLid
 	
 	# Reset selections
 	selected = false

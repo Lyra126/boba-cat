@@ -1,4 +1,4 @@
-[gd_scene load_steps=384 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=385 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
@@ -358,6 +358,7 @@
 [ext_resource type="Texture2D" uid="uid://c1s0cihjsuxo4" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-5 26.png" id="247_rjrua"]
 [ext_resource type="Texture2D" uid="uid://cnmrtpbueb555" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-6 26.png" id="248_cpw5i"]
 [ext_resource type="Texture2D" uid="uid://bkmk0dxd8tn8d" path="res://assets/liquid_station/animations/liquid-pouring/tea-smoothie-2/Untitled_Artwork-7 25.png" id="249_pv728"]
+[ext_resource type="Texture2D" uid="uid://cjp3by1d0qdyk" path="res://assets/final_station/lid.png" id="321_0qjdl"]
 [ext_resource type="Texture2D" uid="uid://c8d5vphoajw5q" path="res://assets/buttons/normalClose.png" id="354_3wj6e"]
 [ext_resource type="Texture2D" uid="uid://c5xubj61n6qem" path="res://assets/buttons/pressedClose.png" id="355_qd2hn"]
 [ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="356_8sbse"]
@@ -1622,7 +1623,7 @@ animations = [{
 size = Vector2(146.056, 146.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nciqo"]
-size = Vector2(197.839, 342.021)
+size = Vector2(156.632, 342.021)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l0au1"]
 size = Vector2(146.056, 334.335)
@@ -1936,6 +1937,13 @@ animation = &"tea-1-still"
 position = Vector2(-144.226, 227.479)
 scale = Vector2(0.955, 0.874)
 
+[node name="Lid" type="Sprite2D" parent="cup"]
+visible = false
+z_index = 11
+position = Vector2(-19.0188, 288.593)
+scale = Vector2(0.661211, 0.661211)
+texture = ExtResource("321_0qjdl")
+
 [node name="Liquid Types" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -2103,7 +2111,8 @@ metadata/_edit_use_anchors_ = true
 [node name="cow milk droppable" type="Area2D" parent="Milk Types"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Milk Types/cow milk droppable"]
-position = Vector2(888.474, -232.124)
+position = Vector2(867.87, -232.124)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_nciqo")
 
 [node name="oat milk droppable" type="Area2D" parent="Milk Types"]

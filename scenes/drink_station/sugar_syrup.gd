@@ -31,6 +31,7 @@ func _physics_process(delta):
 		global_position = lerp(global_position, target_position, 15 * delta) # Smooth animation during dragging
 	else:
 		global_position = lerp(global_position, syrup_position.global_position, 10 * delta)
+		rotation = lerp_angle(rotation, 0, 10 * delta)
 		
 func _input(event):
 	if selected:
@@ -72,11 +73,11 @@ func _input(event):
 									print("level = 100")
 									syrup_down.show()
 									syrup_down.play("default")
-									syrup_level_max = true
 									#syrup_down.play("default")
 								elif(syrupLevel) == "sugar-100":
-									syrup_down.show()
-									syrup_down.play("default")
+									syrup_level_max = true
+									selected = false
+									global.SomethingBeingClickedRn = false
 								break
 				
 				else:
@@ -90,10 +91,13 @@ func smooth_back(delta):
 func _on_syrup_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not global.SomethingBeingClickedRn:
-			selected = true
-			global.SomethingBeingClickedRn = true;
-			offset = get_global_mouse_position() - global_position
-			#$"../cup/liquid-in-cup/Polygon2D/liquid".start_timer()
+			if global.hasLid or syrup_level_max:
+				shake_sprite()
+			else:
+				selected = true
+				global.SomethingBeingClickedRn = true;
+				offset = get_global_mouse_position() - global_position
+				#$"../cup/liquid-in-cup/Polygon2D/liquid".start_timer()
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			selected = false
 			global.SomethingBeingClickedRn = false;
@@ -118,3 +122,8 @@ func _on_syrup_down_animation_finished() -> void:
 func particle_explosion():
 	if syrup_down.is_playing() and not syrup_level_max:
 		particle.emitting = true
+
+func shake_sprite():
+	var tween = get_tree().create_tween()  # Ensure the Tween node/component is correctly referenced
+	var r_max = 2
+	tween.tween_property(self, "rotation_degrees", r_max, 0.05).set_ease(Tween.EASE_OUT)

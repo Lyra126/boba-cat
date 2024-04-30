@@ -135,3 +135,13 @@ func _on_tongs_grab_area_body_exited(body: Node2D) -> void:
 		sugar_cookie = false
 	if body.is_in_group('tray'):
 		tray_droppable = false
+
+func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if event.pressed:
+				c1.texture = null
+				c2.texture = null
+				c3.texture = null
+				c4.texture = null
+				c5.texture = null

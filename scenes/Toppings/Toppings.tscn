@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bv3yw1n541ync"]
+[gd_scene load_steps=32 format=3 uid="uid://bv3yw1n541ync"]
 
 [ext_resource type="Script" path="res://scenes/Toppings/Toppings.gd" id="1_ykgei"]
 [ext_resource type="Texture2D" uid="uid://bk0gxcyege8wb" path="res://assets/toppings_station/assets/bar.png" id="2_4bx8k"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://scenes/Toppings/liquid_inside_cup.gd" id="7_unvub"]
 [ext_resource type="Texture2D" uid="uid://d1bm5tbi585sx" path="res://assets/toppings_station/assets/ladle.png" id="7_vtvgs"]
 [ext_resource type="Script" path="res://scenes/Toppings/ladle.gd" id="8_bi727"]
+[ext_resource type="Texture2D" uid="uid://cjp3by1d0qdyk" path="res://assets/final_station/lid.png" id="8_w1jb5"]
 [ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/buttons/normalBack.png" id="9_t6ws1"]
 [ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/buttons/pressedBack.png" id="10_e7gxs"]
 [ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/buttons/hoverBack.png" id="11_7ilvd"]
@@ -43,7 +44,6 @@ scale = Vector2(0.907088, 0.814889)
 script = ExtResource("1_ykgei")
 
 [node name="pickToppingAudio" type="AudioStreamPlayer2D" parent="."]
-scale = Vector2(1, 1)
 stream = ExtResource("26_17rix")
 
 [node name="bar" type="Node2D" parent="."]
@@ -176,6 +176,13 @@ scale = Vector2(0.911684, 0.93467)
 position = Vector2(-143.713, 230.833)
 scale = Vector2(0.955, 0.874)
 
+[node name="Lid" type="Sprite2D" parent="Cup"]
+visible = false
+z_index = 15
+position = Vector2(-5.51215, 242.978)
+scale = Vector2(0.471272, 0.471272)
+texture = ExtResource("8_w1jb5")
+
 [node name="LadleHanger" type="Sprite2D" parent="."]
 position = Vector2(-443.87, -278.153)
 scale = Vector2(0.551545, 0.551545)
@@ -235,8 +242,8 @@ position = Vector2(1.0419, 662.588)
 shape = SubResource("RectangleShape2D_1w4ow")
 
 [node name="trash" type="Sprite2D" parent="."]
-position = Vector2(-530.268, 439.324)
-scale = Vector2(0.133244, 0.148457)
+position = Vector2(-607.066, 476.242)
+scale = Vector2(0.0759381, 0.0860044)
 texture = ExtResource("19_73j2n")
 
 [node name="trash" type="Area2D" parent="trash"]

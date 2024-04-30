@@ -68,7 +68,6 @@ func _input(event):
 		global.SomethingBeingClickedRn = true
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-				
 				var mouse_position = get_viewport().get_mouse_position()
 				if popping_boba:
 					$"../pickToppingAudio".play()
@@ -122,7 +121,7 @@ func _input(event):
 					
 				elif cup_droppable:
 					global.SomethingBeingClickedRn = true
-					if toppings_station_global.toppings_layers < 5:
+					if toppings_station_global.toppings_layers < 5 and not global.hasLid:
 						if popping_boba_ladle:
 							handle_layer(toppings_station_global.toppings_layers, poppingBoba_topping)
 							global.playerOrder.append("popping-boba")
@@ -170,6 +169,7 @@ func _input(event):
 							
 					else:
 						selected = false
+						global.SomethingBeingClickedRn = false
 						#print(global.toppings_inserted)
 
 				#else:
