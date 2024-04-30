@@ -20,26 +20,12 @@ func _ready():
 	global.currCustomer = global.allCustomers[randomIndex]
 	$Customer.texture = global.get_customer_texture(global.currCustomer)
 	$Next.pressed.connect(self._on_next_pressed)
-	get_tree().paused = true
-	await get_tree().create_timer(1.0).timeout
-	move_customer()
-	get_tree().paused = false
 	
 func _input(event):
 
 	if get_tree().paused:
 		return
 	
-
-func move_customer():
-	# Define the initial position and the target position
-	var initial_position = $Customer.position
-	var target_position = Vector2(0, 0) 
-	var distance = initial_position.distance_to(target_position)
-	var speed = distance * 0.1
-	$Customer.position = lerp(initial_position, target_position, min(1.0, speed * get_process_delta_time()))
-
-
 
 
 func _on_next_pressed():
