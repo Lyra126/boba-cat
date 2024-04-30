@@ -3,9 +3,7 @@ extends Node2D
 var OrderForm
 @onready var progress_bar : TextureProgressBar = $Customer/TextureProgressBar
 @onready var canfire = true
-@onready var timer = $Customer/Timer
 @onready var percentage_of_time
-var nextCustomerCalled = false
 
 
 var drink_options = ["tea", "coffee", "smoothie"]
@@ -20,19 +18,20 @@ func _ready():
 	global.currCustomer = global.allCustomers[randomIndex]
 	$Customer.texture = global.get_customer_texture(global.currCustomer)
 	$Next.pressed.connect(self._on_next_pressed)
+	$order.visible = false
+	global.dialogueCompleted = false
+	progress_bar.visible = false
+	progress_bar.value = 0
+	canfire = true
+	percentage_of_time = 0
 	
 func _input(event):
-
 	if get_tree().paused:
 		return
-	
-
-
+		
 func _on_next_pressed():
 	if global.dialogueCompleted and $Customer/TextureProgressBar.visible:
 		get_tree().change_scene_to_file("res://scenes/Toppings/Toppings.tscn")
-
-	
 	
 func _process(delta):
 	if global.order != []:
@@ -44,32 +43,11 @@ func _process(delta):
 		showOrder()
 		global.orderShown = true
 		
-	if progress_bar.value == 100 and not nextCustomerCalled:
-		timer.stop()
-		nextCustomerCalled = true
-		await get_tree().create_timer(2.0).timeout
-		nextCustomer()
-	elif timer.get_time_left() > 0:
-		percentage_of_time = ((1 - timer.get_time_left() / timer.get_wait_time()) * 100) #100
-		progress_bar.value = percentage_of_time
+	if global.timerInProgress:
+		percentage_of_time = ((global.mins * 60) + global.secs) / 90.0
+		progress_bar.value = percentage_of_time * 100
 			
-		
-func nextCustomer():
-	$order.visible = false
-	progress_bar.visible = false
-	progress_bar.value = 0
-	global.dialogueCompleted = false
-	$order.visible = false;
-	$Customer.position.x =  1300
-	var randomIndex = randi() % global.allCustomers.size()
-	global.currCustomer = global.allCustomers[randomIndex]
-	$Customer.texture = global.get_customer_texture(global.currCustomer)
-	$Customer.visible = true;
-	await get_tree().create_timer(1.0).timeout
-	move_customer()
-	canfire = true
-	nextCustomerCalled = false
-
+	
 func generate_order():
 	var drink = drink_options[randi() % drink_options.size()]
 	var milk = milk_options[randi() % milk_options.size()]
@@ -78,7 +56,6 @@ func generate_order():
 	global.order = [topping, drink, milk, syrup]
 	
 	var num_cookies = randi() % 6
-	print("num cookies:", num_cookies)
 	for i in range(num_cookies):
 		var cookie = cookie_options[randi() % cookie_options.size()]
 		global.order.append(cookie)
@@ -90,7 +67,6 @@ func showOrder():
 	var orderText = ""
 	for item in global.order:
 		orderText += str(item) + "\n"
-	print(orderText)
 	$order/Label.visible = true
 	$order/Label.set_text(orderText)
 
@@ -101,7 +77,8 @@ func _on_close_pressed() -> void:
 	#start timer
 	progress_bar.visible = true
 	canfire = false
-	timer.start()
+	print("timer start")
+	global.timerInProgress = true
 
 
 func _on_texture_button_pressed() -> void:

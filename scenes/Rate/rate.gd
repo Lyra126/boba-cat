@@ -23,7 +23,15 @@ func reset():
 	global.orderShown = false
 	global.hasCup = false
 	global.reset_drink()
+	global.nextCustomerCalled = false
+	global.timeOver = false
 	global.playerOrder = []
+	global.randomIndex = randi() % global.allCustomers.size()
+	global.currCustomer = global.allCustomers[global.randomIndex]
+	global.time = 0.0
+	global.mins = 0
+	global.secs = 0
+	global.timerInProgress = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -63,18 +71,20 @@ func checkOrder() -> int:
 		if playerItem in global.order:
 			matchingComponents += 1
 	print(matchingComponents)
-	if global.hasLid and global.hasStraw:
-		score = int(float(matchingComponents) / len(global.order) * 100)
-	elif not global.hasLid:
-		# Subtract 15 percents if missing lid
-		score = int(float(matchingComponents) / len(global.order) * 100 - 15)
-	elif not global.hasStraw:
-		score = int(float(matchingComponents) / len(global.order) * 100 - 15)
-	else:
-		score = int(float(matchingComponents) / len(global.order) * 100 - 30)
-	
+	score = int(float(matchingComponents) / len(global.order) * 100)
+	print("initial score, ", score)
+	if  not global.hasLid:
+		score -= 15
+		print("no lid, score deducted by 15, ", score)
+	if not global.hasStraw:
+		score -= 15
+		print("no straw, score deducted by 15, ", score)
+	if global.timeOver:
+		score -= 20
+		print("time over, score deducted by 20, ", score)
 	if(matchingComponents < len(global.playerOrder) and matchingComponents == len(global.order)):
-		score = score - (15 * (len(global.playerOrder) - len(global.order)))
+		score -= (15 * (len(global.playerOrder) - len(global.order)))
+		print("wrong additional components, score deducted by 15 each, ", score)
 	return score
 	
 func showDialogue():

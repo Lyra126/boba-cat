@@ -62,9 +62,6 @@ texture_under = ExtResource("9_ycdsr")
 texture_progress = ExtResource("10_ribyt")
 metadata/_edit_use_anchors_ = true
 
-[node name="Timer" type="Timer" parent="Customer"]
-wait_time = 60.0
-
 [node name="DialoguePlayer" parent="." instance=ExtResource("2_8ynne")]
 
 [node name="Background" parent="DialoguePlayer" index="0"]
@@ -177,7 +174,6 @@ texture_hover = ExtResource("19_xjh45")
 [node name="meow" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("21_xk06d")
 
-[connection signal="timeout" from="Customer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="input_event" from="DialoguePlayer/DialogArea" to="DialoguePlayer" method="_on_dialog_area_input_event"]
 [connection signal="mouse_entered" from="DialoguePlayer/DialogArea" to="DialoguePlayer" method="_on_dialog_area_mouse_entered"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

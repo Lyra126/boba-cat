@@ -1,10 +1,15 @@
-extends Node
+extends Node 
 
 var SomethingBeingClickedRn = false
-var prevOrderFinished = false
-var currOrderFinished = false
-var currCustomer = "cat1"
+var timeOver = false
+var timerInProgress = false
+var time: float = 0.0
+var mins: int  = 0
+var secs: int  = 0
 var allCustomers = ["cat1", "cat2", "cat3", "cat4", "cat5", "cat6", "cat7", "cat8", "cat9", "cat10"]
+var randomIndex = randi() % allCustomers.size()
+var currCustomer = allCustomers[randomIndex]
+var nextCustomerCalled = false
 var cat1 = preload("res://assets/cats/cat1.png")
 var cat2 = preload("res://assets/cats/cat2.png")
 var cat3 = preload("res://assets/cats/cat3.png")
@@ -45,8 +50,18 @@ var cookie_sprites_locations
 var hasStraw
 var straw_sprite
 
+
 func _process(delta):
-	pass
+	if timerInProgress:
+		time += delta
+		secs = fmod(time, 60)
+		mins = fmod(time, 3600) / 60
+		if(mins == 1 && secs == 30):
+			timeOver = true
+			timerInProgress = false
+			print("TIME OVER")
+			
+		
 	
 func get_customer_texture(customer):
 	match customer:
