@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://d3uxtyc6i7orl"]
+[gd_scene load_steps=47 format=3 uid="uid://d3uxtyc6i7orl"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Texture2D" uid="uid://b2e4xjp33bts3" path="res://assets/final_station/final-bg.png" id="2_h5y2t"]
@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://c4uhdiq1aj0ga" path="res://assets/final_station/straw_container.png" id="38_ul6ud"]
 [ext_resource type="AudioStream" uid="uid://bt6i4yfc6fxvp" path="res://assets/audio/trashCan.mp3" id="40_nk8k6"]
 [ext_resource type="AudioStream" uid="uid://decrq7ep6v7ya" path="res://assets/audio/sealMachine.mp3" id="41_0cm57"]
+[ext_resource type="AudioStream" uid="uid://xml18g83yrfs" path="res://assets/audio/buttonClick.mp3" id="42_ta4xb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4t4gr"]
 size = Vector2(373.342, 105.414)
@@ -519,6 +520,9 @@ stream = ExtResource("40_nk8k6")
 
 [node name="sealMachine" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("41_0cm57")
+
+[node name="button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("42_ta4xb")
 
 [connection signal="input_event" from="tongs/tongs img/grab tongs" to="tongs" method="_on_area_2d_input_event"]
 [connection signal="body_entered" from="tongs/tongs img/tongs grab area" to="tongs" method="_on_tongs_grab_area_body_entered"]

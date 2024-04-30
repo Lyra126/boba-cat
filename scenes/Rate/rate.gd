@@ -104,6 +104,7 @@ func showDialogue():
 func _on_diag_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			$finish.play()
 			$Label.visible = false
 			$Clear.visible = true
 			await get_tree().create_timer(1.0).timeout

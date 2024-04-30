@@ -17,13 +17,16 @@ func _process(delta):
 	pass
 
 func _on_back_pressed():
+	$button.play()
 	get_tree().change_scene_to_file("res://scenes/Toppings/Toppings.tscn")
 
 func _on_next_pressed():
+	$button.play()
 	get_tree().change_scene_to_file("res://scenes/FinalStation/FinalStation.tscn")
 
 
 func _on_texture_button_pressed() -> void:
+	$button.play()
 	$order.visible = true
 	$close.visible = true
 	var orderText = ""
@@ -34,7 +37,7 @@ func _on_texture_button_pressed() -> void:
 	
 
 func _on_close_pressed() -> void:
-	print("test")
+	$button.play()
 	$order.visible = false
 	$order/Label.visible = false
 	$close.visible = false

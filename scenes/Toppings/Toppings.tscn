@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bv3yw1n541ync"]
+[gd_scene load_steps=33 format=3 uid="uid://bv3yw1n541ync"]
 
 [ext_resource type="Script" path="res://scenes/Toppings/Toppings.gd" id="1_ykgei"]
 [ext_resource type="Texture2D" uid="uid://bk0gxcyege8wb" path="res://assets/toppings_station/assets/bar.png" id="2_4bx8k"]
@@ -25,6 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="22_3ycls"]
 [ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="22_fxphv"]
 [ext_resource type="AudioStream" uid="uid://5yoqiq3mg1fh" path="res://assets/audio/pickTopping.mp3" id="26_17rix"]
+[ext_resource type="AudioStream" uid="uid://xml18g83yrfs" path="res://assets/audio/buttonClick.mp3" id="27_bq6qt"]
+[ext_resource type="AudioStream" uid="uid://dttm2r4tc2uh5" path="res://assets/audio/takeCup.mp3" id="28_lon5v"]
+[ext_resource type="AudioStream" uid="uid://dqf71gvnenx6c" path="res://assets/audio/ladle.mp3" id="29_ues1t"]
 [ext_resource type="AudioStream" uid="uid://bt6i4yfc6fxvp" path="res://assets/audio/trashCan.mp3" id="29_ygq3w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nj373"]
@@ -315,6 +318,15 @@ texture_hover = ExtResource("14_wtiin")
 
 [node name="trashCan" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("29_ygq3w")
+
+[node name="button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("27_bq6qt")
+
+[node name="takeCup" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("28_lon5v")
+
+[node name="ladleSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("29_ues1t")
 
 [connection signal="input_event" from="Cup/cup_sprite/cup_pick_up" to="Cup" method="_on_cup_pick_up_input_event"]
 [connection signal="input_event" from="ladle/Ladle/ladle area" to="ladle" method="_on_ladle_area_input_event"]

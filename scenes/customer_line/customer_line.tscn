@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c77yg5d4yjufk"]
+[gd_scene load_steps=25 format=3 uid="uid://c77yg5d4yjufk"]
 
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
 [ext_resource type="Texture2D" uid="uid://mt3wkqwq7v4" path="res://assets/cutomer_line/customerline_bg.png" id="2_0iumo"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://c5xubj61n6qem" path="res://assets/buttons/pressedClose.png" id="18_6rf5t"]
 [ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="19_xjh45"]
 [ext_resource type="AudioStream" uid="uid://t1et7332083f" path="res://assets/audio/meow.mp3" id="21_xk06d"]
+[ext_resource type="AudioStream" uid="uid://xml18g83yrfs" path="res://assets/audio/buttonClick.mp3" id="23_f3xgm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjlre"]
 radius = 155.978
@@ -173,6 +174,9 @@ texture_hover = ExtResource("19_xjh45")
 
 [node name="meow" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("21_xk06d")
+
+[node name="button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_f3xgm")
 
 [connection signal="input_event" from="DialoguePlayer/DialogArea" to="DialoguePlayer" method="_on_dialog_area_input_event"]
 [connection signal="mouse_entered" from="DialoguePlayer/DialogArea" to="DialoguePlayer" method="_on_dialog_area_mouse_entered"]

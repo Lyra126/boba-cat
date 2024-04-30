@@ -1,4 +1,4 @@
-[gd_scene load_steps=387 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=388 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
@@ -366,6 +366,7 @@
 [ext_resource type="AudioStream" uid="uid://d1y3ijknx00yo" path="res://assets/audio/secondLiquid.mp3" id="362_42ipl"]
 [ext_resource type="AudioStream" uid="uid://bu75c5lc21vy8" path="res://assets/audio/squirt.mp3" id="365_qeh1s"]
 [ext_resource type="AudioStream" uid="uid://bt6i4yfc6fxvp" path="res://assets/audio/trashCan.mp3" id="366_ha8ig"]
+[ext_resource type="AudioStream" uid="uid://xml18g83yrfs" path="res://assets/audio/buttonClick.mp3" id="367_ipkjs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bh2m"]
 size = Vector2(253.707, 204.515)
@@ -2278,6 +2279,9 @@ stream = ExtResource("365_qeh1s")
 
 [node name="trashCan" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("366_ha8ig")
+
+[node name="button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("367_ipkjs")
 
 [connection signal="body_entered" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_entered"]
 [connection signal="body_exited" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_exited"]

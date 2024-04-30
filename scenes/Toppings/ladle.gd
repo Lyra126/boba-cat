@@ -43,22 +43,17 @@ var fruit_jelly_ladle
 func _ready() -> void:
 	global.SomethingBeingClickedRn = false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	#print(global.SomethingBeingClickedRn)
-	#print(layer)
-	pass
 
 func _on_ladle_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not global.SomethingBeingClickedRn:
-	#Input.is_action_pressed("click") and not global.SomethingBeingClickedRn:
+			$"../ladleSound".play()
 			selected = true
-			#print('bruh')
 			global.SomethingBeingClickedRn = true;
 			off_set = get_global_mouse_position() - global_position
 		
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			$"../ladleSound".play()
 			selected = false
 			global.SomethingBeingClickedRn = false;
 

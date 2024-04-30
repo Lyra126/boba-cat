@@ -18,6 +18,7 @@ func _process(delta):
 	pass
 
 func _on_next_pressed():
+	$button.play()
 	get_tree().change_scene_to_file("res://scenes/drink_station/liquid_station.tscn")
 
 func _on_area_2d_mouse_entered() -> void:
@@ -32,6 +33,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if event.pressed:
+				$takeCup.play()
 				$CupDispenser.texture = cupDispenser
 				print("cup has been selected")
 				$Cup.visible = true
@@ -56,13 +58,14 @@ func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 				global.playerOrder = []
 
 func _on_close_pressed() -> void:
-	print("test")
+	$button.play()
 	$OrderForm.visible = false
 	$OrderForm/Label.visible = false
 	$close.visible = false
 
 
 func _on_texture_button_pressed() -> void:
+	$button.play()
 	$OrderForm.visible = true
 	$close.visible = true
 	var orderText = ""
@@ -70,4 +73,3 @@ func _on_texture_button_pressed() -> void:
 		orderText += str(item) + "\n"
 	$OrderForm/Label.visible = true
 	$OrderForm/Label.set_text(orderText)
-

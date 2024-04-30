@@ -31,8 +31,9 @@ func _input(event):
 		
 func _on_next_pressed():
 	if global.dialogueCompleted and $Customer/TextureProgressBar.visible:
+		$button.play()
 		get_tree().change_scene_to_file("res://scenes/Toppings/Toppings.tscn")
-	
+		
 func _process(delta):
 	if global.order != []:
 		$TextureButton.visible = true
@@ -71,6 +72,7 @@ func showOrder():
 	$order/Label.set_text(orderText)
 
 func _on_close_pressed() -> void:
+	$button.play()
 	$order.visible = false
 	$order/Label.visible = false
 	$close.visible = false
@@ -82,6 +84,7 @@ func _on_close_pressed() -> void:
 
 
 func _on_texture_button_pressed() -> void:
+	$button.play()
 	$order.visible = true
 	$close.visible = true
 	var orderText = ""

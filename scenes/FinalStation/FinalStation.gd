@@ -11,13 +11,10 @@ func _ready():
 	if global.order != []:
 		$TextureButton.visible = true
 		
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 
 func _on_submit_order_pressed():
 	if global.order != []:
+		$button.play()
 		get_tree().change_scene_to_file("res://scenes/Rate/rate.tscn")
 	else:
 		print("You haven't made their order yet!")
@@ -25,10 +22,6 @@ func _on_submit_order_pressed():
 
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://scenes/drink_station/liquid_station.tscn")
-
-
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
 
 
 func _on_trash_mouse_exited() -> void:
@@ -52,6 +45,7 @@ func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 				global.playerOrder = []
 
 func _on_texture_button_pressed() -> void:
+	$button.play()
 	$OrderForm.visible = true
 	$close.visible = true
 	var orderText = ""
@@ -62,6 +56,7 @@ func _on_texture_button_pressed() -> void:
 
 
 func _on_close_pressed() -> void:
+	$button.play()
 	$OrderForm.visible = false
 	$OrderForm/Label.visible = false
 	$close.visible = false
