@@ -75,6 +75,7 @@ func _input(event):
 							cat_cookie_tongs = false
 							tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_opened.png")
 							global.cookies_added.append("catCookie")
+							global.playerOrder.append("cat-cookie")
 							global.cookies_sprites.append("res://assets/final_station/cookie_cat.png")
 						
 						elif sugar_cookie_tongs:
@@ -83,6 +84,7 @@ func _input(event):
 							sugar_cookie_tongs = false
 							tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_opened.png")
 							global.cookies_added.append("sugarCookie")
+							global.playerOrder.append("sugar-cookie")
 							global.cookies_sprites.append("res://assets/final_station/sugar_cookie.png")
 							
 						elif chocolate_cookie_tongs:
@@ -91,6 +93,7 @@ func _input(event):
 							chocolate_cookie_tongs = false
 							tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_opened.png")
 							global.cookies_added.append("chocolateCookie")
+							global.playerOrder.append("chocolate-cookie")
 							global.cookies_sprites.append("res://assets/final_station/choco_cookie.png")
 							
 func handle_cookie_layers(layer, cookie):

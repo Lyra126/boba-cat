@@ -54,6 +54,7 @@ func load_scene_text():
 		
 		
 func checkOrder() -> int:
+	var score
 	var matchingComponents = 0
 	print("checking if player made order correctly...")
 	print("Player made: ", global.playerOrder)
@@ -63,15 +64,19 @@ func checkOrder() -> int:
 			matchingComponents += 1
 	print(matchingComponents)
 	if global.hasLid and global.hasStraw:
-		return int(float(matchingComponents) / len(global.order) * 100)
+		score = int(float(matchingComponents) / len(global.order) * 100)
 	elif not global.hasLid:
 		# Subtract 15 percents if missing lid
-		return int(float(matchingComponents) / len(global.order) * 100 - 15)
+		score = int(float(matchingComponents) / len(global.order) * 100 - 15)
 	elif not global.hasStraw:
-		return int(float(matchingComponents) / len(global.order) * 100 - 15)
+		score = int(float(matchingComponents) / len(global.order) * 100 - 15)
 	else:
-		return int(float(matchingComponents) / len(global.order) * 100 - 30)
-		
+		score = int(float(matchingComponents) / len(global.order) * 100 - 30)
+	
+	if(matchingComponents < len(global.playerOrder) and matchingComponents == len(global.order)):
+		score = score - (15 * (len(global.playerOrder) - len(global.order)))
+	return score
+	
 func showDialogue():
 	$Label.visible = true;
 	if rating.value <= 30 and rating.value >= 0:
