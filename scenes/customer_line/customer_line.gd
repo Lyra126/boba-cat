@@ -56,7 +56,7 @@ func generate_order():
 	var topping = topping_options[randi() % topping_options.size()]
 	global.order = [topping, drink, milk, syrup]
 	
-	var num_cookies = randi() % 6
+	var num_cookies = randi() % 5
 	for i in range(num_cookies):
 		var cookie = cookie_options[randi() % cookie_options.size()]
 		global.order.append(cookie)
