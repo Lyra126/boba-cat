@@ -62,14 +62,66 @@ func generate_order():
 		global.order.append(cookie)
 	print(global.order)
 	
+	var orderText = ""
+	#order: topping, drink, milk, syrup, cookies
+	#topping
+	if(global.order[0] == "boba"):
+		orderText += "Boba Pearls" + "\n"
+	elif(global.order[0] == "popping-boba"):
+		orderText += "Popping Boba" + "\n"
+	elif(global.order[0] == "dalgona-chunks"):
+		orderText += "Dalgona Chunks" + "\n"
+	elif(global.order[0] == "fruit-jelly"):
+		orderText += "Fruit Jelly" + "\n"
+	elif(global.order[0] == "strawberries"):
+		orderText += "Strawberry Slices" + "\n"
+	#drink
+	if(global.order[1] == "tea"):
+		orderText += "Tea" + "\n"
+	elif(global.order[1] == "coffee"):
+		orderText += "Coffee" + "\n"
+	elif(global.order[1] == "smoothie"):
+		orderText += "Smoothie" + "\n"
+	#milk
+	if(global.order[2] == "oat-milk"):
+		orderText += "Oat Milk" + "\n"
+	elif(global.order[2] == "almond-milk"):
+		orderText += "Almond Milk" + "\n"
+	elif(global.order[2] == "cow-milk"):
+		orderText += "Cow Milk" + "\n"
+	#Sugar
+	if(global.order[3] == "sugar-25"):
+		orderText += "25% Sugar" + "\n"
+	elif(global.order[3] == "sugar-50"):
+		orderText += "50% Sugar" + "\n"
+	elif(global.order[3] == "sugar-75"):
+		orderText += "75% Sugar" + "\n"
+	elif(global.order[3] == "sugar-100"):
+		orderText += "100% Sugar" + "\n"
+	var numChocCookies = 0
+	var numSugarCookies = 0
+	var numCatCookies = 0
+	for i in range(4, global.order.size()):
+		if(global.order[i] == "chocolate-cookie"):
+			numChocCookies += 1
+		elif(global.order[i] == "sugar-cookie"):
+			numSugarCookies += 1
+		elif(global.order[i] == "cat-cookie"):
+			numCatCookies += 1
+	if(numChocCookies > 0):
+		orderText += str(numChocCookies) + " Chocolate Cookies" + "\n"
+	if(numSugarCookies > 0):
+		orderText += str(numSugarCookies) + " Sugar Cookies" + "\n"
+	if(numSugarCookies > 0):
+		orderText += str( numSugarCookies) + " Cat Cookies" + "\n"
+		
+	global.orderPaper = orderText
+	
 func showOrder():
 	$order.visible = true
 	$close.visible = true
-	var orderText = ""
-	for item in global.order:
-		orderText += str(item) + "\n"
 	$order/Label.visible = true
-	$order/Label.set_text(orderText)
+	$order/Label.set_text(global.orderPaper)
 
 func _on_close_pressed() -> void:
 	$button.play()
@@ -88,8 +140,5 @@ func _on_texture_button_pressed() -> void:
 	$button.play()
 	$order.visible = true
 	$close.visible = true
-	var orderText = ""
-	for item in global.order:
-		orderText += str(item) + "\n"
 	$order/Label.visible = true
-	$order/Label.set_text(orderText)
+	$order/Label.set_text(global.orderPaper)

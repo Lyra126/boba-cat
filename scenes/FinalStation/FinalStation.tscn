@@ -43,7 +43,7 @@
 [ext_resource type="AudioStream" uid="uid://csy22t6wh07gf" path="res://assets/audio/dropCookie.mp3" id="42_rnh1d"]
 [ext_resource type="AudioStream" uid="uid://xml18g83yrfs" path="res://assets/audio/buttonClick.mp3" id="42_ta4xb"]
 [ext_resource type="AudioStream" uid="uid://dd85lw2iijljq" path="res://assets/audio/straw.mp3" id="43_oi17g"]
-[ext_resource type="AudioStream" uid="uid://dqf71gvnenx6c" path="res://assets/audio/ladle.mp3" id="44_fd6hx"]
+[ext_resource type="AudioStream" uid="uid://xvaqsunolunn" path="res://assets/audio/tong.mp3" id="44_c23lj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4t4gr"]
 size = Vector2(373.342, 105.414)
@@ -545,7 +545,7 @@ stream = ExtResource("42_rnh1d")
 stream = ExtResource("43_oi17g")
 
 [node name="tong" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("44_fd6hx")
+stream = ExtResource("44_c23lj")
 
 [connection signal="input_event" from="tongs/tongs img/grab tongs" to="tongs" method="_on_area_2d_input_event"]
 [connection signal="body_entered" from="tongs/tongs img/tongs grab area" to="tongs" method="_on_tongs_grab_area_body_entered"]

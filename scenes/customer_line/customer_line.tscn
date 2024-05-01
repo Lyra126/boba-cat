@@ -136,7 +136,6 @@ autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="Next" type="TextureButton" parent="."]
-visible = false
 offset_left = 872.197
 offset_top = 316.11
 offset_right = 1872.2

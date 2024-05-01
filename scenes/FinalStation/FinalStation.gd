@@ -48,11 +48,8 @@ func _on_texture_button_pressed() -> void:
 	$button.play()
 	$OrderForm.visible = true
 	$close.visible = true
-	var orderText = ""
-	for item in global.order:
-		orderText += str(item) + "\n"
 	$OrderForm/Label.visible = true
-	$OrderForm/Label.set_text(orderText)
+	$OrderForm/Label.set_text(global.orderPaper)
 
 
 func _on_close_pressed() -> void:

@@ -5,7 +5,8 @@ var timeOver = false
 var timerInProgress = false
 var time: float = 0.0
 var mins: int  = 0
-var secs: int  = 0
+var secs: int = 0
+var orderPaper : String
 var allCustomers = ["cat1", "cat2", "cat3", "cat4", "cat5", "cat6", "cat7", "cat8", "cat9", "cat10"]
 var randomIndex = randi() % allCustomers.size()
 var currCustomer = allCustomers[randomIndex]
@@ -61,7 +62,7 @@ func _process(delta):
 			timerInProgress = false
 			print("TIME OVER")
 			
-		
+	
 	
 func get_customer_texture(customer):
 	match customer:
