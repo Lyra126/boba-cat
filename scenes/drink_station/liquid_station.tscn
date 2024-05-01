@@ -370,11 +370,11 @@
 [ext_resource type="Texture2D" uid="uid://c8d5vphoajw5q" path="res://assets/buttons/normalClose.png" id="354_3wj6e"]
 [ext_resource type="Texture2D" uid="uid://c5xubj61n6qem" path="res://assets/buttons/pressedClose.png" id="355_qd2hn"]
 [ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="356_8sbse"]
-[ext_resource type="AudioStream" uid="uid://jyl62k2pxvwo" path="res://assets/audio/firstLiquid.mp3" id="361_6y4l1"]
-[ext_resource type="AudioStream" uid="uid://d1y3ijknx00yo" path="res://assets/audio/secondLiquid.mp3" id="362_42ipl"]
 [ext_resource type="AudioStream" uid="uid://bu75c5lc21vy8" path="res://assets/audio/squirt.mp3" id="365_qeh1s"]
-[ext_resource type="AudioStream" uid="uid://bt6i4yfc6fxvp" path="res://assets/audio/trashCan.mp3" id="366_ha8ig"]
 [ext_resource type="AudioStream" uid="uid://xml18g83yrfs" path="res://assets/audio/buttonClick.mp3" id="367_ipkjs"]
+[ext_resource type="AudioStream" uid="uid://c66lum4vrxkky" path="res://assets/audio/secondLiquid2.mp3" id="371_7hvhx"]
+[ext_resource type="AudioStream" uid="uid://bnf2y1tl7eg6h" path="res://assets/audio/firstLiquid2.mp3" id="371_54mxg"]
+[ext_resource type="AudioStream" uid="uid://caehmnlt8nwvy" path="res://assets/audio/trashCan2.mp3" id="374_d8it6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bh2m"]
 size = Vector2(253.707, 204.515)
@@ -1894,10 +1894,10 @@ vertical_alignment = 1
 auto_translate_mode = 1
 z_index = 15
 offset_left = 561.055
-offset_top = -10.1857
+offset_top = 16.976
 offset_right = 7973.06
-offset_bottom = 1525.81
-scale = Vector2(-0.469598, 0.488502)
+offset_bottom = 1552.98
+scale = Vector2(-0.335658, 0.34917)
 texture = ExtResource("10_c1mk2")
 
 [node name="Label5" type="Label" parent="tutorial/fridge"]
@@ -2009,7 +2009,7 @@ text = "Tea"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="fridge2" type="TextureRect" parent="tutorial"]
+[node name="container" type="TextureRect" parent="tutorial"]
 auto_translate_mode = 1
 z_index = 15
 offset_left = 115.698
@@ -2019,7 +2019,7 @@ offset_bottom = 1089.53
 scale = Vector2(0.298315, 0.32125)
 texture = ExtResource("10_c1mk2")
 
-[node name="Label5" type="Label" parent="tutorial/fridge2"]
+[node name="Label5" type="Label" parent="tutorial/container"]
 auto_translate_mode = 1
 offset_left = 217.827
 offset_top = 200.806
@@ -2541,16 +2541,16 @@ position = Vector2(-8.56171, -17.5938)
 shape = SubResource("RectangleShape2D_l5jj6")
 
 [node name="liquid1" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("361_6y4l1")
+stream = ExtResource("371_54mxg")
 
 [node name="liquid2" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("362_42ipl")
+stream = ExtResource("371_7hvhx")
 
 [node name="sugar" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("365_qeh1s")
 
 [node name="trashCan" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("366_ha8ig")
+stream = ExtResource("374_d8it6")
 
 [node name="button" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("367_ipkjs")

@@ -35,7 +35,7 @@
 [ext_resource type="AudioStream" uid="uid://xml18g83yrfs" path="res://assets/audio/buttonClick.mp3" id="27_bq6qt"]
 [ext_resource type="AudioStream" uid="uid://dttm2r4tc2uh5" path="res://assets/audio/takeCup.mp3" id="28_lon5v"]
 [ext_resource type="AudioStream" uid="uid://dqf71gvnenx6c" path="res://assets/audio/ladle.mp3" id="29_ues1t"]
-[ext_resource type="AudioStream" uid="uid://bt6i4yfc6fxvp" path="res://assets/audio/trashCan.mp3" id="29_ygq3w"]
+[ext_resource type="AudioStream" uid="uid://caehmnlt8nwvy" path="res://assets/audio/trashCan2.mp3" id="33_e87wb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nj373"]
 size = Vector2(27.456, 24.2066)
@@ -218,7 +218,7 @@ theme_override_fonts/font = ExtResource("3_2imkl")
 theme_override_font_sizes/font_size = 28
 text = "Use the ladle to select
 the toppings! Click to 
-pick up,right click to 
+pick up, right click to 
 bring ladle back"
 
 [node name="TextureRect7" type="TextureRect" parent="tutorial"]
@@ -511,16 +511,18 @@ texture_pressed = ExtResource("13_t2k6o")
 texture_hover = ExtResource("14_wtiin")
 
 [node name="trashCan" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("29_ygq3w")
+stream = ExtResource("33_e87wb")
 
 [node name="button" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("27_bq6qt")
 
 [node name="takeCup" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("28_lon5v")
+volume_db = -9.292
 
 [node name="ladleSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("29_ues1t")
+volume_db = -17.512
 
 [connection signal="pressed" from="help button" to="tutorial" method="_on_help_button_pressed"]
 [connection signal="input_event" from="Cup/cup_sprite/cup_pick_up" to="Cup" method="_on_cup_pick_up_input_event"]
