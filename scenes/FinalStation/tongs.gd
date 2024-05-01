@@ -37,11 +37,13 @@ func _process(delta: float) -> void:
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not global.SomethingBeingClickedRn:
+			$"../tong".play()
 			selected = true
 			tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_opened.png")
 			global.SomethingBeingClickedRn = true;
 			off_set = get_global_mouse_position() - global_position
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			$"../tong".play()
 			selected = false
 			tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_closed.png")
 			global.SomethingBeingClickedRn = false;
@@ -72,13 +74,16 @@ func _input(event):
 						if cat_cookie_tongs:
 							handle_cookie_layers(final_station_global.cookie_layers, cat_cookie_sprite)
 							final_station_global.cookie_layers += 1
+							$"../dropCookie".play()
 							cat_cookie_tongs = false
 							tongs_sprite.texture = preload("res://assets/final_station/tongs/tongs_opened.png")
 							global.cookies_added.append("catCookie")
 							global.playerOrder.append("cat-cookie")
 							global.cookies_sprites.append("res://assets/final_station/cookie_cat.png")
 						
+						
 						elif sugar_cookie_tongs:
+							$"../dropCookie".play()
 							handle_cookie_layers(final_station_global.cookie_layers, sugar_cookie_sprite)
 							final_station_global.cookie_layers += 1
 							sugar_cookie_tongs = false
@@ -88,6 +93,7 @@ func _input(event):
 							global.cookies_sprites.append("res://assets/final_station/sugar_cookie.png")
 							
 						elif chocolate_cookie_tongs:
+							$"../dropCookie".play()
 							handle_cookie_layers(final_station_global.cookie_layers, choco_cookie_sprite)
 							final_station_global.cookie_layers += 1
 							chocolate_cookie_tongs = false

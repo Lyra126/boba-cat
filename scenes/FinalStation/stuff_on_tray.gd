@@ -18,6 +18,7 @@ func _on_straw_area_input_event(viewport: Node, event: InputEvent, shape_idx: in
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if event.pressed:
+				$"../straw".play()
 				straw.show()
 				global.hasStraw = true
 				randomize_straw(straw)
