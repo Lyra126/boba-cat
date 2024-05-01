@@ -1,20 +1,22 @@
-[gd_scene load_steps=25 format=3 uid="uid://c77yg5d4yjufk"]
+[gd_scene load_steps=27 format=3 uid="uid://c77yg5d4yjufk"]
 
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
 [ext_resource type="Texture2D" uid="uid://mt3wkqwq7v4" path="res://assets/cutomer_line/customerline_bg.png" id="2_0iumo"]
 [ext_resource type="PackedScene" uid="uid://vbjyytkea21g" path="res://scenes/Dialogue/dialogue_player.tscn" id="2_8ynne"]
+[ext_resource type="Script" path="res://scenes/customer_line/tutorial.gd" id="2_p2r3u"]
 [ext_resource type="Texture2D" uid="uid://bhpqwr1ul8njn" path="res://assets/cutomer_line/restingArms.png" id="3_5vta4"]
+[ext_resource type="Texture2D" uid="uid://j4l4q85hg8vf" path="res://assets/other/Untitled_Artwork 60.png" id="3_8qynq"]
+[ext_resource type="FontFile" uid="uid://v0he3kerpxgp" path="res://assets/fonts/AprilshandwritingRegular-mpGj.otf" id="3_ffmo0"]
 [ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="5_16p48"]
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="6_4eijr"]
 [ext_resource type="Script" path="res://scenes/customer_line/Sprite2D.gd" id="6_qt0fo"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="7_t5lrs"]
 [ext_resource type="Texture2D" uid="uid://no2v4pbnhq8s" path="res://assets/cats/cat1.png" id="8_4iu0w"]
-[ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="9_w6uy6"]
 [ext_resource type="Texture2D" uid="uid://0mex1upu8hmv" path="res://assets/cutomer_line/empty.png" id="9_ycdsr"]
 [ext_resource type="Texture2D" uid="uid://d3xsx378u0t3q" path="res://assets/buttons/orderPaper.png" id="10_8a3xe"]
 [ext_resource type="Texture2D" uid="uid://diri1mm8pslx5" path="res://assets/cutomer_line/overlayCustomerLine.png" id="10_g66uf"]
 [ext_resource type="Texture2D" uid="uid://cx2emgf2n6gak" path="res://assets/cutomer_line/fill.png" id="10_ribyt"]
-[ext_resource type="FontFile" uid="uid://b733oejs22hhv" path="res://assets/fonts/AlanisHand.ttf" id="12_0mxkt"]
+[ext_resource type="FontFile" uid="uid://k3hoaidtei7a" path="res://assets/fonts/CookbookNormalRegular-6YmjD.ttf" id="11_o7onk"]
 [ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="13_j6sap"]
 [ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="14_d6cro"]
 [ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="15_fc2q1"]
@@ -32,6 +34,41 @@ position = Vector2(776, 448)
 scale = Vector2(0.636324, 0.632691)
 script = ExtResource("1_go1ct")
 
+[node name="tutorial" type="Node2D" parent="."]
+position = Vector2(-1250.94, -708.087)
+scale = Vector2(1.00707, 1)
+script = ExtResource("2_p2r3u")
+
+[node name="TextureRect" type="TextureRect" parent="tutorial"]
+z_index = 1
+offset_left = 181.022
+offset_top = 28.4503
+offset_right = 7593.02
+offset_bottom = 1564.45
+scale = Vector2(0.368283, 0.337843)
+texture = ExtResource("3_8qynq")
+
+[node name="Label" type="Label" parent="tutorial"]
+z_index = 1
+offset_left = 78.0296
+offset_top = 104.317
+offset_right = 2430.03
+offset_bottom = 359.317
+scale = Vector2(0.990721, 1.00035)
+theme_override_colors/font_color = Color(0.686257, 0.477653, 0.509724, 1)
+theme_override_fonts/font = ExtResource("3_ffmo0")
+theme_override_font_sizes/font_size = 52
+text = "To get started with an order,
+click on the customer to hear what they have to say.
+Make sure to click on the cat!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="tutorial"]
+visible = false
+offset_right = 233.0
+offset_bottom = 98.0
+
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -1250.94
 offset_top = -708.087
@@ -41,14 +78,15 @@ scale = Vector2(1.00707, 1)
 texture = ExtResource("2_0iumo")
 metadata/_edit_use_anchors_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="paw hands" type="Sprite2D" parent="."]
 position = Vector2(28.2875, 548.451)
 scale = Vector2(0.743653, 0.732593)
 texture = ExtResource("3_5vta4")
 script = ExtResource("6_qt0fo")
 
 [node name="Customer" type="Sprite2D" parent="."]
-scale = Vector2(0.35, 0.35)
+position = Vector2(0, 11.0639)
+scale = Vector2(0.325254, 0.325254)
 texture = ExtResource("8_4iu0w")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="Customer"]
@@ -66,37 +104,40 @@ metadata/_edit_use_anchors_ = true
 [node name="DialoguePlayer" parent="." instance=ExtResource("2_8ynne")]
 
 [node name="Background" parent="DialoguePlayer" index="0"]
-offset_left = 142.0
-offset_top = 34.0
-offset_right = 2142.0
-offset_bottom = 534.0
-scale = Vector2(0.630762, 0.591461)
+visible = false
+offset_left = 306.0
+offset_top = 60.0
+offset_right = 2306.0
+offset_bottom = 560.0
+scale = Vector2(0.487917, 0.404295)
 metadata/_edit_use_anchors_ = true
 
 [node name="TextLabel" parent="DialoguePlayer" index="1"]
+visible = false
 anchor_left = 0.12925
 anchor_top = 0.0884444
 anchor_bottom = 0.315333
-offset_left = 37.2
-offset_top = 28.4
-offset_right = 79.8
-offset_bottom = -28.8
+offset_left = 162.2
+offset_top = 10.4
+offset_right = 204.8
+offset_bottom = -46.8
+scale = Vector2(0.794429, 0.752344)
 theme_type_variation = &"HeaderLarge"
 theme_override_colors/font_color = Color(0.985527, 0.988698, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("9_w6uy6")
+theme_override_fonts/font = ExtResource("11_o7onk")
 theme_override_font_sizes/font_size = 55
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
-metadata/_edit_use_anchors_ = true
 
 [node name="DialogArea" type="Area2D" parent="DialoguePlayer"]
 position = Vector2(812, 458)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialoguePlayer/DialogArea"]
-position = Vector2(-3, -1)
+position = Vector2(-31, -12)
+scale = Vector2(1.22243, 1.20629)
 shape = SubResource("CircleShape2D_kjlre")
 
 [node name="overlay" type="TextureRect" parent="."]
@@ -128,7 +169,7 @@ offset_bottom = 457.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("12_0mxkt")
+theme_override_fonts/font = ExtResource("3_ffmo0")
 theme_override_font_sizes/font_size = 80
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -136,6 +177,7 @@ autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="Next" type="TextureButton" parent="."]
+visible = false
 offset_left = 872.197
 offset_top = 316.11
 offset_right = 1872.2
@@ -174,6 +216,7 @@ texture_hover = ExtResource("19_xjh45")
 
 [node name="meow" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("21_xk06d")
+volume_db = -30.436
 
 [node name="button" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("23_f3xgm")

@@ -10,6 +10,7 @@ var in_progress = false
 
 func _ready():
 	background.visible = false
+	text_label.visible = false
 	scene_text = load_scene_text()
 	
 func load_scene_text():
@@ -42,6 +43,7 @@ func display_dialogue(text_key):
 		else:
 			$"../meow".play()
 			background.visible = true
+			text_label.visible = true
 			in_progress = true
 			selected_text = scene_text[text_key].duplicate()
 			show_text()
@@ -50,6 +52,7 @@ func display_dialogue(text_key):
 func _on_dialog_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			
 			display_dialogue(global.currCustomer)
 
 

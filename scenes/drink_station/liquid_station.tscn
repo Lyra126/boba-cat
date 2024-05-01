@@ -1,16 +1,24 @@
-[gd_scene load_steps=388 format=3 uid="uid://cspsfyf0b2txa"]
+[gd_scene load_steps=396 format=3 uid="uid://cspsfyf0b2txa"]
 
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_station.gd" id="1_p4uih"]
+[ext_resource type="Script" path="res://scenes/drink_station/tutorial_fridge.gd" id="2_cjmyj"]
 [ext_resource type="Script" path="res://scenes/drink_station/sugar_syrup.gd" id="2_frsv4"]
+[ext_resource type="Texture2D" uid="uid://ddntmyywe54" path="res://assets/other/Untitled_Artwork 62.png" id="2_gp4bo"]
 [ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="2_qtkbs"]
 [ext_resource type="Texture2D" uid="uid://d3xsx378u0t3q" path="res://assets/buttons/orderPaper.png" id="2_ufbkq"]
+[ext_resource type="Texture2D" uid="uid://bag716uvmncyy" path="res://assets/other/Untitled_Artwork 67.png" id="3_0xhc8"]
 [ext_resource type="Texture2D" uid="uid://d0cw56n8po7l5" path="res://assets/liquid_station/assets/syrup.png" id="3_lew52"]
+[ext_resource type="FontFile" uid="uid://v0he3kerpxgp" path="res://assets/fonts/AprilshandwritingRegular-mpGj.otf" id="3_twy4m"]
 [ext_resource type="FontFile" uid="uid://b733oejs22hhv" path="res://assets/fonts/AlanisHand.ttf" id="3_yu6tx"]
 [ext_resource type="Texture2D" uid="uid://b4wlosyyn6c26" path="res://assets/liquid_station/assets/syrup_down.png" id="4_g2ujl"]
+[ext_resource type="Texture2D" uid="uid://cyy8jahkiljm8" path="res://assets/other/Untitled_Artwork 68.png" id="4_sk1ot"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="4_t0iax"]
+[ext_resource type="Script" path="res://scenes/drink_station/tutorial.gd" id="4_xf130"]
+[ext_resource type="Texture2D" uid="uid://bhivsoxi3crb" path="res://assets/other/Untitled_Artwork 66.png" id="5_xr4mc"]
 [ext_resource type="Script" path="res://scenes/drink_station/cup.gd" id="6_68ikd"]
 [ext_resource type="Script" path="res://scenes/drink_station/tea.gd" id="9_1upol"]
 [ext_resource type="Texture2D" uid="uid://74gmr84m12k3" path="res://assets/liquid_station/assets/tea_container.png" id="9_lhlql"]
+[ext_resource type="Texture2D" uid="uid://bmoid38x3b7vq" path="res://assets/other/Untitled_Artwork 63.png" id="10_c1mk2"]
 [ext_resource type="Texture2D" uid="uid://rld0v7fg280q" path="res://assets/liquid_station/assets/tea_nozzle_norm.png" id="10_ykvc5"]
 [ext_resource type="Texture2D" uid="uid://b0lb4fndwpn38" path="res://assets/liquid_station/assets/tea_nozzle_down.png" id="11_lqjrf"]
 [ext_resource type="Texture2D" uid="uid://26n3xfp856d1" path="res://assets/liquid_station/assets/fridge_closed.png" id="12_0otd3"]
@@ -1751,6 +1759,282 @@ position = Vector2(805, 477)
 scale = Vector2(0.630954, 0.589065)
 script = ExtResource("1_p4uih")
 
+[node name="background" type="TextureRect" parent="."]
+z_index = -20
+offset_left = -1274.0
+offset_top = -804.0
+offset_right = 1276.0
+offset_bottom = 733.0
+scale = Vector2(0.9966, 0.989153)
+size_flags_horizontal = 4
+texture = ExtResource("13_8b6s5")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="help button" type="TextureButton" parent="."]
+auto_translate_mode = 1
+z_index = 17
+offset_left = -816.224
+offset_top = 561.907
+offset_right = -305.224
+offset_bottom = 910.907
+scale = Vector2(0.321579, 0.350419)
+texture_normal = ExtResource("3_0xhc8")
+texture_pressed = ExtResource("4_sk1ot")
+texture_hover = ExtResource("5_xr4mc")
+
+[node name="tutorial fridge" type="Node2D" parent="."]
+scale = Vector2(1, 1)
+script = ExtResource("2_cjmyj")
+
+[node name="almond milk" type="TextureRect" parent="tutorial fridge"]
+auto_translate_mode = 1
+z_index = 8
+offset_left = 603.848
+offset_top = 475.329
+offset_right = 8015.85
+offset_bottom = 2011.33
+scale = Vector2(0.25481, -0.328528)
+texture = ExtResource("2_gp4bo")
+
+[node name="Label5" type="Label" parent="tutorial fridge/almond milk"]
+auto_translate_mode = 1
+offset_left = 143.058
+offset_top = 511.563
+offset_right = 377.058
+offset_bottom = 636.564
+scale = Vector2(4.35453, -3.82957)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_twy4m")
+theme_override_font_sizes/font_size = 34
+text = "Almond
+Milk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cow milk" type="TextureRect" parent="tutorial fridge"]
+auto_translate_mode = 1
+z_index = 1
+offset_left = 732.225
+offset_top = -645.09
+offset_right = 8144.22
+offset_bottom = 890.91
+scale = Vector2(0.27017, 0.34484)
+texture = ExtResource("2_gp4bo")
+
+[node name="Label5" type="Label" parent="tutorial fridge/cow milk"]
+auto_translate_mode = 1
+offset_left = 140.791
+offset_top = 73.8432
+offset_right = 374.791
+offset_bottom = 198.843
+scale = Vector2(4.47865, 3.97266)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_twy4m")
+theme_override_font_sizes/font_size = 34
+text = "Cow Milk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="oat milk" type="TextureRect" parent="tutorial fridge"]
+auto_translate_mode = 1
+z_index = 1
+offset_left = 423.169
+offset_top = -645.09
+offset_right = 7835.17
+offset_bottom = 890.91
+scale = Vector2(0.27017, 0.34484)
+texture = ExtResource("2_gp4bo")
+
+[node name="Label5" type="Label" parent="tutorial fridge/oat milk"]
+auto_translate_mode = 1
+offset_left = 140.791
+offset_top = 73.8432
+offset_right = 374.791
+offset_bottom = 198.843
+scale = Vector2(4.47865, 3.97266)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_twy4m")
+theme_override_font_sizes/font_size = 34
+text = "Oat Milk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tutorial" type="Node2D" parent="."]
+scale = Vector2(1, 1)
+script = ExtResource("4_xf130")
+
+[node name="syrup2" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 15
+offset_left = -686.262
+offset_top = 108.647
+offset_right = 6725.74
+offset_bottom = 1644.65
+scale = Vector2(0.298929, 0.333126)
+texture = ExtResource("10_c1mk2")
+
+[node name="Label5" type="Label" parent="tutorial/syrup2"]
+auto_translate_mode = 1
+offset_left = 127.246
+offset_top = 188.552
+offset_right = 540.246
+offset_bottom = 317.552
+scale = Vector2(3.53683, 4.05149)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_twy4m")
+theme_override_font_sizes/font_size = 30
+text = "Click to drag,
+right click to 
+return"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fridge" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 15
+offset_left = 561.055
+offset_top = -10.1857
+offset_right = 7973.06
+offset_bottom = 1525.81
+scale = Vector2(-0.469598, 0.488502)
+texture = ExtResource("10_c1mk2")
+
+[node name="Label5" type="Label" parent="tutorial/fridge"]
+auto_translate_mode = 1
+offset_left = 1497.95
+offset_top = 207.254
+offset_right = 1910.95
+offset_bottom = 336.254
+scale = Vector2(-3.04269, 3.41063)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_twy4m")
+theme_override_font_sizes/font_size = 30
+text = "This is the fridge!
+Click to open,
+right click to close"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="syrup" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+offset_left = -916.073
+offset_top = -140.901
+offset_right = 6495.93
+offset_bottom = 1395.1
+scale = Vector2(0.27017, 0.34484)
+texture = ExtResource("2_gp4bo")
+
+[node name="Label5" type="Label" parent="tutorial/syrup"]
+auto_translate_mode = 1
+offset_left = 140.792
+offset_top = 54.1517
+offset_right = 374.792
+offset_bottom = 179.152
+scale = Vector2(4.47865, 3.80769)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_twy4m")
+theme_override_font_sizes/font_size = 34
+text = "Sugar
+Syrup"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="smoothie" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+offset_left = -161.66
+offset_top = -731.668
+offset_right = 7250.34
+offset_bottom = 804.332
+scale = Vector2(0.27017, 0.34484)
+texture = ExtResource("2_gp4bo")
+
+[node name="Label5" type="Label" parent="tutorial/smoothie"]
+auto_translate_mode = 1
+offset_left = 140.791
+offset_top = 73.8432
+offset_right = 374.791
+offset_bottom = 198.843
+scale = Vector2(4.47865, 3.97266)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_twy4m")
+theme_override_font_sizes/font_size = 34
+text = "Smoothie"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="coffee" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+offset_left = -649.81
+offset_top = -731.668
+offset_right = 6762.19
+offset_bottom = 804.332
+scale = Vector2(0.27017, 0.34484)
+texture = ExtResource("2_gp4bo")
+
+[node name="Label5" type="Label" parent="tutorial/coffee"]
+auto_translate_mode = 1
+offset_left = 117.326
+offset_top = 73.8432
+offset_right = 351.326
+offset_bottom = 198.843
+scale = Vector2(4.47865, 3.97266)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_twy4m")
+theme_override_font_sizes/font_size = 40
+text = "Coffee"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tea" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+offset_left = -1149.05
+offset_top = -731.668
+offset_right = 6262.95
+offset_bottom = 804.332
+scale = Vector2(0.27017, 0.34484)
+texture = ExtResource("2_gp4bo")
+
+[node name="Label5" type="Label" parent="tutorial/tea"]
+auto_translate_mode = 1
+offset_left = 119.642
+offset_top = 75.3007
+offset_right = 353.642
+offset_bottom = 200.301
+scale = Vector2(4.47865, 3.97266)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_twy4m")
+theme_override_font_sizes/font_size = 45
+text = "Tea"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fridge2" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 15
+offset_left = 115.698
+offset_top = -446.47
+offset_right = 7527.7
+offset_bottom = 1089.53
+scale = Vector2(0.298315, 0.32125)
+texture = ExtResource("10_c1mk2")
+
+[node name="Label5" type="Label" parent="tutorial/fridge2"]
+auto_translate_mode = 1
+offset_left = 217.827
+offset_top = 200.806
+offset_right = 630.827
+offset_bottom = 329.806
+scale = Vector2(3.22106, 3.69973)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_twy4m")
+theme_override_font_sizes/font_size = 30
+text = "Drag cup to icon,
+once snapped,
+click nozzle"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="order" type="Node2D" parent="."]
 visible = false
 z_index = 15
@@ -2198,18 +2482,6 @@ position = Vector2(693.726, 145.679)
 scale = Vector2(0.407465, 0.407465)
 sprite_frames = SubResource("SpriteFrames_youfl")
 
-[node name="background" type="TextureRect" parent="."]
-z_index = -20
-offset_left = -1274.0
-offset_top = -804.0
-offset_right = 1276.0
-offset_bottom = 733.0
-scale = Vector2(0.9966, 0.989153)
-size_flags_horizontal = 4
-texture = ExtResource("13_8b6s5")
-metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
-
 [node name="Back" type="TextureButton" parent="."]
 offset_left = -1261.58
 offset_top = 422.704
@@ -2283,6 +2555,8 @@ stream = ExtResource("366_ha8ig")
 [node name="button" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("367_ipkjs")
 
+[connection signal="pressed" from="help button" to="tutorial" method="_on_help_button_pressed"]
+[connection signal="pressed" from="help button" to="tutorial fridge" method="_on_help_button_pressed"]
 [connection signal="body_entered" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_entered"]
 [connection signal="body_exited" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_exited"]
 [connection signal="input_event" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_input_event"]

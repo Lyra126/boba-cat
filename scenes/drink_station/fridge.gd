@@ -7,6 +7,7 @@ var clicked = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	liquid_station_global.fridge_open = false
 	closed.show()
 	open.hide()
 	semi_open.hide()
