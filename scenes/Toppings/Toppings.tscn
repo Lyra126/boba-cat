@@ -1,10 +1,17 @@
-[gd_scene load_steps=33 format=3 uid="uid://bv3yw1n541ync"]
+[gd_scene load_steps=40 format=3 uid="uid://bv3yw1n541ync"]
 
 [ext_resource type="Script" path="res://scenes/Toppings/Toppings.gd" id="1_ykgei"]
 [ext_resource type="Texture2D" uid="uid://bk0gxcyege8wb" path="res://assets/toppings_station/assets/bar.png" id="2_4bx8k"]
+[ext_resource type="Script" path="res://scenes/Toppings/tutorial.gd" id="2_t773b"]
+[ext_resource type="FontFile" uid="uid://v0he3kerpxgp" path="res://assets/fonts/AprilshandwritingRegular-mpGj.otf" id="3_2imkl"]
 [ext_resource type="Texture2D" uid="uid://bbb8o2vqkuhj5" path="res://assets/toppings_station/assets/toppings_bg.png" id="3_3mncm"]
+[ext_resource type="Texture2D" uid="uid://ddntmyywe54" path="res://assets/other/Untitled_Artwork 62.png" id="3_mevka"]
+[ext_resource type="Texture2D" uid="uid://bag716uvmncyy" path="res://assets/other/Untitled_Artwork 67.png" id="3_o2cdv"]
 [ext_resource type="Script" path="res://scenes/Toppings/cup.gd" id="4_0yovw"]
+[ext_resource type="Texture2D" uid="uid://cyy8jahkiljm8" path="res://assets/other/Untitled_Artwork 68.png" id="4_2q1b0"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_rrssr"]
+[ext_resource type="Texture2D" uid="uid://bmoid38x3b7vq" path="res://assets/other/Untitled_Artwork 63.png" id="5_86px5"]
+[ext_resource type="Texture2D" uid="uid://bhivsoxi3crb" path="res://assets/other/Untitled_Artwork 66.png" id="5_j3jpt"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_vh8md"]
 [ext_resource type="Texture2D" uid="uid://dh1ejo2el67e6" path="res://assets/toppings_station/assets/ladle hanger.png" id="6_7mgwf"]
 [ext_resource type="Script" path="res://scenes/Toppings/liquid_inside_cup.gd" id="7_unvub"]
@@ -28,7 +35,7 @@
 [ext_resource type="AudioStream" uid="uid://xml18g83yrfs" path="res://assets/audio/buttonClick.mp3" id="27_bq6qt"]
 [ext_resource type="AudioStream" uid="uid://dttm2r4tc2uh5" path="res://assets/audio/takeCup.mp3" id="28_lon5v"]
 [ext_resource type="AudioStream" uid="uid://dqf71gvnenx6c" path="res://assets/audio/ladle.mp3" id="29_ues1t"]
-[ext_resource type="AudioStream" uid="uid://bt6i4yfc6fxvp" path="res://assets/audio/trashCan.mp3" id="29_ygq3w"]
+[ext_resource type="AudioStream" uid="uid://caehmnlt8nwvy" path="res://assets/audio/trashCan2.mp3" id="33_e87wb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nj373"]
 size = Vector2(27.456, 24.2066)
@@ -43,6 +50,198 @@ size = Vector2(1047.66, 1447.97)
 position = Vector2(800, 448)
 scale = Vector2(0.907088, 0.814889)
 script = ExtResource("1_ykgei")
+
+[node name="toppings_bg" type="TextureRect" parent="."]
+z_index = -15
+offset_left = -877.0
+offset_top = -549.0
+offset_right = 2049.0
+offset_bottom = 1285.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_3mncm")
+metadata/_edit_lock_ = true
+
+[node name="help button" type="TextureButton" parent="."]
+z_index = 7
+offset_left = -756.266
+offset_top = 419.689
+offset_right = -245.266
+offset_bottom = 768.689
+scale = Vector2(0.273469, 0.313378)
+texture_normal = ExtResource("3_o2cdv")
+texture_pressed = ExtResource("4_2q1b0")
+texture_hover = ExtResource("5_j3jpt")
+
+[node name="tutorial" type="Node2D" parent="."]
+script = ExtResource("2_t773b")
+
+[node name="toppings" type="Node2D" parent="tutorial"]
+position = Vector2(4.40972, -44.1778)
+scale = Vector2(0.862851, 0.795879)
+
+[node name="TextureRect12" type="TextureRect" parent="tutorial/toppings"]
+auto_translate_mode = 1
+offset_left = 534.061
+offset_top = -242.077
+offset_right = 7946.06
+offset_bottom = 1293.92
+scale = Vector2(0.199, 0.254)
+texture = ExtResource("3_mevka")
+
+[node name="TextureRect11" type="TextureRect" parent="tutorial/toppings"]
+auto_translate_mode = 1
+offset_left = 310.471
+offset_top = -240.535
+offset_right = 7722.47
+offset_bottom = 1295.46
+scale = Vector2(0.199, 0.254)
+texture = ExtResource("3_mevka")
+
+[node name="TextureRect10" type="TextureRect" parent="tutorial/toppings"]
+auto_translate_mode = 1
+offset_left = 86.8808
+offset_top = -240.535
+offset_right = 7498.88
+offset_bottom = 1295.46
+scale = Vector2(0.199, 0.254)
+texture = ExtResource("3_mevka")
+
+[node name="TextureRect9" type="TextureRect" parent="tutorial/toppings"]
+auto_translate_mode = 1
+offset_left = -141.82
+offset_top = -242.077
+offset_right = 7270.18
+offset_bottom = 1293.92
+scale = Vector2(0.199, 0.254)
+texture = ExtResource("3_mevka")
+
+[node name="TextureRect" type="TextureRect" parent="tutorial/toppings"]
+offset_left = -375.632
+offset_top = -240.535
+offset_right = 7036.37
+offset_bottom = 1295.46
+scale = Vector2(0.199302, 0.254294)
+texture = ExtResource("3_mevka")
+
+[node name="Label4" type="Label" parent="tutorial/toppings"]
+auto_translate_mode = 1
+offset_left = 573.669
+offset_top = -206.614
+offset_right = 839.669
+offset_bottom = -81.6138
+scale = Vector2(0.673429, 0.673429)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_2imkl")
+theme_override_font_sizes/font_size = 35
+text = "Strawberry
+Slices"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="tutorial/toppings"]
+auto_translate_mode = 1
+offset_left = 334.746
+offset_top = -222.033
+offset_right = 568.746
+offset_bottom = -97.0327
+scale = Vector2(0.890853, 0.890853)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_2imkl")
+theme_override_font_sizes/font_size = 35
+text = "Tapioca
+Pearls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="tutorial/toppings"]
+auto_translate_mode = 1
+offset_left = 108.601
+offset_top = -222.033
+offset_right = 342.601
+offset_bottom = -97.0327
+scale = Vector2(0.890853, 0.890853)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_2imkl")
+theme_override_font_sizes/font_size = 35
+text = "Fruit
+Jelly"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="tutorial/toppings"]
+auto_translate_mode = 1
+offset_left = -114.989
+offset_top = -220.491
+offset_right = 119.011
+offset_bottom = -95.4909
+scale = Vector2(0.890853, 0.890853)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_2imkl")
+theme_override_font_sizes/font_size = 35
+text = "Dalgona
+Chunks"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="tutorial/toppings"]
+offset_left = -350.078
+offset_top = -220.491
+offset_right = -116.078
+offset_bottom = -95.4908
+scale = Vector2(0.890853, 0.890853)
+theme_override_colors/font_color = Color(0.558077, 0.373539, 0.456266, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2imkl")
+theme_override_font_sizes/font_size = 35
+text = "Popping 
+Boba"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect8" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+offset_left = -403.489
+offset_top = -525.225
+offset_right = 7008.51
+offset_bottom = 1010.78
+scale = Vector2(0.349785, 0.323588)
+texture = ExtResource("5_86px5")
+
+[node name="Label" type="Label" parent="tutorial"]
+offset_left = -297.656
+offset_top = -463.867
+offset_right = 196.344
+offset_bottom = -306.867
+scale = Vector2(0.942061, 1.05193)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_2imkl")
+theme_override_font_sizes/font_size = 28
+text = "Use the ladle to select
+the toppings! Click to 
+pick up, right click to 
+bring ladle back"
+
+[node name="TextureRect7" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+offset_left = -620.667
+offset_top = 130.079
+offset_right = 6791.33
+offset_bottom = 1666.08
+scale = Vector2(0.243518, 0.211486)
+texture = ExtResource("5_86px5")
+
+[node name="Label2" type="Label" parent="tutorial"]
+auto_translate_mode = 1
+offset_left = -541.293
+offset_top = 182.847
+offset_right = -47.2926
+offset_bottom = 339.847
+scale = Vector2(0.942061, 1.05193)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_2imkl")
+theme_override_font_sizes/font_size = 28
+text = "Click here to 
+grab a new cup"
 
 [node name="pickToppingAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("26_17rix")
@@ -221,15 +420,11 @@ polygon = PackedVector2Array(-68.8287, 137.47, -301.139, 143.375, -333.826, 214.
 position = Vector2(-0.000118874, 4.22911e-05)
 polygon = PackedVector2Array(-297.444, 182.564, -208.737, 163.795, -115.572, 154.1, -58.4681, 152.97, -35.8594, 174.772, -43.8505, 218.118, -64.0896, 255.163, -116.495, 299.388, -189.179, 306.061, -253.311, 279.846, -281.381, 245.066, -290.858, 216.461)
 
-[node name="toppings_bg" type="TextureRect" parent="."]
-z_index = -15
-offset_left = -877.0
-offset_top = -549.0
-offset_right = 2049.0
-offset_bottom = 1285.0
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("3_3mncm")
-metadata/_edit_lock_ = true
+[node name="Control" type="Control" parent="ladle"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="CupDispenser" type="Sprite2D" parent="."]
 position = Vector2(-703.35, -55.2223)
@@ -243,8 +438,8 @@ position = Vector2(1.0419, 662.588)
 shape = SubResource("RectangleShape2D_1w4ow")
 
 [node name="trash" type="Sprite2D" parent="."]
-position = Vector2(-800.363, 451.595)
-scale = Vector2(0.127633, 0.146083)
+position = Vector2(-814.695, 467.548)
+scale = Vector2(0.0760501, 0.0870435)
 texture = ExtResource("19_73j2n")
 
 [node name="trash" type="Area2D" parent="trash"]
@@ -316,17 +511,20 @@ texture_pressed = ExtResource("13_t2k6o")
 texture_hover = ExtResource("14_wtiin")
 
 [node name="trashCan" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("29_ygq3w")
+stream = ExtResource("33_e87wb")
 
 [node name="button" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("27_bq6qt")
 
 [node name="takeCup" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("28_lon5v")
+volume_db = -9.292
 
 [node name="ladleSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("29_ues1t")
+volume_db = -17.512
 
+[connection signal="pressed" from="help button" to="tutorial" method="_on_help_button_pressed"]
 [connection signal="input_event" from="Cup/cup_sprite/cup_pick_up" to="Cup" method="_on_cup_pick_up_input_event"]
 [connection signal="input_event" from="ladle/Ladle/ladle area" to="ladle" method="_on_ladle_area_input_event"]
 [connection signal="body_entered" from="ladle/Ladle/scoopable area" to="ladle" method="_on_scoopable_area_body_entered"]

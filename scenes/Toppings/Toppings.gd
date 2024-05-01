@@ -4,14 +4,12 @@ extends Node2D
 @onready var openTrash = preload("res://assets/buttons/openTrash.png")
 @onready var closeTrash = preload("res://assets/buttons/closeTrash.png")
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if not global.hasCup:
 		$Cup.hide()
 	if global.order != []:
 		$TextureButton.visible = true
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -20,7 +18,7 @@ func _process(delta):
 func _on_next_pressed():
 	$button.play()
 	get_tree().change_scene_to_file("res://scenes/drink_station/liquid_station.tscn")
-
+	
 func _on_area_2d_mouse_entered() -> void:
 	$CupDispenser.texture = getCup
 

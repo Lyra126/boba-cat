@@ -41,8 +41,6 @@ func _input(event):
 				if cup_droppable:
 					syrup_still.hide()
 					syrup_down.show()
-					syrup_down.play('default')
-					$"../sugar".play()
 
 					if not syrupAdded:
 						global.playerOrder.append("sugar-25")
@@ -50,6 +48,7 @@ func _input(event):
 						print("level = 25")
 						syrup_down.show()
 						syrup_down.play("default")
+						$"../sugar".play()
 						# try to make the drink lighter every time sugar is added.?
 						
 					else:
@@ -62,23 +61,28 @@ func _input(event):
 									print("level = 50")
 									syrup_down.show()
 									syrup_down.play("default")
+									$"../sugar".play()
 								elif(syrupLevel) == "sugar-50":
 									global.playerOrder.remove_at(syrupIndex)
 									global.playerOrder.append("sugar-75")
 									print("level = 75")
 									syrup_down.show()
 									syrup_down.play("default")
+									$"../sugar".play()
 								elif(syrupLevel) == "sugar-75":
 									global.playerOrder.remove_at(syrupIndex)
 									global.playerOrder.append("sugar-100")
 									print("level = 100")
 									syrup_down.show()
 									syrup_down.play("default")
+									$"../sugar".play()
 									#syrup_down.play("default")
 								elif(syrupLevel) == "sugar-100":
 									syrup_level_max = true
 									selected = false
 									global.SomethingBeingClickedRn = false
+									syrup_down.hide()
+									syrup_still.show()
 								break
 				
 				else:

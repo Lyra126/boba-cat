@@ -1,5 +1,9 @@
 extends Node 
 
+
+func _ready():
+	pass
+
 var SomethingBeingClickedRn = false
 var timeOver = false
 var timerInProgress = false
@@ -50,6 +54,11 @@ var cookie_sprite
 var cookie_sprites_locations
 var hasStraw
 var straw_sprite
+
+var shownCustomerTutorial = false
+var shownToppingsTutorial = false
+var shownLiquidsTutorial = false
+var shownFinalStation = false
 
 
 func _process(delta):

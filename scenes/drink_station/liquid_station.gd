@@ -44,7 +44,6 @@ func _on_trash_mouse_exited() -> void:
 	$trash.texture = closeTrash
 
 
-
 func _on_trash_mouse_entered() -> void:
 	$trash.texture = openTrash
 

@@ -1,12 +1,19 @@
-[gd_scene load_steps=49 format=3 uid="uid://d3uxtyc6i7orl"]
+[gd_scene load_steps=56 format=3 uid="uid://d3uxtyc6i7orl"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
+[ext_resource type="Script" path="res://scenes/FinalStation/tutorial.gd" id="2_5q85h"]
+[ext_resource type="Texture2D" uid="uid://bmoid38x3b7vq" path="res://assets/other/Untitled_Artwork 63.png" id="2_8and8"]
 [ext_resource type="Texture2D" uid="uid://b2e4xjp33bts3" path="res://assets/final_station/final-bg.png" id="2_h5y2t"]
 [ext_resource type="Texture2D" uid="uid://6mqqtrolwi62" path="res://assets/final_station/tongs/tongs_closed.png" id="2_rq8lh"]
+[ext_resource type="Texture2D" uid="uid://bag716uvmncyy" path="res://assets/other/Untitled_Artwork 67.png" id="2_vqkcx"]
 [ext_resource type="Script" path="res://scenes/FinalStation/tongs.gd" id="2_xn26s"]
 [ext_resource type="Texture2D" uid="uid://d3xsx378u0t3q" path="res://assets/buttons/orderPaper.png" id="3_1ukjj"]
+[ext_resource type="Texture2D" uid="uid://ddntmyywe54" path="res://assets/other/Untitled_Artwork 62.png" id="3_8kpwn"]
 [ext_resource type="Script" path="res://scenes/FinalStation/finalcup.gd" id="3_fdyuf"]
+[ext_resource type="Texture2D" uid="uid://cyy8jahkiljm8" path="res://assets/other/Untitled_Artwork 68.png" id="3_ifo5b"]
+[ext_resource type="FontFile" uid="uid://v0he3kerpxgp" path="res://assets/fonts/AprilshandwritingRegular-mpGj.otf" id="3_o4h27"]
 [ext_resource type="Texture2D" uid="uid://0edy7rqaln65" path="res://assets/final_station/test.png" id="3_xkumw"]
+[ext_resource type="Texture2D" uid="uid://bhivsoxi3crb" path="res://assets/other/Untitled_Artwork 66.png" id="4_6o541"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
 [ext_resource type="Texture2D" uid="uid://658y711o0e5o" path="res://assets/final_station/cookie_cat.png" id="4_ij11g"]
 [ext_resource type="FontFile" uid="uid://b733oejs22hhv" path="res://assets/fonts/AlanisHand.ttf" id="4_oewmm"]
@@ -38,12 +45,12 @@
 [ext_resource type="Script" path="res://scenes/FinalStation/stuff_on_tray.gd" id="36_8comx"]
 [ext_resource type="Texture2D" uid="uid://c3khs7734oh3m" path="res://assets/final_station/straw_p.png" id="37_vpufv"]
 [ext_resource type="Texture2D" uid="uid://c4uhdiq1aj0ga" path="res://assets/final_station/straw_container.png" id="38_ul6ud"]
-[ext_resource type="AudioStream" uid="uid://bt6i4yfc6fxvp" path="res://assets/audio/trashCan.mp3" id="40_nk8k6"]
 [ext_resource type="AudioStream" uid="uid://decrq7ep6v7ya" path="res://assets/audio/sealMachine.mp3" id="41_0cm57"]
-[ext_resource type="AudioStream" uid="uid://csy22t6wh07gf" path="res://assets/audio/dropCookie.mp3" id="42_rnh1d"]
 [ext_resource type="AudioStream" uid="uid://xml18g83yrfs" path="res://assets/audio/buttonClick.mp3" id="42_ta4xb"]
-[ext_resource type="AudioStream" uid="uid://dd85lw2iijljq" path="res://assets/audio/straw.mp3" id="43_oi17g"]
 [ext_resource type="AudioStream" uid="uid://xvaqsunolunn" path="res://assets/audio/tong.mp3" id="44_c23lj"]
+[ext_resource type="AudioStream" uid="uid://caehmnlt8nwvy" path="res://assets/audio/trashCan2.mp3" id="46_c563c"]
+[ext_resource type="AudioStream" uid="uid://doodxnh03wbt7" path="res://assets/audio/cookieDown2.mp3" id="49_6a3fn"]
+[ext_resource type="AudioStream" uid="uid://lnfnpdgsasnl" path="res://assets/audio/straw2.mp3" id="50_l2nrf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4t4gr"]
 size = Vector2(373.342, 105.414)
@@ -91,6 +98,199 @@ scale = Vector2(0.996372, 0.940023)
 texture = ExtResource("2_h5y2t")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
+
+[node name="help  button" type="TextureButton" parent="."]
+z_index = 10
+offset_left = -820.469
+offset_top = 570.869
+offset_right = -309.469
+offset_bottom = 919.869
+scale = Vector2(0.341954, 0.341954)
+texture_normal = ExtResource("2_vqkcx")
+texture_pressed = ExtResource("3_ifo5b")
+texture_hover = ExtResource("4_6o541")
+
+[node name="tutorial" type="Node2D" parent="."]
+script = ExtResource("2_5q85h")
+
+[node name="straw" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 8
+offset_left = 387.312
+offset_top = 420.47
+offset_right = 7799.31
+offset_bottom = 1956.47
+scale = Vector2(0.321614, -0.414659)
+texture = ExtResource("3_8kpwn")
+
+[node name="Label5" type="Label" parent="tutorial/straw"]
+auto_translate_mode = 1
+offset_left = 172.039
+offset_top = 452.406
+offset_right = 509.039
+offset_bottom = 584.406
+scale = Vector2(2.86922, -2.52333)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_o4h27")
+theme_override_font_sizes/font_size = 34
+text = "Remember to
+give each order
+a straw!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sugar" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 8
+offset_left = -7.90442
+offset_top = -97.0316
+offset_right = 7404.1
+offset_bottom = 1438.97
+scale = Vector2(0.199959, -0.257809)
+texture = ExtResource("3_8kpwn")
+
+[node name="Label5" type="Label" parent="tutorial/sugar"]
+auto_translate_mode = 1
+offset_left = 197.649
+offset_top = 483.009
+offset_right = 431.649
+offset_bottom = 608.009
+scale = Vector2(3.85074, -3.38652)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_o4h27")
+theme_override_font_sizes/font_size = 34
+text = "Sugar
+Cookie"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="choco" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 8
+offset_left = -502.715
+offset_top = -101.883
+offset_right = 6909.28
+offset_bottom = 1434.12
+scale = Vector2(0.199959, -0.257809)
+texture = ExtResource("3_8kpwn")
+
+[node name="Label5" type="Label" parent="tutorial/choco"]
+auto_translate_mode = 1
+offset_left = 197.649
+offset_top = 483.009
+offset_right = 431.649
+offset_bottom = 608.009
+scale = Vector2(3.85074, -3.38652)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_o4h27")
+theme_override_font_sizes/font_size = 34
+text = "Chocolate
+Chip"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cat" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 8
+offset_left = -233.968
+offset_top = 126.141
+offset_right = 7178.03
+offset_bottom = 1662.14
+scale = Vector2(0.199959, -0.257809)
+texture = ExtResource("3_8kpwn")
+
+[node name="Label5" type="Label" parent="tutorial/cat"]
+auto_translate_mode = 1
+offset_left = 143.058
+offset_top = 511.563
+offset_right = 377.058
+offset_bottom = 636.564
+scale = Vector2(4.35453, -3.82957)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_o4h27")
+theme_override_font_sizes/font_size = 34
+text = "Cat
+Cookie"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tongs" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 15
+offset_left = 33.1982
+offset_top = -687.307
+offset_right = 7445.2
+offset_bottom = 848.693
+scale = Vector2(0.361307, 0.379045)
+texture = ExtResource("2_8and8")
+
+[node name="Label5" type="Label" parent="tutorial/tongs"]
+auto_translate_mode = 1
+offset_left = 301.903
+offset_top = 204.792
+offset_right = 714.903
+offset_bottom = 333.792
+scale = Vector2(2.74806, 3.22479)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_o4h27")
+theme_override_font_sizes/font_size = 30
+text = "Click on tongs to
+pick up cookies!
+Right click to return"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cup" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 30
+offset_left = -295.622
+offset_top = 312.118
+offset_right = 7116.38
+offset_bottom = 1848.12
+scale = Vector2(-0.251077, 0.266657)
+texture = ExtResource("2_8and8")
+
+[node name="Label5" type="Label" parent="tutorial/cup"]
+auto_translate_mode = 1
+offset_left = 1649.64
+offset_top = 169.812
+offset_right = 2062.64
+offset_bottom = 298.812
+scale = Vector2(-3.66259, 4.08816)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_o4h27")
+theme_override_font_sizes/font_size = 30
+text = "Drag cup onto
+tray area to
+set it down"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="machine" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 30
+offset_left = -785.69
+offset_top = -95.4145
+offset_right = 6626.31
+offset_bottom = 1440.59
+scale = Vector2(0.254511, 0.283625)
+texture = ExtResource("2_8and8")
+
+[node name="Label5" type="Label" parent="tutorial/machine"]
+auto_translate_mode = 1
+offset_left = 127.246
+offset_top = 188.552
+offset_right = 540.246
+offset_bottom = 317.552
+scale = Vector2(3.53683, 4.05149)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_o4h27")
+theme_override_font_sizes/font_size = 30
+text = "Drag cup to
+snap onto
+machine"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="OrderForm" type="Node2D" parent="."]
 visible = false
@@ -501,6 +701,7 @@ scale = Vector2(0.238093, 0.285194)
 skew = -0.0651635
 
 [node name="straw" type="Sprite2D" parent="stuff on tray"]
+visible = false
 z_index = 30
 position = Vector2(102.756, 588.659)
 rotation = 0.0292632
@@ -508,8 +709,8 @@ scale = Vector2(0.364012, 0.340707)
 texture = ExtResource("37_vpufv")
 
 [node name="trash" type="Sprite2D" parent="."]
-position = Vector2(-880.542, 609.682)
-scale = Vector2(0.111106, 0.111884)
+position = Vector2(-891.608, 621.003)
+scale = Vector2(0.0947204, 0.102312)
 texture = ExtResource("33_kkjyx")
 
 [node name="trash" type="Area2D" parent="trash"]
@@ -530,7 +731,7 @@ texture = ExtResource("38_ul6ud")
 polygon = PackedVector2Array(-68.5, -730.6, -68.5, -728.7, -60.1, -718.6, -53.5, -728, -48, -728, -44.5, -726.2, -44.5, -724.7, -28.9, -704.5, -22.4, -712, -19.9, -712, -12.5, -713.4, -12.5, -710.6, -0.400024, -691, 8.70001, -700, 14.3, -700, 19.5, -694.8, 19.5, -689, 33, -570.8, 40.7, -643, 42.1, -643, 45.1, -651, 52.3, -651, 60.3, -643.8, 74.5, -664, 79.3, -664, 87.8, -656.3, 104.5, -677, 112.7, -677, 117.6, -668.1, 127.5, -681, 133.2, -681, 138.5, -677, 138.5, -674.4, 140.6, -668.8, 148.7, -676, 156.3, -676, 160.5, -671.8, 160.5, -668.9, 153.1, -590.4, 155.4, -594, 158.1, -594, 165.5, -595.4, 165.5, -593, 170.5, -589, 170.5, -586.5, 180.3, -569.5, 188.7, -577, 194, -577, 197.5, -575.2, 197.5, -573.5, 207.5, -552.6, 215.7, -560, 221.2, -560, 226.5, -556, 226.5, -350, 225.5, -350, 222.7, -234, 258.1, -340, 259.1, -340, 284.1, -404, 285.5, -404, 290.5, -411, 298.3, -411, 304.5, -404.8, 304.5, -401.4, 305.7, -398.5, 313.4, -411, 316.1, -411, 323.5, -412.4, 323.5, -410, 327.5, -407, 327.5, -404, 334, -377.1, 345.5, -378.2, 345.5, -375.8, 350.5, -370.8, 350.5, -354, 361.5, -355.2, 361.5, -352.8, 367.5, -346.8, 367.5, -342.7, 363.1, -327, 375.5, -328.2, 375.5, -325.7, 380.9, -319.3, 379.8, -317, 378.8, -317, 273.5, -65.7, 273.5, -56, 270.5, 457, 269.5, 457, 269.5, 469, 267.8, 469, 264.8, 476, 263.1, 476, 233.1, 496, 229.9, 496, 181.8, 513, 176.9, 513, 113.7, 525, 102.7, 525, 49.6, 530, -120.5, 530, -120.5, 528.9, -184.5, 524.9, -184.5, 523.8, -219.5, 519.8, -219.5, 518.7, -270.5, 507.6, -270.5, 506.4, -303.5, 495.4, -303.5, 494.1, -332.5, 477.1, -332.5, 475.7, -338.5, 467.7, -338.5, 412, -339.5, 412, -339.5, 409, -337.5, 300, -338.5, 300, -340.5, -64, -409.5, -242.6, -409.5, -245.7, -455.5, -385.7, -455.5, -395, -453.5, -395, -450.5, -399, -447.6, -399, -441.5, -400.6, -441.5, -398.4, -435.7, -396.1, -437.8, -412, -435.1, -412, -427.7, -417.3, -425.5, -416.2, -425.5, -415, -400.3, -396.3, -394.5, -404, -386.5, -404, -386.5, -401.9, -373.6, -388, -369.6, -394, -366.8, -394, -357.5, -395.3, -357.5, -392.9, -351.5, -387.9, -351.5, -384.5, -345.7, -373.8, -338.4, -382, -333.8, -382, -327.5, -377, -327.5, -373.3, -315.7, -335.1, -313.2, -337, -308.3, -337, -302.5, -335.5, -302.5, -340, -304.8, -358, -302.3, -358, -297.3, -363, -290.1, -363, -287.5, -362, -287.5, -377.7, -281.4, -385, -270.9, -385, -270.5, -384.7, -270.5, -385.3, -264, -410, -262.6, -410, -257.6, -418, -251.4, -418, -241.5, -403.4, -238.9, -411, -237.5, -411, -234.5, -415, -231.6, -415, -225.5, -416.6, -225.5, -414, -220.5, -410, -220.5, -406.4, -196.5, -341.4, -196.5, -337.3, -176.5, -276.3, -176.5, -272, -154.5, -194.3, -154.5, -214, -158.5, -323, -158.5, -517, -155.8, -517, -146.5, -521, -146.5, -518, -140.4, -513.7, -128.7, -536, -122.8, -536, -114.4, -529.3, -99.6, -553, -92.5, -553, -86.6, -545.2, -85.5, -547.5, -85.5, -550, -105.7, -723, -103.5, -723, -100.5, -727, -91.5, -727, -91.5, -725.1, -84.5, -720.7, -77.5, -729.7, -77.5, -732.4)
 
 [node name="trashCan" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("40_nk8k6")
+stream = ExtResource("46_c563c")
 
 [node name="sealMachine" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("41_0cm57")
@@ -539,14 +740,15 @@ stream = ExtResource("41_0cm57")
 stream = ExtResource("42_ta4xb")
 
 [node name="dropCookie" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("42_rnh1d")
+stream = ExtResource("49_6a3fn")
 
 [node name="straw" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("43_oi17g")
+stream = ExtResource("50_l2nrf")
 
 [node name="tong" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("44_c23lj")
 
+[connection signal="pressed" from="help  button" to="tutorial" method="_on_help__button_pressed"]
 [connection signal="input_event" from="tongs/tongs img/grab tongs" to="tongs" method="_on_area_2d_input_event"]
 [connection signal="body_entered" from="tongs/tongs img/tongs grab area" to="tongs" method="_on_tongs_grab_area_body_entered"]
 [connection signal="body_exited" from="tongs/tongs img/tongs grab area" to="tongs" method="_on_tongs_grab_area_body_exited"]
