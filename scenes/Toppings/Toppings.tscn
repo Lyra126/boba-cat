@@ -252,7 +252,6 @@ scale = Vector2(1, 0.998819)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="trash/trash"]
 position = Vector2(-8.56177, -17.5938)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_c73js")
 
 [node name="OrderForm" type="Node2D" parent="."]

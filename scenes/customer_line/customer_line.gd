@@ -80,6 +80,7 @@ func _on_close_pressed() -> void:
 	progress_bar.visible = true
 	canfire = false
 	print("timer start")
+	$Next.visible = true
 	global.timerInProgress = true
 
 
