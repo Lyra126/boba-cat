@@ -22,7 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="13_t2k6o"]
 [ext_resource type="Texture2D" uid="uid://d3xsx378u0t3q" path="res://assets/buttons/orderPaper.png" id="13_xxs8s"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="14_wtiin"]
-[ext_resource type="FontFile" uid="uid://b733oejs22hhv" path="res://assets/fonts/AlanisHand.ttf" id="16_v6c0e"]
 [ext_resource type="Texture2D" uid="uid://cm3l7eiytexgp" path="res://assets/toppings_station/assets/cupDispenser.png" id="18_1dfv5"]
 [ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="19_73j2n"]
 [ext_resource type="Texture2D" uid="uid://c8d5vphoajw5q" path="res://assets/buttons/normalClose.png" id="20_jag3e"]
@@ -31,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://c5xubj61n6qem" path="res://assets/buttons/pressedClose.png" id="21_sqma7"]
 [ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="22_3ycls"]
 [ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="22_fxphv"]
+[ext_resource type="FontFile" uid="uid://b61w8siqip3ob" path="res://assets/fonts/HappyMarker-xg98.ttf" id="23_q4bmm"]
 [ext_resource type="AudioStream" uid="uid://5yoqiq3mg1fh" path="res://assets/audio/pickTopping.mp3" id="26_17rix"]
 [ext_resource type="AudioStream" uid="uid://xml18g83yrfs" path="res://assets/audio/buttonClick.mp3" id="27_bq6qt"]
 [ext_resource type="AudioStream" uid="uid://dttm2r4tc2uh5" path="res://assets/audio/takeCup.mp3" id="28_lon5v"]
@@ -464,15 +464,18 @@ texture = ExtResource("13_xxs8s")
 
 [node name="Label" type="Label" parent="OrderForm"]
 auto_translate_mode = 1
-offset_left = -309.0
-offset_top = -350.0
-offset_right = 352.0
-offset_bottom = 457.0
+offset_left = -307.578
+offset_top = -400.054
+offset_right = 353.422
+offset_bottom = 406.946
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("16_v6c0e")
+theme_override_fonts/font = ExtResource("23_q4bmm")
 theme_override_font_sizes/font_size = 80
+text = "feafsefs
+fesafs
+feasf"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -491,10 +494,10 @@ texture_hover = ExtResource("22_3ycls")
 [node name="close" type="TextureButton" parent="."]
 visible = false
 z_index = 28
-offset_left = 197.335
-offset_top = -435.642
-offset_right = 1697.33
-offset_bottom = 1064.36
+offset_left = 221.588
+offset_top = -456.504
+offset_right = 1721.59
+offset_bottom = 1043.5
 scale = Vector2(0.0836853, 0.0817412)
 texture_normal = ExtResource("20_jag3e")
 texture_pressed = ExtResource("21_sqma7")

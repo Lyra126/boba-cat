@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://bag716uvmncyy" path="res://assets/other/Untitled_Artwork 67.png" id="3_0xhc8"]
 [ext_resource type="Texture2D" uid="uid://d0cw56n8po7l5" path="res://assets/liquid_station/assets/syrup.png" id="3_lew52"]
 [ext_resource type="FontFile" uid="uid://v0he3kerpxgp" path="res://assets/fonts/AprilshandwritingRegular-mpGj.otf" id="3_twy4m"]
-[ext_resource type="FontFile" uid="uid://b733oejs22hhv" path="res://assets/fonts/AlanisHand.ttf" id="3_yu6tx"]
 [ext_resource type="Texture2D" uid="uid://b4wlosyyn6c26" path="res://assets/liquid_station/assets/syrup_down.png" id="4_g2ujl"]
 [ext_resource type="Texture2D" uid="uid://cyy8jahkiljm8" path="res://assets/other/Untitled_Artwork 68.png" id="4_sk1ot"]
 [ext_resource type="Script" path="res://scenes/drink_station/milk.gd" id="4_t0iax"]
@@ -22,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://rld0v7fg280q" path="res://assets/liquid_station/assets/tea_nozzle_norm.png" id="10_ykvc5"]
 [ext_resource type="Texture2D" uid="uid://b0lb4fndwpn38" path="res://assets/liquid_station/assets/tea_nozzle_down.png" id="11_lqjrf"]
 [ext_resource type="Texture2D" uid="uid://26n3xfp856d1" path="res://assets/liquid_station/assets/fridge_closed.png" id="12_0otd3"]
+[ext_resource type="FontFile" uid="uid://b61w8siqip3ob" path="res://assets/fonts/HappyMarker-xg98.ttf" id="12_3bypd"]
 [ext_resource type="Script" path="res://scenes/drink_station/liquid_in_cup.gd" id="12_5lha2"]
 [ext_resource type="Texture2D" uid="uid://bee8e7v1r8ax4" path="res://assets/liquid_station/assets/coffee_nozzle_norm.png" id="12_kvpxp"]
 [ext_resource type="Texture2D" uid="uid://qrg8dyq1mppd" path="res://assets/liquid_station/animations/liquid-pouring/tea-1/Untitled_Artwork-1 6.png" id="12_lk40l"]
@@ -1784,7 +1784,6 @@ texture_pressed = ExtResource("4_sk1ot")
 texture_hover = ExtResource("5_xr4mc")
 
 [node name="tutorial fridge" type="Node2D" parent="."]
-scale = Vector2(1, 1)
 script = ExtResource("2_cjmyj")
 
 [node name="almond milk" type="TextureRect" parent="tutorial fridge"]
@@ -1799,6 +1798,7 @@ texture = ExtResource("2_gp4bo")
 
 [node name="Label5" type="Label" parent="tutorial fridge/almond milk"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 143.058
 offset_top = 511.563
 offset_right = 377.058
@@ -1824,6 +1824,7 @@ texture = ExtResource("2_gp4bo")
 
 [node name="Label5" type="Label" parent="tutorial fridge/cow milk"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 140.791
 offset_top = 73.8432
 offset_right = 374.791
@@ -1848,6 +1849,7 @@ texture = ExtResource("2_gp4bo")
 
 [node name="Label5" type="Label" parent="tutorial fridge/oat milk"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 140.791
 offset_top = 73.8432
 offset_right = 374.791
@@ -1861,7 +1863,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="tutorial" type="Node2D" parent="."]
-scale = Vector2(1, 1)
 script = ExtResource("4_xf130")
 
 [node name="syrup2" type="TextureRect" parent="tutorial"]
@@ -1876,6 +1877,7 @@ texture = ExtResource("10_c1mk2")
 
 [node name="Label5" type="Label" parent="tutorial/syrup2"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 127.246
 offset_top = 188.552
 offset_right = 540.246
@@ -1902,6 +1904,7 @@ texture = ExtResource("10_c1mk2")
 
 [node name="Label5" type="Label" parent="tutorial/fridge"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 1497.95
 offset_top = 207.254
 offset_right = 1910.95
@@ -1927,6 +1930,7 @@ texture = ExtResource("2_gp4bo")
 
 [node name="Label5" type="Label" parent="tutorial/syrup"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 140.792
 offset_top = 54.1517
 offset_right = 374.792
@@ -1951,6 +1955,7 @@ texture = ExtResource("2_gp4bo")
 
 [node name="Label5" type="Label" parent="tutorial/smoothie"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 140.791
 offset_top = 73.8432
 offset_right = 374.791
@@ -1974,6 +1979,7 @@ texture = ExtResource("2_gp4bo")
 
 [node name="Label5" type="Label" parent="tutorial/coffee"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 117.326
 offset_top = 73.8432
 offset_right = 351.326
@@ -1997,6 +2003,7 @@ texture = ExtResource("2_gp4bo")
 
 [node name="Label5" type="Label" parent="tutorial/tea"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 119.642
 offset_top = 75.3007
 offset_right = 353.642
@@ -2021,6 +2028,7 @@ texture = ExtResource("10_c1mk2")
 
 [node name="Label5" type="Label" parent="tutorial/container"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 217.827
 offset_top = 200.806
 offset_right = 630.827
@@ -2056,7 +2064,7 @@ offset_bottom = 457.0
 theme_override_colors/font_color = Color(0.986752, 0.986752, 0.986752, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("3_yu6tx")
+theme_override_fonts/font = ExtResource("12_3bypd")
 theme_override_font_sizes/font_size = 80
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -2555,8 +2563,8 @@ stream = ExtResource("374_d8it6")
 [node name="button" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("367_ipkjs")
 
-[connection signal="pressed" from="help button" to="tutorial" method="_on_help_button_pressed"]
 [connection signal="pressed" from="help button" to="tutorial fridge" method="_on_help_button_pressed"]
+[connection signal="pressed" from="help button" to="tutorial" method="_on_help_button_pressed"]
 [connection signal="body_entered" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_entered"]
 [connection signal="body_exited" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_body_exited"]
 [connection signal="input_event" from="sugar syrup/syrupSprite/syrup area" to="sugar syrup" method="_on_syrup_area_input_event"]

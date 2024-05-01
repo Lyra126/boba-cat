@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://vbjyytkea21g"]
+[gd_scene load_steps=4 format=3 uid="uid://vbjyytkea21g"]
 
 [ext_resource type="Script" path="res://scenes/Dialogue/dialogue_player.gd" id="1_soy1t"]
 [ext_resource type="Texture2D" uid="uid://b88ek1qkts6hn" path="res://assets/cutomer_line/dialogue.png" id="2_t5vn8"]
+[ext_resource type="FontFile" uid="uid://b61w8siqip3ob" path="res://assets/fonts/HappyMarker-xg98.ttf" id="3_3j5hf"]
 
 [node name="DialoguePlayer" type="CanvasLayer"]
 script = ExtResource("1_soy1t")
@@ -14,14 +15,23 @@ offset_bottom = 315.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_t5vn8")
 
-[node name="TextLabel" type="Label" parent="."]
+[node name="TextLabel" type="Label" parent="Background"]
 process_mode = 1
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.291
 anchor_top = 0.094
 anchor_right = 0.757
 anchor_bottom = 0.275
-offset_left = 49.4
-offset_top = 25.4
-offset_right = 50.4001
-offset_bottom = 48.4
+offset_left = -492.0
+offset_top = 34.25
+offset_right = -491.0
+offset_bottom = 57.25
+scale = Vector2(1.95867, 2.30828)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_3j5hf")
+theme_override_font_sizes/font_size = 40
+text = "Greetings human!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

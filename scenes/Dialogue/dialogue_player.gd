@@ -6,7 +6,7 @@ var scene_text = {}
 var selected_text = []
 var in_progress = false
 @onready var background = $Background
-@onready var text_label = $TextLabel
+@onready var text_label = $Background/TextLabel
 
 func _ready():
 	background.visible = false

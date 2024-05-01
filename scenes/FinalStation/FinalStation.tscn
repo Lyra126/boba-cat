@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://bhivsoxi3crb" path="res://assets/other/Untitled_Artwork 66.png" id="4_6o541"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="4_hdwhh"]
 [ext_resource type="Texture2D" uid="uid://658y711o0e5o" path="res://assets/final_station/cookie_cat.png" id="4_ij11g"]
-[ext_resource type="FontFile" uid="uid://b733oejs22hhv" path="res://assets/fonts/AlanisHand.ttf" id="4_oewmm"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="5_gn2qx"]
 [ext_resource type="Texture2D" uid="uid://ob70xcok41yy" path="res://assets/final_station/choco_cookie.png" id="5_wa4pf"]
 [ext_resource type="Texture2D" uid="uid://2cogrigjf03b" path="res://assets/final_station/sugar_cookie.png" id="6_qx2ym"]
@@ -27,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/buttons/hoverBack.png" id="9_d3pnv"]
 [ext_resource type="Texture2D" uid="uid://da4ofainic75h" path="res://assets/final_station/lid machine/lid machine close/Untitled_Artwork-3 55.png" id="9_jm2cp"]
 [ext_resource type="Texture2D" uid="uid://dndk45tkclobk" path="res://assets/final_station/lid machine/lid machine close/Untitled_Artwork-4 51.png" id="10_ofb81"]
+[ext_resource type="FontFile" uid="uid://b61w8siqip3ob" path="res://assets/fonts/HappyMarker-xg98.ttf" id="11_pa7mf"]
 [ext_resource type="Texture2D" uid="uid://b41oecjf6pspk" path="res://assets/final_station/lid machine/lid machine close/Untitled_Artwork-6 50.png" id="11_yrg7s"]
 [ext_resource type="Texture2D" uid="uid://46hk5lyxa5wi" path="res://assets/final_station/lid machine/lid machine open/lid_machine_bottom.png" id="18_0h5g6"]
 [ext_resource type="Texture2D" uid="uid://cjp3by1d0qdyk" path="res://assets/final_station/lid.png" id="19_cqdi6"]
@@ -125,6 +125,7 @@ texture = ExtResource("3_8kpwn")
 
 [node name="Label5" type="Label" parent="tutorial/straw"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 172.039
 offset_top = 452.406
 offset_right = 509.039
@@ -151,6 +152,7 @@ texture = ExtResource("3_8kpwn")
 
 [node name="Label5" type="Label" parent="tutorial/sugar"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 197.649
 offset_top = 483.009
 offset_right = 431.649
@@ -176,6 +178,7 @@ texture = ExtResource("3_8kpwn")
 
 [node name="Label5" type="Label" parent="tutorial/choco"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 197.649
 offset_top = 483.009
 offset_right = 431.649
@@ -201,6 +204,7 @@ texture = ExtResource("3_8kpwn")
 
 [node name="Label5" type="Label" parent="tutorial/cat"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 143.058
 offset_top = 511.563
 offset_right = 377.058
@@ -218,14 +222,15 @@ vertical_alignment = 1
 auto_translate_mode = 1
 z_index = 15
 offset_left = 33.1982
-offset_top = -687.307
+offset_top = -661.432
 offset_right = 7445.2
-offset_bottom = 848.693
-scale = Vector2(0.361307, 0.379045)
+offset_bottom = 874.568
+scale = Vector2(0.363905, 0.352474)
 texture = ExtResource("2_8and8")
 
 [node name="Label5" type="Label" parent="tutorial/tongs"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 301.903
 offset_top = 204.792
 offset_right = 714.903
@@ -252,6 +257,7 @@ texture = ExtResource("2_8and8")
 
 [node name="Label5" type="Label" parent="tutorial/cup"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 1649.64
 offset_top = 169.812
 offset_right = 2062.64
@@ -278,6 +284,7 @@ texture = ExtResource("2_8and8")
 
 [node name="Label5" type="Label" parent="tutorial/machine"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 127.246
 offset_top = 188.552
 offset_right = 540.246
@@ -314,7 +321,7 @@ offset_bottom = 457.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("4_oewmm")
+theme_override_fonts/font = ExtResource("11_pa7mf")
 theme_override_font_sizes/font_size = 80
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -354,9 +361,10 @@ position = Vector2(-90.0156, 33.1561)
 polygon = PackedVector2Array(-427.474, 86.6188, -404.565, 92.7648, -86.0088, 333.778, 19.5005, 342.834, 46.8289, 293.182, -17.7544, 252.371, -294.666, 37.2461, -354.187, 55.4576)
 
 [node name="case" type="Sprite2D" parent="."]
-position = Vector2(-125.275, -184.765)
+position = Vector2(-124.888, -184.36)
 scale = Vector2(0.584151, 0.580784)
 texture = ExtResource("3_xkumw")
+metadata/_edit_lock_ = true
 
 [node name="catCookie2" type="Sprite2D" parent="case" groups=["cat-cookie"]]
 position = Vector2(-493.033, 255.008)
