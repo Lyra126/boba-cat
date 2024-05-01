@@ -656,14 +656,14 @@ vertical_alignment = 1
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tray"]
 polygon = PackedVector2Array(-333.563, 426.939, -515.362, 609.682, -502.715, 643.643, 637.089, 643.643, 651.316, 606.448, 464.774, 430.174)
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="orderIcon" type="TextureButton" parent="."]
 auto_translate_mode = 1
 visible = false
-offset_left = 1043.37
-offset_top = -688.925
-offset_right = 1543.37
-offset_bottom = 11.0753
-scale = Vector2(0.288519, 0.33947)
+offset_left = 1019.66
+offset_top = -692.159
+offset_right = 1519.66
+offset_bottom = 7.84119
+scale = Vector2(0.326572, 0.363676)
 texture_normal = ExtResource("29_sx6wd")
 texture_pressed = ExtResource("30_pvshn")
 texture_hover = ExtResource("31_pscrj")
@@ -766,7 +766,7 @@ stream = ExtResource("44_c23lj")
 [connection signal="input_event" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_input_event"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="SubmitOrder" to="." method="_on_submit_order_pressed"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="orderIcon" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="close" to="." method="_on_close_pressed"]
 [connection signal="input_event" from="trash/trash" to="." method="_on_trash_input_event"]
 [connection signal="input_event" from="trash/trash" to="tongs" method="_on_trash_input_event"]

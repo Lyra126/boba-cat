@@ -17,6 +17,8 @@ func _ready() -> void:
 	$Customer.texture = global.get_customer_texture(global.currCustomer)
 	await get_tree().create_timer(1.0).timeout
 	rateOrder()
+	await get_tree().create_timer(4.0).timeout
+	$tutorial.show()
 	
 func reset():
 	global.dialogueCompleted = false

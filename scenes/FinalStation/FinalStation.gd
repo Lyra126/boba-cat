@@ -9,7 +9,7 @@ func _ready():
 	if not global.hasCup:
 		$cup.hide()
 	if global.order != []:
-		$TextureButton.visible = true
+		$orderIcon.visible = true
 		
 
 func _on_submit_order_pressed():

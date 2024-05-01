@@ -2049,11 +2049,11 @@ z_index = 15
 
 [node name="TextureRect" type="TextureRect" parent="order"]
 auto_translate_mode = 1
-offset_left = -344.164
-offset_top = -502.615
-offset_right = 155.836
-offset_bottom = 197.385
-scale = Vector2(1.46752, 1.43387)
+offset_left = -347.093
+offset_top = -529.653
+offset_right = 152.907
+offset_bottom = 170.347
+scale = Vector2(1.46752, 1.51548)
 texture = ExtResource("2_ufbkq")
 
 [node name="Label" type="Label" parent="order"]
@@ -2061,13 +2061,15 @@ offset_left = -309.0
 offset_top = -350.0
 offset_right = 352.0
 offset_bottom = 457.0
+scale = Vector2(1, 0.958401)
 theme_override_colors/font_color = Color(0.986752, 0.986752, 0.986752, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
+theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("12_3bypd")
 theme_override_font_sizes/font_size = 80
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="sugar_syrup_droppable" type="Area2D" parent="."]
 position = Vector2(-2.26498e-06, 3.39522)
@@ -2515,21 +2517,21 @@ metadata/_edit_use_anchors_ = true
 [node name="close" type="TextureButton" parent="."]
 visible = false
 z_index = 15
-offset_left = 248.83
+offset_left = 191.773
 offset_top = -485.515
-offset_right = 1748.83
+offset_right = 1691.77
 offset_bottom = 1014.48
-scale = Vector2(0.0770623, 0.0843981)
+scale = Vector2(0.109459, 0.119248)
 texture_normal = ExtResource("354_3wj6e")
 texture_pressed = ExtResource("355_qd2hn")
 texture_hover = ExtResource("356_8sbse")
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="orderIcon" type="TextureButton" parent="."]
 visible = false
-offset_left = 1040.0
-offset_top = -776.0
-offset_right = 1540.0
-offset_bottom = -76.0
+offset_left = 1015.92
+offset_top = -775.806
+offset_right = 1515.92
+offset_bottom = -75.8058
 scale = Vector2(0.344599, 0.37583)
 texture_normal = ExtResource("134_xity5")
 texture_pressed = ExtResource("135_7tirn")
@@ -2605,7 +2607,7 @@ stream = ExtResource("367_ipkjs")
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="orderIcon" to="." method="_on_texture_button_pressed"]
 [connection signal="input_event" from="trash/trash" to="." method="_on_trash_input_event"]
 [connection signal="mouse_entered" from="trash/trash" to="." method="_on_trash_mouse_entered"]
 [connection signal="mouse_exited" from="trash/trash" to="." method="_on_trash_mouse_exited"]

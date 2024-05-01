@@ -8,7 +8,7 @@ func _ready():
 	$Back.pressed.connect(self._on_back_pressed)
 	$Next.pressed.connect(self._on_next_pressed)
 	if global.order != []:
-		$TextureButton.visible = true
+		$orderIcon.visible = true
 	#get_liquid_inside_cup_animation(anim)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

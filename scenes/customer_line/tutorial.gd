@@ -6,8 +6,7 @@ var time_passed = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if global.shownCustomerTutorial:
-		$TextureRect.hide()
-		$Label.hide()
+		$".".hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -19,6 +18,5 @@ func _process(delta: float) -> void:
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
-			$TextureRect.hide()
-			$Label.hide()
-			global.shownCustomerTutorial = true
+			$".".hide()
+			global.shownRate = true

@@ -59,6 +59,7 @@ var shownCustomerTutorial = false
 var shownToppingsTutorial = false
 var shownLiquidsTutorial = false
 var shownFinalStation = false
+var shownRate = false
 
 
 func _process(delta):

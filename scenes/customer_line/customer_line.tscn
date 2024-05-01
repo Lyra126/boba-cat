@@ -117,6 +117,9 @@ offset_left = -491.821
 offset_top = 46.9908
 offset_right = -490.821
 offset_bottom = 69.9908
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
 text = ""
 
 [node name="DialogArea" type="Area2D" parent="DialoguePlayer"]
@@ -154,7 +157,7 @@ offset_right = 352.981
 offset_bottom = 418.896
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
+theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("14_yq4pu")
 theme_override_font_sizes/font_size = 80
 horizontal_alignment = 1

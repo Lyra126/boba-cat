@@ -74,6 +74,7 @@ texture_hover = ExtResource("5_j3jpt")
 
 [node name="tutorial" type="Node2D" parent="."]
 script = ExtResource("2_t773b")
+metadata/_edit_lock_ = true
 
 [node name="toppings" type="Node2D" parent="tutorial"]
 position = Vector2(4.40972, -44.1778)
@@ -198,6 +199,55 @@ Boba"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TextureRect10" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 20
+offset_left = -790.442
+offset_top = 364.467
+offset_right = 6621.56
+offset_bottom = 1900.47
+scale = Vector2(0.222632, 0.223538)
+texture = ExtResource("5_86px5")
+
+[node name="Label" type="Label" parent="tutorial/TextureRect10"]
+auto_translate_mode = 1
+offset_left = -128.747
+offset_top = 236.058
+offset_right = 365.253
+offset_bottom = 393.058
+scale = Vector2(4.06576, 5.35604)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_2imkl")
+theme_override_font_sizes/font_size = 28
+text = "Click to delete
+current order"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect9" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+offset_left = 713.271
+offset_top = -512.953
+offset_right = 8125.27
+offset_bottom = 1023.05
+scale = Vector2(-0.228832, 0.230424)
+texture = ExtResource("5_86px5")
+
+[node name="Label" type="Label" parent="tutorial/TextureRect9"]
+auto_translate_mode = 1
+offset_left = 1874.06
+offset_top = 239.655
+offset_right = 2368.06
+offset_bottom = 396.655
+scale = Vector2(-3.98156, 5.10613)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_2imkl")
+theme_override_font_sizes/font_size = 28
+text = "Click here to 
+view the order"
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [node name="TextureRect8" type="TextureRect" parent="tutorial"]
 auto_translate_mode = 1
 offset_left = -403.489
@@ -207,12 +257,12 @@ offset_bottom = 1010.78
 scale = Vector2(0.349785, 0.323588)
 texture = ExtResource("5_86px5")
 
-[node name="Label" type="Label" parent="tutorial"]
-offset_left = -297.656
-offset_top = -463.867
-offset_right = 196.344
-offset_bottom = -306.867
-scale = Vector2(0.942061, 1.05193)
+[node name="Label" type="Label" parent="tutorial/TextureRect8"]
+offset_left = 308.87
+offset_top = 189.618
+offset_right = 802.87
+offset_bottom = 346.618
+scale = Vector2(2.54261, 3.28701)
 theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
 theme_override_fonts/font = ExtResource("3_2imkl")
 theme_override_font_sizes/font_size = 28
@@ -452,6 +502,7 @@ shape = SubResource("RectangleShape2D_c73js")
 [node name="OrderForm" type="Node2D" parent="."]
 visible = false
 z_index = 25
+scale = Vector2(0.634265, 0.713095)
 
 [node name="TextureRect" type="TextureRect" parent="OrderForm"]
 auto_translate_mode = 1
@@ -470,7 +521,7 @@ offset_right = 353.422
 offset_bottom = 406.946
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
+theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("23_q4bmm")
 theme_override_font_sizes/font_size = 80
 text = "feafsefs
@@ -480,13 +531,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="TextureButton" type="TextureButton" parent="."]
-visible = false
+[node name="orderIcon" type="TextureButton" parent="."]
 offset_left = 702.247
 offset_top = -530.134
 offset_right = 1202.25
 offset_bottom = 169.866
-scale = Vector2(0.288519, 0.33947)
+scale = Vector2(0.246, 0.289)
 texture_normal = ExtResource("20_pfya0")
 texture_pressed = ExtResource("21_qobrt")
 texture_hover = ExtResource("22_3ycls")
@@ -494,11 +544,11 @@ texture_hover = ExtResource("22_3ycls")
 [node name="close" type="TextureButton" parent="."]
 visible = false
 z_index = 28
-offset_left = 221.588
-offset_top = -456.504
-offset_right = 1721.59
-offset_bottom = 1043.5
-scale = Vector2(0.0836853, 0.0817412)
+offset_left = 121.267
+offset_top = -327.652
+offset_right = 1621.27
+offset_bottom = 1172.35
+scale = Vector2(0.066591, 0.064707)
 texture_normal = ExtResource("20_jag3e")
 texture_pressed = ExtResource("21_sqma7")
 texture_hover = ExtResource("22_fxphv")
@@ -539,6 +589,6 @@ volume_db = -17.512
 [connection signal="input_event" from="trash/trash" to="ladle" method="_on_trash_input_event"]
 [connection signal="mouse_entered" from="trash/trash" to="." method="_on_trash_mouse_entered"]
 [connection signal="mouse_exited" from="trash/trash" to="." method="_on_trash_mouse_exited"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="orderIcon" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

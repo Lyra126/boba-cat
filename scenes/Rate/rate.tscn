@@ -1,13 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwtjyl3dll2e1"]
+[gd_scene load_steps=22 format=3 uid="uid://dwtjyl3dll2e1"]
 
 [ext_resource type="Script" path="res://scenes/Rate/rate.gd" id="1_6u8ji"]
 [ext_resource type="Texture2D" uid="uid://dxrasnos0pmau" path="res://assets/rate/rate.png" id="2_v238p"]
+[ext_resource type="Script" path="res://scenes/customer_line/tutorial.gd" id="2_xk5av"]
 [ext_resource type="Texture2D" uid="uid://no2v4pbnhq8s" path="res://assets/cats/cat1.png" id="3_m2tf4"]
+[ext_resource type="Texture2D" uid="uid://j4l4q85hg8vf" path="res://assets/other/Untitled_Artwork 60.png" id="3_vac0w"]
 [ext_resource type="Texture2D" uid="uid://doyijlo53a272" path="res://assets/rate/emptyStars.png" id="4_afqof"]
+[ext_resource type="FontFile" uid="uid://v0he3kerpxgp" path="res://assets/fonts/AprilshandwritingRegular-mpGj.otf" id="4_d0lts"]
 [ext_resource type="Texture2D" uid="uid://decqfronbg1e3" path="res://assets/rate/fullStars.png" id="5_fudmb"]
 [ext_resource type="Texture2D" uid="uid://b88ek1qkts6hn" path="res://assets/cutomer_line/dialogue.png" id="6_f8gjd"]
 [ext_resource type="Texture2D" uid="uid://c7cre5rll2or2" path="res://assets/rate/overlayTray.png" id="7_4k1jg"]
-[ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="7_lsw0c"]
+[ext_resource type="FontFile" uid="uid://b61w8siqip3ob" path="res://assets/fonts/HappyMarker-xg98.ttf" id="7_bvpnr"]
 [ext_resource type="Script" path="res://scenes/FinalStation/finalcup.gd" id="8_i1btk"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="9_lfoyv"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="10_me8f5"]
@@ -45,11 +48,52 @@ func deselect():
 [node name="Rate" type="Node2D"]
 script = ExtResource("1_6u8ji")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="tutorial" type="Node2D" parent="."]
+visible = false
+z_index = 2
+position = Vector2(-1250.94, -708.087)
+scale = Vector2(1.00707, 1)
+script = ExtResource("2_xk5av")
+
+[node name="TextureRect" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 1
+offset_left = 1385.15
+offset_top = 704.087
+offset_right = 8797.15
+offset_bottom = 2240.09
+scale = Vector2(0.213067, 0.195456)
+texture = ExtResource("3_vac0w")
+
+[node name="Label" type="Label" parent="tutorial/TextureRect"]
+auto_translate_mode = 1
+z_index = 1
+offset_left = -279.655
+offset_top = 224.562
+offset_right = 2072.35
+offset_bottom = 479.562
+scale = Vector2(2.67513, 2.95154)
+theme_override_colors/font_color = Color(0.686257, 0.477653, 0.509724, 1)
+theme_override_fonts/font = ExtResource("4_d0lts")
+theme_override_font_sizes/font_size = 52
+text = "When you've finished recieving your rating,
+click back on the cat to go to your
+next customer!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="tutorial"]
+auto_translate_mode = 1
+visible = false
+offset_right = 233.0
+offset_bottom = 98.0
+
+[node name="bg" type="TextureRect" parent="."]
 offset_right = 2000.0
 offset_bottom = 1250.0
 scale = Vector2(0.800277, 0.719555)
 texture = ExtResource("2_v238p")
+metadata/_edit_lock_ = true
 
 [node name="Customer" type="Sprite2D" parent="."]
 position = Vector2(477, 435)
@@ -58,52 +102,51 @@ texture = ExtResource("3_m2tf4")
 
 [node name="Rating" type="TextureProgressBar" parent="."]
 visible = false
-offset_left = 8.0
-offset_top = 16.0
-offset_right = 2508.0
-offset_bottom = 1016.0
+offset_left = 41.0
+offset_top = 22.0
+offset_right = 2541.0
+offset_bottom = 1022.0
 scale = Vector2(0.233563, 0.203656)
 texture_under = ExtResource("4_afqof")
 texture_progress = ExtResource("5_fudmb")
 
 [node name="Notif" type="TextureRect" parent="."]
 visible = false
-offset_left = 600.0
-offset_top = 24.0
-offset_right = 2600.0
-offset_bottom = 524.0
-scale = Vector2(0.498067, 0.607163)
+offset_left = 663.0
+offset_top = 28.0
+offset_right = 2663.0
+offset_bottom = 528.0
+scale = Vector2(0.433981, 0.392525)
 texture = ExtResource("6_f8gjd")
 
 [node name="Clear" type="Label" parent="."]
 visible = false
-offset_left = 864.0
-offset_top = 80.0
-offset_right = 1198.0
-offset_bottom = 248.0
-scale = Vector2(1.33964, 0.999813)
+offset_left = 814.0
+offset_top = 14.0
+offset_right = 1407.0
+offset_bottom = 319.0
+scale = Vector2(0.93363, 0.766311)
 theme_type_variation = &"HeaderLarge"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 25
-theme_override_fonts/font = ExtResource("7_lsw0c")
+theme_override_fonts/font = ExtResource("7_bvpnr")
 theme_override_font_sizes/font_size = 150
-text = "CLEAR"
+text = "Cleared!"
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 3
 
 [node name="Label" type="Label" parent="."]
 visible = false
-offset_left = 672.0
-offset_top = 96.0
-offset_right = 1528.0
-offset_bottom = 264.0
+offset_left = 680.0
+offset_top = 46.0
+offset_right = 1536.0
+offset_bottom = 214.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("7_lsw0c")
-theme_override_font_sizes/font_size = 55
+theme_override_fonts/font = ExtResource("7_bvpnr")
+theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
