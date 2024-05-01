@@ -211,6 +211,7 @@ texture = ExtResource("5_86px5")
 
 [node name="Label" type="Label" parent="tutorial/TextureRect10"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = -128.747
 offset_top = 236.058
 offset_right = 365.253
@@ -235,6 +236,7 @@ texture = ExtResource("5_86px5")
 
 [node name="Label" type="Label" parent="tutorial/TextureRect9"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 1874.06
 offset_top = 239.655
 offset_right = 2368.06
@@ -258,6 +260,7 @@ scale = Vector2(0.349785, 0.323588)
 texture = ExtResource("5_86px5")
 
 [node name="Label" type="Label" parent="tutorial/TextureRect8"]
+layout_mode = 0
 offset_left = 308.87
 offset_top = 189.618
 offset_right = 802.87

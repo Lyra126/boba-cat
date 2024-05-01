@@ -1,0 +1,100 @@
+[gd_scene load_steps=4 format=3 uid="uid://nxqlbdtyoix2"]
+
+[ext_resource type="Texture2D" uid="uid://dtlc6ifddcc0c" path="res://assets/welcome/credit.png" id="1_dkt3q"]
+[ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="2_8mdxb"]
+[ext_resource type="Texture2D" uid="uid://gr51x125w14j" path="res://assets/welcome/cc.png" id="3_2qlyt"]
+
+[node name="Credits" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 2000.0
+offset_bottom = 1250.0
+scale = Vector2(0.79949, 0.723625)
+texture = ExtResource("1_dkt3q")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 957.0
+offset_top = 27.0
+offset_right = 1365.0
+offset_bottom = 178.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("2_8mdxb")
+theme_override_font_sizes/font_size = 150
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cc" type="Sprite2D" parent="."]
+position = Vector2(942, 351)
+scale = Vector2(0.694, 0.674)
+texture = ExtResource("3_2qlyt")
+
+[node name="Label" type="Label" parent="cc"]
+anchors_preset = -1
+anchor_left = -0.34849
+anchor_top = -0.000522003
+anchor_right = -0.69849
+anchor_bottom = 0.107478
+offset_left = -80.7982
+offset_top = 242.101
+offset_right = 588.202
+offset_bottom = 509.101
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_8mdxb")
+theme_override_font_sizes/font_size = 50
+text = "Clarissa Cheung
+
+2nd Year
+Computer Science Student 
+@ University of Florida
+insta: clynae2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+auto_translate_mode = 1
+offset_left = 945.0
+offset_top = 811.0
+offset_right = 1584.0
+offset_bottom = 886.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_8mdxb")
+theme_override_font_sizes/font_size = 35
+text = "Sound Effects by Zapslat
+BG Music: \"Green Tea\" - Purrple Cat on Chosic"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="rp" type="Sprite2D" parent="."]
+position = Vector2(1343, 350)
+scale = Vector2(0.694, 0.674)
+texture = ExtResource("3_2qlyt")
+
+[node name="Label" type="Label" parent="rp"]
+auto_translate_mode = 1
+anchors_preset = -1
+anchor_left = -0.350016
+anchor_top = -0.001686
+anchor_right = -0.700016
+anchor_bottom = 0.106314
+offset_left = -64.1851
+offset_top = 239.715
+offset_right = 604.815
+offset_bottom = 506.715
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_8mdxb")
+theme_override_font_sizes/font_size = 50
+text = "Rachel Pu
+
+2nd Year
+Computer Science Student 
+@ University of Florida
+insta: clynae2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

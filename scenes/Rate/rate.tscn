@@ -68,6 +68,7 @@ texture = ExtResource("3_vac0w")
 [node name="Label" type="Label" parent="tutorial/TextureRect"]
 auto_translate_mode = 1
 z_index = 1
+layout_mode = 0
 offset_left = -279.655
 offset_top = 224.562
 offset_right = 2072.35

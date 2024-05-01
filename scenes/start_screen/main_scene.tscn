@@ -34,4 +34,14 @@ offset_top = 296.0
 offset_right = 102.0
 offset_bottom = 453.0
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -488.0
+offset_top = 262.0
+offset_right = -346.0
+offset_bottom = 336.0
+scale = Vector2(2.13393, 2.11499)
+text = "Credits"
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
