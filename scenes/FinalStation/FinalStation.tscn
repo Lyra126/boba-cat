@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://d3uxtyc6i7orl"]
+[gd_scene load_steps=55 format=3 uid="uid://d3uxtyc6i7orl"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Script" path="res://scenes/FinalStation/tutorial.gd" id="2_5q85h"]
@@ -34,7 +34,6 @@
 [ext_resource type="Texture2D" uid="uid://554nig4kbyt3" path="res://assets/final_station/lid machine/lid machine open/lid_machine_middle_back.png" id="20_n6xst"]
 [ext_resource type="Texture2D" uid="uid://gyo466pymk15" path="res://assets/final_station/lid machine/lid machine open/lid_machine_middle_front.png" id="21_vcbix"]
 [ext_resource type="Texture2D" uid="uid://da8qqrxlydbxi" path="res://assets/final_station/submit.png" id="27_ea6kn"]
-[ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="28_rqf7d"]
 [ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="29_sx6wd"]
 [ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="30_pvshn"]
 [ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="31_pscrj"]
@@ -186,9 +185,9 @@ offset_bottom = 608.009
 scale = Vector2(3.85074, -3.38652)
 theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
 theme_override_fonts/font = ExtResource("3_o4h27")
-theme_override_font_sizes/font_size = 34
+theme_override_font_sizes/font_size = 32
 text = "Chocolate
-Chip"
+Chip Cookie"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -225,7 +224,7 @@ offset_left = 33.1982
 offset_top = -661.432
 offset_right = 7445.2
 offset_bottom = 874.568
-scale = Vector2(0.363905, 0.352474)
+scale = Vector2(0.36565, 0.34245)
 texture = ExtResource("2_8and8")
 
 [node name="Label5" type="Label" parent="tutorial/tongs"]
@@ -279,23 +278,23 @@ offset_left = -785.69
 offset_top = -95.4145
 offset_right = 6626.31
 offset_bottom = 1440.59
-scale = Vector2(0.254511, 0.283625)
+scale = Vector2(0.311063, 0.302598)
 texture = ExtResource("2_8and8")
 
 [node name="Label5" type="Label" parent="tutorial/machine"]
 auto_translate_mode = 1
 layout_mode = 0
-offset_left = 127.246
-offset_top = 188.552
-offset_right = 540.246
-offset_bottom = 317.552
-scale = Vector2(3.53683, 4.05149)
+offset_left = 137.218
+offset_top = 192.397
+offset_right = 550.218
+offset_bottom = 321.397
+scale = Vector2(3.57631, 3.88407)
 theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
 theme_override_fonts/font = ExtResource("3_o4h27")
-theme_override_font_sizes/font_size = 30
-text = "Drag cup to
-snap onto
-machine"
+theme_override_font_sizes/font_size = 25
+text = "Always add a lid!
+Drag cup to snap 
+onto machine"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -320,7 +319,7 @@ offset_right = 352.0
 offset_bottom = 457.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
+theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("11_pa7mf")
 theme_override_font_sizes/font_size = 80
 horizontal_alignment = 1
@@ -639,13 +638,14 @@ texture_normal = ExtResource("27_ea6kn")
 
 [node name="Label" type="Label" parent="SubmitOrder"]
 layout_mode = 0
-offset_left = 139.356
-offset_top = 101.406
-offset_right = 863.356
-offset_bottom = 396.406
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("28_rqf7d")
+offset_left = 106.404
+offset_top = 89.8746
+offset_right = 830.404
+offset_bottom = 384.875
+scale = Vector2(1.11954, 1.11954)
+theme_override_colors/font_outline_color = Color(0.301961, 0.164706, 0.0627451, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("11_pa7mf")
 theme_override_font_sizes/font_size = 200
 text = "Submit"
 horizontal_alignment = 1
@@ -659,11 +659,11 @@ polygon = PackedVector2Array(-333.563, 426.939, -515.362, 609.682, -502.715, 643
 [node name="orderIcon" type="TextureButton" parent="."]
 auto_translate_mode = 1
 visible = false
-offset_left = 1019.66
+offset_left = 1018.08
 offset_top = -692.159
-offset_right = 1519.66
-offset_bottom = 7.84119
-scale = Vector2(0.326572, 0.363676)
+offset_right = 1518.08
+offset_bottom = 7.84125
+scale = Vector2(0.354425, 0.363676)
 texture_normal = ExtResource("29_sx6wd")
 texture_pressed = ExtResource("30_pvshn")
 texture_hover = ExtResource("31_pscrj")

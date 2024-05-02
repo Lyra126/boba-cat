@@ -1778,7 +1778,7 @@ offset_left = -816.224
 offset_top = 561.907
 offset_right = -305.224
 offset_bottom = 910.907
-scale = Vector2(0.321579, 0.350419)
+scale = Vector2(0.350788, 0.364086)
 texture_normal = ExtResource("3_0xhc8")
 texture_pressed = ExtResource("4_sk1ot")
 texture_hover = ExtResource("5_xr4mc")
@@ -1865,30 +1865,58 @@ vertical_alignment = 1
 [node name="tutorial" type="Node2D" parent="."]
 script = ExtResource("4_xf130")
 
+[node name="cup" type="TextureRect" parent="tutorial"]
+auto_translate_mode = 1
+z_index = 50
+offset_left = -28.5281
+offset_top = 392.147
+offset_right = 7383.47
+offset_bottom = 1928.15
+scale = Vector2(-0.35951, 0.353642)
+texture = ExtResource("10_c1mk2")
+
+[node name="Label5" type="Label" parent="tutorial/cup"]
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 1450.4
+offset_top = 192.014
+offset_right = 1915.4
+offset_bottom = 349.014
+scale = Vector2(-2.51243, 2.88772)
+theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
+theme_override_fonts/font = ExtResource("3_twy4m")
+theme_override_font_sizes/font_size = 30
+text = "Click to move cup
+around, click cup
+anywhere else to drop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="syrup2" type="TextureRect" parent="tutorial"]
 auto_translate_mode = 1
-z_index = 15
-offset_left = -686.262
-offset_top = 108.647
-offset_right = 6725.74
-offset_bottom = 1644.65
-scale = Vector2(0.298929, 0.333126)
+z_index = 50
+offset_left = -714.791
+offset_top = 162.97
+offset_right = 6697.21
+offset_bottom = 1698.97
+scale = Vector2(-0.35951, 0.353642)
 texture = ExtResource("10_c1mk2")
 
 [node name="Label5" type="Label" parent="tutorial/syrup2"]
 auto_translate_mode = 1
 layout_mode = 0
-offset_left = 127.246
-offset_top = 188.552
-offset_right = 540.246
-offset_bottom = 317.552
-scale = Vector2(3.53683, 4.05149)
+offset_left = 1459.21
+offset_top = 201.614
+offset_right = 1924.21
+offset_bottom = 358.614
+scale = Vector2(-2.51243, 2.88772)
 theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
 theme_override_fonts/font = ExtResource("3_twy4m")
 theme_override_font_sizes/font_size = 30
-text = "Click to drag,
-right click to 
-return"
+text = "Click to drag, then onto
+cup to add syrup. 
+One push = 25% sugar
+ Right click to return"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -2494,10 +2522,10 @@ sprite_frames = SubResource("SpriteFrames_youfl")
 
 [node name="Back" type="TextureButton" parent="."]
 offset_left = -1261.58
-offset_top = 422.704
-offset_right = -261.58
-offset_bottom = 1422.7
-scale = Vector2(0.32, 0.32)
+offset_top = 446.47
+offset_right = -261.582
+offset_bottom = 1446.47
+scale = Vector2(0.318178, 0.293198)
 texture_normal = ExtResource("40_2pc7h")
 texture_pressed = ExtResource("41_rpnfp")
 texture_hover = ExtResource("42_8e33d")
@@ -2528,19 +2556,19 @@ texture_hover = ExtResource("356_8sbse")
 
 [node name="orderIcon" type="TextureButton" parent="."]
 visible = false
-offset_left = 1015.92
+offset_left = 1019.09
 offset_top = -775.806
-offset_right = 1515.92
-offset_bottom = -75.8058
-scale = Vector2(0.344599, 0.37583)
+offset_right = 1519.09
+offset_bottom = -75.8056
+scale = Vector2(0.3657, 0.385565)
 texture_normal = ExtResource("134_xity5")
 texture_pressed = ExtResource("135_7tirn")
 texture_hover = ExtResource("136_2dvsm")
 metadata/_edit_use_anchors_ = true
 
 [node name="trash" type="Sprite2D" parent="."]
-position = Vector2(-890.715, 602.65)
-scale = Vector2(0.103193, 0.117496)
+position = Vector2(-890.715, 609.44)
+scale = Vector2(0.0962705, 0.10769)
 texture = ExtResource("2_qtkbs")
 
 [node name="trash" type="Area2D" parent="trash"]

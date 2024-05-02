@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhoh40m4lx3uo"]
+[gd_scene load_steps=10 format=3 uid="uid://bhoh40m4lx3uo"]
 
 [ext_resource type="Script" path="res://scenes/start_screen/main_scene.gd" id="1_lmhu1"]
-[ext_resource type="Texture2D" uid="uid://bte2db3h0d8dv" path="res://assets/welcome/store.png" id="2_ff285"]
+[ext_resource type="Texture2D" uid="uid://bvulouj2kjx7n" path="res://assets/welcome/bg.png" id="2_vfvpy"]
+[ext_resource type="Texture2D" uid="uid://cclfgrdyd8qxh" path="res://assets/welcome/credits.png" id="3_tcgtp"]
+[ext_resource type="FontFile" uid="uid://b61w8siqip3ob" path="res://assets/fonts/HappyMarker-xg98.ttf" id="4_gpu3b"]
+[ext_resource type="Texture2D" uid="uid://ctxdkiondmnx6" path="res://assets/welcome/Untitled_Artwork-1 61.png" id="4_twf5i"]
+[ext_resource type="Texture2D" uid="uid://ci4mr3bhw4vkr" path="res://assets/welcome/Untitled_Artwork-2 62.png" id="5_o3akd"]
+[ext_resource type="Texture2D" uid="uid://dsmf4hiqrikgb" path="res://assets/welcome/Untitled_Artwork-2 63.png" id="7_tbjuf"]
+[ext_resource type="Texture2D" uid="uid://b66igdbkhcqyo" path="res://assets/welcome/Untitled_Artwork-1 62.png" id="8_n5n7j"]
+[ext_resource type="Texture2D" uid="uid://b33hhyrf82klr" path="res://assets/welcome/Untitled_Artwork-3 57.png" id="9_e47ot"]
 
 [node name="MainScene" type="Control"]
 layout_mode = 3
@@ -19,29 +26,63 @@ anchor_left = -6.516
 anchor_top = -5.12
 anchor_right = 6.379
 anchor_bottom = 5.783
-offset_left = 312.984
-offset_top = 196.04
-offset_right = 2207.0
-offset_bottom = 1176.96
-scale = Vector2(0.455746, 0.444101)
-texture = ExtResource("2_ff285")
+offset_left = 306.984
+offset_top = 183.04
+offset_right = 2201.0
+offset_bottom = 1163.96
+scale = Vector2(0.457709, 0.460937)
+texture = ExtResource("2_vfvpy")
 expand_mode = 1
 
-[node name="Play" type="Button" parent="."]
-layout_mode = 0
-offset_left = -120.0
-offset_top = 296.0
-offset_right = 102.0
-offset_bottom = 453.0
+[node name="Credits" type="TextureButton" parent="."]
+auto_translate_mode = 1
+offset_left = 829.0
+offset_top = 295.0
+offset_right = 1742.0
+offset_bottom = 906.0
+scale = Vector2(0.251744, 0.196537)
+texture_normal = ExtResource("3_tcgtp")
+texture_pressed = ExtResource("4_twf5i")
+texture_hover = ExtResource("5_o3akd")
 
-[node name="Button" type="Button" parent="."]
+[node name="Label" type="Label" parent="Credits"]
 layout_mode = 0
-offset_left = -488.0
-offset_top = 262.0
-offset_right = -346.0
-offset_bottom = 336.0
-scale = Vector2(2.13393, 2.11499)
+offset_left = 55.6121
+offset_top = 127.203
+offset_right = 418.612
+offset_bottom = 228.203
+scale = Vector2(2.0111, 3.00756)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.316167, 0.316167, 0.316167, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("4_gpu3b")
+theme_override_font_sizes/font_size = 100
 text = "Credits"
 
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Play2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 674.0
+offset_top = 430.0
+offset_right = 1501.0
+offset_bottom = 996.0
+scale = Vector2(0.450783, 0.292213)
+texture_normal = ExtResource("7_tbjuf")
+texture_pressed = ExtResource("8_n5n7j")
+texture_hover = ExtResource("9_e47ot")
+
+[node name="Label" type="Label" parent="Play2"]
+auto_translate_mode = 1
+offset_left = 64.3324
+offset_top = 133.465
+offset_right = 427.332
+offset_bottom = 234.465
+scale = Vector2(2.29174, 3.38319)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.165276, 0.324402, 0.174066, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("4_gpu3b")
+theme_override_font_sizes/font_size = 100
+text = "Start!"
+
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Play2" to="." method="_on_play_2_pressed"]

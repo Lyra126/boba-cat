@@ -109,7 +109,7 @@ func generate_order():
 		elif(global.order[i] == "cat-cookie"):
 			numCatCookies += 1
 	if(numChocCookies > 0):
-		orderText += str(numChocCookies) + " Chocolate Cookies" + "\n"
+		orderText += str(numChocCookies) + " Chocolate Chip Cookies" + "\n"
 	if(numSugarCookies > 0):
 		orderText += str(numSugarCookies) + " Sugar Cookies" + "\n"
 	if(numSugarCookies > 0):

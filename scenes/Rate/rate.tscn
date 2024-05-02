@@ -51,7 +51,7 @@ script = ExtResource("1_6u8ji")
 [node name="tutorial" type="Node2D" parent="."]
 visible = false
 z_index = 2
-position = Vector2(-1250.94, -708.087)
+position = Vector2(-1251, -666)
 scale = Vector2(1.00707, 1)
 script = ExtResource("2_xk5av")
 

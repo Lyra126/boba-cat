@@ -149,7 +149,7 @@ scale = Vector2(0.890853, 0.890853)
 theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
 theme_override_fonts/font = ExtResource("3_2imkl")
 theme_override_font_sizes/font_size = 35
-text = "Tapioca
+text = "Boba
 Pearls"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -202,11 +202,11 @@ vertical_alignment = 1
 [node name="TextureRect10" type="TextureRect" parent="tutorial"]
 auto_translate_mode = 1
 z_index = 20
-offset_left = -790.442
-offset_top = 364.467
-offset_right = 6621.56
-offset_bottom = 1900.47
-scale = Vector2(0.222632, 0.223538)
+offset_left = -792.646
+offset_top = 363.24
+offset_right = 6619.35
+offset_bottom = 1899.24
+scale = Vector2(0.240001, 0.21049)
 texture = ExtResource("5_86px5")
 
 [node name="Label" type="Label" parent="tutorial/TextureRect10"]
@@ -535,9 +535,10 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="orderIcon" type="TextureButton" parent="."]
-offset_left = 702.247
+visible = false
+offset_left = 714.374
 offset_top = -530.134
-offset_right = 1202.25
+offset_right = 1214.38
 offset_bottom = 169.866
 scale = Vector2(0.246, 0.289)
 texture_normal = ExtResource("20_pfya0")

@@ -1,13 +1,13 @@
 [gd_scene load_steps=27 format=3 uid="uid://c77yg5d4yjufk"]
 
 [ext_resource type="Script" path="res://scenes/customer_line/customer_line.gd" id="1_go1ct"]
-[ext_resource type="Texture2D" uid="uid://mt3wkqwq7v4" path="res://assets/cutomer_line/customerline_bg.png" id="2_0iumo"]
 [ext_resource type="PackedScene" uid="uid://vbjyytkea21g" path="res://scenes/Dialogue/dialogue_player.tscn" id="2_8ynne"]
 [ext_resource type="Script" path="res://scenes/customer_line/tutorial.gd" id="2_p2r3u"]
 [ext_resource type="Texture2D" uid="uid://bhpqwr1ul8njn" path="res://assets/cutomer_line/restingArms.png" id="3_5vta4"]
 [ext_resource type="Texture2D" uid="uid://j4l4q85hg8vf" path="res://assets/other/Untitled_Artwork 60.png" id="3_8qynq"]
 [ext_resource type="FontFile" uid="uid://v0he3kerpxgp" path="res://assets/fonts/AprilshandwritingRegular-mpGj.otf" id="3_ffmo0"]
 [ext_resource type="Texture2D" uid="uid://b663f8bqtgw7d" path="res://assets/buttons/normalNext.png" id="5_16p48"]
+[ext_resource type="Texture2D" uid="uid://c8qgdm2i8nbut" path="res://assets/cutomer_line/orderStation.png" id="5_n1o1r"]
 [ext_resource type="Texture2D" uid="uid://gw2radftsehp" path="res://assets/buttons/pressedNext.png" id="6_4eijr"]
 [ext_resource type="Script" path="res://scenes/customer_line/Sprite2D.gd" id="6_qt0fo"]
 [ext_resource type="Texture2D" uid="uid://vqsn6wx1oxr3" path="res://assets/buttons/hoverNext.png" id="7_t5lrs"]
@@ -69,13 +69,13 @@ visible = false
 offset_right = 233.0
 offset_bottom = 98.0
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="bg" type="TextureRect" parent="."]
 offset_left = -1250.94
 offset_top = -708.087
 offset_right = 1270.06
 offset_bottom = 709.913
 scale = Vector2(1.00707, 1)
-texture = ExtResource("2_0iumo")
+texture = ExtResource("5_n1o1r")
 metadata/_edit_use_anchors_ = true
 
 [node name="paw hands" type="Sprite2D" parent="."]
@@ -120,6 +120,7 @@ offset_bottom = 69.9908
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 38
 text = ""
 
 [node name="DialogArea" type="Area2D" parent="DialoguePlayer"]
@@ -131,6 +132,7 @@ scale = Vector2(1.22243, 1.20629)
 shape = SubResource("CircleShape2D_kjlre")
 
 [node name="overlay" type="TextureRect" parent="."]
+visible = false
 offset_left = -1251.0
 offset_top = -702.0
 offset_right = 1289.0

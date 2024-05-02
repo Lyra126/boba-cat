@@ -17,7 +17,7 @@ func _ready() -> void:
 	$Customer.texture = global.get_customer_texture(global.currCustomer)
 	await get_tree().create_timer(1.0).timeout
 	rateOrder()
-	await get_tree().create_timer(4.0).timeout
+	await get_tree().create_timer(3.5).timeout
 	$tutorial.show()
 	
 func reset():
@@ -52,7 +52,6 @@ func rateOrder():
 	$meow.play()
 	showDialogue()
 	reset()
-	
 	
 	
 func load_scene_text():
@@ -109,7 +108,7 @@ func _on_diag_area_input_event(viewport: Node, event: InputEvent, shape_idx: int
 			$finish.play()
 			$Label.visible = false
 			$Clear.visible = true
-			await get_tree().create_timer(1.0).timeout
+			await get_tree().create_timer(3).timeout
 			$Notif.visible = false
 			$Clear.visible = false
 			get_tree().change_scene_to_file("res://scenes/customer_line/customer_line.tscn")

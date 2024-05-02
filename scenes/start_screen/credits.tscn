@@ -1,10 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://nxqlbdtyoix2"]
+[gd_scene load_steps=11 format=3 uid="uid://nxqlbdtyoix2"]
 
+[ext_resource type="Script" path="res://scenes/start_screen/credits.gd" id="1_74sgd"]
 [ext_resource type="Texture2D" uid="uid://dtlc6ifddcc0c" path="res://assets/welcome/credit.png" id="1_dkt3q"]
 [ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="2_8mdxb"]
+[ext_resource type="FontFile" uid="uid://b61w8siqip3ob" path="res://assets/fonts/HappyMarker-xg98.ttf" id="2_67jp3"]
 [ext_resource type="Texture2D" uid="uid://gr51x125w14j" path="res://assets/welcome/cc.png" id="3_2qlyt"]
+[ext_resource type="Script" path="res://scenes/start_screen/us.gd" id="4_daroq"]
+[ext_resource type="Texture2D" uid="uid://sx47xcwf6rax" path="res://assets/welcome/rp.png" id="5_rheb6"]
+[ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/buttons/normalBack.png" id="5_utios"]
+[ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/buttons/pressedBack.png" id="6_oom42"]
+[ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/buttons/hoverBack.png" id="7_rbw4p"]
 
 [node name="Credits" type="Node2D"]
+script = ExtResource("1_74sgd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 2000.0
@@ -13,37 +21,56 @@ scale = Vector2(0.79949, 0.723625)
 texture = ExtResource("1_dkt3q")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 957.0
-offset_top = 27.0
-offset_right = 1365.0
-offset_bottom = 178.0
+offset_left = 885.0
+offset_top = 32.0
+offset_right = 1429.0
+offset_bottom = 183.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 25
-theme_override_fonts/font = ExtResource("2_8mdxb")
-theme_override_font_sizes/font_size = 150
+theme_override_fonts/font = ExtResource("2_67jp3")
+theme_override_font_sizes/font_size = 130
 text = "Credits"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="cc" type="Sprite2D" parent="."]
+[node name="credits" type="Label" parent="."]
+auto_translate_mode = 1
+offset_left = 944.0
+offset_top = 775.0
+offset_right = 1583.0
+offset_bottom = 889.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_8mdxb")
+theme_override_font_sizes/font_size = 35
+text = "Sound Effects by Zapslat
+BG Music: \"Green Tea\" - Purrple Cat on Chosic
+Fonts by Fontspace"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="us" type="Node2D" parent="."]
+script = ExtResource("4_daroq")
+
+[node name="cc" type="Sprite2D" parent="us"]
 position = Vector2(942, 351)
 scale = Vector2(0.694, 0.674)
 texture = ExtResource("3_2qlyt")
 
-[node name="Label" type="Label" parent="cc"]
+[node name="Label" type="Label" parent="us/cc"]
 anchors_preset = -1
-anchor_left = -0.34849
+anchor_left = -0.69849
 anchor_top = -0.000522003
 anchor_right = -0.69849
 anchor_bottom = 0.107478
-offset_left = -80.7982
-offset_top = 242.101
-offset_right = 588.202
-offset_bottom = 509.101
+offset_left = 16.392
+offset_top = 228.748
+offset_right = 685.392
+offset_bottom = 495.748
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("2_8mdxb")
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("2_67jp3")
+theme_override_font_sizes/font_size = 40
 text = "Clarissa Cheung
 
 2nd Year
@@ -54,41 +81,27 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Label2" type="Label" parent="."]
-auto_translate_mode = 1
-offset_left = 945.0
-offset_top = 811.0
-offset_right = 1584.0
-offset_bottom = 886.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("2_8mdxb")
-theme_override_font_sizes/font_size = 35
-text = "Sound Effects by Zapslat
-BG Music: \"Green Tea\" - Purrple Cat on Chosic"
-horizontal_alignment = 2
-vertical_alignment = 1
+[node name="rp" type="Sprite2D" parent="us"]
+position = Vector2(1361, 345)
+scale = Vector2(1.24314, 1.20731)
+texture = ExtResource("5_rheb6")
 
-[node name="rp" type="Sprite2D" parent="."]
-position = Vector2(1343, 350)
-scale = Vector2(0.694, 0.674)
-texture = ExtResource("3_2qlyt")
-
-[node name="Label" type="Label" parent="rp"]
+[node name="Label" type="Label" parent="us/rp"]
 auto_translate_mode = 1
 anchors_preset = -1
-anchor_left = -0.350016
+anchor_left = -0.700016
 anchor_top = -0.001686
 anchor_right = -0.700016
 anchor_bottom = 0.106314
-offset_left = -64.1851
-offset_top = 239.715
-offset_right = 604.815
-offset_bottom = 506.715
+offset_left = -3.39827
+offset_top = 138.755
+offset_right = 665.602
+offset_bottom = 405.755
+scale = Vector2(0.585138, 0.585138)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("2_8mdxb")
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("2_67jp3")
+theme_override_font_sizes/font_size = 40
 text = "Rachel Pu
 
 2nd Year
@@ -98,3 +111,15 @@ insta: kazuhimi"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 9.0
+offset_top = 714.0
+offset_right = 1009.0
+offset_bottom = 1714.0
+scale = Vector2(0.236281, 0.215086)
+texture_normal = ExtResource("5_utios")
+texture_pressed = ExtResource("6_oom42")
+texture_hover = ExtResource("7_rbw4p")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
