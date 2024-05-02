@@ -1,13 +1,13 @@
 [gd_scene load_steps=22 format=3 uid="uid://dwtjyl3dll2e1"]
 
 [ext_resource type="Script" path="res://scenes/Rate/rate.gd" id="1_6u8ji"]
-[ext_resource type="Texture2D" uid="uid://dxrasnos0pmau" path="res://assets/rate/rate.png" id="2_v238p"]
 [ext_resource type="Script" path="res://scenes/customer_line/tutorial.gd" id="2_xk5av"]
 [ext_resource type="Texture2D" uid="uid://no2v4pbnhq8s" path="res://assets/cats/cat1.png" id="3_m2tf4"]
 [ext_resource type="Texture2D" uid="uid://j4l4q85hg8vf" path="res://assets/other/Untitled_Artwork 60.png" id="3_vac0w"]
 [ext_resource type="Texture2D" uid="uid://doyijlo53a272" path="res://assets/rate/emptyStars.png" id="4_afqof"]
 [ext_resource type="FontFile" uid="uid://v0he3kerpxgp" path="res://assets/fonts/AprilshandwritingRegular-mpGj.otf" id="4_d0lts"]
 [ext_resource type="Texture2D" uid="uid://decqfronbg1e3" path="res://assets/rate/fullStars.png" id="5_fudmb"]
+[ext_resource type="Texture2D" uid="uid://cekwl66jjrfmv" path="res://assets/rate/ratebg.png" id="5_ootb2"]
 [ext_resource type="Texture2D" uid="uid://b88ek1qkts6hn" path="res://assets/cutomer_line/dialogue.png" id="6_f8gjd"]
 [ext_resource type="Texture2D" uid="uid://c7cre5rll2or2" path="res://assets/rate/overlayTray.png" id="7_4k1jg"]
 [ext_resource type="FontFile" uid="uid://b61w8siqip3ob" path="res://assets/fonts/HappyMarker-xg98.ttf" id="7_bvpnr"]
@@ -93,7 +93,7 @@ offset_bottom = 98.0
 offset_right = 2000.0
 offset_bottom = 1250.0
 scale = Vector2(0.800277, 0.719555)
-texture = ExtResource("2_v238p")
+texture = ExtResource("5_ootb2")
 metadata/_edit_lock_ = true
 
 [node name="Customer" type="Sprite2D" parent="."]
@@ -117,7 +117,7 @@ offset_left = 663.0
 offset_top = 28.0
 offset_right = 2663.0
 offset_bottom = 528.0
-scale = Vector2(0.433981, 0.392525)
+scale = Vector2(0.433443, 0.423)
 texture = ExtResource("6_f8gjd")
 
 [node name="Clear" type="Label" parent="."]
@@ -126,7 +126,7 @@ offset_left = 814.0
 offset_top = 14.0
 offset_right = 1407.0
 offset_bottom = 319.0
-scale = Vector2(0.93363, 0.766311)
+scale = Vector2(0.93363, 0.822672)
 theme_type_variation = &"HeaderLarge"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -139,10 +139,11 @@ vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 visible = false
-offset_left = 680.0
-offset_top = 46.0
-offset_right = 1536.0
-offset_bottom = 214.0
+offset_left = 684.0
+offset_top = 53.0
+offset_right = 1540.0
+offset_bottom = 221.0
+scale = Vector2(0.96684, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
@@ -162,6 +163,7 @@ scale = Vector2(1.2711, 1.2306)
 shape = SubResource("CircleShape2D_vdxh8")
 
 [node name="overlayTray" type="TextureRect" parent="."]
+visible = false
 offset_top = 16.0
 offset_right = 2000.0
 offset_bottom = 1266.0
