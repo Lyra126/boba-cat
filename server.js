@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-
+ 
 // Middleware to set Cross-Origin Embedder Policy and Cross-Origin Opener Policy headers
 app.use(function(req, res, next) {
   res.header("Cross-Origin-Embedder-Policy", "require-corp");
