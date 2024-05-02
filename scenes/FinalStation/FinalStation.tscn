@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://d3uxtyc6i7orl"]
+[gd_scene load_steps=57 format=3 uid="uid://d3uxtyc6i7orl"]
 
 [ext_resource type="Script" path="res://scenes/FinalStation/FinalStation.gd" id="1_ixfov"]
 [ext_resource type="Script" path="res://scenes/FinalStation/tutorial.gd" id="2_5q85h"]
@@ -33,15 +33,17 @@
 [ext_resource type="Texture2D" uid="uid://bbnyrf5wrgce2" path="res://assets/final_station/lid machine/lid machine open/lid_machine_top.png" id="19_r3ofr"]
 [ext_resource type="Texture2D" uid="uid://554nig4kbyt3" path="res://assets/final_station/lid machine/lid machine open/lid_machine_middle_back.png" id="20_n6xst"]
 [ext_resource type="Texture2D" uid="uid://gyo466pymk15" path="res://assets/final_station/lid machine/lid machine open/lid_machine_middle_front.png" id="21_vcbix"]
-[ext_resource type="Texture2D" uid="uid://da8qqrxlydbxi" path="res://assets/final_station/submit.png" id="27_ea6kn"]
 [ext_resource type="Texture2D" uid="uid://wtcxqp7v72p2" path="res://assets/buttons/normalOrder.png" id="29_sx6wd"]
 [ext_resource type="Texture2D" uid="uid://ceini1vxcdf1f" path="res://assets/buttons/pressedOrder.png" id="30_pvshn"]
 [ext_resource type="Texture2D" uid="uid://cap1aarokdn18" path="res://assets/buttons/hoverOrder.png" id="31_pscrj"]
 [ext_resource type="Texture2D" uid="uid://brho2pav0ffva" path="res://assets/buttons/closeTrash.png" id="33_kkjyx"]
 [ext_resource type="Texture2D" uid="uid://c8d5vphoajw5q" path="res://assets/buttons/normalClose.png" id="33_td8ja"]
+[ext_resource type="Texture2D" uid="uid://rxw1rbvtg2f8" path="res://assets/final_station/normalSubmit.png" id="34_bqm78"]
 [ext_resource type="Texture2D" uid="uid://c5xubj61n6qem" path="res://assets/buttons/pressedClose.png" id="34_hsdpk"]
 [ext_resource type="Texture2D" uid="uid://xeg24gfoi0fi" path="res://assets/buttons/hoverClose.png" id="35_23xwa"]
+[ext_resource type="Texture2D" uid="uid://d3ndxrthnw823" path="res://assets/final_station/pressedSubmit.png" id="35_qbaht"]
 [ext_resource type="Script" path="res://scenes/FinalStation/stuff_on_tray.gd" id="36_8comx"]
+[ext_resource type="Texture2D" uid="uid://dck1rulaee8oo" path="res://assets/final_station/hoverSubmit.png" id="36_x2lf5"]
 [ext_resource type="Texture2D" uid="uid://c3khs7734oh3m" path="res://assets/final_station/straw_p.png" id="37_vpufv"]
 [ext_resource type="Texture2D" uid="uid://c4uhdiq1aj0ga" path="res://assets/final_station/straw_container.png" id="38_ul6ud"]
 [ext_resource type="AudioStream" uid="uid://decrq7ep6v7ya" path="res://assets/audio/sealMachine.mp3" id="41_0cm57"]
@@ -634,7 +636,9 @@ offset_top = 506.182
 offset_right = 1780.95
 offset_bottom = 1006.18
 scale = Vector2(0.430861, 0.395863)
-texture_normal = ExtResource("27_ea6kn")
+texture_normal = ExtResource("34_bqm78")
+texture_pressed = ExtResource("35_qbaht")
+texture_hover = ExtResource("36_x2lf5")
 
 [node name="Label" type="Label" parent="SubmitOrder"]
 layout_mode = 0
