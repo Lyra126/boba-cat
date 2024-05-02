@@ -1878,17 +1878,17 @@ texture = ExtResource("10_c1mk2")
 [node name="Label5" type="Label" parent="tutorial/cup"]
 auto_translate_mode = 1
 layout_mode = 0
-offset_left = 1450.4
-offset_top = 192.014
-offset_right = 1915.4
-offset_bottom = 349.014
-scale = Vector2(-2.51243, 2.88772)
+offset_left = 1551.79
+offset_top = 168.012
+offset_right = 2016.79
+offset_bottom = 325.012
+scale = Vector2(-2.90201, 3.33549)
 theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
 theme_override_fonts/font = ExtResource("3_twy4m")
 theme_override_font_sizes/font_size = 30
 text = "Click to move cup
-around, click cup
-anywhere else to drop"
+around, right click
+to drop"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -2177,7 +2177,7 @@ scale = Vector2(1.06, 1.06)
 texture = ExtResource("14_ulmdc")
 
 [node name="cup_spot" type="StaticBody2D" parent="." groups=["cup_drop", "droppable"]]
-position = Vector2(0, 1)
+position = Vector2(0, 1.69763)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cup_spot"]
 position = Vector2(1.58488, 418.309)

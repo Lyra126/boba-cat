@@ -40,7 +40,7 @@ func _physics_process(delta):
 	if selected:
 		target_position = get_global_mouse_position() - offset
 		global_position = lerp(global_position, target_position, 15 * delta)
-		if global_position.y < 270:
+		if global_position.y < 400:
 			scale = Vector2(0.75, 0.75)
 		else:
 			scale = Vector2(1, 1)
@@ -50,8 +50,19 @@ func _input(event):
 		if liquid_station_global.nozzle_anim_playing:
 			selected = false
 			return
-		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			handle_liquid_selection(event)
+		if event is InputEventMouseButton:
+			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				handle_liquid_selection(event)
+			if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+				global_position = lerp(global_position, cup_spot.global_position, 1)
+				scale = Vector2(1, 1)  # Reset scale if needed
+				selected = false
+				global.SomethingBeingClickedRn = false
+				liquid_station_global.tea_set_to_pour = false
+				liquid_station_global.coffee_set_to_pour = false
+				liquid_station_global.smoothie_set_to_pour = false
+				liquid_station_global.going_to_pour = false
+				return  # Stop further processing
 
 func handle_liquid_selection(event):
 	# Determine which liquid is droppable
@@ -90,8 +101,6 @@ func handle_liquid_selection(event):
 		liquid_station_global.coffee_set_to_pour = false
 		liquid_station_global.smoothie_set_to_pour = false
 		liquid_station_global.going_to_pour = false
-		global_position = lerp(global_position, cup_spot.global_position, 1)
-		scale = Vector2(1, 1)  # Reset scale if needed
 	
 func _on_cup_pick_up_body_entered(body):
 	if body.is_in_group('tea-droppable'):

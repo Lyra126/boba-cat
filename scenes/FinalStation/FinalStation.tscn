@@ -117,27 +117,27 @@ script = ExtResource("2_5q85h")
 [node name="straw" type="TextureRect" parent="tutorial"]
 auto_translate_mode = 1
 z_index = 8
-offset_left = 387.312
-offset_top = 420.47
-offset_right = 7799.31
-offset_bottom = 1956.47
-scale = Vector2(0.321614, -0.414659)
+offset_left = 360.437
+offset_top = 428.556
+offset_right = 7772.44
+offset_bottom = 1964.56
+scale = Vector2(0.354315, -0.398351)
 texture = ExtResource("3_8kpwn")
 
 [node name="Label5" type="Label" parent="tutorial/straw"]
 auto_translate_mode = 1
 layout_mode = 0
-offset_left = 172.039
-offset_top = 452.406
-offset_right = 509.039
-offset_bottom = 584.406
-scale = Vector2(2.86922, -2.52333)
+offset_left = 200.779
+offset_top = 462.807
+offset_right = 537.779
+offset_bottom = 594.807
+scale = Vector2(2.64153, -2.67307)
 theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
 theme_override_fonts/font = ExtResource("3_o4h27")
 theme_override_font_sizes/font_size = 34
-text = "Remember to
-give each order
-a straw!"
+text = "Each order
+needs a straw!
+Don't forget!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -232,11 +232,11 @@ texture = ExtResource("2_8and8")
 [node name="Label5" type="Label" parent="tutorial/tongs"]
 auto_translate_mode = 1
 layout_mode = 0
-offset_left = 301.903
-offset_top = 204.792
-offset_right = 714.903
-offset_bottom = 333.792
-scale = Vector2(2.74806, 3.22479)
+offset_left = 289.67
+offset_top = 198.341
+offset_right = 702.67
+offset_bottom = 327.341
+scale = Vector2(2.81927, 3.76321)
 theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
 theme_override_fonts/font = ExtResource("3_o4h27")
 theme_override_font_sizes/font_size = 30
@@ -267,9 +267,9 @@ scale = Vector2(-3.66259, 4.08816)
 theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
 theme_override_fonts/font = ExtResource("3_o4h27")
 theme_override_font_sizes/font_size = 30
-text = "Drag cup onto
-tray area to
-set it down"
+text = "Click to drag,
+right click to
+return"
 horizontal_alignment = 1
 vertical_alignment = 1
 
