@@ -25,7 +25,7 @@ func _physics_process(delta):
 	if selected:
 		target_position = get_global_mouse_position() - offset
 		global_position = lerp(global_position, target_position, 15 * delta) # Smooth animation during dragging
-		look_at(get_global_mouse_position() - Vector2(150,150))
+		look_at(get_global_mouse_position() - Vector2(125,125))
 	else:
 		global_position = lerp(global_position, almond_milk_droppable.global_position, 10 * delta)
 		rotation = lerp_angle(rotation, 0, 10 * delta)

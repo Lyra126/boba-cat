@@ -5,7 +5,7 @@ var time_passed = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if global.shownCustomerTutorial:
+	if global.shownRate:
 		$".".hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,4 +19,4 @@ func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			$".".hide()
-			global.shownCustomerTutorial = true
+			global.shownRate = true

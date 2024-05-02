@@ -1,15 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://nxqlbdtyoix2"]
+[gd_scene load_steps=12 format=3 uid="uid://nxqlbdtyoix2"]
 
 [ext_resource type="Script" path="res://scenes/start_screen/credits.gd" id="1_74sgd"]
 [ext_resource type="Texture2D" uid="uid://dtlc6ifddcc0c" path="res://assets/welcome/credit.png" id="1_dkt3q"]
-[ext_resource type="FontFile" uid="uid://bbjpmucho215x" path="res://assets/fonts/Jersey15-Regular.ttf" id="2_8mdxb"]
 [ext_resource type="FontFile" uid="uid://b61w8siqip3ob" path="res://assets/fonts/HappyMarker-xg98.ttf" id="2_67jp3"]
 [ext_resource type="Texture2D" uid="uid://gr51x125w14j" path="res://assets/welcome/cc.png" id="3_2qlyt"]
+[ext_resource type="FontFile" uid="uid://v0he3kerpxgp" path="res://assets/fonts/AprilshandwritingRegular-mpGj.otf" id="4_1r18o"]
 [ext_resource type="Script" path="res://scenes/start_screen/us.gd" id="4_daroq"]
 [ext_resource type="Texture2D" uid="uid://sx47xcwf6rax" path="res://assets/welcome/rp.png" id="5_rheb6"]
 [ext_resource type="Texture2D" uid="uid://cod1hk81g17u3" path="res://assets/buttons/normalBack.png" id="5_utios"]
 [ext_resource type="Texture2D" uid="uid://c5nhvdg6r8njc" path="res://assets/buttons/pressedBack.png" id="6_oom42"]
 [ext_resource type="Texture2D" uid="uid://ci7aa37fsuf7k" path="res://assets/buttons/hoverBack.png" id="7_rbw4p"]
+[ext_resource type="AudioStream" uid="uid://xml18g83yrfs" path="res://assets/audio/buttonClick.mp3" id="11_jsxnm"]
 
 [node name="Credits" type="Node2D"]
 script = ExtResource("1_74sgd")
@@ -35,13 +36,14 @@ vertical_alignment = 1
 
 [node name="credits" type="Label" parent="."]
 auto_translate_mode = 1
-offset_left = 944.0
-offset_top = 775.0
-offset_right = 1583.0
-offset_bottom = 889.0
+offset_left = 527.0
+offset_top = 759.0
+offset_right = 1586.0
+offset_bottom = 894.0
+theme_override_colors/font_color = Color(0.957919, 0.652432, 0.70452, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("2_8mdxb")
+theme_override_fonts/font = ExtResource("4_1r18o")
 theme_override_font_sizes/font_size = 35
 text = "Sound Effects by Zapslat
 BG Music: \"Green Tea\" - Purrple Cat on Chosic
@@ -121,5 +123,9 @@ scale = Vector2(0.236281, 0.215086)
 texture_normal = ExtResource("5_utios")
 texture_pressed = ExtResource("6_oom42")
 texture_hover = ExtResource("7_rbw4p")
+
+[node name="button" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1, 0)
+stream = ExtResource("11_jsxnm")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

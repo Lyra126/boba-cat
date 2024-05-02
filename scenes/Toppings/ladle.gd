@@ -260,4 +260,8 @@ func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 				t2.set_texture(null)
 				t1.set_texture(null)
 				$"../Cup/stuff_inside_cup/Polygon2D/liquid_sprite".set_texture(null)
+				if selected:
+					selected = false
+					global.SomethingBeingClickedRn = false
+					$Ladle.set_texture(ladle)
 				

@@ -36,6 +36,7 @@ expand_mode = 1
 
 [node name="Credits" type="TextureButton" parent="."]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 829.0
 offset_top = 295.0
 offset_right = 1742.0
@@ -72,6 +73,7 @@ texture_hover = ExtResource("9_e47ot")
 
 [node name="Label" type="Label" parent="Play2"]
 auto_translate_mode = 1
+layout_mode = 0
 offset_left = 64.3324
 offset_top = 133.465
 offset_right = 427.332

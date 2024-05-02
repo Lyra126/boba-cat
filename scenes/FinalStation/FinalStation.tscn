@@ -276,21 +276,21 @@ vertical_alignment = 1
 [node name="machine" type="TextureRect" parent="tutorial"]
 auto_translate_mode = 1
 z_index = 30
-offset_left = -785.69
-offset_top = -95.4145
-offset_right = 6626.31
-offset_bottom = 1440.59
-scale = Vector2(0.311063, 0.302598)
-texture = ExtResource("2_8and8")
+offset_left = -1105.02
+offset_top = -164.954
+offset_right = 6306.98
+offset_bottom = 1371.05
+scale = Vector2(0.336895, 0.334346)
+texture = ExtResource("3_8kpwn")
 
 [node name="Label5" type="Label" parent="tutorial/machine"]
 auto_translate_mode = 1
 layout_mode = 0
-offset_left = 137.218
-offset_top = 192.397
-offset_right = 550.218
-offset_bottom = 321.397
-scale = Vector2(3.57631, 3.88407)
+offset_left = 18.7698
+offset_top = 87.0638
+offset_right = 431.77
+offset_bottom = 216.064
+scale = Vector2(3.10973, 3.37734)
 theme_override_colors/font_color = Color(0.556863, 0.372549, 0.454902, 1)
 theme_override_fonts/font = ExtResource("3_o4h27")
 theme_override_font_sizes/font_size = 25
@@ -541,7 +541,6 @@ build_mode = 1
 polygon = PackedVector2Array(-1734.69, -667.734, -1478.18, -768.636, 1512.96, -768.636, 1739.03, -661.798, 1695.56, 727.087, 1004.29, 694.443, -113.037, 694.443, -117.385, 296.77, -921.688, 270.061, -952.121, 302.706, -995.597, 359.092, -952.121, 715.216, -1695.56, 730.055, -1730.34, -641.024)
 
 [node name="cup_spot" type="StaticBody2D" parent="." groups=["cup_drop", "droppable"]]
-visible = false
 position = Vector2(-105, 88)
 scale = Vector2(0.75, 0.75)
 script = SubResource("GDScript_14f8c")

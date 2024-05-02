@@ -207,7 +207,7 @@ texture_hover = ExtResource("19_xjh45")
 
 [node name="meow" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("21_xk06d")
-volume_db = -30.436
+volume_db = -13.639
 
 [node name="button" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("23_f3xgm")

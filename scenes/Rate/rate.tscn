@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://dwtjyl3dll2e1"]
 
 [ext_resource type="Script" path="res://scenes/Rate/rate.gd" id="1_6u8ji"]
-[ext_resource type="Script" path="res://scenes/customer_line/tutorial.gd" id="2_xk5av"]
+[ext_resource type="Script" path="res://scenes/Rate/tutorial.gd" id="2_pdf2c"]
 [ext_resource type="Texture2D" uid="uid://no2v4pbnhq8s" path="res://assets/cats/cat1.png" id="3_m2tf4"]
 [ext_resource type="Texture2D" uid="uid://j4l4q85hg8vf" path="res://assets/other/Untitled_Artwork 60.png" id="3_vac0w"]
 [ext_resource type="Texture2D" uid="uid://doyijlo53a272" path="res://assets/rate/emptyStars.png" id="4_afqof"]
@@ -53,7 +53,7 @@ visible = false
 z_index = 2
 position = Vector2(-1251, -666)
 scale = Vector2(1.00707, 1)
-script = ExtResource("2_xk5av")
+script = ExtResource("2_pdf2c")
 
 [node name="TextureRect" type="TextureRect" parent="tutorial"]
 auto_translate_mode = 1
