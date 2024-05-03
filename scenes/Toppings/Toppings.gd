@@ -54,14 +54,12 @@ func _on_trash_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 				global.hasCup = false
 				global.reset_drink()
 				global.playerOrder = []
-				
 
 func _on_close_pressed() -> void:
 	$button.play()
 	$OrderForm.visible = false
 	$OrderForm/Label.visible = false
 	$close.visible = false
-
 
 func _on_texture_button_pressed() -> void:
 	$button.play()

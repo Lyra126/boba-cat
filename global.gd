@@ -71,8 +71,6 @@ func _process(delta):
 			timeOver = true
 			timerInProgress = false
 			print("TIME OVER")
-			
-	
 	
 func get_customer_texture(customer):
 	match customer:
@@ -102,9 +100,12 @@ func get_liquid_inside_cup(sprite):
 	if liquid_station_global.liquid_layer == 1:
 		if liquid_station_global.tea == 1:
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/tea-1.png"))
+			print('tea')
 		elif liquid_station_global.coffee == 1:
+			print('coffee')
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/coffee-1.png"))
 		elif liquid_station_global.smoothie == 1:
+			print('smoothie')
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/smoothie-1.png"))
 		elif liquid_station_global.cow_milk == 1:
 			sprite.set_texture(load("res://assets/liquid_station/assets/cup-liquids/cow-milk-1.png"))
@@ -250,6 +251,12 @@ func reset_drink():
 	toppings_inserted.resize(0)
 	liquids_poured.resize(0)
 	liquid_station_global.liquid_layer = 0
+	liquid_station_global.tea = 0
+	liquid_station_global.coffee = 0
+	liquid_station_global.smoothie = 0
+	liquid_station_global.cow_milk = 0
+	liquid_station_global.almond_milk = 0
+	liquid_station_global.oat_milk = 0
 	syrups_poured.resize(0)
 	toppings_station_global.toppings_layers = 0
 	topping_sprite.texture = null

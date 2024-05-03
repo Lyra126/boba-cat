@@ -22,12 +22,10 @@ func _ready():
 	if global.hasLid:
 		$Lid.show()
 	global.SomethingBeingClickedRn = false;
-	
 
 func _process(delta):
-	#if tea_droppable:
-		#print(tea_drop.global_position)
 	pass
+		
 	
 func _on_cup_pick_up_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
@@ -40,7 +38,7 @@ func _physics_process(delta):
 	if selected:
 		target_position = get_global_mouse_position() - offset
 		global_position = lerp(global_position, target_position, 15 * delta)
-		if global_position.y < 270:
+		if global_position.y < 400:
 			scale = Vector2(0.75, 0.75)
 		else:
 			scale = Vector2(1, 1)
@@ -50,14 +48,25 @@ func _input(event):
 		if liquid_station_global.nozzle_anim_playing:
 			selected = false
 			return
-		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			handle_liquid_selection(event)
+		if event is InputEventMouseButton:
+			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				handle_liquid_selection(event)
+			if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+				global_position = lerp(global_position, cup_spot.global_position, 1)
+				scale = Vector2(1, 1)  # Reset scale if needed
+				selected = false
+				global.SomethingBeingClickedRn = false
+				liquid_station_global.tea_set_to_pour = false
+				liquid_station_global.coffee_set_to_pour = false
+				liquid_station_global.smoothie_set_to_pour = false
+				liquid_station_global.going_to_pour = false
+				return  # Stop further processing
 
 func handle_liquid_selection(event):
 	# Determine which liquid is droppable
-	var is_tea = tea_droppable and not liquid_station_global.tea_set_to_pour and not liquid_station_global.liquid_layer == 2 and not global.hasLid
-	var is_coffee = coffee_droppable and not liquid_station_global.coffee_set_to_pour and not liquid_station_global.liquid_layer == 2 and not global.hasLid
-	var is_smoothie = smoothie_droppable and not liquid_station_global.smoothie_set_to_pour and not liquid_station_global.liquid_layer == 2 and not global.hasLid
+	var is_tea = tea_droppable and not liquid_station_global.tea_set_to_pour
+	var is_coffee = coffee_droppable and not liquid_station_global.coffee_set_to_pour
+	var is_smoothie = smoothie_droppable and not liquid_station_global.smoothie_set_to_pour
 	
 	# Reset selections
 	selected = false
@@ -121,4 +130,4 @@ func _on_coffee_nozzle_down_animation_finished():
 func _on_smoothie_nozzle_down_animation_finished():
 	selected = true
 	liquid_station_global.going_to_pour = false
-	
+

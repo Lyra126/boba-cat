@@ -25,7 +25,7 @@ func _physics_process(delta):
 	if selected:
 		target_position = get_global_mouse_position() - offset
 		global_position = lerp(global_position, target_position, 15 * delta) # Smooth animation during dragging
-		look_at(get_global_mouse_position() - Vector2(125,125))
+		look_at(get_global_mouse_position() - Vector2(170,170))
 	else:
 		global_position = lerp(global_position, almond_milk_droppable.global_position, 10 * delta)
 		rotation = lerp_angle(rotation, 0, 10 * delta)
@@ -64,7 +64,6 @@ func _on_almond_animations_animation_finished() -> void:
 func _on_almond_area_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.is_in_group('cup_drop')and global.hasCup:
 		cup_droppable = true
-
 
 func _on_almond_area_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.is_in_group('cup_drop')and global.hasCup:

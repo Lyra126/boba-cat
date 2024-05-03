@@ -22,10 +22,11 @@ scale = Vector2(0.79949, 0.723625)
 texture = ExtResource("1_dkt3q")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 885.0
-offset_top = 32.0
-offset_right = 1429.0
-offset_bottom = 183.0
+offset_left = 533.0
+offset_top = 24.0
+offset_right = 1077.0
+offset_bottom = 175.0
+scale = Vector2(1.0503, 1.04897)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 25
 theme_override_fonts/font = ExtResource("2_67jp3")
@@ -36,10 +37,11 @@ vertical_alignment = 1
 
 [node name="credits" type="Label" parent="."]
 auto_translate_mode = 1
-offset_left = 527.0
+offset_left = 325.0
 offset_top = 759.0
-offset_right = 1586.0
+offset_right = 1384.0
 offset_bottom = 894.0
+scale = Vector2(0.899245, 0.899245)
 theme_override_colors/font_color = Color(0.957919, 0.652432, 0.70452, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
@@ -48,10 +50,12 @@ theme_override_font_sizes/font_size = 35
 text = "Sound Effects by Zapslat
 BG Music: \"Green Tea\" - Purrple Cat on Chosic
 Fonts by Fontspace"
-horizontal_alignment = 2
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="us" type="Node2D" parent="."]
+position = Vector2(71, 38)
+scale = Vector2(0.912083, 0.912083)
 script = ExtResource("4_daroq")
 
 [node name="cc" type="Sprite2D" parent="us"]

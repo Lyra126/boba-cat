@@ -112,8 +112,8 @@ func generate_order():
 		orderText += str(numChocCookies) + " Chocolate Chip Cookies" + "\n"
 	if(numSugarCookies > 0):
 		orderText += str(numSugarCookies) + " Sugar Cookies" + "\n"
-	if(numSugarCookies > 0):
-		orderText += str( numSugarCookies) + " Cat Cookies" + "\n"
+	if(numCatCookies > 0):
+		orderText += str( numCatCookies) + " Cat Cookies" + "\n"
 		
 	global.orderPaper = orderText
 	

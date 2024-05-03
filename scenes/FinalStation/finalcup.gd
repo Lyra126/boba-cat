@@ -9,9 +9,13 @@ var target_position
 var overlapMachine
 var finalStation
 var original_position
-var tray_droppable
+#var tray_droppable
 var cup_down
 
+func _ready():
+	if global.hasLid:
+		$Lid.visible = true
+	
 func _process(delta):
 	pass
 	
@@ -24,12 +28,12 @@ func _on_cup_pick_up_input_event(viewport, event, shape_idx):
 func _input(event):
 	if selected:
 		if event is InputEventMouseButton:
-			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-				if tray_droppable:
-					$".".global_position.x = cup_spot.global_position.x
-					$".".global_position.y = cup_spot.global_position.y
-					selected = false
-					global.SomethingBeingClickedRn = false
+			if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+				$".".global_position.x = cup_spot.global_position.x
+				$".".global_position.y = cup_spot.global_position.y
+				scale = Vector2(0.75, 0.75)
+				selected = false
+				global.SomethingBeingClickedRn = false
 
 func _physics_process(delta):
 	if selected:
@@ -71,10 +75,10 @@ func addLid():
 	scale = Vector2(0.60, 0.60)
 	pass
 
-func _on_cup_pick_up_body_entered(body: Node2D) -> void:
-	if body.is_in_group('tray'):
-		tray_droppable = true
-
-func _on_cup_pick_up_body_exited(body: Node2D) -> void:
-	if body.is_in_group('tray'):
-		tray_droppable = false
+#func _on_cup_pick_up_body_entered(body: Node2D) -> void:
+	#if body.is_in_group('tray'):
+		#tray_droppable = true
+#
+#func _on_cup_pick_up_body_exited(body: Node2D) -> void:
+	#if body.is_in_group('tray'):
+		#tray_droppable = false

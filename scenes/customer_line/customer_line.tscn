@@ -104,7 +104,6 @@ metadata/_edit_use_anchors_ = true
 [node name="DialoguePlayer" parent="." instance=ExtResource("2_8ynne")]
 
 [node name="Background" parent="DialoguePlayer" index="0"]
-visible = false
 offset_left = 306.0
 offset_top = 60.0
 offset_right = 2306.0
@@ -114,9 +113,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TextLabel" parent="DialoguePlayer/Background" index="0"]
 offset_left = -491.821
-offset_top = 46.9908
+offset_top = 64.3049
 offset_right = -490.821
-offset_bottom = 69.9908
+offset_bottom = 87.3049
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
