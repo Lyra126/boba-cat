@@ -21,7 +21,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#print(liquid_station_global.going_to_pour)
 	pass
 
 func _on_milk_area_input_event(viewport, event, shape_idx):
@@ -30,6 +29,8 @@ func _on_milk_area_input_event(viewport, event, shape_idx):
 			if liquid_station_global.fridge_open and not liquid_station_global.going_to_pour:
 				if liquid_station_global.liquid_layer == 2 or global.hasLid:
 					shake_sprite()
+					#global.SomethingBeingClickedRn = false
+					#$"../../cup".global_position = $"../../cup_spot".global_position
 				else:
 					selected = true
 					global.SomethingBeingClickedRn = true;

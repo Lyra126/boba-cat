@@ -11,10 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://b88ek1qkts6hn" path="res://assets/cutomer_line/dialogue.png" id="6_f8gjd"]
 [ext_resource type="Texture2D" uid="uid://c7cre5rll2or2" path="res://assets/rate/overlayTray.png" id="7_4k1jg"]
 [ext_resource type="FontFile" uid="uid://b61w8siqip3ob" path="res://assets/fonts/HappyMarker-xg98.ttf" id="7_bvpnr"]
-[ext_resource type="Script" path="res://scenes/FinalStation/finalcup.gd" id="8_i1btk"]
 [ext_resource type="Texture2D" uid="uid://bc4d8sl6v755m" path="res://assets/liquid_station/assets/front_cup.png" id="9_lfoyv"]
 [ext_resource type="Texture2D" uid="uid://21cd7rwmx4u3" path="res://assets/liquid_station/assets/back_cup.png" id="10_me8f5"]
 [ext_resource type="Script" path="res://scenes/Toppings/liquid_inside_cup.gd" id="11_g78so"]
+[ext_resource type="Script" path="res://scenes/Rate/cup.gd" id="12_hdj2u"]
 [ext_resource type="Texture2D" uid="uid://cjp3by1d0qdyk" path="res://assets/final_station/lid.png" id="12_m5u1c"]
 [ext_resource type="Texture2D" uid="uid://c3khs7734oh3m" path="res://assets/final_station/straw_p.png" id="14_hnpyh"]
 [ext_resource type="AudioStream" uid="uid://t1et7332083f" path="res://assets/audio/meow.mp3" id="15_4c636"]
@@ -102,31 +102,29 @@ scale = Vector2(0.221558, 0.25453)
 texture = ExtResource("3_m2tf4")
 
 [node name="Rating" type="TextureProgressBar" parent="."]
-visible = false
-offset_left = 41.0
-offset_top = 22.0
-offset_right = 2541.0
-offset_bottom = 1022.0
-scale = Vector2(0.233563, 0.203656)
+offset_left = 35.0
+offset_top = 21.0
+offset_right = 2535.0
+offset_bottom = 1021.0
+scale = Vector2(0.233006, 0.230091)
 texture_under = ExtResource("4_afqof")
 texture_progress = ExtResource("5_fudmb")
 
 [node name="Notif" type="TextureRect" parent="."]
-visible = false
-offset_left = 663.0
-offset_top = 28.0
-offset_right = 2663.0
-offset_bottom = 528.0
-scale = Vector2(0.433443, 0.423)
+offset_left = 641.0
+offset_top = 24.0
+offset_right = 2641.0
+offset_bottom = 524.0
+scale = Vector2(0.463671, 0.538688)
 texture = ExtResource("6_f8gjd")
 
-[node name="Clear" type="Label" parent="."]
+[node name="Clear" type="Label" parent="Notif"]
 visible = false
-offset_left = 814.0
-offset_top = 14.0
-offset_right = 1407.0
-offset_bottom = 319.0
-scale = Vector2(0.93363, 0.822672)
+offset_left = 306.55
+offset_top = -43.6604
+offset_right = 899.55
+offset_bottom = 261.34
+scale = Vector2(2.29217, 1.98102)
 theme_type_variation = &"HeaderLarge"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -137,18 +135,18 @@ text = "Cleared!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="Notif"]
 visible = false
-offset_left = 684.0
-offset_top = 53.0
-offset_right = 1540.0
-offset_bottom = 221.0
-scale = Vector2(0.96684, 1)
+offset_left = 107.835
+offset_top = 89.1055
+offset_right = 963.835
+offset_bottom = 257.105
+scale = Vector2(2.06176, 1.84687)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("7_bvpnr")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 33
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -183,7 +181,7 @@ polygon = PackedVector2Array(-298.427, 477.794, -534.503, 708.514, -523.963, 753
 [node name="cup" type="Node2D" parent="."]
 position = Vector2(354, 425)
 scale = Vector2(0.451316, 0.493282)
-script = ExtResource("8_i1btk")
+script = ExtResource("12_hdj2u")
 
 [node name="cup_sprite" type="Node2D" parent="cup"]
 position = Vector2(14.6271, 89.7369)
