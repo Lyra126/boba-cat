@@ -120,6 +120,7 @@ texture = ExtResource("6_f8gjd")
 
 [node name="Clear" type="Label" parent="Notif"]
 visible = false
+layout_mode = 0
 offset_left = 306.55
 offset_top = -43.6604
 offset_right = 899.55
@@ -137,6 +138,7 @@ vertical_alignment = 1
 
 [node name="Label" type="Label" parent="Notif"]
 visible = false
+layout_mode = 0
 offset_left = 107.835
 offset_top = 89.1055
 offset_right = 963.835

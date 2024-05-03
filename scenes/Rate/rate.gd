@@ -172,13 +172,13 @@ func showDialogue():
 	# Define feedback based on the score
 	if score == 100:
 		feedbackText = "Perfect work! "
-	elif score > 80 and score < 100:
+	elif score >= 80 and score < 100:
 		feedbackText = "So close! "
-	elif score > 60 and score < 79:
+	elif score >= 60 and score < 79:
 		feedbackText = "It's good, but not exactly what I ordered. "
-	elif score > 30 and score < 59:
+	elif score >= 30 and score < 59:
 		feedbackText = "Hm, it seems like my order was messed up. "
-	elif score < 29:
+	elif score <= 29:
 		feedbackText = "Ah, this isn't my order! "
 	
 	# Append issues to the feedback text
