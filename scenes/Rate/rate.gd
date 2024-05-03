@@ -169,17 +169,49 @@ func showDialogue():
 	var issues = orderCheck["issues"]
 	var feedbackText = ""
 	
+	var score100Text = [
+		"Amazing work!",
+		"Purrfect work!",
+		"Great job!",
+		"Love it!"
+	]
+	
+	var closeText = [
+		"So close!",
+		"Close, but not perfect.",
+		"You almost had it!",
+		"Ah, so close!"
+	]
+	var notThatGoodText = [
+		"It's good, but not what I ordered.",
+		"Thanks, but not exactly what I asked for",
+		"Hmm, it's fine but not what I wanted.",
+		"It's fine, but it could be better."
+	]
+	var MessedUpText = [
+		"Hm, it seems like my order was messed up.",
+		"Did you by chance forget my order?",
+		"This doesn't look right.",
+		"Ah, it looks my order got messed up."
+	]
+	
+	var badText = [
+		"Ah, this isn't my order!",
+		"Hmm, this doesn't look like my order.",
+		"I'm sorry, but this isn't my order!",
+		"Did you forget my order?"
+	]
 	# Define feedback based on the score
 	if score == 100:
-		feedbackText = "Perfect work! "
+		feedbackText = rand_text(score100Text) + " "
 	elif score >= 80 and score < 100:
-		feedbackText = "So close! "
+		feedbackText = rand_text(closeText) + " "
 	elif score >= 60 and score < 79:
-		feedbackText = "It's good, but not exactly what I ordered. "
+		feedbackText = rand_text(notThatGoodText) + " "
 	elif score >= 30 and score < 59:
-		feedbackText = "Hm, it seems like my order was messed up. "
+		feedbackText = rand_text(MessedUpText) + " "
 	elif score <= 29:
-		feedbackText = "Ah, this isn't my order! "
+		feedbackText = rand_text(badText) + " "
 	
 	# Append issues to the feedback text
 	var positiveMessages = [
