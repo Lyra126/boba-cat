@@ -1674,12 +1674,6 @@ animations = [{
 "texture": ExtResource("25_kocgj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_jjmtj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_oass6")
-}, {
-"duration": 1.0,
 "texture": ExtResource("25_kocgj")
 }],
 "loop": false,
@@ -1707,12 +1701,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("30_3hbfx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_8rug6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_ft0m0")
 }],
 "loop": false,
 "name": &"default",
@@ -1739,12 +1727,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("35_ux4h3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_iadle")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_1f30t")
 }],
 "loop": false,
 "name": &"default",
@@ -2257,7 +2239,7 @@ scale = Vector2(0.911684, 0.93467)
 position = Vector2(-144.226, 227.479)
 scale = Vector2(0.955101, 0.874128)
 sprite_frames = SubResource("SpriteFrames_k1bue")
-animation = &"tea-1-still"
+animation = &"almond-milk-1"
 
 [node name="Sprite2D" type="Sprite2D" parent="cup/liquid-in-cup/Polygon2D"]
 position = Vector2(-144.226, 227.479)
@@ -2498,7 +2480,7 @@ visible = false
 position = Vector2(572.599, -251.414)
 scale = Vector2(0.41, 0.41)
 sprite_frames = SubResource("SpriteFrames_rck20")
-frame = 7
+frame = 5
 frame_progress = 1.0
 
 [node name="almond milk" type="Node2D" parent="Milk Types"]
@@ -2606,6 +2588,7 @@ stream = ExtResource("367_ipkjs")
 [connection signal="body_entered" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_entered"]
 [connection signal="body_exited" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_body_exited"]
 [connection signal="input_event" from="cup/cup_sprite/cup_pick_up" to="cup" method="_on_cup_pick_up_input_event"]
+[connection signal="animation_finished" from="cup/liquid-in-cup/Polygon2D/liquid_animations" to="cup/liquid-in-cup" method="_on_liquid_animations_animation_finished"]
 [connection signal="animation_finished" from="Liquid Types/tea/tea nozzle/tea nozzle down" to="cup" method="_on_tea_nozzle_down_animation_finished"]
 [connection signal="animation_finished" from="Liquid Types/tea/tea nozzle/tea nozzle down" to="Liquid Types/tea" method="_on_tea_nozzle_down_animation_finished"]
 [connection signal="input_event" from="Liquid Types/tea/tea nozzle/nozzle area" to="Liquid Types/tea" method="_on_nozzle_area_input_event"]

@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var amplitude = 0.3  # Adjust this value to control the amplitude of the bobbing
+var amplitude = 0.1  # Adjust this value to control the amplitude of the bobbing
 var frequency = 2  # Adjust this value to control the frequency of the bobbing
 var time_passed = 0
 

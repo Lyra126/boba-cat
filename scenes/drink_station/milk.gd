@@ -54,12 +54,6 @@ func _on_milk_animations_animation_finished():
 	milk_still.show()
 	liquid_station_global.cow_milk_pouring = false
 	
-#func restrict_mouse_area(): < - maybe implement if we have time, want to restrict the mouse area when the animation is playing
-	#var mouse_position = get_viewport().get_mouse_position()
-	#if not allowed_area.has_point(mouse_position):
-		#var clamped_x = clamp(mouse_position.x, allowed_area.position.x, allowed_area.position.x)
-		#var clamped_y = clamp(mouse_position.y, allowed_area.position.y, allowed_area.position.y)
-		#get_viewport().warp_mouse(Vector2(clamped_x, clamped_y))
 		
 func _input(event):
 	if selected:

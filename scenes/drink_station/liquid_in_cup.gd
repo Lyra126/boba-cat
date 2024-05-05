@@ -10,9 +10,6 @@ extends Node2D
 @onready var t2 = $"Polygon2D/toppings-2"
 @onready var t1 = $"Polygon2D/toppings-1"
 
-#var layer = 0
-var wait_for_next_layer = false
-
 # Initialize these to handle different liquids and combinations
 var has_tea_been_poured = false
 var has_coffee_been_poured = false
@@ -22,6 +19,7 @@ var has_oat_milk_been_poured = false
 var has_almond_milk_been_poured = false
 
 func _ready() -> void:
+	liquid_station_global.wait_for_next_layer = false
 	anim.modulate.a = 0.8
 	global.get_toppings_inside_cup(t1, t2, t3, t4, t5)
 	anim.hide()
@@ -52,18 +50,21 @@ func _ready() -> void:
 			anim.play("cow-milk-1-still")
 			anim.pause()
 			has_cow_milk_been_poured = true
+			return
 			
 		if liquid_station_global.oat_milk == 1:
 			$"../../liquid1".play()
 			anim.play("oat-milk-1-still")
 			anim.pause()
 			has_oat_milk_been_poured = true
+			return
 			
 		if liquid_station_global.almond_milk == 1:
 			$"../../liquid1".play()
 			anim.play("almond-milk-1-still")
 			anim.pause()
 			has_almond_milk_been_poured = true
+			return
 			
 # the SPRITE version of the liquid will only show if the max number of layers is reached
 	if liquid_station_global.liquid_layer == 2:
@@ -75,8 +76,9 @@ func _process(delta: float) -> void:
 	manage_animations()
 	allow_next_layer()
 	
+	
 func allow_next_layer():
-	wait_for_next_layer = false  # Reset this flag to allow progression to the next layer
+	liquid_station_global.wait_for_next_layer = false  # Reset this flag to allow progression to the next layer
 
 func reset_animation():
 	liquid_station_global.liquid_layer = 0
@@ -95,7 +97,7 @@ func reset_animation():
 	has_cow_milk_been_poured = false
 	has_oat_milk_been_poured = false
 	has_almond_milk_been_poured = false
-	wait_for_next_layer = false  # Ensure that layer transitions can happen after reset
+	liquid_station_global.wait_for_next_layer = false  # Ensure that layer transitions can happen after reset
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
@@ -106,7 +108,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 func manage_animations():
 	anim.modulate.a = 0.8
 	# Handle the first pour of liquid
-	if liquid_station_global.liquid_layer == 0 and not wait_for_next_layer:
+	if liquid_station_global.liquid_layer == 0 and not liquid_station_global.wait_for_next_layer:
 		if liquid_station_global.tea_pouring and not anim.is_playing():
 			anim.show()
 			$"../../liquid1".play()
@@ -116,7 +118,7 @@ func manage_animations():
 			global.playerOrder.append("tea")
 			print(global.playerOrder)
 			has_tea_been_poured = true
-			wait_for_next_layer = true  # Prevent immediate transition to the next layer
+			liquid_station_global.wait_for_next_layer = true  # Prevent immediate transition to the next layer
 			return  # Exit the function to ensure no further actions are taken this frame
 
 		if liquid_station_global.coffee_pouring and not anim.is_playing():
@@ -127,7 +129,7 @@ func manage_animations():
 			liquid_station_global.coffee = 1
 			global.playerOrder.append("coffee")
 			has_coffee_been_poured = true
-			wait_for_next_layer = true  # Prevent immediate transition to the next layer
+			liquid_station_global.wait_for_next_layer = true  # Prevent immediate transition to the next layer
 			return  # Exit the function to ensure no further actions are taken this frame
 
 		elif liquid_station_global.smoothie_pouring and not anim.is_playing():
@@ -138,7 +140,7 @@ func manage_animations():
 			liquid_station_global.smoothie = 1
 			global.playerOrder.append("smoothie")
 			has_smoothie_been_poured = true
-			wait_for_next_layer = true  # Prevent immediate transition to the next layer
+			liquid_station_global.wait_for_next_layer = true  # Prevent immediate transition to the next layer
 			return  # Exit the function to ensure no further actions are taken this frame
 
 		elif liquid_station_global.cow_milk_pouring and not anim.is_playing():
@@ -149,7 +151,7 @@ func manage_animations():
 			liquid_station_global.cow_milk = 1
 			global.playerOrder.append("cow-milk")
 			has_cow_milk_been_poured = true
-			wait_for_next_layer = true  # Prevent immediate transition to the next layer
+			liquid_station_global.wait_for_next_layer = true  # Prevent immediate transition to the next layer
 			return  # Exit the function to ensure no further actions are taken this frame
 
 		elif liquid_station_global.oat_milk_pouring and not anim.is_playing():
@@ -160,7 +162,7 @@ func manage_animations():
 			liquid_station_global.oat_milk = 1
 			global.playerOrder.append("oat-milk")
 			has_oat_milk_been_poured = true
-			wait_for_next_layer = true  # Prevent immediate transition to the next layer
+			liquid_station_global.wait_for_next_layer = true  # Prevent immediate transition to the next layer
 			return  # Exit the function to ensure no further actions are taken this frame
 
 		elif liquid_station_global.almond_milk_pouring and not anim.is_playing():
@@ -171,11 +173,11 @@ func manage_animations():
 			liquid_station_global.almond_milk = 1
 			global.playerOrder.append("almond-milk")
 			has_almond_milk_been_poured = true
-			wait_for_next_layer = true  # Prevent immediate transition to the next layer
+			liquid_station_global.wait_for_next_layer = true  # Prevent immediate transition to the next layer
 			return  # Exit the function to ensure no further actions are taken this frame
 
 	# Handle the second layer, possibly after a delay or external trigger
-	elif liquid_station_global.liquid_layer == 1 and not wait_for_next_layer:
+	elif liquid_station_global.liquid_layer == 1 and not liquid_station_global.wait_for_next_layer:
 		
 		######### COW MILK AND TEA ##########
 		if has_tea_been_poured and liquid_station_global.cow_milk_pouring and not anim.is_playing():
@@ -636,3 +638,8 @@ func manage_animations():
 			liquid_station_global.almond_milk = 3
 			if not "almond-milk2" in global.playerOrder:
 				global.playerOrder.append("almond-milk2")
+
+
+func _on_liquid_animations_animation_finished() -> void:
+	liquid_station_global.wait_for_next_layer = true;
+	return

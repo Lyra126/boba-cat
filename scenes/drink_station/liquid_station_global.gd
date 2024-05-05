@@ -18,6 +18,8 @@ var oat_milk_pouring = false
 var almond_milk_pouring = false
 var sugar_syrup_pressed = false
 
+var wait_for_next_layer = false
+
 var tea = 0
 var coffee = 0
 var smoothie = 0

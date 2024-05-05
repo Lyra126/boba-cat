@@ -202,10 +202,10 @@ vertical_alignment = 1
 [node name="TextureRect10" type="TextureRect" parent="tutorial"]
 auto_translate_mode = 1
 z_index = 20
-offset_left = -792.646
-offset_top = 363.24
-offset_right = 6619.35
-offset_bottom = 1899.24
+offset_left = -797.056
+offset_top = 354.65
+offset_right = 6614.94
+offset_bottom = 1890.65
 scale = Vector2(0.240001, 0.21049)
 texture = ExtResource("5_86px5")
 
